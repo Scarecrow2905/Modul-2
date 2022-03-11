@@ -9,12 +9,22 @@ function Login(){
         model.app.currentUserID =  model.ansatt[i].id;
        return alert('Logga inn'), updateViewPanel()  
     }}
-    return alert('Feil brukernavn/passord')
+    return alert("Feil brukernavn/passord. Du må nesten skrive riktig, dickhead!")
 };
 
-    
-    
-    
+function sendInnSpm(){
+    model.inputs.questionsPage.addQuestions.push(model.spm)
+    svar += model.inputs.questionsPage.addQuestions[0];
+        updateViewUndersøkelse();
+}
+function sendInnSvarAlt(){
+    model.inputs.questionsPage.question.push(model.spmSvar)
+    for(let i = 0; i < model.inputs.questionsPage.question.length; i++)
+    spmsvar = model.inputs.questionsPage.question[i] + ': ' + '<input type="checkbox">' 
+    updateViewUndersøkelse();
+
+}    
+
     
     
     
