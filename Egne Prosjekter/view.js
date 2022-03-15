@@ -1,13 +1,14 @@
 showView();
 
-function showView() {
+function showView(){
     let html = '';
-    html += `
-    <div> hei </div>
+    document.getElementById('app').innerHTML = `
+    /*HTML*/ <div> FUNK DIN FA***   
     
-`;
+    </div>
+    
+`};
 
 
-outputDiv.innerHTML = html;
 
-}
+

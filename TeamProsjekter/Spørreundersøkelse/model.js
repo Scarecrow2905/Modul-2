@@ -31,7 +31,7 @@ const model = {
         { id: 000, groupID: 'admin', username: 'Thorbjørn',  password: '3131' },
         { id: 000, groupID: 'admin', username: 'Tommy',      password: '4141' },
         { id: 000, groupID: 'admin', username: 'Trond Erik', password: '6969' },
-        { id: 001, groupID: 'user', username: 'Erter',      password: '0001' },
+        { id: 001, groupID: 'user',  username: 'Erter',      password: '0001' },
     ],
     statistics: {
         nei: 0,
