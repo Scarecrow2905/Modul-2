@@ -53,16 +53,16 @@ const model = {
     // Data
 selectedCategory = 14,
 
-    categories: [ Stue, Kjøkken, Spiserom, Soverom, Bad, Gang, Vaskerom,],
+    // categories: [ Stue, Kjøkken, Spiserom, Soverom, Bad, Gang, Vaskerom,],
         
-        Stue:            [Sofa, sofabord, sjeselong, kommode, hylle, reol, pyntegjenstander],
-        Spiserom:            [Spisebord, spisestuestol, reol, kommode, pyntegjenstander],
-        Kjøkken:             [Kjøkkenbord, kjøkkenstol, hylle, pyntegjenstander],
-        Soverom:             [Seng, nattbord, kommode, garderobeskap, pyntegjenstander],
-        Bad:             [Badekar, vaskebrett, pyntegjenstander],
-        Gang:            [Skohylle, garderobeskap, hattehylle, pyntegjenstander],
-        Klær:            [Kjole, bukse, genser, jakke, cardigan, hatt, skjerf, øredobber],
-        Sko:             [Støvletter, støvler, joggesko, platåsko, høyhælte],
+    //     Stue:            [Sofa, sofabord, sjeselong, kommode, hylle, reol, pyntegjenstander],
+    //     Spiserom:        [Spisebord, spisestuestol, reol, kommode, pyntegjenstander],
+    //     Kjøkken:         [Kjøkkenbord, kjøkkenstol, hylle, pyntegjenstander],
+    //     Soverom:         [Seng, nattbord, kommode, garderobeskap, pyntegjenstander],
+    //     Bad:             [Badekar, vaskebrett, pyntegjenstander],
+    //     Gang:            [Skohylle, garderobeskap, hattehylle, pyntegjenstander],
+    //     Klær:            [Kjole, bukse, genser, jakke, cardigan, hatt, skjerf, øredobber],
+    //     Sko:             [Støvletter, støvler, joggesko, platåsko, høyhælte],
         
         
     payment: {
