@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="model.js"></script>
-    <script src="viewStore.js"></script>
+    <script src="viewFront.js"></script>
+    <script src="common.js"></script>
+    <script src="controller.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,12 +18,17 @@
     
     let appDiv = document.getElementById('app');
     updateView();
+    
     function updateView(){
+        let html = '';
         const page = model.app.currentPage;
-        if (page === 'FrontPage') updateViewFront();
+        if (page === 'FrontPage') html = updateViewFront(); 
         else if (page === 'Product') updateViewProduct();
+        appDiv.innerHTML = html;
+
     }
 
+    
         
     </script>
 </body>
