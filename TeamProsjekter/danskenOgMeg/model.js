@@ -9,16 +9,19 @@ const model = {
     fuckLister4: '',
 
     shoppingCart: {
+        productPrice: 4000,
+        productImg: 'testSofa.jpg',
         totalPrice: 0,
         cartProducts:[],
         numberOfItems: 0,
+        typeOfDelivery: '',
     },
       
     //App -!-
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | Login | Cart | PaymentPage | 
+        currentPage: 'Cart', //FrontPage |  Product | Login | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
@@ -107,8 +110,10 @@ const model = {
         password:'monkeyBusiness',
     }],
     
-    //Alle produkter
+    // Alle produkter
+
     products:[
+        
         // Stue
         {
             title: 'Sofa',

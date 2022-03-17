@@ -82,11 +82,57 @@ background-color: green;
 
 /* *************HANDLEKURV************* */
 
-.col-1h  {width: 10%;}
-.col-2h  {width: 75%;}
-.col-3h  {width: 15%;}
-.col-4h  {width: 15%;}
-.col-5h  {width: 41%;}
+.productImg {
+  height: 100px;
+  width: 100px;
+  border: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: rgb(0, 181, 226);
+}
+
+.quantityInput {
+  height:20px;
+  width: 50px;
+  border: solid;
+  border-width: 2px;
+  border-color: rgb(0, 134, 18)
+}
+
+.removeBtn {
+  color: rgba(255, 255, 255, 0.801);
+  height: 30px;
+  width: 90px;
+  border: solid;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: rgb(253, 111, 111);
+  font-weight: bold;
+
+}
+.cart {
+  border: solid;
+}
+
+.buyBtn {
+  height: 30px;
+  width: 90px;
+  border: solid;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: rgb(111, 161, 253);
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.col-1h  {width: 40%; height: 25%;}
+.col-2h  {width: 10%; height: 25%;}
+.col-3h  {width: 10%; height: 25%;}
+.col-4h  {width: 25%; height: 25%;}
+.col-5h  {width: 90%; height: 50%;}
 .col-6h  {width: 50%;}
 .col-7h  {width: 58%;}
 .col-8h  {width: 66%;}
