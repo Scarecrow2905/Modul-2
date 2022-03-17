@@ -1,3 +1,9 @@
+function Header() {
+    return `
+         <h1 class="header">Dansken og meg - Vintage skatter</h1>
+         `
+ }
+
 function visListe(fucka){
     let x = fucka;
     if(x == ''){
