@@ -18,7 +18,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  ProductPage | LoginPage | ShoppingCart | PaymentPage | 
+        currentPage: 'FrontPage', //FrontPage |  Product | Login | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-

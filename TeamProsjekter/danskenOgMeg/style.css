@@ -80,4 +80,20 @@ background-color: green;
     background-color: #3e8e41;
   }
 
+/* *************HANDLEKURV************* */
+
+.col-1h  {width: 10%;}
+.col-2h  {width: 75%;}
+.col-3h  {width: 15%;}
+.col-4h  {width: 15%;}
+.col-5h  {width: 41%;}
+.col-6h  {width: 50%;}
+.col-7h  {width: 58%;}
+.col-8h  {width: 66%;}
+.col-9h  {width: 75%;}
+.col-10h {width: 83.33%;}
+.col-11h {width: 91.66%;}
+.col-12h {width: 100%;}
+
+
  
