@@ -2,7 +2,7 @@
 function updateViewCart(){
     html =
     `
-    <div> Handlevogn </div>
+    <div> Endring </div>
     `
     return html;
 };
