@@ -1,3 +1,4 @@
+/*-----------------ViewFront------------------------*/
 body {
     margin:0;
     padding:0;
@@ -6,10 +7,10 @@ body {
     background-color: yellow;
     height: 100vh;
     display:grid;
-    grid-template-columns: 2fr 7fr 3fr ;
+    grid-template-columns: 2fr 7fr 3fr  ;
     grid-template-rows: 1fr 0.5fr 7fr 0.5fr ;
     grid-template-areas: 'header header header'
-                         'innhold1 innhold1 innhold1'
+                         'liteFelt liteFelt liteFelt'
                          'meny innhold innhold '
                          'footer footer footer ';
 }
@@ -34,11 +35,60 @@ div.innhold {
     background-color:lightgray;
     grid-area: innhold;
 }
-div.innhold1 {
+div.liteFelt {
     background-color:white;
-    grid-area: innhold1;
+    grid-area: liteFelt;
 }
 div.footer {
-    background-color:lightblue;
+    background-color:blue;
     grid-area: footer;
 }
+/*------------------------Handlekurv---------------------*/
+
+.pageCart {
+    background-color: brown;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr 2fr ;
+    grid-template-areas:'header header header header'
+                        'liteFelt liteFelt liteFelt liteFelt'
+                        'product price quantity removeBtn'
+                        'buyBtn buyBtn buyBtn buyBtn'
+                        'footer footer footer footer';
+}
+
+
+
+
+
+
+div.footer {
+    grid-area: footer;
+    background-color: tomato;
+}
+div.product {
+    grid-area: product;
+    background-color: blue;
+}
+
+div.price {
+    grid-area: price;
+    background-color: green;
+}
+
+div.quantity {
+    grid-area: quantity;
+    background-color: yellow;
+}
+
+div.removeBtn {
+    grid-area: removeBtn;
+    background-color: orange;
+}
+
+div.buyBtn {
+    grid-area: buyBtn;
+    background-color: red;
+}
+

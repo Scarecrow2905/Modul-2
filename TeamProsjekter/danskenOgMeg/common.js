@@ -5,7 +5,7 @@ function Header() {
  }
 function searchfield(){
     return `
-    <div>Søk etter varer her: <input type="text" oninput="searchCatalog()"</div>
+    <div><b>Søk etter varer her:</b> <input type="text" oninput="searchCatalog()"/></div>
     `
 }
 
@@ -13,31 +13,28 @@ let dropDown = '';
 function dropdownListe(){
 for (let i = 0; i < model.categories.length; i++) {
     dropDown += /*html*/`
-    <div class="drit" onclick="showSubCategories(${i})">${model.categories[i].name }</div>
+    <div class="drit" onclick="showCategories(${i})">${model.categories[i].name }</div>
     <div>${faen}</div>
     `
 }
 }
-function showSubCategories(index) {
+function showCategories(index) {
      for (let i = 0; i < model.categoriesSub.length; i++){
           for (let a = 0; a < model.categories.length; a++){
              if(model.categoriesSub[i].parentId == index){
-                subLister = model.categoriesSub[i].categoriName
+                subLister = model.categoriesSub[i].categoriName  
+            }
+        }
 
-             }
-         }
-     }
+    }
+     
     // if (index == model.categories[i].id) {
     //     subLister = model.catagoriesSub[a]
 
     // }
     //if (model.categoriesSub[a] === true) return;
 
-    
-
     updateView();
-
-    
 }
 
 

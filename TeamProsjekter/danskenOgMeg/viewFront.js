@@ -1,19 +1,24 @@
 function updateViewFront() {
     let liste = '';
+    let html = '';
     for (let i = 0; i < model.categories.length;i++){
-        liste += '<ul>'+ '<li class="dropDownList">' + model.categories[i].name + '</li>'+ '</ul>'
+        liste +=  '<ul>'+ `<li class="dropDownList" onclick='showCategories(${model.categories[i].id})'>` + model.categories[i].name + '</li>'+ '</ul>'
     }
-    html += `
+    html += /*html*/`
     <div class="page">
-        <div class="header">${Header()}
+        <div class="header">${Header()}</div>
+        <div class="liteFelt">
+            <ul>
+                <li class="liteFeltLi">${searchfield()}</li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
+            <ul>
         </div>
         <div class="meny">
             <div>${liste}</div>
+            <div onclick="showSubCategories()">${subLister}</div>
         </div>
         <div class="innhold">innhold</div>
-        <div class="innhold1">${searchfield()}
-        <div onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn</div>
-        </div>
         <div class="footer">footer</div>
     </div>
   `

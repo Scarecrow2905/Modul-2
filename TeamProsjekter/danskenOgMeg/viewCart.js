@@ -1,39 +1,47 @@
 
 function updateViewCart(){
     html =
-    `${Header()}
-
-
-    <div class="col-1h">
+    `
     
+
+
+<div class="pageCart">
+
+    <div class="header">${Header()}</div>
+    <div class="liteFelt">
+            <ul>
+                <li class="liteFeltLi">${searchfield()}</li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'frontPage';updateView()">Tilbake</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
+            </ul>
+    </div>
+
+    <div class="product">
     <img class="productImg" src="${model.shoppingCart.productImg}">
-    <div>${model.shoppingCart.cartProducts} "Navn på produkt" </div>
-    <hr>
+    ${model.shoppingCart.cartProducts} "Navn på produkt"
     </div>
 
-    <div class="col-2h">
+    <div class="price">
     ${model.shoppingCart.productPrice} Kr 
-    <hr>
     </div>
 
-    <div class="col-3h">
-
+    
+    <div class="quantity">
     <input class="quantityInput" type="number" value=${model.shoppingCart.cartProducts}>
-    <hr>
     </div>
 
-    <div class="col-4h">
-
+    <div class="removeBtn">
     <button class="removeBtn" onclick" >REMOVE</button>
-    <hr>
     </div>
 
-    <div class="col-5h">
-
-    <button class="buyBtn" onclick="purchase()"> KJØP </button>
-
+    <div class="buyBtn">
+    <button class="buyBtn" onclick="purchase()"> Kjøp</button>
     </div>
 
+    <div class="footer"> Footer </div>
+
+
+</div>
 
 
     ` 

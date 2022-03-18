@@ -1,66 +1,62 @@
-* {
-    box-sizing: border-box;
-    
+/*------------FrontPage------------*/
+ul{
+  margin:5px;
+}
+.dropDownList{
+  color:black;
+  list-style-type: none;
+  margin:0px;
+  padding:5px;
+  background-color: rgb(189, 207, 243) ;
+  border:1px solid black;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width:75%;
+}
+.dropDownList:hover{
+  background-color: black;
+  color: rgb(189, 207, 243);
+}
+.header{
+  text-align:center;
+}
+.footer {
+  grid-area: footer;
+}
+.liteFeltLi{
+  list-style-type: none;
+  float:left;
+  margin-left:15%;
+}
+.liteFelt {
+ 
+  align-items: center;
+
 }
 
-[class*="col-"] {
-    float: left;
-    /* padding: 15px; */
-    border: 1px solid green; 
-  }
-.col-1 {width: 10%;}
-.col-2 {width: 75%; height: 7rem;}
-.col-3 {width: 15%; height: 3rem;}
-.col-4 {width: 15%; height: 3rem;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-.row::after {
-    clear: both;
-    display: table; 
-}
-
-.col-1{
-  background-color:yellow;
-} 
-.col-2{
-  background-color:orange;
-}
-.col-3{
-    background-color: rgba(30, 31, 30, 0.897);
-    color: rgba(228, 55, 199, 0.623);
-}
-.col-4 {
-background-color: green;
-}
-.drit:hover{
-    background-color: pink;
-    border: 1px solid black;
+/* .drit:hover{
+  background-color: pink;
+  border: 1px solid black;
 }
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left:75px;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left:75px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
 
 /* *************HANDLEKURV************* */
 
@@ -81,7 +77,7 @@ background-color: green;
   border-color: rgb(0, 134, 18)
 }
 
-.removeBtn {
+ .removeBtn {
   color: rgba(255, 255, 255, 0.801);
   height: 30px;
   width: 90px;
@@ -91,12 +87,12 @@ background-color: green;
   background-color: rgb(253, 111, 111);
   font-weight: bold;
 
-}
+} 
 .cart {
   border: solid;
 }
 
-.buyBtn {
+ .buyBtn {
   height: 30px;
   width: 90px;
   border: solid;
@@ -105,24 +101,10 @@ background-color: green;
   background-color: rgb(111, 161, 253);
   text-align: center;
   vertical-align: middle;
+  align-items: middle;
   cursor: pointer;
-  margin: 0 auto;
   font-weight: bold;
-}
-
-.col-1h  {width: 40%; height: 25%;}
-.col-2h  {width: 10%; height: 25%;}
-.col-3h  {width: 10%; height: 25%;}
-.col-4h  {width: 25%; height: 25%;}
-.col-5h  {width: 90%; height: 50%;}
-.col-6h  {width: 50%;}
-.col-7h  {width: 58%;}
-.col-8h  {width: 66%;}
-.col-9h  {width: 75%;}
-.col-10h {width: 83.33%;}
-.col-11h {width: 91.66%;}
-.col-12h {width: 100%;}
-
+} 
 
 body {
   background-color: rgba(30, 31, 30, 0.815);
