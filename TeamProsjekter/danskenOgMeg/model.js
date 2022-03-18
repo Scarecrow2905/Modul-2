@@ -1,5 +1,5 @@
 let html = '';
-let faen = '';
+let subLister = '';
 
 const model = {
     fuckLister0: '',
@@ -57,28 +57,23 @@ const model = {
     //Kategorier med forskjellige id og parentId
     categories:[
         {name:'Stue', id:1},
-        //{categoriName:'Sofa', id:11,parentId:1},
-
         {name: 'Spiserom', id:2},
-        //{categoriName: 'Bord', id:21, parentId:2},
-        
         {name: 'Kjøkken', id:3},
-        //{categoriName: 'Stol', id:31, parentId:3},
-        
         {name: 'Soverom', id: 4},
-        //{categoriName: 'Seng', id:41, parentId:4},
-
         {name: 'Bad', id:5},
-        //{categoriName: 'Badekar', id:51, parentId:5},
-        
         {name: 'Gang', id:6},
-        // {categoriName: 'Garderobe', id:61, parentId:6},
-
         {name: 'Klær', id:7},
-        //{categoriName: 'Kjole', id:71, parentId:7},
-        
         {name: 'Sko', id:8},
-        //{categoriName: 'Støvler', id:81, parentId:8},   
+    ],
+    categoriesSub:[
+        {categoriName:'Sofa', id:11,parentId:1},
+        {categoriName: 'Bord', id:21, parentId:2},
+        {categoriName: 'Stol', id:31, parentId:3},
+        {categoriName: 'Seng', id:41, parentId:4},
+        {categoriName: 'Badekar', id:51, parentId:5},
+        {categoriName: 'Garderobe', id:61, parentId:6},
+        {categoriName: 'Kjole', id:71, parentId:7},
+        {categoriName: 'Støvler', id:81, parentId:8},   
     ],
 
     // Oversikt over ulike kategorier og produkter
@@ -108,67 +103,7 @@ const model = {
     }],
     
     //Alle produkter
-    products:[
-        // Stue
-        {
-            title: 'Sofa',
-            price: 6000,
-            stock: 1,
-            category: 'Stue',
-            categoryId: 11,
-            subCategory: 'Store ting',
-            img: 'blablabla',
-            description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
-            measures: 'Høyde 80cm. Dybde 50cm.',
-            color: ['Oker Gul'],
-            country: 'Danmark',
-            year: '2006',
-        },
-
-        {
-            title: 'Vintage Sofa',
-            price: 11000,
-            stock: 1,
-            category: 'Stue',
-            categoryId: 12,
-            subCategory: 'Store ting',
-            img: 'blablabla',
-            description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
-            measures: 'Høyde 90cm. Dybde 89cm. Lengde 240cm.',
-            color: ['Mørk grønn', ' Beige'],
-            country: 'Sverige',
-            year: '1961',
-        },  
-        // Spiserom
-        {
-            title: 'Bord',
-            price: 8700,
-            stock: 1,
-            category: 'Stue',
-            categoryId: 21,
-            subCategory: 'Store ting',
-            img: 'blablabla',
-            description: 'Pent brukt, godt lagret.',
-            color: ['Mørk grønn'],
-            country: 'Italia',
-            year: '1962',
-            },
-            
-        // Kjøkken
-        {   
-            title: 'Gammel kjøttkvern',
-            price: 3000,
-            stock: 1,
-            category: 'Kjøkken',
-            categoryId: 32,
-            subCategory: '',
-            img: '......',
-            description: '',
-            color: ['metall', 'svart'],
-            country: 'Danmark',
-            year: '1971',
-        }, 
-    ],
+    
 }
       
 

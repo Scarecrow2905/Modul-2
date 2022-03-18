@@ -1,0 +1,24 @@
+ul{
+    margin:5px;
+}
+.dropDownList{
+    color:black;
+    list-style-type: none;
+    margin:0px;
+    padding:5px;
+    background-color: rgb(189, 207, 243) ;
+    border:1px solid black;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width:75%;
+}
+.dropDownList:hover{
+    background-color: black;
+    color: rgb(189, 207, 243);
+}
+.header{
+    text-align:center;
+}
+.footer {
+    grid-area: footer
+}
