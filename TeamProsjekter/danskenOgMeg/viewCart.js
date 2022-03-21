@@ -11,7 +11,7 @@ function updateViewCart(){
     <div class="liteFelt">
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'frontPage';updateView()">Tilbake</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button></li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
             </ul>
     </div>

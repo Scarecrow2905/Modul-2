@@ -10,7 +10,7 @@ function updateViewFront() {
         <div class="liteFelt">
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
             <ul>
         </div>
@@ -18,7 +18,7 @@ function updateViewFront() {
             <div>${liste}</div>
             <div onclick="showSubCategories()">${subLister}</div>
         </div>
-        <div class="innhold">innhold</div>
+        <div class="innhold" onclick="addToCart()">${model.products.name}</div>
         <div class="footer">footer</div>
     </div>
   `

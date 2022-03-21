@@ -2,7 +2,9 @@ function Header() {
     return `
          <h1 class="header">Dansken og meg - Vintage skatter</h1>
          `
- }
+}
+ 
+//Søkefelt
 function searchfield(){
     return `
     <div><b>Søk etter varer her:</b> <input type="text" oninput="searchCatalog()"/></div>
@@ -13,7 +15,7 @@ let dropDown = '';
 function dropdownListe(){
 for (let i = 0; i < model.categories.length; i++) {
     dropDown += /*html*/`
-    <div class="drit" onclick="showCategories(${i})">${model.categories[i].name }</div>
+    <div class="drit" onclick="showCategories(${i})">${model.categories[i].name}</div>
     <div>${faen}</div>
     `
 }

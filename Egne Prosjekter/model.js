@@ -1,28 +1,11 @@
-let html = '',
+const model = {
 
-
-const model = { 
-    // App
-    app: {
-        currentPage: 'motherBase' // Rnd Support Intel Combat
-    },
-    // Inputs
-    search: '',
-    
-    // Data
-
-    stats: [
-        combat = 0,
-        rnd = 0,
-        support = 0,
-        intel = 0,
-        
-    ]
-
-    roster: [
-        combat: {
-            name: 'testName1' 
-        }
-    ]
+    titles: [
+        {name: 'Bird box', genre: 'Horror', length: 2,},
+        {name: 'Polar', genre: 'Thriller', length: 1.5,},
+        {name: 'Breaking Bad', genre: 'Drama', length: 2,},
+        {name: 'Io', genre: 'Sci-fi', length: 3,},
+    ],
+}
 
 

@@ -46,11 +46,11 @@ div.footer {
 /*------------------------Handlekurv---------------------*/
 
 .pageCart {
-    background-color: brown;
+    background-color: teal;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 7fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 2fr 2fr ;
+    grid-template-rows: 1fr 0.5fr 0.5fr 3fr ;
     grid-template-areas:'header header header header'
                         'liteFelt liteFelt liteFelt liteFelt'
                         'product price quantity removeBtn'
@@ -88,6 +88,9 @@ div.removeBtn {
 }
 
 div.buyBtn {
+    position: relative;
+    top: 10%;
+    left:40%;
     grid-area: buyBtn;
     background-color: red;
 }
