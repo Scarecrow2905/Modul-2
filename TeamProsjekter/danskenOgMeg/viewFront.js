@@ -2,7 +2,8 @@ function updateViewFront() {
     let liste = '';
     let html = '';
     for (let i = 0; i < model.categories.length;i++){
-        liste +=  '<ul>'+ `<li class="dropDownList" onclick='showCategories(${model.categories[i].id})'>` + model.categories[i].name + '</li>'+ '</ul>'
+        liste +=  '<ul>'+ `<li class="dropDownList" onclick='showCategories(${model.categories[i].id})'>`
+        + model.categories[i].name + '</li>'+ '</ul>'
     }
     html += /*html*/`
     <div class="page">
@@ -16,7 +17,7 @@ function updateViewFront() {
         </div>
         <div class="meny">
             <div>${liste}</div>
-            <div onclick="showSubCategories()">${subLister}</div>
+            <div  onclick="showSubCategories()">${showSubLister}</div>
         </div>
         <div class="innhold" onclick="addToCart()">${model.products.name}</div>
         <div class="footer">footer</div>
