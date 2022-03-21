@@ -1,7 +1,7 @@
 function viewProduct() {
     html = 
     `
-    <div>${model.}</div>
+    <div>${model}</div>
     
     `
 }

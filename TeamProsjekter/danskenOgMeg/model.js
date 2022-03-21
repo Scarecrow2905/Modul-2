@@ -1,6 +1,5 @@
-let html = '';
-let subLister = '';
-
+let x = '';
+let showSubLister = '';
 const model = {
     fuckLister0: '',
     fuckLister1: '',
@@ -70,12 +69,20 @@ const model = {
     ],
     categoriesSub:[
         {categoriName:'Sofa', id:11,parentId:1},
+        {categoriName:'Skjenk', id:12,parentId:1},
+
         {categoriName: 'Bord', id:21, parentId:2},
+
         {categoriName: 'Stol', id:31, parentId:3},
+
         {categoriName: 'Seng', id:41, parentId:4},
+
         {categoriName: 'Badekar', id:51, parentId:5},
+
         {categoriName: 'Garderobe', id:61, parentId:6},
+
         {categoriName: 'Kjole', id:71, parentId:7},
+        
         {categoriName: 'Støvler', id:81, parentId:8},   
     ],
 

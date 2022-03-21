@@ -9,31 +9,36 @@ function searchfield(){
     `
 }
 
-let dropDown = '';
-function dropdownListe(){
-for (let i = 0; i < model.categories.length; i++) {
-    dropDown += /*html*/`
-    <div class="drit" onclick="showCategories(${i})">${model.categories[i].name }</div>
-    <div>${faen}</div>
-    `
-}
-}
+// let dropDown = '';
+// function dropdownListe(){
+// for (let i = 0; i < model.categories.length; i++) {
+//     dropDown += /*html*/`
+//     <div class="drit" onclick="showCategories(${i})">${model.categories[i].name }</div>
+//     <div>${faen}</div>
+//     `
+// }
+//}
 function showCategories(index) {
+    let subLister = '';
      for (let i = 0; i < model.categoriesSub.length; i++){
           for (let a = 0; a < model.categories.length; a++){
-             if(model.categoriesSub[i].parentId == index){
-                subLister = model.categoriesSub[i].categoriName  
+                 if(model.categoriesSub[i].parentId == index ){
+                    subLister += '<ul>' + '<li class="sublist" onclick="${model.categoriesSub[i].id}">' + model.categoriesSub[i].categoriName + '</li>' + '</ul>';
+                    showSubLister = subLister;
+                    if (subLister.length == 2){
+                        return showSubLister;
+                    }
+                    //  x = subLister ;
+                    //     if(x == ''){
+                    //         subLister = model.categoriesSub[i].categoriName;
+                    //     } else {
+                    //         subLister = '';
+                    //     }
+                    }
+                } 
             }
-        }
-
-    }
-     
-    // if (index == model.categories[i].id) {
-    //     subLister = model.catagoriesSub[a]
-
-    // }
-    //if (model.categoriesSub[a] === true) return;
-
+        console.log('sub', subLister)
+        console.log('x', x)
     updateView();
 }
 
@@ -62,8 +67,19 @@ function visListe(fucka){
     }
 }
 
-function AutomatiseringAvBarneArbeid() {
-    if (model.categories.length > 0) {
 
+function SC() { 
+    let toggle = () => {
+    let element = document.getElementById('Sub-cat');
+        let hidden = element.getAttribute('hidden');
+            
+        if (hidden) { 
+            element.removeAttribute('hidden');
+        }
+        else {
+            element.setAttribute('hidden', 'hidden');
+        }
     }
+// <button onclick="toggle();">My button</button>
+    
 }
