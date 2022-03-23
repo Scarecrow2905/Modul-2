@@ -21,13 +21,8 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-<<<<<<< HEAD
-        currentPage: 'FrontPage', //FrontPage |  Product | Login | Cart | PaymentPage | 
-=======
         currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
->>>>>>> 010c23ddf4f5a95f7ad7e4ce96dafe2f453ee354
         currentUser: '',
-        loginType: 'email',
     },
     //Inputs -!-
 
@@ -37,7 +32,6 @@ const model = {
         password: '',
         createNewUsername: '',
         createNewPassword: '',
-        loginWith: '',
     },
     //Søkefelt
     frontPage: {
