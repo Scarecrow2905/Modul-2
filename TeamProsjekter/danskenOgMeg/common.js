@@ -44,49 +44,80 @@ function showCategories(index) {
     updateView();
 }
 
+// function make(index){
+
+// let html = "";
+// model.fuckLister0 = "";
+// let liste =[];
+// model.activeSubCategory[index] = !model.activeSubCategory[index];
+// model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
+// // let filter = model.categoriesSub.filter(id => model.categories.id)
+// if(index < 1000 ){
+// for (let i = 0; i < model.categoriesSub.length; i++){
+//     if(model.categoriesSub[i].parentId == model.categories[index].id){
+//         liste.push(model.categoriesSub[i]);
+//     }
+//  }
+// }
+
+//     for (let i = 0; i < model.categories.length; i++){
+//         let lengthOfSubCatecory = []; 
+//         if(model.categoriesSub[i].parentId == model.categories[i].id){
+//             lengthOfSubCatecory.push(model.categoriesSub[i]);
+//         }
+//     if(model.activeSubCategory[i] == true){
+//      html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+     
+   
+//      for(let j = 0; j < liste.length;j++){
+     
+//          if(model.wasActiveSubCategory[i] != model.activeSubCategory[i] && liste.length <= lengthOfSubCatecory.length  ){
+//             html += `<div class="sublist"  onclick="updateViewFront()">${liste[j].categoriName}</div>`
+//          }
+//          else{
+//             html += `<div class="sublist"  onclick="updateViewFront()">${lengthOfSubCatecory[j].categoriName}</div>`
+//          }
+//      }
+    
+//     }
+//     else{
+//         html += `<div class="dropDownList"  onclick="make(${i})">${model.categories[i].name}</div>`
+//     }
+//     }
+//     model.fuckLister0 = html;
+//    updateView();
+// }
+
 function make(index){
 
-let html = "";
-model.fuckLister0 = "";
-let liste =[];
-model.activeSubCategory[index] = !model.activeSubCategory[index];
-model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
-// let filter = model.categoriesSub.filter(id => model.categories.id)
-if(index < 1000 ){
-for (let i = 0; i < model.categoriesSub.length; i++){
-    if(model.categoriesSub[i].parentId == model.categories[index].id){
-        liste.push(model.categoriesSub[i]);
-    }
-}
-}
+    let html = "";
+    model.fuckLister0 = "";
+    model.activeSubCategory[index] = !model.activeSubCategory[index];
+    model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
+    
+    for(let i = 0; i < model.categories.length; i++){      
+        if(model.activeSubCategory[i] == true && index < 1000){
+            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+         for(let j = 0; j <model.categories[i].sub.length; j++){
+            html += `<div class="sublist"  onclick="updateViewFront()">${model.categories[i].sub[j].categoriName}</div>`
+            }
+        }
+        else{
+            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+        }
 
-    for (let i = 0; i < model.categories.length; i++){
-    if(model.activeSubCategory[i] == true){
-     html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
-  
-     if(liste.length > 0){
-     for(let j = 0; j < liste.length;j++){
-        // let liste2 = [];
-       
-                // model.categoriesSub.filter(c.id == model.categories.id => liste2.push(model.categoriesSub[i]));
-      
-
-         console.log("dette er categoriname " + liste[j].categoriName )
-         if(model.wasActiveSubCategory[i] != model.activeSubCategory[i]){
-            html += `<div class="sublist"  onclick="updateViewFront()">${liste[j].categoriName}</div>`
-         }
-         else{
-            html += `<div class="sublist"  onclick="updateViewFront()">${model.categoriesSub[i].categoriName}</div>`
-         }
-     }
-    }
-    }
-    else{
-        html += `<div class="dropDownList"  onclick="make(${i})">${model.categories[i].name}</div>`
-    }
     }
     model.fuckLister0 = html;
-   updateView();
+    updateView();
+       
+      
+    }
+function addCategory(){
+    // legg til verdier for å lage kategori (Id og navn på kategori)
+
+    model.activeSubCategory.push(false) 
+    model.wasActiveSubCategory.push(false) 
+    //update view
 }
 
 

@@ -21,7 +21,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'LoginMail', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
@@ -39,7 +39,7 @@ const model = {
     }, 
     //Legge til nye kategorier
     createCategory:[ 
-        {name: '', id:''},
+        {name: '', id:'', sub:[]},
         {name: '', id:'', parentId: ''},
         ],
     //Legge til nye produkter
@@ -59,36 +59,48 @@ const model = {
     },
     //Kategorier med forskjellige id og parentId
     activeSubCategory: [false,false,false,false,false,false,false,false],
-    wasActiveSubCategory: [false,false,false,false,false,false,false,false],
+    wasActiveSubCategory: [false, false, false, false, false, false, false, false]
+    //OBS ::: Legge til False per kategori/Sub 
+    ,
     categories:[
-        {name:'Stue', id:1},
-        {name: 'Spiserom', id:2},
-        {name: 'Kjøkken', id:3},
-        {name: 'Soverom', id: 4},
-        {name: 'Bad', id:5},
-        {name: 'Gang', id:6},
-        {name: 'Klær', id:7},
-        {name: 'Sko', id:8},
+        {name: 'Stue', id: 1, sub: [{ categoriName: 'Sofa', id: 11, parentId: 1 }, { categoriName: 'Skjenk', id: 12, parentId: 1 },] },
+        {name: 'Spiserom', id:2, sub:[{categoriName: 'Bord', id:21, parentId:2},  ]},
+        {name: 'Kjøkken', id:3, sub:[{categoriName: 'Stol', id:31, parentId:3},   ]},
+        {name: 'Soverom', id: 4, sub:[{categoriName: 'Seng', id:41, parentId:4},  ]},
+        {name: 'Bad', id:5, sub:[ {categoriName: 'Badekar', id:51, parentId:5},   ]},
+        {name: 'Gang', id:6, sub:[ {categoriName: 'Garderobe', id:61, parentId:6},]},
+        {name: 'Klær', id:7, sub:[ {categoriName: 'Kjole', id:71, parentId:7},    ]},
+        {name: 'Sko', id:8, sub:[{categoriName: 'Støvler', id:81, parentId:8},    ]},
     ],
-    categoriesSub:[
-        {categoriName:'Sofa', id:11,parentId:1},
-        {categoriName:'Skjenk', id:12,parentId:1},
+   
+    // categories:[
+    //     {name:'Stue', id:1},
+    //     {name: 'Spiserom', id:2},
+    //     {name: 'Kjøkken', id:3},
+    //     {name: 'Soverom', id: 4},
+    //     {name: 'Bad', id:5},
+    //     {name: 'Gang', id:6},
+    //     {name: 'Klær', id:7},
+    //     {name: 'Sko', id:8},
+    // ],
+    // categoriesSub:[
+    //     {categoriName:'Sofa', id:11,parentId:1},
+    //     {categoriName:'Skjenk', id:12,parentId:1},
 
-        {categoriName: 'Bord', id:21, parentId:2},
+    //     {categoriName: 'Bord', id:21, parentId:2},
 
-        {categoriName: 'Stol', id:31, parentId:3},
+    //     {categoriName: 'Stol', id:31, parentId:3},
 
-        {categoriName: 'Seng', id:41, parentId:4},
+    //     {categoriName: 'Seng', id:41, parentId:4},
 
-        {categoriName: 'Badekar', id:51, parentId:5},
+    //     {categoriName: 'Badekar', id:51, parentId:5},
 
-        {categoriName: 'Garderobe', id:61, parentId:6},
+    //     {categoriName: 'Garderobe', id:61, parentId:6},
 
-        {categoriName: 'Kjole', id:71, parentId:7},
+    //     {categoriName: 'Kjole', id:71, parentId:7},
         
-        {categoriName: 'Støvler', id:81, parentId:8},   
-    ],
-       
+    //     {categoriName: 'Støvler', id:81, parentId:8},   
+    // ],
     // Data -!-
 
     //Betalingsløsninger

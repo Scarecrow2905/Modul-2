@@ -13,7 +13,7 @@ function updateViewFront() {
             <ul>
         </div>
         <div class="meny">
-          ${meny()}
+          ${model.fuckLister0}
         </div>
         <div class="innhold" onclick="addToCart()">${model.products.name}</div>
         <div class="footer">footer</div>
