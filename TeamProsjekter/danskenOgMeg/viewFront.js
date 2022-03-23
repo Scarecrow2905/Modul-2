@@ -56,8 +56,10 @@ function updateViewLoginWithMail(){
         <div class="headerL">${Header()}</div>
         <div  class="smalLinje">
             <ul>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></li>
+                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></li>
+                <li class="backLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
             </ul> 
+        </div>
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
@@ -84,7 +86,12 @@ function updateViewLoginWithPhone(){
     html = /*html*/`
     <div class="loginPage">
         <div class="headerL">${Header()}</div>
-        <div class="smalLinje"><button class="backButton"  onclick="model.app.currentPage='FrontPage';updateView()">Backto main</button></div>
+        <div  class="smalLinje">
+            <ul>
+                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></li>
+                <li class="backLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
+            </ul> 
+        </div>
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
