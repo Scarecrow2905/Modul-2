@@ -24,3 +24,16 @@ function removeCart(index) {
         model.shoppingCart.cartProducts --;
     }
 }
+
+// ------------ LOGIN----------------
+function username(){
+    return `
+    <div><input class="username" placeholder="E-post*"type="text" oninput="${model.account.userName}"/></div>
+`
+}
+function password(){
+    return `
+    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.password}"/></div>
+    `
+
+}

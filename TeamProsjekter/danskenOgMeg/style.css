@@ -124,3 +124,52 @@ ul{
 body {
   background-color: rgba(30, 31, 30, 0.815);
 }
+
+/*----------LOGIN------------*/
+.h2Login{
+  text-align:center;
+}
+.paragraphLogin{
+  text-align:center;
+  text-decoration: underline;
+}
+.username{
+  font-size: 15px;
+  width:30%;
+  padding:1% 0% 1% 0%;
+}
+.password{
+  font-size: 15px;
+  width:30%;
+  padding:1% 0% 1% 0%;
+}
+.usernamePosition{
+  text-align:center;
+}
+.passwordPosition{
+  text-align:center;
+  margin-top: 1%;
+
+}
+.loginButton{
+  margin-left:34.80%;
+  margin-top:1%;
+  background-color:tomato;
+  color:white;
+  width:30.4%;
+  padding:0.5% 0% 0.5% 0%
+}
+.createUserButton{
+  background-color:yellow;
+  margin:10% 0% 0% 43%;
+  padding:2%;
+}
+.forgotPasswordButton{
+  text-decoration: underline;
+  background-color: white;
+  width:30.4%;
+  margin:1% 0% 0% 41%;
+  padding:2%;
+
+
+}

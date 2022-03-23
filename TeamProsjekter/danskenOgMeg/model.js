@@ -1,6 +1,7 @@
 let x = '';
 let showSubLister = '';
 const model = {
+    text1:"",
     fuckLister0: '',
     fuckLister1: '',
     fuckLister2: '',
@@ -15,12 +16,12 @@ const model = {
         numberOfItems: 0,
         typeOfDelivery: '',
     },
-      
+    
     //App -!-
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | Login | Cart | PaymentPage | 
+        currentPage: 'Login', //FrontPage |  Product | Login | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
