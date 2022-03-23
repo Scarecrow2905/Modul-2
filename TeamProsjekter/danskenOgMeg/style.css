@@ -132,9 +132,15 @@ body {
 .h2Login{
   text-align:center;
 }
-.paragraphLogin{
+.paragraphMail{
   text-align:center;
   text-decoration: underline;
+}
+.Phone{
+  text-align:center;
+}
+.paragraphLogin{
+  text-align:center;
 }
 .username{
   font-size: 15px;
@@ -157,22 +163,37 @@ body {
 .loginButton{
   margin-left:34.80%;
   margin-top:1%;
-  background-color:tomato;
+  background-color:rgb(243, 121, 7);
   color:white;
   width:30.4%;
   padding:0.5% 0% 0.5% 0%
 }
-.createUserButton{
-  background-color:yellow;
-  margin:10% 0% 0% 43%;
-  padding:2%;
+.loginButton:hover{
+  background-color:rgb(243, 121, 7);
+  box-shadow: 2px 2px 1px 1px black;
 }
+
 .forgotPasswordButton{
   text-decoration: underline;
   background-color: white;
   width:30.4%;
-  margin:1% 0% 0% 41%;
-  padding:2%;
-
-
+  margin-top:1%;
+  margin-left:34.80%;
+  padding:0.5% 0% 0.5% 0%;
+}
+.forgotPasswordButton:hover{
+  background-color:rgb(247, 240, 240);
+  box-shadow: 2px 2px 1px 1px black;
+}
+.createUserButton{
+  text-decoration: underline;
+  background-color:white;
+  width:30.4%;
+  margin-top:1%;
+  margin-left:34.80%;
+  padding:0.5% 0% 0.5% 0%;
+}
+.createUserButton:hover{
+  background-color:rgb(247, 240, 240);
+  box-shadow: 2px 2px 1px 1px black;
 }

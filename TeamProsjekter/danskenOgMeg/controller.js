@@ -28,9 +28,14 @@ function removeCart(index) {
 }
 
 // ------------ LOGIN----------------
-function username(){
+function mail(){
     return `
-    <div><input class="username" placeholder="E-post*"type="text" oninput="${model.account.userName}"/></div>
+    <div><input class="username" placeholder="E-post*" type="email" oninput="${model.account.userName}"/></div>
+`
+}
+function phone(){
+    return `
+    <div><input class="username" placeholder="Phone Number*" type="tel" oninput="${model.account.userName}"/></div>
 `
 }
 function password(){

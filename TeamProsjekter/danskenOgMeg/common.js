@@ -44,10 +44,6 @@ function showCategories(index) {
     updateView();
 }
 
-// function SC() { 
-//     let toggle = () => {
-//     let element = document.getElementById('Sub-cat');
-//         let hidden = element.getAttribute('hidden');
 function make(index){
 
 let html = "";
@@ -119,10 +115,10 @@ function visListe(fucka){
 }
 
 
-function SC() { 
-    let toggle = () => {
-    let element = document.getElementById('Sub-cat');
-        let hidden = element.getAttribute('hidden');
+// function SC() { 
+//     let toggle = () => {
+//     let element = document.getElementById('Sub-cat');
+//         let hidden = element.getAttribute('hidden');
             
 //         if (hidden) { 
 //             element.removeAttribute('hidden');
@@ -132,4 +128,5 @@ function SC() {
 //         }
 //     }
 // <button onclick="toggle();">My button</button>
-    }}
+//}
+    

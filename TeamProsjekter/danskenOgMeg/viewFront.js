@@ -8,10 +8,8 @@ function updateViewFront() {
         <div class="liteFelt">
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Login</button></li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</button></li>
             <ul>
         </div>
         <div class="meny">
@@ -52,27 +50,57 @@ function underkategori(index){
     updateViewFront()
 }
 // ------------------------- Login ---------------------------
-function updateViewLogin(){
+function updateViewLoginWithMail(){
     html = /*html*/`
     <div class="loginPage">
-        <div class="headerL">header</div>
+        <div class="headerL">${Header()}</div>
         <div class="smalLinje"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to balls</button></div>
         <div class="menyL">
-            <div><h2 class="h2Login">Logg inn</h2></div>
-            <div><p class="paragraphLogin">E- POST</<p></div>
-            <div class="usernamePosition">${username()}</div>
-            <div class="passwordPosition">${password()}</div>
-            <div><button class="loginButton">Log inn</button></div>
-            <div><button class="forgotPasswordButton">Forgot your password?</button></div>
-            <div><button class="createUserButton">Create User</button></div>
-
+            <div><h2 class="h2Login">Logg inn..</h2></div>
+            <div>
+                <div> <p class="paragraphMail">E- MAIL</p>
+                      <p class="paragraphLogin">OR</p>
+                      <p onclick="model.app.currentPage = 'LoginPhone'; updateView()" class="Phone">PHONE</p></div>
+                <div  class="usernamePosition">${mail()}</div>
+                <div  class="passwordPosition">${password()}</div>
+                <div> <button class="loginButton">Log inn</button></div>
+                <div> <p class="paragraphLogin">Did you</p></div>
+                <div> <button class="forgotPasswordButton">Forgot your password?</button></div>
+                <div> <p class="paragraphLogin"> Or, do you want to</<p></div>
+                <div> <button class="createUserButton">Create new User?</button></div>
+            </div>
         </div>
-        <div class="innholdL">innhold</div>
-        <div class="innhold1L">innhold1</div>
+        <div class="innholdL"></div>
+        <div class="innhold1L"></div>
         <div class="footerL">footer</div>
     </div>`
     return html;
 
 }
-// ${username()}
-// ${password()}
+function updateViewLoginWithPhone(){
+    html = /*html*/`
+    <div class="loginPage">
+        <div class="headerL">${Header()}</div>
+        <div class="smalLinje"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to balls</button></div>
+        <div class="menyL">
+            <div><h2 class="h2Login">Logg inn..</h2></div>
+            <div>
+                <div><p onclick="model.app.currentPage = 'LoginMail'; updateView()"  class="Phone">E- MAIL</p>
+                <p class="paragraphLogin">OR</p>
+                <p class="paragraphMail">PHONE</p></div>
+                <div class="usernamePosition">${phone()}</div>
+                <div class="passwordPosition">${password()}</div>
+                <div><button class="loginButton">Log inn</button></div>
+                <div><p class="paragraphLogin">Did you</p></div>
+                <div><button class="forgotPasswordButton">Forgot your password?</button></div>
+                <div><p class="paragraphLogin"> Or, do you want to</<p></div>
+                <div><button class="createUserButton">Create new User?</button></div>
+            </div>
+        </div>
+        <div class="innholdL"></div>
+        <div class="innhold1L"></div>
+        <div class="footerL">footer</div>
+    </div>`
+    return html;
+
+}
