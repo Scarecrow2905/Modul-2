@@ -49,23 +49,26 @@ function underkategori(index){
     model.text1 = html
     updateViewFront()
 }
-// ------------------------- Login ---------------------------
+// ------------------------- Login Mail ---------------------------
 function updateViewLoginWithMail(){
     html = /*html*/`
     <div class="loginPage">
         <div class="headerL">${Header()}</div>
-        <div class="smalLinje"><button class="backButton" onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></div>
+        <div  class="smalLinje">
+            <ul>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></li>
+            </ul> 
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
-                <div> <p class="paragraphMail">E- MAIL</p>
+                <div> <p class="paragraphMail">E-MAIL</p>
                       <p class="paragraphLogin">OR</p>
                       <p onclick="model.app.currentPage = 'LoginPhone'; updateView()" class="Phone">PHONE</p></div>
                 <div  class="usernamePosition">${mail()}</div>
                 <div  class="passwordPosition">${password()}</div>
                 <div> <button class="loginButton">Log inn</button></div>
                 <div> <button class="forgotPasswordButton">Forgot your password?</button></div>
-                <div> <p class="paragraphLogin"> Or, are you a new user?</<p></div>
+                <div> <p class="paragraphLogin"> Or, are you a new user?</p></div>
                 <div> <button class="createUserButton">Create new account</button></div>
             </div>
         </div>
@@ -74,13 +77,14 @@ function updateViewLoginWithMail(){
         <div class="footerL">footer</div>
     </div>`
     return html;
-
 }
+// ------------------------- Login Phone ---------------------------
+
 function updateViewLoginWithPhone(){
     html = /*html*/`
     <div class="loginPage">
         <div class="headerL">${Header()}</div>
-        <div class="smalLinje"><button onclick="model.app.currentPage='FrontPage';updateView()">Backto main</button></div>
+        <div class="smalLinje"><button class="backButton"  onclick="model.app.currentPage='FrontPage';updateView()">Backto main</button></div>
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
