@@ -3,11 +3,12 @@ ul{
   margin:5px;
 }
 .dropDownList{
+  user-select: none;
   color:black;
   list-style-type: none;
   margin:0px;
   padding:5px;
-  background-color: rgb(189, 207, 243) ;
+  background-color: rgb(128, 166, 240) ;
   border:1px solid black;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -15,7 +16,7 @@ ul{
 }
 .dropDownList:hover{
   background-color: black;
-  color: rgb(189, 207, 243);
+  color: rgb(197, 233, 241);
 }
 .header{
   text-align:center;
@@ -34,11 +35,13 @@ ul{
 
 }
 .sublist{
+  user-select: none;
   background-color:tomato;
   color:black;
   list-style-type: none;
   margin:0px;
   padding:5px;
+  margin-left: 10px;
   border:1px solid black;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

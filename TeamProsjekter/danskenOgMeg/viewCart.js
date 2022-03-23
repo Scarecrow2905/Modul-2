@@ -1,5 +1,11 @@
 
 function updateViewCart(){
+    var result = '';
+for (let i = 0; i < model.shoppingCart.length;) {
+    const product = model.shoppingCart.cartProducts[i];
+    const price = model.shoppingCart.c
+
+}
     html =
     `
     
@@ -16,8 +22,8 @@ function updateViewCart(){
             </ul>
     </div>
 
-    <div class="product">
-    <img class="productImg" src="${model.shoppingCart.productImg}">
+    <div class="product" >
+    <img class="productImg" src="${model.shoppingCart.productImg}"> 
     ${model.shoppingCart.cartProducts} "Navn på produkt"
     </div>
 
@@ -31,7 +37,7 @@ function updateViewCart(){
     </div>
 
     <div class="removeBtn">
-    <button class="removeBtn" onclick" >REMOVE</button>
+    <button class="removeBtn" onclick="removeCart()" >REMOVE</button>
     </div>
 
     <div class="buyBtn">
@@ -48,7 +54,3 @@ function updateViewCart(){
     return html;
 };
 
-/*shoppingCart: {
-    totalPrice: 0,
-    cartProducts:[],
-    numberOfItems: 0, */

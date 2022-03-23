@@ -6,8 +6,8 @@ function addToCart(index) {
         model.shoppingCart.numberOfItems ++;
         model.shoppingCart.totalPrice += model.products[index].price;
         model.shoppingCart.push(model.products[index].title)
+        updateViewCart()
     }
-    updateView()
     
     
 };
@@ -16,14 +16,14 @@ function purchase(index) {
     if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');
     else {
         alert('Takk for handelen!')
-        viewStore();
+        updateViewCart();
     }
 };
 
-// function removeCart(index) {
-//     if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
-//     else {
-//         model.shoppingCart.cartProducts --;
-//         viewStore();
-//     }
-// }
+ function removeCart(index) {
+     if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
+     else {
+        model.shoppingCart.cartProducts --;
+        updateViewCart()
+    }
+};

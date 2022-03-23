@@ -1,17 +1,20 @@
+
 function updateViewFront() {
     let liste = '';
     let html = '';
-    for (let i = 0; i < model.categories.length;i++){
-        liste +=  '<ul>'+ `<li class="dropDownList" onclick='showCategories(${model.categories[i].id})'>`
-        + model.categories[i].name + '</li>'+ '</ul>'
-    }
+    liste += model.fuckLister0;
+    // for (let i = 0; i < model.categories.length;i++){
+    //     liste +=  '<ul>'+ `<li class="dropDownList" onclick='make(${model.categories[i].id})'>`
+    //     + model.categories[i].name + '</li>'+ '</ul>'
+    //     + model.fuckLister0;
+    // }
     html += /*html*/`
     <div class="page">
         <div class="header">${Header()}</div>
         <div class="liteFelt">
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn: ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
             <ul>
         </div>
