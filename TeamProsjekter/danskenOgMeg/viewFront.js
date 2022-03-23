@@ -1,3 +1,4 @@
+
 function updateViewFront() {
     
     let html = '';

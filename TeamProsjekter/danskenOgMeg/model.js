@@ -10,7 +10,7 @@ const model = {
 
     shoppingCart: {
         productPrice: 4000,
-        productImg: 'testSofa.jpg',
+        productImg: 'testSofa.jpg', // Midlertidig
         totalPrice: 0,
         cartProducts:[],
         numberOfItems: 0,
@@ -58,6 +58,8 @@ const model = {
             year: '',
     },
     //Kategorier med forskjellige id og parentId
+    activeSubCategory: [false,false,false,false,false,false,false,false],
+    wasActiveSubCategory: [false,false,false,false,false,false,false,false],
     categories:[
         {name:'Stue', id:1},
         {name: 'Spiserom', id:2},
@@ -86,17 +88,6 @@ const model = {
         
         {categoriName: 'Støvler', id:81, parentId:8},   
     ],
-
-    // Oversikt over ulike kategorier og produkter
-    // categories: [ Stue, Kjøkken, Spiserom, Soverom, Bad, Gang, Vaskerom,],   
-    //     Stue:            [Sofa, sofabord, sjeselong, kommode, hylle, reol, pyntegjenstander],
-    //     Spiserom:        [Spisebord, spisestuestol, reol, kommode, pyntegjenstander],
-    //     Kjøkken:         [Kjøkkenbord, kjøkkenstol, hylle, pyntegjenstander],
-    //     Soverom:         [Seng, nattbord, kommode, garderobeskap, pyntegjenstander],
-    //     Bad:             [Badekar, vaskebrett, pyntegjenstander],
-    //     Gang:            [Skohylle, garderobeskap, hattehylle, pyntegjenstander],
-    //     Klær:            [Kjole, bukse, genser, jakke, cardigan, hatt, skjerf, øredobber],
-    //     Sko:             [Støvletter, støvler, joggesko, platåsko, høyhælte],
        
     // Data -!-
 
