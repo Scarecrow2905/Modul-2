@@ -200,4 +200,10 @@ body {
 .backLogin{
   list-style-type: none;
   float:left;
+  margin-left:2%;
+}
+.cartLogin{
+  float:right;
+  list-style-type: none;
+  margin-right:2%;
 }

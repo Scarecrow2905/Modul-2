@@ -21,7 +21,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'LoginMail', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
