@@ -54,7 +54,7 @@ function updateViewLoginWithMail(){
     html = /*html*/`
     <div class="loginPage">
         <div class="headerL">${Header()}</div>
-        <div class="smalLinje"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to balls</button></div>
+        <div class="smalLinje"><button class="backButton" onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></div>
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
@@ -64,10 +64,9 @@ function updateViewLoginWithMail(){
                 <div  class="usernamePosition">${mail()}</div>
                 <div  class="passwordPosition">${password()}</div>
                 <div> <button class="loginButton">Log inn</button></div>
-                <div> <p class="paragraphLogin">Did you</p></div>
                 <div> <button class="forgotPasswordButton">Forgot your password?</button></div>
-                <div> <p class="paragraphLogin"> Or, do you want to</<p></div>
-                <div> <button class="createUserButton">Create new User?</button></div>
+                <div> <p class="paragraphLogin"> Or, are you a new user?</<p></div>
+                <div> <button class="createUserButton">Create new account</button></div>
             </div>
         </div>
         <div class="innholdL"></div>
@@ -81,7 +80,7 @@ function updateViewLoginWithPhone(){
     html = /*html*/`
     <div class="loginPage">
         <div class="headerL">${Header()}</div>
-        <div class="smalLinje"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to balls</button></div>
+        <div class="smalLinje"><button onclick="model.app.currentPage='FrontPage';updateView()">Backto main</button></div>
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
@@ -91,10 +90,9 @@ function updateViewLoginWithPhone(){
                 <div class="usernamePosition">${phone()}</div>
                 <div class="passwordPosition">${password()}</div>
                 <div><button class="loginButton">Log inn</button></div>
-                <div><p class="paragraphLogin">Did you</p></div>
                 <div><button class="forgotPasswordButton">Forgot your password?</button></div>
-                <div><p class="paragraphLogin"> Or, do you want to</<p></div>
-                <div><button class="createUserButton">Create new User?</button></div>
+                <div><p class="paragraphLogin"> Or, are you a new user?</<p></div>
+                <div><button class="createUserButton">Create new account</button></div>
             </div>
         </div>
         <div class="innholdL"></div>
