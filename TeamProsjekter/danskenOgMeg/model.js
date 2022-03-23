@@ -23,7 +23,6 @@ const model = {
     app: {
         currentPage: 'Login', //FrontPage |  Product | Login | Cart | PaymentPage | 
         currentUser: '',
-        loginType: 'email',
     },
     //Inputs -!-
 
@@ -33,7 +32,6 @@ const model = {
         password: '',
         createNewUsername: '',
         createNewPassword: '',
-        loginWith: '',
     },
     //Søkefelt
     frontPage: {
