@@ -27,7 +27,9 @@
         if (page === 'FrontPage') html = updateViewFront(); 
         else if (page === 'Product') html = updateViewProduct();
         else if (page === 'Cart') html = updateViewCart();
-        else if (page === 'Login') html = updateViewLogin();
+        else if (page === 'LoginMail') html = updateViewLoginWithMail();
+        else if (page === 'LoginPhone') html = updateViewLoginWithPhone();
+
         appDiv.innerHTML = html;
         } 
     </script>
