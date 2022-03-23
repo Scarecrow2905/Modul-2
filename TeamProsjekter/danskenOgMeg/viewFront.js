@@ -15,7 +15,7 @@ function updateViewFront() {
         <div class="meny">
           ${meny()}
         </div>
-        <div class="innhold">innhold</div>
+        <div class="innhold" onclick="addToCart()">${model.products.name}</div>
         <div class="footer">footer</div>
     </div>
   `

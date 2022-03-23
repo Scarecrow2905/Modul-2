@@ -7,16 +7,18 @@ function addToCart(index) {
         model.shoppingCart.totalPrice += model.products[index].price;
         model.shoppingCart.push(model.products[index].title)
     }
-    viewStore();
+    updateView()
     
-}
+    
+};
 
 function purchase(index) {
     if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');
     else {
         alert('Takk for handelen!')
+        viewStore();
     }
-}
+};
 
 function removeCart(index) {
     if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
