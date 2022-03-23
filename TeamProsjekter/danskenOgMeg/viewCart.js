@@ -3,8 +3,12 @@ function updateViewCart(){
     var result = '';
 for (let i = 0; i < model.shoppingCart.length;) {
     const product = model.shoppingCart.cartProducts[i];
-    const price = model.shoppingCart.c
+    const productImg = model.shoppingCart.productImg;
+    const price = model.products.price;
 
+    result += `<div class="product">${productImg} ${product} - Pris: ${price} </div>
+    
+    `
 }
     html =
     `
@@ -39,6 +43,8 @@ for (let i = 0; i < model.shoppingCart.length;) {
     <div class="removeBtn">
     <button class="removeBtn" onclick="removeCart()" >REMOVE</button>
     </div>
+
+    <div class="product">${result}</div>
 
     <div class="buyBtn">
     <button class="buyBtn" onclick="purchase()"> Kjøp</button>
