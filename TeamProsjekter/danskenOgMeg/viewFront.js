@@ -1,4 +1,3 @@
-
 function updateViewFront() {
     
     let html = '';
@@ -11,6 +10,8 @@ function updateViewFront() {
                 <li class="liteFeltLi">${searchfield()}</li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn</button></li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Login</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
             <ul>
         </div>
         <div class="meny">

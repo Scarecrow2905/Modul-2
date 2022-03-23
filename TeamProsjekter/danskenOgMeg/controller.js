@@ -39,3 +39,10 @@ function password(){
     `
 
 }
+ function removeCart(index) {
+     if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
+     else {
+        model.shoppingCart.cartProducts --;
+        updateViewCart()
+    }
+};
