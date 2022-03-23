@@ -1,6 +1,6 @@
 function Header() {
     return `
-         <h1 class="header">Dansken og meg - Vintage skatter</h1>
+         <h1 class="header">Dansken og meg - Vintage Julefinger</h1>
          `
 }
  

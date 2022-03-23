@@ -22,7 +22,7 @@ for (let i = 0; i < model.shoppingCart.length;) {
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Login';updateView()">Logg inn</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</button></li>
             </ul>
     </div>
 
