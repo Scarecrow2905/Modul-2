@@ -27,23 +27,6 @@ function removeCart(index) {
     }
 }
 
-// ------------ LOGIN----------------
-function mail(){
-    return `
-    <div><input class="username" placeholder="E-post*" type="email" oninput="${model.account.userName}"/></div>
-`
-}
-function phone(){
-    return `
-    <div><input class="username" placeholder="Phone Number*" type="tel" oninput="${model.account.userName}"/></div>
-`
-}
-function password(){
-    return `
-    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.password}"/></div>
-    `
-
-}
  function removeCart(index) {
      if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
      else {
@@ -51,3 +34,36 @@ function password(){
         updateViewCart()
     }
 };
+
+// Meny med dropdown
+function make(index){
+
+    let html = "";
+    model.fuckLister0 = "";
+    model.activeSubCategory[index] = !model.activeSubCategory[index];
+    model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
+    
+    for(let i = 0; i < model.categories.length; i++){      
+        if(model.activeSubCategory[i] == true && index < 1000){
+            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+         for(let j = 0; j <model.categories[i].sub.length; j++){
+            html += `<div class="sublist"  onclick="updateViewFront()">${model.categories[i].sub[j].categoriName}</div>`
+            }
+        }
+        else{
+            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+        }
+
+    }
+    model.fuckLister0 = html;
+    updateView();
+       
+      
+    }
+function addCategory(){
+    // legg til verdier for å lage kategori (Id og navn på kategori)
+
+    model.activeSubCategory.push(false) 
+    model.wasActiveSubCategory.push(false) 
+    //update view
+}
