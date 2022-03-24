@@ -67,3 +67,34 @@ function addCategory(){
     model.wasActiveSubCategory.push(false) 
     //update view
 }
+function randomNumerGitt(){
+let randomNumber = Math.round(Math.random() * 3);
+return randomNumber;
+}
+
+function addNewInforToModel(){
+let idNummer = randomNumerGitt();
+console.log(idNummer)
+for(let i = 0; i < model.account.users.length; i++){
+if(model.account.users[i].id === idNummer){
+     alert('tallet finnes');
+     return;
+ } else {
+    alert('tallet finnes ikke')
+    model.account.users.push({firstName: model.account.newFirstName,
+        lastName: model.account.newLastName,
+        phone: model.account.createNewPhoneNumber,
+        email: model.account.createNewEmail,
+        password: model.account.createNewPassword,
+        id: idNummer,})
+    }
+}
+updateView();
+
+}
+
+//     {model.account.newFirstName}
+//  {model.account.newLastName}    
+// {model.account.createNewEmail}    
+// {model.account.createNewPhoneNumber}
+// {model.account.createNewPassword}

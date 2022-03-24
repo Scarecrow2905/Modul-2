@@ -28,11 +28,12 @@ const model = {
 
     //Inputs for login og å lage nye brukere
     account: {
-        firstName:'',
-        lastName:'',
-        phone: '',
-        Email:'',
-        password: '',
+        users:[{firstName:'admin', lastName:'nordmann', phone: 0, email:'test@test.no', password:'abc123', id: 0  }],
+        // firstName:[],
+        // lastName:[],
+        // phone: [],
+        // Email:[],
+        // password: [],
         newFirstName:'',
         newLastName:'',
         createNewPhoneNumber: '',

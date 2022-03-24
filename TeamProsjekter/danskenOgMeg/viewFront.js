@@ -78,7 +78,7 @@ function updateViewLoginWithPhone(){
                 <div class="passwordPosition">${password()}</div>
                 <div><button class="loginButton">Log inn</button></div>
                 <div class="paragraphLogin"> are you an robot?</div>
-                <div><button class="forgotPasswordButton">Forgot your password?</button></div>
+                <div><button  onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Forgot your password?</button></div>
                 <div><p class="paragraphLogin"> Or, are you a new user?</<p></div>
                 <div><button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Create new account</button></div>
             </div>
@@ -111,7 +111,7 @@ function updateViewCreateAccount(){
             <div class="passwordPosition">${password()}      </div>
             <p class="paragraphLogin">Write your password again :</p>
             <div class="passwordPosition">${passwordCheck()} </div>
-            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccoust';updateView()">Continue</button> </div>
+            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';updateView()">Continue</button> </div>
             <br>
             <div class="paragraphLogin">Already have an account?</div>
             <div><button class="loginButton" onclick="model.app.currentPage = 'LoginMail';updateView()">Login</div>
@@ -123,6 +123,8 @@ function updateViewCreateAccount(){
 </div>`
 return html;
 }
+// ------------------------- Account Information ----------------------------
+
 function updateViewNewAccount(){
     html =/*hmtl*/ `
     <div class="loginPage">
@@ -135,14 +137,14 @@ function updateViewNewAccount(){
         </ul> 
     </div>
     <div class="menyL">
-        <div><h2 class="h2Login">Your Account</h2></div>
+        <div><h2 class="h2Login">Your Account Information</h2></div>
         <div>
-            <div class="usernamePosition"> First Name: ${model.account.newFirstName}     </div>
-            <div class="usernamePosition"> Last Name: ${model.account.newLastName}      </div>
-            <div class="usernamePosition"> Your E-Mail:${model.account.createNewEmail}          </div>
-            <div class="usernamePosition"> Your Phone Nr:${model.account.createNewPhoneNumber}         </div>
-            <div class="passwordPosition"> Your Password:${model.account.createNewPassword}      </div>
-            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccoust';updateView()">Create and logg inn</button> </div>
+            <div class="usernamePosition"> First Name:<br><b>${model.account.newFirstName}</b>    </div>
+            <div class="usernamePosition"> Last Name:<br><b> ${model.account.newLastName}</b>     </div>
+            <div class="usernamePosition"> Your E-Mail:<br><b>${model.account.createNewEmail}</b>          </div>
+            <div class="usernamePosition"> Your Phone Nr:<br><b>${model.account.createNewPhoneNumber}</b>        </div>
+            <div class="passwordPosition"> Your Password:<br><b>${model.account.createNewPassword}</b>      </div>
+            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';addNewInforToModel();">Create and logg inn</button> </div>
         </div>
     </div>
     <div class="innholdL"></div>
