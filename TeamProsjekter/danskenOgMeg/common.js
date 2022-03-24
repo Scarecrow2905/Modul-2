@@ -1,97 +1,52 @@
+// ------------ oversikrift --------------
 function Header() {
     return `
          <h1 class="header">Dansken og meg - Vintage Julefinger</h1>
          `
 }
- 
-//Søkefelt
+
+// ---------------- Søkefelt ---------------
 function searchfield(){
     return `
     <div><b>Søk etter varer her:</b> <input type="text" oninput="searchCatalog()"/></div>
     `
 }
-
-
-
-function showCategories(index) {
-    let subLister = '';
-     for (let i = 0; i < model.categoriesSub.length; i++){
-          for (let a = 0; a < model.categories.length; a++){
-                 if(model.categoriesSub[i].parentId == index ){
-                    subLister += '<ul>' + '<li class="sublist" onclick="${model.categoriesSub[i].id}">' + model.categoriesSub[i].categoriName + '</li>' + '</ul>';
-                    showSubLister = subLister;
-                    
-                    //  x = subLister ;
-                    //     if(x == ''){
-                    //         subLister = model.categoriesSub[i].categoriName;
-                    //     } else {
-                    //         subLister = '';
-                    //     }
-                    }
-                } 
-            }
-        console.log('sub', subLister)
-        console.log('x', x)
-    updateView();
+// ------------ LOGIN----------------
+function mail(){
+    return `
+    <div><input class="username" value="${model.account.createNewEmail}" placeholder="E-post*" type="email" oninput="model.account.createNewEmail = this.value"/></div>
+`
 }
-
-
-
-function make(index){
-
-    let html = "";
-    model.fuckLister0 = "";
-    model.activeSubCategory[index] = !model.activeSubCategory[index];
-    model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
-    
-    for(let i = 0; i < model.categories.length; i++){      
-        if(model.activeSubCategory[i] == true && index < 1000){
-            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
-         for(let j = 0; j <model.categories[i].sub.length; j++){
-            html += `<div class="sublist"  onclick="updateViewFront()">${model.categories[i].sub[j].categoriName}</div>`
-            }
-        }
-        else{
-            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
-        }
-
-    }
-    model.fuckLister0 = html;
-    updateView();
-       
-      
-    }
-function addCategory(){
-    // legg til verdier for å lage kategori (Id og navn på kategori)
-
-    model.activeSubCategory.push(false) 
-    model.wasActiveSubCategory.push(false) 
-    //update view
+function phone(){
+    return `
+    <div><input class="username" value="${model.account.createNewPhoneNumber}" placeholder="Phone Number*" type="tel" oninput="model.account.createNewPhoneNumber = this.value"/></div>
+`
 }
-
-
-    // if (index == model.categories[0].id) {
-    //     subLister = `<div id='subListe'>${model.categoriesSub[0].categoriName}</div>`
-   
-    // console.log('er', subLister)
-    // console.log('er',model.categories[index].id)
-    // if(model.categories[index].id == 1){ faen = model.categoriesSub[0].categoriName}
-    // console.log('er:', faen)
-
-  
-function visListe(fucka){
-    let x = subLister;
-    if(x == ''){
-        subListe = `
-        <ul>
-            <li class="A1">1</li>
-            <li class="A1">2</li>
-            <li class="A1">3</li>
-        </ul>
+function password(){
+    return `
+    <div><input class="password" value="${model.account.createNewPassword}"  placeholder="Password*" type="password" oninput="model.account.createNewPassword = this.value"/></div>
     `
-    } else {
-        subLister = ''
-    }
+}
+function passwordCheck(){
+    return `
+    <div><input class="password" value="${model.account.createNewPasswordCheck}" placeholder="Password*" type="password" oninput="model.account.createNewPasswordCheck = this.value"/></div>
+    `
+}
+function firstName(){
+    return `
+    <div><input class="password"  value="${model.account.newFirstName}" placeholder="First name*" type="text" oninput="model.account.newFirstName = this.value"/></div>
+    `
+}
+function lastName(){
+    return `
+    <div><input class="password" value="${model.account.newLastName}" placeholder="Last name*" type="text" oninput="model.account.newLastName = this.value"/></div>
+    `
 }
 
 
+
+
+
+
+
+    

@@ -50,17 +50,25 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'Cart', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'createNewAccount', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
 
     //Inputs for login og å lage nye brukere
     account: {
-        userName: '',
-        password: '',
-        createNewUsername: '',
+        users:[{firstName:'admin', lastName:'nordmann', phone: 0, email:'test@test.no', password:'abc123', id: 0  }],
+        // firstName:[],
+        // lastName:[],
+        // phone: [],
+        // Email:[],
+        // password: [],
+        newFirstName:'',
+        newLastName:'',
+        createNewPhoneNumber: '',
+        createNewEmail: '',
         createNewPassword: '',
+        createNewPasswordCheck: '',
     },
     //Søkefelt
     frontPage: {
