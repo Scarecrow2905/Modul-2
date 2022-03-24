@@ -43,57 +43,7 @@ div.footer {
     background-color:blue;
     grid-area: footer;
 }
-/*------------------------Handlekurv---------------------*/
 
-.pageCart {
-    background-color: teal;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 7fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 3fr ;
-    grid-template-areas:'header header header header'
-                        'liteFelt liteFelt liteFelt liteFelt'
-                        'product price quantity removeBtn'
-                        'buyBtn buyBtn buyBtn buyBtn'
-                        'footer footer footer footer';
-}
-
-
-
-
-
-
-div.footer {
-    grid-area: footer;
-    background-color: tomato;
-}
-div.product {
-    grid-area: product;
-    background-color: blue;
-}
-
-div.price {
-    grid-area: price;
-    background-color: green;
-}
-
-div.quantity {
-    grid-area: quantity;
-    background-color: yellow;
-}
-
-div.removeBtn {
-    grid-area: removeBtn;
-    background-color: orange;
-}
-
-div.buyBtn {
-    position: relative;
-    top: 10%;
-    left:40%;
-    grid-area: buyBtn;
-    background-color: red;
-}
 
 /*-----------LOGIN-----------*/
     .loginPage{

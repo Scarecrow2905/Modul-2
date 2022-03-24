@@ -9,10 +9,39 @@ const model = {
     fuckLister4: '',
 
     shoppingCart: {
-        productPrice: 4000,
-        productImg: 'testSofa.jpg', // Midlertidig
+        // productPrice: 4000,
+        // productImg: 'testSofa.jpg', // Midlertidig
         totalPrice: 0,
-        cartProducts:[],
+        cartProducts:[
+            {
+                title: 'Sofa',
+                price: 6000,
+                stock: 1,
+                category: 'Stue',
+                categoryId: 11,
+                subCategory: 'Store ting',
+                img: 'testSofa.jpg',
+                description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+                measures: 'Høyde 80cm. Dybde 50cm.',
+                color: ['Oker Gul'],
+                country: 'Danmark',
+                year: '2006',
+            },
+            {
+                title: 'Sofa',
+                price: 6000,
+                stock: 1,
+                category: 'Stue',
+                categoryId: 11,
+                subCategory: 'Store ting',
+                img: 'testSofa.jpg',
+                description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+                measures: 'Høyde 80cm. Dybde 50cm.',
+                color: ['Oker Gul'],
+                country: 'Danmark',
+                year: '2006',
+            },
+        ],
         numberOfItems: 0,
         typeOfDelivery: '',
     },
@@ -21,7 +50,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'Cart', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-

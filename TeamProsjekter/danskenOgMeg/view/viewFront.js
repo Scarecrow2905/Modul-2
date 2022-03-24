@@ -23,32 +23,7 @@ function updateViewFront() {
   return html;
 }
 
-function meny(){
-    let html = "";
-    let liste = '';
-    // for (let i = 0; i < model.categories.length;i++){
-    //     liste +=  '<ul>'+ `<li class="dropDownList" onclick='showCategories(${model.categories[i].id})'>`
-    //     + model.categories[i].name + '</li>'+ '</ul>'
-    // }
-    for (let i = 0; i < model.categories.length;i++){
-        html +=  `<div class="dropDownList" onclick='underkategori(${i})'>${model.categories[i].name}</div>`
-        
-    }
-    
 
-    html += ` 
-              <div onclick="showSubCategories()">${showSubLister}</div>`
-    return html;
-}
-function underkategori(index){
-    let html = "";
-    for (let i = 0; i < 2;i++){
-    html +=  `<div class="dropDownList" >${model.categoriesSub[i].categoriName}</div>`
-    }
-
-    model.text1 = html
-    updateViewFront()
-}
 // ------------------------- Login Mail ---------------------------
 function updateViewLoginWithMail(){
     html = /*html*/`
