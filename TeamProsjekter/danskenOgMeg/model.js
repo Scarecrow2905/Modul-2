@@ -28,12 +28,17 @@ const model = {
 
     //Inputs for login og å lage nye brukere
     account: {
+        firstName:'',
+        lastName:'',
         userName: '',
         password: '',
+        Email:'',
         createNewUsername: '',
         createNewEmail: '',
         createNewPassword: '',
         createNewPasswordCheck: '',
+        newFirstName:'',
+        newLastName:'',
     },
     //Søkefelt
     frontPage: {

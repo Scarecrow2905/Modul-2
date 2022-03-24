@@ -31,7 +31,16 @@ function passwordCheck(){
     return `
     <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.createNewPasswordCheck}"/></div>
     `
-
+}
+function firstName(){
+    return `
+    <div><input class="password" placeholder="First name*" type="password" oninput="${model.account.newFirstName}"/></div>
+    `
+}
+function lastName(){
+    return `
+    <div><input class="password" placeholder="Last name*" type="password" oninput="${model.account.newLastName}"/></div>
+    `
 }
 
 
