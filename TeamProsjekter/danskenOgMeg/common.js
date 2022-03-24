@@ -14,17 +14,22 @@ function searchfield(){
 // ------------ LOGIN----------------
 function mail(){
     return `
-    <div><input class="username" placeholder="E-post*" type="email" oninput="${model.account.userName}"/></div>
+    <div><input class="username" placeholder="E-post*" type="email" oninput="${model.account.createNewEmail}"/></div>
 `
 }
 function phone(){
     return `
-    <div><input class="username" placeholder="Phone Number*" type="tel" oninput="${model.account.userName}"/></div>
+    <div><input class="username" placeholder="Phone Number*" type="tel" oninput="${model.account.createNewUsername}"/></div>
 `
 }
 function password(){
     return `
-    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.password}"/></div>
+    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.createNewPassword}"/></div>
+    `
+}
+function passwordCheck(){
+    return `
+    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.createNewPasswordCheck}"/></div>
     `
 
 }
