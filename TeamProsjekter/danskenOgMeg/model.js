@@ -30,15 +30,15 @@ const model = {
     account: {
         firstName:'',
         lastName:'',
-        userName: '',
-        password: '',
+        phone: '',
         Email:'',
-        createNewUsername: '',
+        password: '',
+        newFirstName:'',
+        newLastName:'',
+        createNewPhoneNumber: '',
         createNewEmail: '',
         createNewPassword: '',
         createNewPasswordCheck: '',
-        newFirstName:'',
-        newLastName:'',
     },
     //Søkefelt
     frontPage: {

@@ -14,32 +14,32 @@ function searchfield(){
 // ------------ LOGIN----------------
 function mail(){
     return `
-    <div><input class="username" placeholder="E-post*" type="email" oninput="${model.account.createNewEmail}"/></div>
+    <div><input class="username" value="${model.account.createNewEmail}" placeholder="E-post*" type="email" oninput="model.account.createNewEmail = this.value"/></div>
 `
 }
 function phone(){
     return `
-    <div><input class="username" placeholder="Phone Number*" type="tel" oninput="${model.account.createNewUsername}"/></div>
+    <div><input class="username" value="${model.account.createNewPhoneNumber}" placeholder="Phone Number*" type="tel" oninput="model.account.createNewPhoneNumber = this.value"/></div>
 `
 }
 function password(){
     return `
-    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.createNewPassword}"/></div>
+    <div><input class="password" value="${model.account.createNewPassword}"  placeholder="Password*" type="password" oninput="model.account.createNewPassword = this.value"/></div>
     `
 }
 function passwordCheck(){
     return `
-    <div><input class="password" placeholder="Password*" type="password" oninput="${model.account.createNewPasswordCheck}"/></div>
+    <div><input class="password" value="${model.account.createNewPasswordCheck}" placeholder="Password*" type="password" oninput="model.account.createNewPasswordCheck = this.value"/></div>
     `
 }
 function firstName(){
     return `
-    <div><input class="password" placeholder="First name*" type="password" oninput="${model.account.newFirstName}"/></div>
+    <div><input class="password"  value="${model.account.newFirstName}" placeholder="First name*" type="text" oninput="model.account.newFirstName = this.value"/></div>
     `
 }
 function lastName(){
     return `
-    <div><input class="password" placeholder="Last name*" type="password" oninput="${model.account.newLastName}"/></div>
+    <div><input class="password" value="${model.account.newLastName}" placeholder="Last name*" type="text" oninput="model.account.newLastName = this.value"/></div>
     `
 }
 
