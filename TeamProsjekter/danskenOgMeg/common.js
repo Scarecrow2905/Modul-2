@@ -3,7 +3,10 @@ function Header() {
     return `
          <h1 class="header">Dansken og meg - Vintage Julefinger</h1>
          `
-}
+};
+
+
+
 
 // ---------------- Søkefelt ---------------
 function searchfield(){
@@ -43,6 +46,10 @@ function lastName(){
     `
 }
 
+function login() {
+// if model.account.users[i].email === Input.value = "true" && model.account.users[i].password === input.value = "true"
+// active.user === model.account.users[i]
+}
 
 
 

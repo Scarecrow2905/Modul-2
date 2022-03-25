@@ -1,4 +1,6 @@
 /*------------FrontPage------------*/
+
+/*------------FrontPage - DropDown------------*/
 ul{
   margin:5px;
 }
@@ -52,6 +54,46 @@ ul{
   color: tomato;
 }
 
+/*------------FrontPage - Produkter------------*/
+
+.front-row {
+  display: flex;
+}
+
+.front-item {
+  width: 20%;
+  height: 10%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.front-item-title {
+  color: #333;
+  margin-left: .5em;
+  font-size: 1.2em;
+}
+
+.front-column {
+  display: flex;
+  align-items: center;
+}
+
+.front-item-image {
+  display:flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: solid black 1px;
+
+}
+
+.front-price {
+  display: flex;
+  width:5%;
+  font-size: 1.2em;
+  color: #333;
+  align-items: center;
+}
 /* .drit:hover{
   background-color: pink;
   border: 1px solid black;

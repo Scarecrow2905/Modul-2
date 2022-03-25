@@ -50,14 +50,17 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'createNewAccount', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | createNewAccount
         currentUser: '',
     },
     //Inputs -!-
 
     //Inputs for login og å lage nye brukere
     account: {
-        users:[{firstName:'admin', lastName:'nordmann', phone: 0, email:'test@test.no', password:'abc123', id: 0  }],
+        users:[{firstName:'admin', lastName:'nordmann', phone: 0, email:'test@test.no', password:'abc123', id: 0  },
+        {firstName:'kåre', lastName:'nordmann', phone: 0, email:'fest@test.no', password:'abcd123', id: 0  },
+        {firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 0 },
+    ],
         // firstName:[],
         // lastName:[],
         // phone: [],
@@ -164,7 +167,7 @@ const model = {
             category: 'Stue',
             categoryId: 11,
             subCategory: 'Store ting',
-            img: 'blablabla',
+            img: 'testSofa.jpg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde 80cm. Dybde 50cm.',
             color: ['Oker Gul'],
@@ -179,7 +182,7 @@ const model = {
             category: 'Stue',
             categoryId: 12,
             subCategory: 'Store ting',
-            img: 'blablabla',
+            img: 'testSofa.jpg',
             description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
             measures: 'Høyde 90cm. Dybde 89cm. Lengde 240cm.',
             color: ['Mørk grønn', ' Beige'],
@@ -194,7 +197,7 @@ const model = {
             category: 'Stue',
             categoryId: 21,
             subCategory: 'Store ting',
-            img: 'blablabla',
+            img: 'testSofa.jpg',
             description: 'Pent brukt, godt lagret.',
             color: ['Mørk grønn'],
             country: 'Italia',
@@ -209,7 +212,7 @@ const model = {
             category: 'Kjøkken',
             categoryId: 32,
             subCategory: '',
-            img: '......',
+            img: 'testSofa.jpg',
             description: '',
             color: ['metall', 'svart'],
             country: 'Danmark',
