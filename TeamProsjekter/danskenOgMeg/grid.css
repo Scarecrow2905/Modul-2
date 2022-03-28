@@ -23,6 +23,7 @@ body {
                              'footer footer';
     }
 }
+
 div.header {
     background-color: rgb(189, 207, 243);
     grid-area: header;

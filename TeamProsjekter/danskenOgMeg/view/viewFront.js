@@ -36,13 +36,14 @@ function productsMain () {
 
     for (let i = 0; i < model.products.length; i++){
     result += `
-    <div class="front-row">
-        <div class="front-item product-column">
-            <img class="front-item-image" src="${model.products[i].img}"/>
-            <span class="front-item-title"> ${model.products[i].title} </span>
+    
+        <div class="front-item front-column">
+            <div> 
+                <img class="front-item-image" src="${model.products[i].img}"/>
+                <span class="front-item-title"> ${model.products[i].title} </span>
+            </div>
+                <span class="front-price front-column">${model.products[i].price}kr</span>
         </div>
-            <span class="front-price front-column">${model.products[i].price}kr</span>
-    </div>
     `
     }
     
