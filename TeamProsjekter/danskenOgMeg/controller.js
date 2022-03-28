@@ -67,34 +67,47 @@ function addCategory(){
     model.wasActiveSubCategory.push(false) 
     //update view
 }
-function randomNumerGitt(){
-let randomNumber = Math.round(Math.random() * 3);
-return randomNumber;
-}
+// function randomNumerGitt(){
+// let randomNumber = Math.round(Math.random() * 3);
+// return randomNumber;
+// }
 
 function addNewInforToModel(){
-let idNummer = randomNumerGitt();
-console.log(idNummer)
-for(let i = 0; i < model.account.users.length; i++){
-if(model.account.users[i].id === idNummer){
-     alert('tallet finnes');
-     return;
- } else {
-    alert('tallet finnes ikke')
     model.account.users.push({firstName: model.account.newFirstName,
         lastName: model.account.newLastName,
         phone: model.account.createNewPhoneNumber,
         email: model.account.createNewEmail,
         password: model.account.createNewPassword,
-        id: idNummer,})
-    }
-}
+        id: model.idIndex,})
+    model.idIndex++;
+   model.app.currentPage = ''; 
 updateView();
-
 }
 
-//     {model.account.newFirstName}
-//  {model.account.newLastName}    
-// {model.account.createNewEmail}    
-// {model.account.createNewPhoneNumber}
-// {model.account.createNewPassword}
+function DoThisMailPersonExist(){
+    for (let i = 0; i < model.account.users.length; i++) {
+    if(model.account.email == model.account.users[i].email &&  model.account.password == model.account.users[i].password  ){
+        alert('yippi det finnes!')
+    } else{
+        alert('Noooo finnes ikke!..')
+    }}
+    updateView();
+}
+function DoThisPhonePersonExist(){
+    for (let i = 0; i < model.account.users.length; i++) {
+        if(model.account.phone == model.account.users[i].phone &&  model.account.password == model.account.users[i].password ){
+            alert('yippi det finnes!')
+        } else{
+            alert('Noooo finnes ikke!..')
+        }}
+        updateView();
+}
+function checkPasswordAndMail(){
+if (model.account.createNewPassword != model.account.createNewPasswordCheck){
+    return alert('Password is not the same. Please fix it you stupid');
+} else if(model.account.createNewEmail.includes('@') == false){
+    alert('You have forgotten the "@" you dumbass!')
+} else if(model.account.createNewPassword == model.account.createNewPasswordCheck && model.account.createNewEmail.includes('@')) {
+    updateView();
+}
+}

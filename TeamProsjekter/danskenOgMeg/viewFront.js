@@ -43,7 +43,7 @@ function updateViewLoginWithMail(){
                       <p onclick="model.app.currentPage = 'LoginPhone'; updateView()" class="Phone">PHONE</p></div>
                 <div  class="usernamePosition">${mail()}</div>
                 <div  class="passwordPosition">${password()}</div>
-                <div> <button class="loginButton">Log inn</button></div>
+                <div> <button class="loginButton" onclick="DoThisMailPersonExist()">Log inn</button></div>
                 <div class="paragraphLogin"> are you an robot?</div>
                 <div> <button onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Forgot your password?</button></div>
                 <div> <p class="paragraphLogin"> Or, are you a new user?</p></div>
@@ -76,7 +76,7 @@ function updateViewLoginWithPhone(){
                 <p class="paragraphMail">PHONE</p></div>
                 <div class="usernamePosition">${phone()}</div>
                 <div class="passwordPosition">${password()}</div>
-                <div><button class="loginButton">Log inn</button></div>
+                <div><button class="loginButton" onclick="DoThisPhonePersonExist()">Log inn</button></div>
                 <div class="paragraphLogin"> are you an robot?</div>
                 <div><button  onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Forgot your password?</button></div>
                 <div><p class="paragraphLogin"> Or, are you a new user?</<p></div>
@@ -106,12 +106,12 @@ function updateViewCreateAccount(){
         <div>
             <div class="usernamePosition">${firstName()}     </div>
             <div class="usernamePosition">${lastName()}      </div>
-            <div class="usernamePosition">${mail()}          </div>
-            <div class="usernamePosition">${phone()}         </div>
-            <div class="passwordPosition">${password()}      </div>
+            <div class="usernamePosition">${newMail()}          </div>
+            <div class="usernamePosition">${newPhone()}         </div>
+            <div class="passwordPosition">${newPassword()}      </div>
             <p class="paragraphLogin">Write your password again :</p>
             <div class="passwordPosition">${passwordCheck()} </div>
-            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';updateView()">Continue</button> </div>
+            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';checkPasswordAndMail()">Continue</button> </div>
             <br>
             <div class="paragraphLogin">Already have an account?</div>
             <div><button class="loginButton" onclick="model.app.currentPage = 'LoginMail';updateView()">Login</div>
