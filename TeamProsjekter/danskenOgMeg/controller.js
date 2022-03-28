@@ -61,10 +61,6 @@ function addCategory(){
     //update view
 
 }
-// function randomNumerGitt(){
-// let randomNumber = Math.round(Math.random() * 3);
-// return randomNumber;
-// }
 
 function addNewInforToModel(){
     model.account.users.push({firstName: model.account.newFirstName,
