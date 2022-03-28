@@ -162,7 +162,7 @@ const model = {
         
         // Stue
         {
-            title: 'Sofa',
+            title: 'hore',
             price: 6000,
             stock: 69,
             category: 'Stue',

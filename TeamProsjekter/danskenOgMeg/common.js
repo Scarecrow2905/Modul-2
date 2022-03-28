@@ -3,7 +3,6 @@ function Header() {
     return `
          <h1 class="header">Dansken og meg - Hobo´s skatter</h1>
          `
-    updateView
 };
 
 
