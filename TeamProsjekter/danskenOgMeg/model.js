@@ -50,7 +50,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'viewNewAccount', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'LoginMail', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
