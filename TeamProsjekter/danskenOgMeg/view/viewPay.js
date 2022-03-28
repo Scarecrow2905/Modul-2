@@ -1,4 +1,13 @@
+function updateViewPay(){
+html = `
+    <div id class="pay-main">
 
+    </div>
+
+`
+
+return html;
+};
 
 
 /*<head>
