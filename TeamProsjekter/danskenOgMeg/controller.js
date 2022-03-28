@@ -2,7 +2,7 @@
 function addToCart(index) {
     categoryId = '';
     for (let i = 0; i < model.products.length; i++) {
-   // console.log('index nr:', index)
+     console.log('index nr:', index)
     // if (model.products[i].includes(model.products[i].categoryId[index])){
         if (model.products[i].categoryId == index) {
             if (model.products[i].stock == 0){
@@ -11,8 +11,7 @@ function addToCart(index) {
                 model.products[i].stock --;
                 model.shoppingCart.numberOfItems ++;
                 model.shoppingCart.totalPrice += model.products[i].price;
-                model.shoppingCart.cartProducts.push(model.products[i] );
-                // console.log(model.shoppingCart.cartProducts)
+                model.shoppingCart.cartProducts.push(model.products[i]);
             }    
         }
 }
