@@ -192,7 +192,7 @@ const model = {
         },  
         // Spiserom
         {
-            title: 'Bård',
+            title: 'Sofa Bård',
             price: 8700,
             stock: 12,
             category: 'Stue',

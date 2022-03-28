@@ -1,7 +1,7 @@
 function updateViewPay(){
 html = `
-    <div id class="pay-main">
-
+    <div class="pay-main">
+        <div class="pay-title"> 
     </div>
 
 `
