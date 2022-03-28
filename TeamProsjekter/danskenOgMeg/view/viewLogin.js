@@ -18,7 +18,7 @@ function updateViewLoginWithMail(){
                 <div  class="usernamePosition">${mail()}</div>
                 <div  class="passwordPosition">${password()}</div>
                 <div> <button class="loginButton" onclick="DoThisMailPersonExist()">Log inn</button></div>
-                <div class="paragraphLogin"> are you an robot?</div>
+                <div class="paragraphLogin"> are you a robot?</div>
                 <div> <button onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Forgot your password?</button></div>
                 <div> <p class="paragraphLogin"> Or, are you a new user?</p></div>
                 <div> <button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Create new account</button></div>

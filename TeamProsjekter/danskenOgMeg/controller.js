@@ -1,16 +1,24 @@
 // Legg til i Handlekurv
 function addToCart(index) {
-    if (model.product[index].stock == 0) alert('Ikke på lager');
-    else {
-        model.products[index].stock --;
-        model.shoppingCart.numberOfItems ++;
-        model.shoppingCart.totalPrice += model.products[index].price;
-        model.shoppingCart.push(model.products[index].title)
-        updateViewCart()
-    }
-    
-    
+    categoryId = '';
+    for (let i = 0; i < model.products.length; i++) {
+   // console.log('index nr:', index)
+    // if (model.products[i].includes(model.products[i].categoryId[index])){
+        if (model.products[i].categoryId == index) {
+            if (model.products[i].stock == 0){
+                alert ('Fuck you, det er tomt');
+            } else {
+                model.products[i].stock --;
+                model.shoppingCart.numberOfItems ++;
+                model.shoppingCart.totalPrice += model.products[i].price;
+                model.shoppingCart.cartProducts.push(model.products[i] );
+                // console.log(model.shoppingCart.cartProducts)
+            }    
+        }
+}
+    updateView();
 };
+
 
 function purchase(index) {
     if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');
@@ -27,6 +35,9 @@ function purchase(index) {
         updateViewCart()
     }
 };
+
+// -------------------tiss---------bæsj----cart---ting---------------prom-p------------------
+
 
 // Meny med dropdown
 function make(index){
@@ -61,7 +72,7 @@ function addCategory(){
     //update view
 
 }
-
+// ------------- Login information ------------
 function addNewInforToModel(){
     model.account.users.push({firstName: model.account.newFirstName,
         lastName: model.account.newLastName,

@@ -1,7 +1,7 @@
 // ------------ oversikrift --------------
 function Header() {
     return `
-         <h1 class="header">Dansken og meg - Vintage Julefinger</h1>
+         <h1 class="header">Dansken og meg - Hobo´s skatter</h1>
          `
 };
 
