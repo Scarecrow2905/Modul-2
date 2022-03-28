@@ -10,7 +10,7 @@ function updateViewFront() {
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'LoginMail';updateView();">Logg inn</button></li>
             <ul>
         </div>
         <div class="meny">
@@ -35,7 +35,7 @@ function productsMain(){
     var result = '';
 
     for (let i = 0; i < model.products.length; i++){
-    result += `
+    result += /*html*/`
     
         <div class="front-item front-column">
             <div> 

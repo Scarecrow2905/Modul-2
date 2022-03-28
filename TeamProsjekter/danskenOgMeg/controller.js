@@ -2,9 +2,9 @@
 function addToCart(index) {
     categoryId = '';
     for (let i = 0; i < model.products.length; i++) {
-     console.log('index nr:', index)
-    // if (model.products[i].includes(model.products[i].categoryId[index])){
-        if (model.products[i].categoryId == index) {
+        // console.log('index nr:', index)
+        // if (model.products[i].includes(model.products[i].categoryId[index])){
+            if (model.products[i].categoryId == index) {
             if (model.products[i].stock == 0){
                 alert ('Fuck you, det er tomt');
             } else {
@@ -31,7 +31,7 @@ function purchase(index) {
      if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
      else {
         model.shoppingCart.cartProducts --;
-        updateViewCart()
+         updateViewCart();
     }
 };
 
