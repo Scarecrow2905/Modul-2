@@ -207,7 +207,7 @@ const model = {
             
         // Kjøkken
         {   
-            title: 'Gammel glufse',
+            title: 'biff gardiner',
             price: 3000,
             stock: 5,
             category: 'Kjøkken',
