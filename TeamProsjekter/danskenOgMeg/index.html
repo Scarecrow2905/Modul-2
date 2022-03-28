@@ -9,6 +9,7 @@
     <script src="/view/viewFront.js"></script>
     <script src="/view/viewCart.js"></script>
     <script src="/view/viewLogin.js"></script>
+    <script src="/view/viewPay.js"></script>
     <!-- <script src="/view/viewPay.js"></script>       Denne må kodes. -->
     <!-- <script src="/view/viewProduct.js"></script>  Denne må kodes.-->
     <script src="common.js"></script>
@@ -26,7 +27,7 @@
     make(1000)
     function updateView(){
         let html = '';
-        const page = model.app.currentPage;
+        const page = model.app.currentPage; 
         if (page === 'FrontPage') html = updateViewFront(); 
         else if (page === 'Product') html = updateViewProduct();
         else if (page === 'Cart') html = updateViewCart();

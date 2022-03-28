@@ -16,7 +16,7 @@ function updateViewFront() {
         <div class="meny">
           ${model.fuckLister0}
         </div>
-        <div class="innhold" onclick="addToCart()">
+        <div class="innhold">
 
         ${productsMain()}
         
@@ -43,7 +43,9 @@ function productsMain () {
                 <span class="front-item-title"> ${model.products[i].title} </span>
             </div>
                 <span class="front-price front-column">${model.products[i].price}kr</span>
+                <button type="button" class="front-item-btn" onclick="addToCart()">Legg til handlekurv</button>
         </div>
+
     `
     }
     
