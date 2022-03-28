@@ -20,13 +20,6 @@ function purchase(index) {
     }
 };
 
-function removeCart(index) {
-    if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
-    else {
-        model.shoppingCart.cartProducts --;
-    }
-}
-
  function removeCart(index) {
      if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
      else {
@@ -66,6 +59,7 @@ function addCategory(){
     model.activeSubCategory.push(false) 
     model.wasActiveSubCategory.push(false) 
     //update view
+
 }
 // function randomNumerGitt(){
 // let randomNumber = Math.round(Math.random() * 3);
