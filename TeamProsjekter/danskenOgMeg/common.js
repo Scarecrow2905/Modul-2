@@ -17,15 +17,32 @@ function searchfield(){
 // ------------ LOGIN----------------
 function mail(){
     return `
-    <div><input class="username" value="${model.account.createNewEmail}" placeholder="E-post*" type="email" oninput="model.account.createNewEmail = this.value"/></div>
+    <div><input class="username" value="${model.account.email}" placeholder="E-post*" type="email" oninput="model.account.email = this.value"/></div>
 `
 }
 function phone(){
     return `
-    <div><input class="username" value="${model.account.createNewPhoneNumber}" placeholder="Phone Number*" type="tel" oninput="model.account.createNewPhoneNumber = this.value"/></div>
+    <div><input class="username" value="${model.account.phone}" placeholder="Phone*" type="email" oninput="model.account.phone = this.value"/></div>
 `
 }
 function password(){
+    return `
+    <div><input class="username" value="${model.account.password}" placeholder="Password*" type="email" oninput="model.account.password = this.value"/></div>
+`
+}
+
+// ----------- Create New -----------------------------
+function newMail(){
+    return `
+    <div><input class="username" value="${model.account.createNewEmail}" placeholder="E-post*" type="email" oninput="model.account.createNewEmail = this.value"/></div>
+`
+}
+function newPhone(){
+    return `
+    <div><input class="username" value="${model.account.createNewPhoneNumber}" placeholder="Phone Number*" type="tel" oninput="model.account.createNewPhoneNumber = this.value"/></div>
+`
+}
+function newPassword(){
     return `
     <div><input class="password" value="${model.account.createNewPassword}"  placeholder="Password*" type="password" oninput="model.account.createNewPassword = this.value"/></div>
     `
