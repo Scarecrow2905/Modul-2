@@ -26,7 +26,7 @@ function updateViewFront() {
   `
 
   return html;
-}
+};
 
 // ---------------- FrontPage (Produkter) ---------------&&
 
@@ -44,7 +44,7 @@ function productsMain () {
                 <p>stock: ${model.products[i].stock}</p>
             </div>
                 <span class="front-price front-column">${model.products[i].price}kr</span>
-                <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til handlekurv</button>
+                <button type="button" class="front-item-btn" onclick="addToCart(${i})">Legg til handlekurv</button>
         </div>
 
     `
