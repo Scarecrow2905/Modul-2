@@ -5,8 +5,8 @@ function updateViewCart(){
     <div class="cart-main-header">${Header()}</div>
 
     <div class="cart-navigation">
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button></li>
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</button></li>
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</button>
     </div>
 
     <div class="newProduct">
