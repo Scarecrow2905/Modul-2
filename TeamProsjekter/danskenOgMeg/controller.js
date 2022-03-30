@@ -95,12 +95,13 @@ function DoThisMailPersonExist(){
         model.app.currentUser = model.account.users[i].id;
         alert('logged inn');
         foundUser = true;
+        model.app.status = true;
         model.app.currentPage = 'FrontPage';
     } }
     if (foundUser === false){
         alert(' finnes ikke!..')    
     }
-    updateView();
+    loggedInnOrNot()
 }
 //Sjekker at personens telefon nummer og passord finnes i modellen.
 function DoThisPhonePersonExist(){
@@ -142,4 +143,17 @@ function resettInformation(){
     model.account.createNewPassword = '';
     model.account.createNewPasswordCheck = '';
     updateView();
+}
+
+function loggedInnOrNot(){
+    for (let i = 0; i < model.account.users.length; i++) {        
+    if (model.app.status == false){
+        model.app.showStatus = 'Logg inn'
+    } else if (model.app.status == true){
+        if (model.app.currentUser == model.account.users[i].id){
+        model.app.showStatus = model.account.users[i].firstName + ' ' + model.account.users[i].lastName
+        }
+    }
+}
+ updateView();
 }

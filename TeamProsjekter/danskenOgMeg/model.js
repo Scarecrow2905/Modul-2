@@ -1,6 +1,6 @@
-let x = '';
-let showSubLister = '';
+
 const model = {
+
     text1:"",
     fuckLister0: '',
     fuckLister1: '',
@@ -51,17 +51,19 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'createNewAccount', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
-        currentUser: '',
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentUser: 0,
+        status: false,
+        showStatus: 'Logg inn',
     },
     //Inputs -!-
     idIndex: 2,
-    //Inputs for login og å lage nye brukere
+    //Inputs for login og å lage nye brukeretest
     account: {
         users: [
-            { firstName: 'admin', lastName: 'nordmann', phone: 0, email: 'test@test.no', password: 'abc123', id: 0 },
-            {firstName:'kåre', lastName:'nordmann', phone: 0, email:'fest@test.no', password:'abcd123', id: 0  },
-            {firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 0 },
+            { firstName: 'admin', lastName: 'nordmann', phone: 0, email: 'test@test.no', password: 'abc123', id: 1 },
+            {firstName:'kåre', lastName:'nordmann', phone: 0, email:'fest@test.no', password:'abcd123', id: 3  },
+            {firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
     ],
         // firstName:[],
         // lastName:[],
@@ -147,7 +149,7 @@ const model = {
         },
         {
             name: 'Soverom', id: 4, sub: [
-                { categoriName: 'Seng', id: 41, parentId: 4 },
+                { categoriName: 'Leketøy', id: 41, parentId: 4 },// seng
                 { categoriName: 'Nattbord', id: 42, parentId: 4 },
                 { categoriName: 'Kommoder', id: 43, parentId: 4 },
                 { categoriName: 'Garderobeskap', id: 44, parentId: 4 },
