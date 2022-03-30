@@ -5,9 +5,6 @@ function Header() {
          `
 };
 
-
-
-
 // ---------------- Søkefelt ---------------
 function searchfield(){
     return `

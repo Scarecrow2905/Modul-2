@@ -12,7 +12,6 @@ function addToCart(index) {
                 model.shoppingCart.numberOfItems ++;
                 model.shoppingCart.totalPrice += model.products[i].price;
                 model.shoppingCart.cartProducts.push(model.products[i]);
-                console.log(model.shoppingCart.cartProducts)
             }    
         }
 }

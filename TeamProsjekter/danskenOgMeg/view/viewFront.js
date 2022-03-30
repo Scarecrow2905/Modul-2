@@ -31,7 +31,7 @@ function updateViewFront() {
 // ---------------- FrontPage (Produkter) ---------------&&
 
 
-function productsMain () {
+function productsMain(){
     var result = '';
 
     for (let i = 0; i < model.products.length; i++){
@@ -40,11 +40,11 @@ function productsMain () {
         <div class="front-item front-column">
             <div> 
                 <img class="front-item-image" src="${model.products[i].img}"/>
-                <span class="front-item-title"> ${model.products[i].title}</span>
+                <span class="front-item-title">${model.products[i].title}</span>
                 <p>stock: ${model.products[i].stock}</p>
             </div>
                 <span class="front-price front-column">${model.products[i].price}kr</span>
-                <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til i handlekurv</button>
+                <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til handlekurv</button>
         </div>
 
     `
