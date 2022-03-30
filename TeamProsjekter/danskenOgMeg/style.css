@@ -81,7 +81,7 @@ ul{
   padding-bottom: 10px;
   margin-top: 10px;
 }
-.front-column:nth-child(4n + 1) {
+.front-column:nth-child(3n + 1) {
   clear: left;
   
 }
@@ -270,6 +270,39 @@ ul{
 body {
   background-color: rgba(30, 31, 30, 0.815);
 }
+
+/*----------PAY------------*/
+
+.pay-main {
+  display: flex;
+  float: middle;
+  background-color: #1c6780;
+  border:#333 solid;
+}
+
+.pay-title {
+  background-color: #1c6780;
+  
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pay-form {
+  display: flex;
+  position: relative;
+  
+}
+
 
 /*----------LOGIN------------*/
 .h2Login{
