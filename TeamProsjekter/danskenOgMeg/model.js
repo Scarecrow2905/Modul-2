@@ -256,7 +256,7 @@ const model = {
             category: 'Spiserom',
             categoryId: 12,
             subCategory: 'Spisestuestol',
-            img: '',
+            img: '/testBilder/habdulstol.png',
             description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
             measures: 'Høyde 90cm. Dybde 89cm. Lengde 240cm.',
             color: ['Mørk grønn', ' Beige'],
