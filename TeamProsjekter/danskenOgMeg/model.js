@@ -62,7 +62,7 @@ const model = {
     //Inputs for login og å lage nye brukeretest
     account: {
         users: [
-            { firstName: 'admin', lastName: 'nordmann', phone: 0, email: 'test@test.no', password: 'abc123', id: 1 },
+            { firstName: 'admin', lastName: 'nordmann', phone: 12121212, email: 'test@test.no', password: 'abc123', id: 1 },
             { firstName: 'kåre', lastName: 'nordmann', phone: 0, email: 'fest@test.no', password: 'abcd123', id: 3 },
             { firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
         ],

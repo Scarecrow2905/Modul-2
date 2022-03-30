@@ -185,7 +185,7 @@ function checkLoginStatus(){
 }
 function logOut(){
     if (model.app.click == 1){
-        alert('Are you sure you want to log out?')
+        alert('Are you sure you want to log out? klick again..')
     }if(model.app.click > 1){
         model.app.click = 0;
             model.app.status = false;
