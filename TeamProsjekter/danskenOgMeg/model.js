@@ -1,7 +1,7 @@
 
 const model = {
 
-    text1:"",
+    text1: "",
     fuckLister0: '',
     fuckLister1: '',
     fuckLister2: '',
@@ -12,7 +12,7 @@ const model = {
         // productPrice: 4000,
         // productImg: 'testSofa.jpg', // Midlertidig
         totalPrice: 0,
-        cartProducts:[
+        cartProducts: [
             // {
             //     title: 'Sofa',
             //     price: 6000,
@@ -46,7 +46,7 @@ const model = {
         numberOfItems: 0,
         typeOfDelivery: '',
     },
-    
+
     //App -!-
 
     // Navn på de forskjellige sider.
@@ -62,17 +62,17 @@ const model = {
     account: {
         users: [
             { firstName: 'admin', lastName: 'nordmann', phone: 0, email: 'test@test.no', password: 'abc123', id: 1 },
-            {firstName:'kåre', lastName:'nordmann', phone: 0, email:'fest@test.no', password:'abcd123', id: 3  },
-            {firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
-    ],
+            { firstName: 'kåre', lastName: 'nordmann', phone: 0, email: 'fest@test.no', password: 'abcd123', id: 3 },
+            { firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
+        ],
         // firstName:[],
         // lastName:[],
         phone: '',
-        email: '', 
+        email: '',
         password: '',
         //------
-        newFirstName:'',
-        newLastName:'',
+        newFirstName: '',
+        newLastName: '',
         createNewPhoneNumber: '',
         createNewEmail: '',
         createNewPassword: '',
@@ -81,44 +81,45 @@ const model = {
     //Søkefelt
     frontPage: {
         search: '',
-    }, 
+    },
     //Legge til nye kategorier
-    createCategory:[ 
-        {name: '', id:'', sub:[]},
-        {name: '', id:'', parentId: ''},
+    createCategory: [
+        { name: '', id: '', sub: [] },
+        { name: '', id: '', parentId: '' },
     ],
-        createSubCategory:[ 
-        {categoriName: '', id:'', parentId: ''},
-        
+    createSubCategory: [
+        { categoriName: '', id: '', parentId: '' },
+
     ],
 
     //Legge til nye produkter
     createItems: {
-            title: '',
-            price: 0,
-            stock: 1, 
-            category: '',
-            categoryId: '',
-            subCategory: '',
-            img: '',
-            description: '',
-            measures: '',
-            color: [],
-            country: '',
-            year: '',
+        title: '',
+        price: 0,
+        stock: 1,
+        category: '',
+        categoryId: '',
+        subCategory: '',
+        img: '',
+        description: '',
+        measures: '',
+        color: [],
+        country: '',
+        year: '',
     },
     //Kategorier med forskjellige id og parentId
-    activeSubCategory: [false,false,false,false,false,false,false,false],
+    activeSubCategory: [false, false, false, false, false, false, false, false],
     wasActiveSubCategory: [false, false, false, false, false, false, false, false]
     //OBS ::: Legge til False per kategori/Sub 
     ,
-    categories:[
-        {name: 'Stue', id: 1, 
+    categories: [
+        {
+            name: 'Stue', id: 1,
             sub: [
                 { categoriName: 'Sofa', id: 11, parentId: 1 },
                 { categoriName: 'Sofabord', id: 12, parentId: 1 },
                 { categoriName: 'Sjeselong', id: 14, parentId: 1 },
-                { categoriName: 'Kommoder', id: 15, parentId: 1 }, 
+                { categoriName: 'Kommoder', id: 15, parentId: 1 },
                 { categoriName: 'Hyller', id: 16, parentId: 1 },
                 { categoriName: 'Reol', id: 17, parentId: 1 },
                 { categoriName: 'Pyntegjenstander', id: 18, parentId: 1 },
@@ -206,8 +207,8 @@ const model = {
             ]
         },
     ],
-   
- 
+
+
     // Data -!-
 
     //Betalingsløsninger
@@ -229,10 +230,10 @@ const model = {
         userlevel: 'user'
     },
     ],
-    
+
     //Alle produkter
-    products:[
-        
+    products: [
+
         // Stue
         {
             title: 'Sofa',
@@ -252,17 +253,17 @@ const model = {
         {
             title: 'Spisestuestol',
             price: 3499,
-            stock:4,
+            stock: 4,
             category: 'Spiserom',
             categoryId: 12,
             subCategory: 'Spisestuestol',
-            img: '',
+            img: '/testBilder/habdulstol.png',
             description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
             measures: 'Høyde 90cm. Dybde 89cm. Lengde 240cm.',
             color: ['Mørk grønn', ' Beige'],
             country: 'Sverige',
             year: '1961',
-        },  
+        },
         // Spiserom
         {
             title: 'Kjøkkenbord',
@@ -276,10 +277,10 @@ const model = {
             color: ['Mørk grønn'],
             country: 'Italia',
             year: '1962',
-            },
-            
+        },
+
         // Kjøkken
-        {   
+        {
             title: 'Seng',
             price: 7899,
             stock: 2,
@@ -291,7 +292,7 @@ const model = {
             color: ['metall', 'svart'],
             country: 'Danmark',
             year: '1971',
-        }, 
+        },
         {
             title: 'Badekar',
             price: 9799,
@@ -330,7 +331,7 @@ const model = {
             img: '',
             description: 'Godt brukt, med fortsatt mye bruk igjen. Stått lagret i bod siden 2005.',
             measures: 'Lengde 39cm. Bredde 7cm.',
-            color: ['Red', 'blue','green'],
+            color: ['Red', 'blue', 'green'],
             country: 'uganda',
             year: '1500~',
         },
@@ -344,7 +345,7 @@ const model = {
             img: '',
             description: 'brukt et par ganger',
             measures: 'Lengde 2cm. Bredde 3cm.',
-            color: ['white', 'grey','purple'],
+            color: ['white', 'grey', 'purple'],
             country: 'Denmark',
             year: '1990~',
         },
@@ -358,7 +359,7 @@ const model = {
             img: '',
             description: 'Hele verden rundt siden 1880',
             measures: 'Høyde: 50cm ',
-            color: ['black', 'brown','tan'],
+            color: ['black', 'brown', 'tan'],
             country: 'Denmark',
             year: '1880ca',
         },
