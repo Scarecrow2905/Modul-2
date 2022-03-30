@@ -72,6 +72,7 @@ function addCategory(){
 
 }
 // ------------- Login information ------------
+// Pusher ny bruker inn i modellen.
 function addNewInforToModel(){
     model.account.users.push({firstName: model.account.newFirstName,
         lastName: model.account.newLastName,
@@ -80,34 +81,65 @@ function addNewInforToModel(){
         password: model.account.createNewPassword,
         id: model.idIndex,})
     model.idIndex++;
-   model.app.currentPage = ''; 
-updateView();
-}
-
-function DoThisMailPersonExist(){
-    for (let i = 0; i < model.account.users.length; i++) {
-    if(model.account.email == model.account.users[i].email &&  model.account.password == model.account.users[i].password  ){
-        alert('yippi det finnes!')
-    } else{
-        alert('Noooo finnes ikke!..')
-    }}
+    alert('You can now login with your new accunt. good luck!')
+    model.app.currentPage = 'LoginMail';
+    resettInformation();
     updateView();
 }
+//Sjekker at personens mail  og passord finnes i modellen.
+
+function DoThisMailPersonExist(){
+    let foundUser = false;
+    for (let i = 0; i < model.account.users.length; i++) {
+    if(model.account.email == model.account.users[i].email &&  model.account.password == model.account.users[i].password){
+        model.app.currentUser = model.account.users[i].id;
+        alert('logged inn');
+        foundUser = true;
+        model.app.currentPage = 'FrontPage';
+    } }
+    if (foundUser === false){
+        alert(' finnes ikke!..')    
+    }
+    updateView();
+}
+//Sjekker at personens telefon nummer og passord finnes i modellen.
 function DoThisPhonePersonExist(){
     for (let i = 0; i < model.account.users.length; i++) {
         if(model.account.phone == model.account.users[i].phone &&  model.account.password == model.account.users[i].password ){
-            alert('yippi det finnes!')
+            model.app.currentUser = model.account.users[i].id
+            alert('yippi det finnes!');
+            model.app.currentPage = 'FrontPage';
         } else{
             alert('Noooo finnes ikke!..')
         }}
         updateView();
 }
-function checkPasswordAndMail(){
-if (model.account.createNewPassword != model.account.createNewPasswordCheck){
-    return alert('Password is not the same. Please fix it you stupid');
-} else if(model.account.createNewEmail.includes('@') == false){
-    alert('You have forgotten the "@" you dumbass!')
-} else if(model.account.createNewPassword == model.account.createNewPasswordCheck && model.account.createNewEmail.includes('@')) {
-    updateView();
+// Sjekker at alt er riktig når man lager en ny bruker.
+function checkEverything(){
+    if (model.account.newFirstName == ''){
+        return alert('You have forgotten you´re first name')
+    } else if (model.account.newLastName == ''){
+        return alert('You have forgotten you´re last name')
+    } else if (model.account.createNewEmail.includes('@', '.com','.no','hotmail','gmail') == false){ //
+        return alert('Please enter a right mail adress.')
+    } else if (model.account.createNewPhoneNumber.length < 8){
+        return alert('Too few digital numbers')
+    }  else if (model.account.createNewPassword.length < 4 ){
+        return alert('password need to be at least 4 digits long')
+    }else if (model.account.createNewPassword != model.account.createNewPasswordCheck){
+        return alert('Password is not the same. Please fix it you stupid');
+    }else if(model.account.createNewPassword == model.account.createNewPasswordCheck) {
+        updateView();
+
+    }
 }
+// Nullstill informasjonen om ny bruker.
+function resettInformation(){
+    model.account.newFirstName = '';
+    model.account.newLastName = '';
+    model.account.createNewPhoneNumber = '';
+    model.account.createNewEmail = '';
+    model.account.createNewPassword = '';
+    model.account.createNewPasswordCheck = '';
+    updateView();
 }

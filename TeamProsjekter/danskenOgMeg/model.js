@@ -51,11 +51,11 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'PayPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PayPage | 
+        currentPage: 'createNewAccount', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
-    idIndex: 1,
+    idIndex: 2,
     //Inputs for login og å lage nye brukere
     account: {
         users: [
@@ -67,7 +67,8 @@ const model = {
         // lastName:[],
         phone: '',
         email: '', 
-        password: '' ,
+        password: '',
+        //------
         newFirstName:'',
         newLastName:'',
         createNewPhoneNumber: '',
