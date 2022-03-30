@@ -242,7 +242,7 @@ const model = {
             category: 'Stue',
             categoryId: 11,
             subCategory: 'Sofa',
-            img: 'testBilder\Bilder til nettside\1 Stue\1 Sofa\vintagesofaoker.jpeg',
+            img: 'testBilder/TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
@@ -266,17 +266,17 @@ const model = {
         },
         // Spiserom
         {
-            title: 'Kjøkkenbord',
-            price: 6699,
-            stock: 1,
+            title: 'Vector biker motorsykkel barbord/bardisk - Svart/gylden',
+            price: 35890,
+            stock: 5,
             category: 'Kjøkken',
             categoryId: 21,
             subCategory: 'Kjøkkenbord',
             img: '/testBilder/grupper.png',
-            description: 'Pent brukt, godt lagret.',
-            color: ['Mørk grønn'],
-            country: 'Italia',
-            year: '1962',
+            description: 'Bardisk med plass til både flasker og glass, også med kjøleboks. Stamme i svart metall med fine kontraster til den gyldne fargen. Topplate av mangotre.',
+            color: ['gold', 'gylden'],
+            country: 'Canada',
+            year: '2002',
         },
 
         // Kjøkken
