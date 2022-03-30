@@ -71,6 +71,10 @@ function addCategory(){
     //update view
 
 }
+
+//------------------------------------------------------------------
+
+
 // ------------- Login information ------------
 // Pusher ny bruker inn i modellen.
 function addNewInforToModel(){
