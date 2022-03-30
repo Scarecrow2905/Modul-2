@@ -2,7 +2,7 @@
 function updateViewFront() {
     
     let html = '';
-   
+   // model.app.currentPage = 'LoginMail'
     html += /*html*/`
     <div class="page">
         <div class="header">${Header()}</div>
@@ -10,7 +10,7 @@ function updateViewFront() {
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
                 <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'LoginMail';updateView();">${model.app.showStatus}</button></li>
+                <li class="liteFeltLi"><button onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li> 
             <ul>
         </div>
         <div class="meny">

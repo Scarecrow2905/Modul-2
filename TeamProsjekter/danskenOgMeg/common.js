@@ -59,6 +59,18 @@ function lastName(){
     <div><input class="password" value="${model.account.newLastName}" placeholder="Last name*" type="text" oninput="model.account.newLastName = this.value"/></div>
     `
 }
+function accountInfo(){
+    for (let i = 0; i < model.account.users.length; i++) {
+        if (model.app.currentUser == model.account.users[i].id){
+       return `
+       <div>${model.account.users[i].firstName}</div>
+       <div>${model.account.users[i].lastName}</div>
+       <div>${model.account.users[i].phone}</div>
+       <div>${model.account.users[i].email}</div>
+       <div>${model.account.users[i].password}</div>
+    ` 
+    }
+}}
 
 function login() {
 // if model.account.users[i].email === Input.value = "true" && model.account.users[i].password === input.value = "true"

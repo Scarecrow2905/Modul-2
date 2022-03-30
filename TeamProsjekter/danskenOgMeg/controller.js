@@ -71,7 +71,23 @@ function addCategory(){
     //update view
 
 }
-// ------------- Login information ------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------- Login information ------------------ Login information  ------------------ Login information ------------------ Login information ------------------ Login information ------------------
+
 // Pusher ny bruker inn i modellen.
 function addNewInforToModel(){
     model.account.users.push({firstName: model.account.newFirstName,
@@ -87,7 +103,6 @@ function addNewInforToModel(){
     updateView();
 }
 //Sjekker at personens mail  og passord finnes i modellen.
-
 function DoThisMailPersonExist(){
     let foundUser = false;
     for (let i = 0; i < model.account.users.length; i++) {
@@ -99,7 +114,7 @@ function DoThisMailPersonExist(){
         model.app.currentPage = 'FrontPage';
     } }
     if (foundUser === false){
-        alert(' finnes ikke!..')    
+        alert('User account do not exist.')    
     }
     loggedInnOrNot()
 }
@@ -107,13 +122,16 @@ function DoThisMailPersonExist(){
 function DoThisPhonePersonExist(){
     for (let i = 0; i < model.account.users.length; i++) {
         if(model.account.phone == model.account.users[i].phone &&  model.account.password == model.account.users[i].password ){
-            model.app.currentUser = model.account.users[i].id
-            alert('yippi det finnes!');
+            model.app.currentUser = model.account.users[i].id;
+            alert('logged inn');
+            foundUser = true;
+            model.app.status = true;
             model.app.currentPage = 'FrontPage';
-        } else{
-            alert('Noooo finnes ikke!..')
-        }}
-        updateView();
+        } }
+        if (foundUser === false){
+            alert('User account do not exist.')    
+        }
+        loggedInnOrNot()
 }
 // Sjekker at alt er riktig når man lager en ny bruker.
 function checkEverything(){
@@ -131,7 +149,6 @@ function checkEverything(){
         return alert('Password is not the same. Please fix it you stupid');
     }else if(model.account.createNewPassword == model.account.createNewPasswordCheck) {
         updateView();
-
     }
 }
 // Nullstill informasjonen om ny bruker.
@@ -144,16 +161,37 @@ function resettInformation(){
     model.account.createNewPasswordCheck = '';
     updateView();
 }
-
+// Sjekker om du er logget inn, og hvilken  som er currentUser, for hvilket navn som skal komme opp.
 function loggedInnOrNot(){
     for (let i = 0; i < model.account.users.length; i++) {        
     if (model.app.status == false){
-        model.app.showStatus = 'Logg inn'
+        model.app.showStatus = 'Logg inn';  
     } else if (model.app.status == true){
         if (model.app.currentUser == model.account.users[i].id){
-        model.app.showStatus = model.account.users[i].firstName + ' ' + model.account.users[i].lastName
+        model.app.showStatus = model.account.users[i].firstName + ' ' + model.account.users[i].lastName;
         }
     }
 }
  updateView();
 }
+function checkLoginStatus(){
+    if(model.app.status == false){
+        model.app.currentPage = 'LoginMail';
+    } else if (model.app.status == true){
+        model.app.currentPage = 'accountInfo';
+    }
+    // model.app.currentPage = 'FrontPage'
+    updateView();
+}
+function logOut(){
+    if (model.app.click == 1){
+        alert('Are you sure you want to log out?')
+    }if(model.app.click > 1){
+        model.app.click = 0;
+            model.app.status = false;
+            model.app.showStatus = 'Logg inn'; 
+            model.app.currentPage ='FrontPage';
+
+        } 
+        updateView();
+    }

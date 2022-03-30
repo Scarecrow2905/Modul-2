@@ -55,6 +55,7 @@ const model = {
         currentUser: 0,
         status: false,
         showStatus: 'Logg inn',
+        click: 0,
     },
     //Inputs -!-
     idIndex: 2,

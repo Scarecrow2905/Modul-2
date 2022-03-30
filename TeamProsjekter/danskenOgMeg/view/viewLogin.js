@@ -128,7 +128,25 @@ function updateViewNewAccount(){
 </div>`
 return html;
 }
-
+function updateViewAccountInfo(){
+    html = `
+    <div class="loginPage">
+        <div class="headerL">${Header()}</div>
+        <div class="smalLinje">
+            <ul>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'FrontPage'; updateView()";>Back</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.click++; logOut()";>Log Out</button></li> 
+            <ul>
+        </div>
+        <div class="menyL">${accountInfo()}</div>
+        <div class="innholdL"></div>
+        <div class="innhold1L"></div>
+        <div class="footerL">footer</div>
+    </div>
+    `
+    return html;
+}
 
 
 
