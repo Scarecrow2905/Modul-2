@@ -28,7 +28,7 @@ function password(){
 `
 }
 
-// ----------- Create New -----------------------------
+// ----------- Create New Login User -----------------------------
 function newMail(){
     return `
     <div><input class="username" value="${model.account.createNewEmail}" placeholder="E-post*" type="email" oninput="model.account.createNewEmail = this.value"/></div>

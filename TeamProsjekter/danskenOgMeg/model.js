@@ -51,22 +51,23 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'createNewAccount', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
         currentUser: '',
     },
     //Inputs -!-
-    idIndex: 1,
+    idIndex: 2,
     //Inputs for login og å lage nye brukere
     account: {
-        users:[{firstName:'admin', lastName:'nordmann', phone: 0, email:'test@test.no', password:'abc123', id: 0  },
-        {firstName:'kåre', lastName:'nordmann', phone: 0, email:'fest@test.no', password:'abcd123', id: 0  },
-        {firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 0 },
+        users:[{firstName:'admin', lastName:'nordmann', phone: 0, email:'test@test.no', password:'abc123', id: 1  },
+        // {firstName:'kåre', lastName:'nordmann', phone: 0, email:'fest@test.no', password:'abcd123', id: 3  },
+        // {firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
     ],
         // firstName:[],
         // lastName:[],
         phone: '',
         email: '', 
-        password: '' ,
+        password: '',
+        //------
         newFirstName:'',
         newLastName:'',
         createNewPhoneNumber: '',
