@@ -242,7 +242,7 @@ const model = {
             category: 'Stue',
             categoryId: 11,
             subCategory: 'Sofa',
-            img: 'testSofa.jpg',
+            img: 'testBilder\Bilder til nettside\1 Stue\1 Sofa\vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
