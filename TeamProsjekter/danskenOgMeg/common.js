@@ -63,11 +63,11 @@ function accountInfo(){
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.currentUser == model.account.users[i].id){
        return `
-       <div>${model.account.users[i].firstName}</div>
-       <div>${model.account.users[i].lastName}</div>
-       <div>${model.account.users[i].phone}</div>
-       <div>${model.account.users[i].email}</div>
-       <div>${model.account.users[i].password}</div>
+       <div>First Name:${model.account.users[i].firstName}</div>
+       <div> Last Name:${model.account.users[i].lastName}</div>
+       <div> Phone Number:${model.account.users[i].phone}</div>
+       <div>Mail Adress:${model.account.users[i].email}</div>
+       <div>Your Password:${model.account.users[i].password}</div>
     ` 
     }
 }}
