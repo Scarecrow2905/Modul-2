@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="model.js"></script>
+    <!-----------------Views------------------------>
     <script src="view/viewCart.js"></script>
     <script src="view/viewLogin.js"></script>
     <script src="view/viewFront.js"></script>
     <script src="view/viewPay.js"></script>
+    <script src="view/viewProduct.js"></script>
+
+    <!----------functions-------------->
     <script src="common.js"></script>
     <script src="controller.js"></script>
+
+    <!---------------Styles----------------------->
     <link rel="stylesheet" href="grid.css"/>
     <link rel="stylesheet" href="style.css"/>
 
@@ -35,6 +41,7 @@
         else if (page === 'viewNewAccount') html = updateViewNewAccount();
         else if (page === 'accountInfo') html = updateViewAccountInfo();
         else if (page === 'PayPage') html = updateViewPay();
+        else if (page === 'viewProduct') html = viewProduct();
         appDiv.innerHTML = html;
     } 
     </script>
