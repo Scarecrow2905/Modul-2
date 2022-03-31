@@ -49,7 +49,7 @@ ul{
   width:75%;
 }
 .sublist:hover{
-  background-color: black;
+  background-color: rgb(119, 95, 161);
   color: rgb(197, 233, 241);
 }
 
