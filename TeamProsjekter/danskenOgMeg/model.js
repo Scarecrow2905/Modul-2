@@ -9,14 +9,13 @@ const model = {
     fuckLister4: '',
 
     shoppingCart: {
-        // productPrice: 4000,
-        // productImg: 'testSofa.jpg', // Midlertidig
+
         totalPrice: 0,
         cartProducts: [
             // {
             //     title: 'Sofa',
             //     price: 6000,
-            //     stock: 69,
+            //     s tock: 69,
             //     category: 'Stue',
             //     categoryId: 11,
             //     subCategory: 'Store ting',
@@ -51,17 +50,18 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PayPage | 
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | 
         currentUser: 0,
         status: false,
         showStatus: 'Logg inn',
+        click: 0,
     },
     //Inputs -!-
     idIndex: 2,
     //Inputs for login og å lage nye brukeretest
     account: {
         users: [
-            { firstName: 'admin', lastName: 'nordmann', phone: 0, email: 'test@test.no', password: 'abc123', id: 1 },
+            { firstName: 'admin', lastName: 'nordmann', phone: 12121212, email: 'test@test.no', password: 'abc123', id: 1 },
             { firstName: 'kåre', lastName: 'nordmann', phone: 0, email: 'fest@test.no', password: 'abcd123', id: 3 },
             { firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
         ],
@@ -236,13 +236,13 @@ const model = {
 
         // Stue
         {
-            title: 'Sofa',
-            price: 8999,
+            title: 'Midlertidlig-Produkt 1',
+            price: 9999,
             stock: 2,
             category: 'Stue',
             categoryId: 11,
             subCategory: 'Sofa',
-            img: 'testBilder/TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
@@ -251,13 +251,13 @@ const model = {
         },
 
         {
-            title: 'Spisestuestol',
-            price: 3499,
+            title: 'Midlertidlig-Produkt 2',
+            price: 8888,
             stock: 4,
             category: 'Spiserom',
             categoryId: 12,
             subCategory: 'Spisestuestol',
-            img: '/testBilder/habdulstol.png',
+            img: 'TempBilder/2Spiserom/1stoler/habdulstol.png',
             description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
             measures: 'Høyde 90cm. Dybde 89cm. Lengde 240cm.',
             color: ['Mørk grønn', ' Beige'],
@@ -266,13 +266,13 @@ const model = {
         },
         // Spiserom
         {
-            title: 'Vector biker motorsykkel barbord/bardisk - Svart/gylden',
-            price: 35890,
+            title: 'Midlertidlig-Produkt 3',
+            price: 44444,
             stock: 5,
             category: 'Kjøkken',
             categoryId: 21,
             subCategory: 'Kjøkkenbord',
-            img: '/testBilder/grupper.png',
+            img: 'TempBilder/3Kjøkken/Tempkitchentable/8729f31b63ae4f033a520009b94acd6048-removebg-preview.png',
             description: 'Bardisk med plass til både flasker og glass, også med kjøleboks. Stamme i svart metall med fine kontraster til den gyldne fargen. Topplate av mangotre.',
             color: ['gold', 'gylden'],
             country: 'Canada',
@@ -280,27 +280,28 @@ const model = {
         },
 
         // Kjøkken
+
         {
-            title: 'Seng',
-            price: 7899,
-            stock: 2,
+            title: 'Midlertidlig-Produkt 4',
+            price: 8888,
+            stock: 12,
             category: 'Soverom',
             categoryId: 32,
             subCategory: 'Seng',
-            img: '/testBilder/80svintagebord.jpeg',
+            img: 'TempBilder/1Stue/2Sofabord/80svintagebord.jpeg',
             description: '',
             color: ['metall', 'svart'],
             country: 'Danmark',
             year: '1971',
         },
         {
-            title: 'Badekar',
-            price: 9799,
+            title: 'Midlertidlig-Produkt 5',
+            price: 8888,
             stock: 3,
             category: 'Bad',
             categoryId: 51,
             subCategory: 'Badekar',
-            img: '',
+            img: 'TempBilder/1Stue/4Kommoder/kommodevin.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde 80cm. Dybde 50cm.',
             color: ['Oker Gul'],
@@ -308,13 +309,13 @@ const model = {
             year: '2017',
         },
         {
-            title: 'Garderobeskap',
+            title: 'Midlertidlig-Produkt 6 ',
             price: 8899,
             stock: 2,
             category: 'Gang',
             categoryId: 62,
             subCategory: 'Gardeobeskap',
-            img: '',
+            img: 'TempBilder/1Stue/4Kommoder/retroskjenk.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde 80cm. Dybde 50cm.',
             color: ['Oker Gul'],
@@ -322,13 +323,13 @@ const model = {
             year: '2006',
         },
         {
-            title: 'Kjole',
+            title: 'Midlertidlig-Produkt 7',
             price: 2999,
             stock: 1,
             category: 'Klær',
             categoryId: 71,
             subCategory: 'Kjoler',
-            img: '',
+            img: 'TempBilder/1Stue/2Sofabord/vintagemosaikkbord.jpeg',
             description: 'Godt brukt, med fortsatt mye bruk igjen. Stått lagret i bod siden 2005.',
             measures: 'Lengde 39cm. Bredde 7cm.',
             color: ['Red', 'blue', 'green'],
@@ -336,13 +337,13 @@ const model = {
             year: '1500~',
         },
         {
-            title: 'Støvletter',
+            title: 'Midlertidlig-Produkt 8',
             price: 12500,
             stock: 1,
             category: 'Sko',
             categoryId: 101,
             subCategory: 'Støvletter',
-            img: '',
+            img: 'TempBilder/1Stue/3Sjeselong/vintagesjesbrownleather.jpeg',
             description: 'brukt et par ganger',
             measures: 'Lengde 2cm. Bredde 3cm.',
             color: ['white', 'grey', 'purple'],
@@ -350,13 +351,13 @@ const model = {
             year: '1990~',
         },
         {
-            title: ' Globus 1',
+            title: ' Midlertidlig-Produkt 9',
             price: 4999,
             stock: 2,
             category: 'Lesesal',
             categoryId: 102,
             subCategory: '',
-            img: '',
+            img: 'TempBilder/2Spiserom/5Pyntegjenstander/vintagekaraffel.jpeg',
             description: 'Hele verden rundt siden 1880',
             measures: 'Høyde: 50cm ',
             color: ['black', 'brown', 'tan'],

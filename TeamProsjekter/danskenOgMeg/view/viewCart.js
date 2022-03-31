@@ -6,7 +6,8 @@ function updateViewCart(){
 
     <div class="cart-navigation">
     <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</button>
+    <button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button>
+
     </div>
 
     <div class="newProduct">

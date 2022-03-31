@@ -12,7 +12,7 @@ function updateViewLoginWithMail(){
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
-                <div> <p class="paragraphMail">E-MAIL</p>
+                <div> <p class="paragraphMail"><b>MAIL</b></p>
                       <p class="paragraphLogin">OR</p>
                       <p onclick="model.app.currentPage = 'LoginPhone'; updateView()" class="Phone">PHONE</p></div>
                 <div  class="usernamePosition">${mail()}</div>
@@ -46,9 +46,9 @@ function updateViewLoginWithPhone(){
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
-                <div><p onclick="model.app.currentPage = 'LoginMail'; updateView()"  class="Phone">E- MAIL</p>
+                <div><p onclick="model.app.currentPage = 'LoginMail'; updateView()"  class="Phone">MAIL</p>
                 <p class="paragraphLogin">OR</p>
-                <p class="paragraphMail">PHONE</p></div>
+                <p class="paragraphMail"><b>PHONE</b></p></div>
                 <div class="usernamePosition">${phone()}</div>
                 <div class="passwordPosition">${password()}</div>
                 <div><button class="loginButton" onclick="DoThisPhonePersonExist(); model.account.password = ''">Log inn</button></div>
@@ -127,6 +127,25 @@ function updateViewNewAccount(){
     <div class="footerL">footer</div>
 </div>`
 return html;
+}
+function updateViewAccountInfo(){
+    html = `
+    <div class="loginPage">
+        <div class="headerL">${Header()}</div>
+        <div class="smalLinje">
+            <ul>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'FrontPage'; updateView()";>Back</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+                <li class="liteFeltLi"><button onclick="model.app.click++; logOut()";>Log Out</button></li> 
+            <ul>
+        </div>
+        <div class="menyL">${accountInfo()}</div>
+        <div class="innholdL"></div>
+        <div class="innhold1L"></div>
+        <div class="footerL">footer</div>
+    </div>
+    `
+    return html;
 }
 
 

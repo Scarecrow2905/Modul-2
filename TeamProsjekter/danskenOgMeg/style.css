@@ -54,42 +54,70 @@ ul{
 }
 
 /*------------FrontPage - Produkter------------*/
+.rows{
+  float:left;
+  width: 20%;
+  height: auto;
+  margin-top:2%;
+  margin-left:1%;
+  font-size:1rem;
+  padding:10px;
+}
+.first{
+  clear:left;
+}
+.stock{
+  font-size:0.9rem;
+}
 
+.front-price {
+  width:5%;
+  font-size: 1rem;
+  color: red;
+  text-decoration: underline;
+
+}
+/*-----------*/
 .front-row {
   display: flex;
+  
   flex-direction: column;
 }
 
-.front-item {
+/* .front-item {
   width: 20%;
   height: auto;
   margin-top: 5px;
   margin-left: 5px;
-}
+} */
 
 .front-item-title {
-  color: #333;
-  margin-left: .5em;
+  color: red;
+  /* margin-left: .5em; */
   font-size: 1.2em;
 }
 
 .front-column {
-  position: relative;
-  float: left;
+  /* position: relative; */
+  /* float: left; */
   align-items: center;
-  margin-right: 1.5em;
+  /* margin-right: 1.5em; */
   padding-bottom: 10px;
   margin-top: 10px;
 }
-.front-column:nth-child(3n + 1) {
+ /* .front-column:nth-child(3n + 1) {
   clear: left;
   
+}  */
+.front-item-btn{
+  margin:0px;
+  padding:0px;
 }
-
 .front-item-image {
-  display:flex;
-  width: 60%;
-  height: auto;
+  /* display:flex; */
+  width:13em;
+  
+  height: 10em;
   border-radius: 10px;
   border: solid black 1px;
   margin-bottom: 2px;
