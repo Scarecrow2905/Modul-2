@@ -54,41 +54,65 @@ ul{
 }
 
 /*------------FrontPage - Produkter------------*/
+.rows{
+  float:left;
+  margin-top:2%;
+  margin-left:1%;
+  font-size:1rem;
+  padding:10px;
+}
+.first{
+  clear:left;
+}
+.stock{
+  font-size:0.9rem;
+}
 
+.front-price {
+  width:5%;
+  font-size: 1rem;
+  color: red;
+  text-decoration: underline;
+
+}
+/*-----------*/
 .front-row {
   display: flex;
   flex-direction: column;
 }
 
-.front-item {
+/* .front-item {
   width: 20%;
   height: auto;
   margin-top: 5px;
   margin-left: 5px;
-}
+} */
 
 .front-item-title {
-  color: #333;
-  margin-left: .5em;
+  color: red;
+  /* margin-left: .5em; */
   font-size: 1.2em;
 }
 
 .front-column {
-  position: relative;
-  float: left;
+  /* position: relative; */
+  /* float: left; */
   align-items: center;
-  margin-right: 1.5em;
+  /* margin-right: 1.5em; */
   padding-bottom: 10px;
   margin-top: 10px;
 }
-.front-column:nth-child(3n + 1) {
+ /* .front-column:nth-child(3n + 1) {
   clear: left;
   
+}  */
+.front-item-btn{
+  margin:0px;
+  padding:0px;
 }
-
 .front-item-image {
-  display:flex;
-  width: 60%;
+  /* display:flex; */
+  max-width:30%;
   height: auto;
   border-radius: 10px;
   border: solid black 1px;
@@ -96,35 +120,7 @@ ul{
 
 }
 
-.front-price {
-  width:5%;
-  font-size: 1.2em;
-  color: #333;
-  
-}
-/* .drit:hover{
-  background-color: pink;
-  border: 1px solid black;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  left:75px;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-} */
+
 
 /* *************HANDLEKURV************* */
 
