@@ -4,7 +4,7 @@ body {
     padding:0;
 } 
 .page{
-    background-color: yellow;
+    background-color: rgb(192, 169, 236);
     height: 100vh;
     display:grid;
     grid-template-columns: 2fr 7fr 3fr  ;
@@ -25,11 +25,11 @@ body {
 }
 
 div.header {
-    background-color: rgb(189, 207, 243);
+    background-color: rgb(189, 206, 243);
     grid-area: header;
 }
 div.meny {
-    background-color:seagreen;
+    background-color:rgb(189, 207, 243);
     grid-area: meny;
 }
 div.innhold {
@@ -37,11 +37,11 @@ div.innhold {
     grid-area: innhold;
 }
 div.liteFelt {
-    background-color:white;
+    background-color:rgb(189, 207, 243);
     grid-area: liteFelt;
 }
 div.footer {
-    background-color:blue;
+    background-color:rgb(189, 207, 243);
     grid-area: footer;
 }
 
