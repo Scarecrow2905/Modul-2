@@ -51,7 +51,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PayPage | 
         currentUser: 0,
         status: false,
         showStatus: 'Logg inn',

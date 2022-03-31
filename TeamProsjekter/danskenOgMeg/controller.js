@@ -161,3 +161,7 @@ function loggedInnOrNot(){
 }
  updateView();
 }
+
+
+// ----------PayPage-----------
+

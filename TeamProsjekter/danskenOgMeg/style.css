@@ -102,29 +102,6 @@ ul{
   color: #333;
   
 }
-/* .drit:hover{
-  background-color: pink;
-  border: 1px solid black;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  left:75px;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-} */
 
 /* *************HANDLEKURV************* */
 
@@ -273,34 +250,73 @@ body {
 
 /*----------PAY------------*/
 
-.pay-main {
-  display: flex;
-  float: middle;
-  background-color: #1c6780;
-  border:#333 solid;
-}
-
-.pay-title {
-  background-color: #1c6780;
-  
+.pay-page {
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  min-height: 100vh;
+  background: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 60px;
 }
 
-.pay-form {
+.container form {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0.1);
+  padding: 20px;
+  width: 600px;
+}
+
+.container form .inputBox {
+  margin-top: 20px;
+}
+
+.container form .inputBox span {
+  display: block;
+  color: #999;
+  padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border:1px solid rgba(0,0,0.1);
+  color: #444;
+}
+
+.container form .flexbox {
   display: flex;
-  position: relative;
-  
+  gap: 15px;
+}
+
+.container form .flexbox .inputBox {
+  flex: 1 1 150px;
+}
+
+.container form .submit-btn {
+  width: 100%;
+  background: linear-gradient(45deg, rgb(81, 128, 129), rgb(15, 59, 80));
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 2.s linear;
+  break-before: 5px;
+  border-radius: 5px;
 }
 
 

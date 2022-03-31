@@ -18,7 +18,7 @@ function updateViewCart(){
     <strong class="cart-total-title">Totalt</strong>
     <span class="cart-total-price">${model.shoppingCart.totalPrice} kr </span>
 
-    <button class="btn-buy" onclick="purchase()"> Kjøp</button>
+    <button class="btn-buy" onclick="model.app.currentPage = 'PayPage';updateView()"> Kjøp</button>
     </div>
 
 </div>

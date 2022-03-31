@@ -1,84 +1,75 @@
 function updateViewPay(){
 html = `
-    <div class="pay-main">
-        <div class="pay-title"> 
-        <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
-        <div> Total ${model.shoppingCart.totalPrice},- 
-        </div>
+<div class="pay-page">
+<div class="container">
+<form action="">
+<button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake til forside</button>
+<button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlekurv</button>
+            <div class="inputBox">
+                <span>Kortnummer</span>
+                <input type="text" maxlength="16" class="card-number-input">
+            </div>
 
-        <div class="pay-checkbox"> 
-        <label class="container"> Kort
-            <input id="card" type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
+            <div class="inputBox">
+            <span>Navn på kortholder</span>
+            <input type="text" class="card-holder-input">
+            
 
-        <label class="container"> PayPal
-            <input id="PayPal" type="checkbox">
-            <span class="checkmark"></span>
-        </label>
+            <div class="flexbox">
+            <div class="inputBox">
+                <span>Utgåelse Måned</span>
+                <select name="" id="" class="month-input">
+                    <option value="month" selected disabled>Måned</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            
+            </div>
 
-        <label class="container"> Vipps
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-        </div>
+            <div class="inputBox">
+                <span>Utgåelse år</span>
+                <select name="" id="" class="year-input">
+                    <option value="year" selected disabled>År</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            
 
-        <div class="pay-form">
+            <div class="inputbox">
+            <span>cvv</span>
+            <input type="text" maxlength="4" class="cvv-input">
+            </div>
 
-        <form action="receipt.php" method="post" id="the-form">
-        <div class="input input-text half-width">
-        <span class="input-label">Fornavn</span>
-        <input class="input-field" type="text" placeholder="Jon" name="fname" autofocus>
-        </div>
-
-        <div class="input" input-text half-width">
-        <span class="input-label">Etternavn</span>
-        <input class="input-field" type="text" placeholder="Brun" name="lname">
-        </div>
-
-        <div class="input" input-text full width">
-        <span class="input-label>E-post adresse</span>
-        <input class="input-field" type="text" placeholder="someone@example.com" name="email">
-        </div>
-
-        <div class="input input-text full-width">
-        <span class="input-label">Kortnummer</span>
-        <input class="input-field" type="text" placeholder="0000 0000 0000 0000">
-        <div id="ccnumber"></div>
-        </div>
-
-        <div class="input input-text half-width">
-        <span class="input-label">Utløpsdato</span>
-        <input class="input-field" type="numbers" placeholder="10 / 12">
-        <div id="ccexp"></div>
-        </div>
-
-        <div class="input input-text half-width">
-        <span class="input-label">CVV</span>
-        <input class="input-field" type"numbers" placeholder="123">
-        <div id="cvv"></div>
-
-        
-        </div>
-        
-        
-        <button class="btn-buy" onclick="purchase()"> Kjøp</button>
-
-
-
-
+            <input type="submit" value="submit" class="submit-btn">
+        </form>
     </div>
+</div>
 
+    `
     
-
-`
-
-
+    return html;
+    };
 
 
 
-return html;
-};
+
 
 
 /*<head>
@@ -177,4 +168,126 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="pay-checkbox"> 
+        <label class="container"> Kort
+            <input id="card" type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="container"> PayPal
+            <input id="PayPal" type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+
+        <label class="container"> Vipps
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+
+    <div class="pay-form">
+
+        
+        <div class="input input-fName">
+        <span class="input-label">Fornavn</span>
+        <input class="input-field" type="text" placeholder="Jon" name="fname" autofocus>
+        </div>
+
+        <div class="input input-lName">
+        <span class="input-label">Etternavn</span>
+        <input class="input-field" type="text" placeholder="Brun" name="lname">
+        </div>
+
+        <div class="input input-email">
+        <span class="input-label>E-post adresse</span>
+        <input class="input-field" type="text" placeholder="someone@example.com" name="email">
+        </div>
+
+        <div class="input input-cardNmb">
+        <span class="input-label">Kortnummer</span>
+        <input class="input-field" type="text" placeholder="0000 0000 0000 0000">
+        <div id="ccnumber"></div>
+        </div>
+
+        <div class="input input-expiration">
+        <span class="input-label">Utløpsdato</span>
+        <input class="input-field" type="numbers" placeholder="10 / 12">
+        <div id="ccexp"></div>
+        </div>
+
+        <div class="input input-cvv">
+        <span class="input-label">CVV</span>
+        <input class="input-field" type"numbers" placeholder="123">
+        <div id="cvv"></div>
+
+        
+    </div>
+        
+        
+        <button class="btn-buy" onclick="purchase()"> Kjøp</button>
+
+
+
+
+
+
+        <div class="pay-main">
+        <div class="pay-title"> 
+        <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
+        <div> Total ${model.shoppingCart.totalPrice},- </div>
+    
+
+    <div class="pay-form">
+
+        
+    <div class="input input-fName">
+    <span class="input-label">Fornavn</span>
+    <input class="input-field" type="text" placeholder="Jon" name="fname" autofocus>
+    </div>
+
+    <div class="input input-lName">
+    <span class="input-label">Etternavn</span>
+    <input class="input-field" type="text" placeholder="Brun" name="lname">
+    </div>
+
+    <div class="input input-email">
+    <span class="input-label>E-post adresse</span>
+    <input class="input-field" type="text" placeholder="someone@example.com" name="email">
+    </div>
+
+    <div class="input input-cardNmb">
+    <span class="input-label">Kortnummer</span>
+    <input class="input-field" type="text" placeholder="0000 0000 0000 0000">
+    
+    </div>
+
+    <div class="input input-expiration">
+    <span class="input-label">Utløpsdato</span>
+    <input class="input-field" type="numbers" placeholder="10 / 12">
+    
+    </div>
+
+    <div class="input input-cvv">
+    <span class="input-label">CVV</span>
+    <input class="input-field" type"numbers" placeholder="123">
+    
+
+    
+    </div>
+      
+</div>
 */
