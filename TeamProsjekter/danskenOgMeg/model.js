@@ -9,8 +9,7 @@ const model = {
     fuckLister4: '',
 
     shoppingCart: {
-        // productPrice: 4000,
-        // productImg: 'testSofa.jpg', // Midlertidig
+
         totalPrice: 0,
         cartProducts: [
             // {
@@ -243,7 +242,7 @@ const model = {
             category: 'Stue',
             categoryId: 11,
             subCategory: 'Sofa',
-            img: 'testBilder/TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
@@ -258,7 +257,7 @@ const model = {
             category: 'Spiserom',
             categoryId: 12,
             subCategory: 'Spisestuestol',
-            img: '/testBilder/habdulstol.png',
+            img: 'TempBilder/2Spiserom/1stoler/habdulstol.png',
             description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
             measures: 'Høyde 90cm. Dybde 89cm. Lengde 240cm.',
             color: ['Mørk grønn', ' Beige'],
@@ -273,7 +272,7 @@ const model = {
             category: 'Kjøkken',
             categoryId: 21,
             subCategory: 'Kjøkkenbord',
-            img: '/testBilder/grupper.png',
+            img: 'TempBilder/3Kjøkken/Tempkitchentable/8729f31b63ae4f033a520009b94acd6048-removebg-preview.png',
             description: 'Bardisk med plass til både flasker og glass, også med kjøleboks. Stamme i svart metall med fine kontraster til den gyldne fargen. Topplate av mangotre.',
             color: ['gold', 'gylden'],
             country: 'Canada',
