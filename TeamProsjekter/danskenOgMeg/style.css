@@ -119,7 +119,13 @@ ul{
 }  */
 .front-item-btn{
   margin:0px;
-  padding:0px;
+  padding:5px;
+  color: white;
+  background-color: rgb(119, 95, 161);
+  border: none;
+  border-radius: .3em;
+  height: 34px;
+  width: 100%;
 }
 .front-item-image {
   /* display:flex; */
