@@ -22,8 +22,14 @@ ul{
 }
 .header{
   text-align:center;
+  margin:0px;
+  padding:0px;
   color: rgb(119, 95, 161);
-  font-size: largest;
+  /* font-size: largest; */
+}
+.smallerHeader{
+  margin:0px;
+  padding:0px;
 }
 .footer {
   grid-area: footer;

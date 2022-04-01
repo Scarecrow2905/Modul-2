@@ -54,7 +54,6 @@ function make(index){
         else{
             html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
         }
-
     }
     model.viewMenyCategories = html;
     updateView();
@@ -66,9 +65,8 @@ function addCategory(){
     model.activeSubCategory.push(false) 
     // model.wasActiveSubCategory.push(false) 
 }
-
+// Legger til bilder på forsiden. Gjør sånn at man får opp spesifikke bilder etter hvilken kategori man trykker på.
 function viewStuff(index){
-
     model.viewProductsHere = "";
     let html = "";
     for (let i = 0; i < model.products.length; i++){  
@@ -101,57 +99,6 @@ function viewStuff(index){
         model.viewProductsHere = html;
         updateView();
 }
-
-
-function ViewMyProducts(){
-var result = '';
-for (let i = 0; i < model.viewProductsHere.length; i++){
-    let first = i % 3 == 0 ? 'first' : '';
-result = /*html*/ `
-<div class="rows ${first}">
-    <img class="front-item-image" src="${ model.viewProductsHere[i].img}"/>
-    <div class="front-item-title">${ model.viewProductsHere.title}</div>
-    <div class="front-price">${ model.viewProductsHere.price}kr</div>
-    <div class="stock">stock: ${ model.viewProductsHere.stock}</div>
-    <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til handlekurv</button>
-</div>
-
-`
-}
-return result;
-
-}
-
-
-function ViewMyProductsa(){
-    var result = '';
-    for (let i = 0; i < model.products.length; i++){
-        let first = i % 3 == 0 ? 'first' : '';
-    result += /*html*/`
-    
-        <div class="rows ${first}">
-            <img class="front-item-image" src="${model.products[i].img}"/>
-            <div class="front-item-title">${model.products[i].title}</div>
-            <div class="front-price">${model.products[i].price}kr</div>
-            <div class="stock">stock: ${model.products[i].stock}</div>
-            <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til handlekurv</button>
-        </div>
-
-    `
-    }
-    
-    return result;
-}
-
-
-
-
-
-
-
-
-
-
 
 // ------------- Login information ------------------ Login information  ------------------ Login information ------------------ Login information ------------------ Login information ------------------
 
