@@ -22,6 +22,8 @@ ul{
 }
 .header{
   text-align:center;
+  color: rgb(119, 95, 161);
+  font-size: largest;
 }
 .footer {
   grid-area: footer;
@@ -79,7 +81,7 @@ ul{
 .front-price {
   width:5%;
   font-size: 1rem;
-  color: red;
+  color: #333;
   text-decoration: underline;
 
 }
@@ -98,7 +100,7 @@ ul{
 } */
 
 .front-item-title {
-  color: red;
+  color: #333;
   /* margin-left: .5em; */
   font-size: 1.2em;
 }

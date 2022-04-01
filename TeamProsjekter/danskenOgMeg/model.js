@@ -121,8 +121,8 @@ const model = {
                 { categoriName: 'Sjeselong', id: 14, parentId: 1 },
                 { categoriName: 'Kommoder', id: 15, parentId: 1 },
                 { categoriName: 'Hyller', id: 16, parentId: 1 },
-                { categoriName: 'Reol', id: 17, parentId: 1 },
-                { categoriName: 'Pyntegjenstander', id: 18, parentId: 1 },
+                { categoriName: 'Reoler', id: 17, parentId: 1 },
+                { categoriName: 'Interiør', id: 18, parentId: 1 },
                 { categoriName: 'Tekstil', id: 19, parentId: 1 },
             ]
         },
@@ -131,11 +131,12 @@ const model = {
             sub: [
                 { categoriName: 'Spisebord', id: 21, parentId: 2 },
                 { categoriName: 'Spisestuestoler', id: 22, parentId: 2 },
-                { categoriName: 'Reol-ER', id: 23, parentId: 2 },
+                { categoriName: 'Reoler', id: 23, parentId: 2 },
                 { categoriName: 'Kommode', id: 24, parentId: 2 },
                 { categoriName: 'Skjenk', id: 25, parentId: 2 },
                 { categoriName: 'Kommode', id: 26, parentId: 2 },
-                { categoriName: 'Tekstil', id: 27, parentId: 2 },
+                { categoriName: 'Interiør', id: 27, parentId: 2 },
+                { categoriName: 'Tekstil', id: 28, parentId: 2 },
 
             ]
         },
@@ -144,7 +145,7 @@ const model = {
                 { categoriName: 'Kjøkkenbord', id: 31, parentId: 3 },
                 { categoriName: 'Kjøkkenstoler', id: 32, parentId: 3 },
                 { categoriName: 'Hyller', id: 33, parentId: 3 },
-                { categoriName: 'Pyntegjenstander', id: 35, parentId: 3 },
+                { categoriName: 'Interiør', id: 35, parentId: 3 },
                 { categoriName: 'Tekstil', id: 36, parentId: 3 },
             ]
         },
@@ -154,7 +155,7 @@ const model = {
                 { categoriName: 'Nattbord', id: 42, parentId: 4 },
                 { categoriName: 'Kommoder', id: 43, parentId: 4 },
                 { categoriName: 'Garderobeskap', id: 44, parentId: 4 },
-                { categoriName: 'Pyntegjenstander', id: 45, parentId: 4 },
+                { categoriName: 'Interiør', id: 45, parentId: 4 },
                 { categoriName: 'Tekstil', id: 46, parentId: 4 },
             ]
         },
@@ -162,8 +163,8 @@ const model = {
             name: 'Bad', id: 5, sub: [
                 { categoriName: 'Badekar', id: 51, parentId: 5 },
                 { categoriName: 'Vaskebrett', id: 52, parentId: 5 },
-                { categoriName: 'Baderomsinnredning', id: 53, parentId: 5 },
-                { categoriName: 'Pyntegjenstander', id: 54, parentId: 5 },
+                { categoriName: 'Innredning', id: 53, parentId: 5 },
+                { categoriName: 'Interiør', id: 54, parentId: 5 },
                 { categoriName: 'Tekstil', id: 55, parentId: 5 },
             ]
         },
@@ -172,7 +173,7 @@ const model = {
                 { categoriName: 'Sko oppbevaring', id: 61, parentId: 6 },
                 { categoriName: 'Garderobeskap', id: 62, parentId: 6 },
                 { categoriName: 'Hattehyller', id: 63, parentId: 6 },
-                { categoriName: 'Pyntegjenstander', id: 64, parentId: 6 },
+                { categoriName: 'Interiør', id: 64, parentId: 6 },
                 { categoriName: 'Tekstil', id: 65, parentId: 6 },
             ]
         },
@@ -202,7 +203,7 @@ const model = {
                 { categoriName: 'Godstol', id: 91, parentId: 9 },
                 { categoriName: 'Bokhyller', id: 92, parentId: 9 },
                 { categoriName: 'Avlastningsbord', id: 93, parentId: 9 },
-                { categoriName: 'Pyntegjenstander', id: 94, parentId: 9 },
+                { categoriName: 'Interiør', id: 94, parentId: 9 },
                 { categoriName: 'Tekstil', id: 95, parentId: 9 },
             ]
         },
@@ -357,7 +358,7 @@ const model = {
             category: 'Lesesal',
             categoryId: 102,
             subCategory: '',
-            img: 'TempBilder/2Spiserom/5Pyntegjenstander/vintagekaraffel.jpeg',
+            img: 'TempBilder/2Spiserom/5Interiør/vintagekaraffel.jpeg',
             description: 'Hele verden rundt siden 1880',
             measures: 'Høyde: 50cm ',
             color: ['black', 'brown', 'tan'],

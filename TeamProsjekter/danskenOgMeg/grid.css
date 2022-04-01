@@ -25,23 +25,23 @@ body {
 }
 
 div.header {
-    background-color: rgb(189, 206, 243);
+    background-color: rgb(163, 166, 169);
     grid-area: header;
 }
 div.meny {
-    background-color:rgb(189, 207, 243);
+    background-color:rgb(205, 209, 213);
     grid-area: meny;
 }
 div.innhold {
-    background-color:lightgray;
+    background-color:rgb(205, 209, 213);
     grid-area: innhold;
 }
 div.liteFelt {
-    background-color:rgb(189, 207, 243);
+    background-color:rgb(205, 209, 213);
     grid-area: liteFelt;
 }
 div.footer {
-    background-color:rgb(189, 207, 243);
+    background-color:rgb(163, 166, 169);
     grid-area: footer;
 }
 
