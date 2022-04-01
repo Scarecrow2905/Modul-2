@@ -10,26 +10,34 @@ ul{
   list-style-type: none;
   margin:0px;
   padding:5px;
-  background-color: rgb(128, 166, 240) ;
+  background-color: rgb(119, 95, 161) ;
   border:1px solid black;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   width:75%;
 }
 .dropDownList:hover{
-  background-color: black;
-  color: rgb(197, 233, 241);
+  background-color: rgb(170, 135, 216);
+  color: rgb(185, 183, 189);
 }
 .header{
   text-align:center;
+  color: rgb(119, 95, 161);
+  font-size: largest;
 }
 .footer {
   grid-area: footer;
+}
+
+.search-icon {
+  float:left;
+  
 }
 .liteFeltLi{
   list-style-type: none;
   float:left;
   margin-left:15%;
+  font-size:1rem;
 }
 .liteFelt {
  align-items: center;
@@ -37,7 +45,7 @@ ul{
 }
 .sublist{
   user-select: none;
-  background-color:tomato;
+  background-color:rgb(170, 135, 216);
   color:black;
   list-style-type: none;
   margin:0px;
@@ -49,13 +57,15 @@ ul{
   width:75%;
 }
 .sublist:hover{
-  background-color: black;
-  color: tomato;
+  background-color: rgb(119, 95, 161);
+  color: rgb(197, 233, 241);
 }
 
 /*------------FrontPage - Produkter------------*/
 .rows{
   float:left;
+  width: 20%;
+  height: auto;
   margin-top:2%;
   margin-left:1%;
   font-size:1rem;
@@ -70,13 +80,14 @@ ul{
 
 .front-price {
   font-size: 1rem;
-  color: red;
+  color: #333;
   text-decoration: underline;
 
 }
 /*-----------*/
 /* .front-row {
   display: flex;
+  
   flex-direction: column;
 } */
 
@@ -88,7 +99,7 @@ ul{
 } */
 
 .front-item-title {
-  color: red;
+  color: #333;
   /* margin-left: .5em; */
   font-size: 1.2em;
 }
@@ -107,31 +118,43 @@ ul{
 }  */
 .front-item-btn{
   margin:0px;
-  padding:0px;
+  padding:5px;
+  color: white;
+  background-color: rgb(119, 95, 161);
+  border: none;
+  border-radius: .3em;
+  height: 34px;
+  width: 100%;
 }
 .front-item-image {
   /* display:flex; */
-  width:30%; 
-  height: auto;
+  width:13em;
+  
+  height: 10em;
   border-radius: 10px;
   border: solid black 1px;
   margin-bottom: 2px;
 
 }
 
-
+.front-price {
+  width:5%;
+  font-size: 1.2em;
+  color: #333;
+  
+}
 
 /* *************HANDLEKURV************* */
 
 .cart-main {
-  background-color: #1c6780;
+  background-color: rgb(205, 209, 213);
 }
 
 .cart-main-header {
   font-weight: bold;
   font-size: 1.2em;
   color: #333;
-  background-color:rgb(231, 231, 231);
+  background-color:rgb(163, 166, 169);
 }
 .cart-header {
   font-weight: bold;
@@ -147,12 +170,16 @@ ul{
 
 .btn-cart-navigation {
   color: white;
-  background-color: #dabb0f;
+  background-color: rgb(119, 95, 161);
   border: none;
   border-radius: .3em;
   font-weight: bold;
   height: 34px;
   margin-right: 25px;
+}
+
+.btn-cart-navigation:hover {
+  background-color: rgb(170, 135, 216);
 }
 
 .cart-column {
@@ -197,7 +224,7 @@ ul{
 
 .btn-danger {
   color: white;
-  background-color: #EB5757;
+  background-color: rgb(119, 95, 161);
   border: none;
   border-radius: .3em;
   font-weight: bold;
@@ -205,12 +232,12 @@ ul{
 }
 
 .btn-danger:hover{
-  background-color: #CC4C4C;
+  background-color: rgb(170, 135, 216);
 }
 
 .btn-buy {
   width: 75px;
-  background-color: #56CCF2;
+  background-color: rgb(119, 95, 161);
   border:none;
   border-radius: .3em;
   font-weight: bold;
@@ -218,13 +245,18 @@ ul{
   margin-top: 30px;
   display:block;
   margin:40px;
+  color: #fff;
+}
+
+.btn-buy:hover {
+  background-color: rgb(170, 135, 216);
 }
 
 .cart-quantity-input {
   height: 34px;
   width: 50px;
   border-radius: 5px;
-  border: 1px solid #56CCF2;
+  border: 1px solid rgb(119, 95, 161);
   background-color: rgb(218, 218, 218);
   padding: 0;
   text-align: center;
@@ -268,34 +300,73 @@ body {
 
 /*----------PAY------------*/
 
-.pay-main {
-  display: flex;
-  float: middle;
-  background-color: #1c6780;
-  border:#333 solid;
-}
-
-.pay-title {
-  background-color: #1c6780;
-  
+.pay-page {
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
 }
 
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+  min-height: 100vh;
+  background: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 60px;
 }
 
-.pay-form {
+.container form {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0.1);
+  padding: 20px;
+  width: 600px;
+}
+
+.container form .inputBox {
+  margin-top: 20px;
+}
+
+.container form .inputBox span {
+  display: block;
+  color: #999;
+  padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border:1px solid rgba(0,0,0.1);
+  color: #444;
+}
+
+.container form .flexbox {
   display: flex;
-  position: relative;
-  
+  gap: 15px;
+}
+
+.container form .flexbox .inputBox {
+  flex: 1 1 150px;
+}
+
+.container form .submit-btn {
+  width: 100%;
+  background: linear-gradient(45deg, rgb(119, 95, 161), rgb(170, 135, 216));
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 2.s linear;
+  break-before: 5px;
+  border-radius: 5px;
 }
 
 
@@ -335,13 +406,13 @@ body {
 .loginButton{
   margin-left:34.80%;
   margin-top:1%;
-  background-color:rgb(243, 121, 7);
-  color:white;
+  background-color:rgb(170, 135, 216);
+  color:#333;
   width:30.4%;
   padding:0.5% 0% 0.5% 0%
 }
 .loginButton:hover{
-  background-color:rgb(243, 121, 7);
+  background-color:rgb(119, 95, 161);
   box-shadow: 2px 2px 1px 1px black;
 }
 

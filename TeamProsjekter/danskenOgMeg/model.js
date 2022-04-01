@@ -9,7 +9,7 @@ const model = {
             // {
             //     title: 'Sofa',
             //     price: 6000,
-            //     stock: 69,
+            //     s tock: 69,
             //     category: 'Stue',
             //     categoryId: 11,
             //     subCategory: 'Store ting',
@@ -44,7 +44,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | PaymentPage | 
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | 
         currentUser: 0,
         status: false,
         showStatus: 'Logg inn',
@@ -117,8 +117,8 @@ const model = {
                 { categoriName: 'Sjeselong', id: 14, parentId: 1 },
                 { categoriName: 'Kommoder', id: 15, parentId: 1 },
                 { categoriName: 'Hyller', id: 16, parentId: 1 },
-                { categoriName: 'Reol', id: 17, parentId: 1 },
-                { categoriName: 'Pyntegjenstander', id: 18, parentId: 1 },
+                { categoriName: 'Reoler', id: 17, parentId: 1 },
+                { categoriName: 'Interiør', id: 18, parentId: 1 },
                 { categoriName: 'Tekstil', id: 19, parentId: 1 },
             ]
         },
@@ -127,11 +127,12 @@ const model = {
             sub: [
                 { categoriName: 'Spisebord', id: 21, parentId: 2 },
                 { categoriName: 'Spisestuestoler', id: 22, parentId: 2 },
-                { categoriName: 'Reol-ER', id: 23, parentId: 2 },
+                { categoriName: 'Reoler', id: 23, parentId: 2 },
                 { categoriName: 'Kommode', id: 24, parentId: 2 },
                 { categoriName: 'Skjenk', id: 25, parentId: 2 },
                 { categoriName: 'Kommode', id: 26, parentId: 2 },
-                { categoriName: 'Tekstil', id: 27, parentId: 2 },
+                { categoriName: 'Interiør', id: 27, parentId: 2 },
+                { categoriName: 'Tekstil', id: 28, parentId: 2 },
 
             ]
         },
@@ -140,7 +141,7 @@ const model = {
                 { categoriName: 'Kjøkkenbord', id: 31, parentId: 3 },
                 { categoriName: 'Kjøkkenstoler', id: 32, parentId: 3 },
                 { categoriName: 'Hyller', id: 33, parentId: 3 },
-                { categoriName: 'Pyntegjenstander', id: 35, parentId: 3 },
+                { categoriName: 'Interiør', id: 35, parentId: 3 },
                 { categoriName: 'Tekstil', id: 36, parentId: 3 },
             ]
         },
@@ -150,7 +151,7 @@ const model = {
                 { categoriName: 'Nattbord', id: 42, parentId: 4 },
                 { categoriName: 'Kommoder', id: 43, parentId: 4 },
                 { categoriName: 'Garderobeskap', id: 44, parentId: 4 },
-                { categoriName: 'Pyntegjenstander', id: 45, parentId: 4 },
+                { categoriName: 'Interiør', id: 45, parentId: 4 },
                 { categoriName: 'Tekstil', id: 46, parentId: 4 },
             ]
         },
@@ -158,8 +159,8 @@ const model = {
             name: 'Bad', id: 5, sub: [
                 { categoriName: 'Badekar', id: 51, parentId: 5 },
                 { categoriName: 'Vaskebrett', id: 52, parentId: 5 },
-                { categoriName: 'Baderomsinnredning', id: 53, parentId: 5 },
-                { categoriName: 'Pyntegjenstander', id: 54, parentId: 5 },
+                { categoriName: 'Innredning', id: 53, parentId: 5 },
+                { categoriName: 'Interiør', id: 54, parentId: 5 },
                 { categoriName: 'Tekstil', id: 55, parentId: 5 },
             ]
         },
@@ -168,7 +169,7 @@ const model = {
                 { categoriName: 'Sko oppbevaring', id: 61, parentId: 6 },
                 { categoriName: 'Garderobeskap', id: 62, parentId: 6 },
                 { categoriName: 'Hattehyller', id: 63, parentId: 6 },
-                { categoriName: 'Pyntegjenstander', id: 64, parentId: 6 },
+                { categoriName: 'Interiør', id: 64, parentId: 6 },
                 { categoriName: 'Tekstil', id: 65, parentId: 6 },
             ]
         },
@@ -198,7 +199,7 @@ const model = {
                 { categoriName: 'Godstol', id: 91, parentId: 9 },
                 { categoriName: 'Bokhyller', id: 92, parentId: 9 },
                 { categoriName: 'Avlastningsbord', id: 93, parentId: 9 },
-                { categoriName: 'Pyntegjenstander', id: 94, parentId: 9 },
+                { categoriName: 'Interiør', id: 94, parentId: 9 },
                 { categoriName: 'Tekstil', id: 95, parentId: 9 },
             ]
         },
@@ -236,8 +237,8 @@ const model = {
 
         // Stue
         {
-            title: 'Brun Sofa',
-            price: 8999,
+            title: 'Midlertidlig-Produkt 1',
+            price: 9999,
             stock: 2,
             category: 'Stue',
             id: 111,
@@ -281,8 +282,8 @@ const model = {
             year: '2006',
         },
         {
-            title: 'Spisestuestol',
-            price: 3499,
+            title: 'Midlertidlig-Produkt 2',
+            price: 8888,
             stock: 4,
             category: 'Spiserom',
             id: 122,
@@ -297,8 +298,8 @@ const model = {
         },
         // Spiserom
         {
-            title: 'Vector biker motorsykkel barbord/bardisk - Svart/gylden',
-            price: 35890,
+            title: 'Midlertidlig-Produkt 3',
+            price: 44444,
             stock: 5,
             category: 'Kjøkken',
             id: 131,
@@ -312,29 +313,30 @@ const model = {
         },
 
         // Kjøkken
+
         {
-            title: 'Seng',
-            price: 7899,
-            stock: 2,
+            title: 'Midlertidlig-Produkt 4',
+            price: 8888,
+            stock: 12,
             category: 'Soverom',
             id: 142,
             parentId: 41,
             subCategory: 'Seng',
-            img: '/testBilder/80svintagebord.jpeg',
+            img: 'TempBilder/1Stue/2Sofabord/80svintagebord.jpeg',
             description: '',
             color: ['metall', 'svart'],
             country: 'Danmark',
             year: '1971',
         },
         {
-            title: 'Badekar',
-            price: 9799,
+            title: 'Midlertidlig-Produkt 5',
+            price: 8888,
             stock: 3,
             category: 'Bad',
             id: 151,
             parentId: 51,
             subCategory: 'Badekar',
-            img: '',
+            img: 'TempBilder/1Stue/4Kommoder/kommodevin.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde 80cm. Dybde 50cm.',
             color: ['Oker Gul'],
@@ -342,14 +344,14 @@ const model = {
             year: '2017',
         },
         {
-            title: 'Garderobeskap',
+            title: 'Midlertidlig-Produkt 6 ',
             price: 8899,
             stock: 2,
             category: 'Gang',
             id: 162,
             parentId: 62,
             subCategory: 'Gardeobeskap',
-            img: '',
+            img: 'TempBilder/1Stue/4Kommoder/retroskjenk.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde 80cm. Dybde 50cm.',
             color: ['Oker Gul'],
@@ -357,14 +359,14 @@ const model = {
             year: '2006',
         },
         {
-            title: 'Kjole',
+            title: 'Midlertidlig-Produkt 7',
             price: 2999,
             stock: 1,
             category: 'Klær',
             id: 171,
             parentId: 71,
             subCategory: 'Kjoler',
-            img: '',
+            img: 'TempBilder/1Stue/2Sofabord/vintagemosaikkbord.jpeg',
             description: 'Godt brukt, med fortsatt mye bruk igjen. Stått lagret i bod siden 2005.',
             measures: 'Lengde 39cm. Bredde 7cm.',
             color: ['Red', 'blue', 'green'],
@@ -372,14 +374,14 @@ const model = {
             year: '1500~',
         },
         {
-            title: 'Støvletter',
+            title: 'Midlertidlig-Produkt 8',
             price: 12500,
             stock: 1,
             category: 'Sko',
             id: 181,
             parentId: 81,
             subCategory: 'Støvletter',
-            img: '',
+            img: 'TempBilder/1Stue/3Sjeselong/vintagesjesbrownleather.jpeg',
             description: 'brukt et par ganger',
             measures: 'Lengde 2cm. Bredde 3cm.',
             color: ['white', 'grey', 'purple'],
@@ -387,14 +389,14 @@ const model = {
             year: '1990~',
         },
         {
-            title: ' Globus 1',
+            title: ' Midlertidlig-Produkt 9',
             price: 4999,
             stock: 2,
             category: 'Lesesal',
             id: 191,
             parentId: 91,
             subCategory: '',
-            img: '',
+            img: 'TempBilder/2Spiserom/5Pyntegjenstander/vintagekaraffel.jpeg',
             description: 'Hele verden rundt siden 1880',
             measures: 'Høyde: 50cm ',
             color: ['black', 'brown', 'tan'],

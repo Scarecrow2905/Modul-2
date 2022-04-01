@@ -19,7 +19,7 @@ function updateViewCart(){
     <strong class="cart-total-title">Totalt</strong>
     <span class="cart-total-price">${model.shoppingCart.totalPrice} kr </span>
 
-    <button class="btn-buy" onclick="purchase()"> Kjøp</button>
+    <button class="btn-buy" onclick="model.app.currentPage = 'PayPage';updateView()"> Kjøp</button>
     </div>
 
 </div>
@@ -47,7 +47,7 @@ function createCartItems(){
                             <span class="cart-price cart-column">${model.shoppingCart.cartProducts[i].price} kr </span>
                         <div class="cart-quantity cart-column">
                             <input class="cart-quantity-input" type="number" value="${model.shoppingCart.quantity}">
-                            <button class="btn btn-danger cart-quantity-button" type"button">REMOVE</button>
+                            <button class="btn btn-danger cart-quantity-button" type"button">Fjern</button>
                     </div>
 
                 </div> `
