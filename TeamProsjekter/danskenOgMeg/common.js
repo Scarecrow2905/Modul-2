@@ -8,7 +8,7 @@ function Header() {
 // ---------------- Søkefelt ---------------
 function searchfield() {
     return `
-    <div class="Searchfield"> <input placeholder="Søkord" type="text" oninput="searchCatalog()"/></div>
+    <div class="Searchfield"> <input placeholder="Søkeord" type="text" oninput="searchCatalog()"/></div>
     `
 }
 // ------------ LOGIN----------------

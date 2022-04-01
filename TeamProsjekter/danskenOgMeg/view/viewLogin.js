@@ -5,7 +5,7 @@ function updateViewLoginWithMail(){
         <div class="headerL">${Header()}</div>
         <div  class="smalLinje">
             <ul>
-                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></li>
+                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
                 <li class="cartLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
             </ul> 
         </div>
@@ -39,7 +39,7 @@ function updateViewLoginWithPhone(){
         <div class="headerL">${Header()}</div>
         <div  class="smalLinje">
             <ul>
-                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Back to main</button></li>
+                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
                 <li class="cartLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
             </ul> 
         </div>
