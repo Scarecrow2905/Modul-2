@@ -1,18 +1,19 @@
 function addToCart(index) {
-    categoryId = '';
+    id = '';
     for (let i = 0; i < model.products.length; i++) {
         // console.log('index nr:', index)
         // if (model.products[i].includes(model.products[i].categoryId[index])){
-            if (model.products[i].categoryId == index) {
+            if (model.products[i].id == index) {
             if (model.products[i].stock == 0){
-                alert ('Fuck you, det er tomt');
+                alert ('Ikke igjen på lager');
             } else {
                 model.products[i].stock --;
                 model.shoppingCart.numberOfItems ++;
                 model.shoppingCart.totalPrice += model.products[i].price;
                 model.shoppingCart.cartProducts.push(model.products[i]);
-            }    
-        }
+            }
+                
+            }
 }
     updateView();
 };
@@ -67,7 +68,7 @@ function addCategory(){
 }
 // Legger til bilder på forsiden. Gjør sånn at man får opp spesifikke bilder etter hvilken kategori man trykker på.
 function viewStuff(index){
-    model.viewProductsHere = "";
+    // model.viewProductsHere = "";
     let html = "";
     for (let i = 0; i < model.products.length; i++){  
         let first = i % 3 == 0 ? 'first' : '';
@@ -79,6 +80,7 @@ function viewStuff(index){
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
         <div class="stock">stock: ${model.products[i].stock}</div>
+        <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView();">Legg til handlekurv</button>
     </div>`
     }}
 
@@ -93,6 +95,7 @@ function viewStuff(index){
                 <div class="front-item-title">${model.products[i].title}</div>
                 <div class="front-price">${model.products[i].price}kr</div>
                 <div class="stock">stock: ${model.products[i].stock}</div>
+                <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
             </div>`
         } 
         }

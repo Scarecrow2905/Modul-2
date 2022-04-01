@@ -1,3 +1,8 @@
+:root {
+--MainFarge: rgb(192, 169, 236);
+/* var(--MainFarge); */
+}
+
 /*-----------------ViewFront------------------------*/
 body {
     margin:0;
@@ -25,23 +30,23 @@ body {
 }
 
 div.header {
-    background-color: rgb(163, 166, 169);
+    background-color: rgb(162, 222, 208);
     grid-area: header;
 }
 div.meny {
-    background-color:rgb(205, 209, 213);
+    background-color:rgb(162, 222, 208);
     grid-area: meny;
 }
 div.innhold {
-    background-color:rgb(205, 209, 213);
+    background-color: rgb(162, 222, 208);
     grid-area: innhold;
 }
 div.liteFelt {
-    background-color:rgb(205, 209, 213);
+    background-color:rgb(162, 222, 208);
     grid-area: liteFelt;
 }
 div.footer {
-    background-color:rgb(205, 209, 213);
+    background-color:rgb(162, 222, 208);
     grid-area: footer;
 }
 

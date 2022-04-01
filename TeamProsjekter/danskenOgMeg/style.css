@@ -1,5 +1,5 @@
 /*------------FrontPage------------*/
-
+@font-face { font-family: stalemate; src: url('stalemate.regular.ttf'); } header { font-family: stalemate }
 /*------------FrontPage - DropDown------------*/
 ul{
   margin:5px;
@@ -10,21 +10,21 @@ ul{
   list-style-type: none;
   margin:0px;
   padding:5px;
-  background-color: rgb(119, 95, 161) ;
+  background-color: rgb(246, 153, 116) ;
   border:1px solid black;
   text-align: center;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   width:75%;
 }
 .dropDownList:hover{
-  background-color: rgb(170, 135, 216);
-  color: rgb(185, 183, 189);
+  background-color:rgb(246, 153, 116);
+  color: #333;
 }
 .header{
   text-align:center;
   margin:0px;
   padding:0px;
-  color: rgb(119, 95, 161);
+  color: #333;
   /* font-size: largest; */
 }
 .smallerHeader{
@@ -51,7 +51,7 @@ ul{
 }
 .sublist{
   user-select: none;
-  background-color:rgb(170, 135, 216);
+  background-color:rgb(242, 250, 140);
   color:black;
   list-style-type: none;
   margin:0px;
@@ -63,8 +63,8 @@ ul{
   width:75%;
 }
 .sublist:hover{
-  background-color: rgb(119, 95, 161);
-  color: rgb(197, 233, 241);
+  background-color: rgb(244, 241, 187);
+  color: #333;
 }
 
 /*------------FrontPage - Produkter------------*/
@@ -125,12 +125,16 @@ ul{
 .front-item-btn{
   margin:0px;
   padding:5px;
-  color: white;
-  background-color: rgb(119, 95, 161);
+  color: #333;
+  background-color: rgb(246, 153, 116);
   border: none;
   border-radius: .3em;
   height: 34px;
   width: 100%;
+}
+.front-item-btn:hover{
+  background-color: brown;
+  color:yellowgreen;
 }
 .front-item-image {
   /* display:flex; */
@@ -176,7 +180,7 @@ ul{
 
 .btn-cart-navigation {
   color: white;
-  background-color: rgb(119, 95, 161);
+  background-color: rgb(246, 153, 116);
   border: none;
   border-radius: .3em;
   font-weight: bold;
@@ -185,7 +189,7 @@ ul{
 }
 
 .btn-cart-navigation:hover {
-  background-color: rgb(170, 135, 216);
+  background-color: rgb(246, 153, 116);
 }
 
 .cart-column {
@@ -230,7 +234,7 @@ ul{
 
 .btn-danger {
   color: white;
-  background-color: rgb(119, 95, 161);
+  background-color: rgb(246, 153, 116);
   border: none;
   border-radius: .3em;
   font-weight: bold;
@@ -243,7 +247,7 @@ ul{
 
 .btn-buy {
   width: 75px;
-  background-color: rgb(119, 95, 161);
+  background-color: rgb(246, 153, 116);
   border:none;
   border-radius: .3em;
   font-weight: bold;
@@ -255,7 +259,7 @@ ul{
 }
 
 .btn-buy:hover {
-  background-color: rgb(170, 135, 216);
+  background-color: rgb(246, 153, 116);
 }
 
 .cart-quantity-input {

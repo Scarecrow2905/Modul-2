@@ -30,7 +30,7 @@ function updateViewFront() {
 };
 
 // ---------------- FrontPage (Produkter) ---------------&&
-
+// console.log(model.products[i].stock + 'STOCK')
 //Thorbjørn prøver å åpne produktet KEK FIKK TIPS OM MODAL
 
 
