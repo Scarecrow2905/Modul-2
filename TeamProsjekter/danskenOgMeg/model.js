@@ -2,12 +2,6 @@
 const model = {
 
     text1: "",
-    fuckLister0: '',
-    fuckLister1: '',
-    fuckLister2: '',
-    fuckLister3: '',
-    fuckLister4: '',
-
     shoppingCart: {
 
         totalPrice: 0,
@@ -107,11 +101,13 @@ const model = {
         country: '',
         year: '',
     },
+    // Viser kategori og sub katergori menyen
+    viewMenyCategories: '',
     //Kategorier med forskjellige id og parentId
     activeSubCategory: [false, false, false, false, false, false, false, false],
-    wasActiveSubCategory: [false, false, false, false, false, false, false, false]
+    // wasActiveSubCategory: [false, false, false, false, false, false, false, false]
     //OBS ::: Legge til False per kategori/Sub 
-    ,
+    
     categories: [
         {
             name: 'Stue', id: 1,
@@ -232,15 +228,20 @@ const model = {
     ],
 
     //Alle produkter
+    randomNumbers: [2, 5, 7, 9, 0, 10],
+    activeProduct: false,
+    viewProductsHere: '',
+    clickedOnProducts: false,
     products: [
 
         // Stue
         {
-            title: 'Sofa',
+            title: 'Brun Sofa',
             price: 8999,
             stock: 2,
             category: 'Stue',
-            categoryId: 11,
+            id: 111,
+            parentId: 11,
             subCategory: 'Sofa',
             img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
@@ -249,13 +250,43 @@ const model = {
             country: 'Danmark',
             year: '2006',
         },
-
+        {
+            title: 'Rød Sofa',
+            price: 8999,
+            stock: 2,
+            category: 'Stue',
+            id: 112,
+            parentId: 11,
+            subCategory: 'Sofa',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+            measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
+            color: ['Oker Gul'],
+            country: 'Danmark',
+            year: '2006',
+        },
+        {
+            title: 'Grønn Sofa',
+            price: 8999,
+            stock: 2,
+            category: 'Stue',
+            id: 113,
+            parentId: 11,
+            subCategory: 'Sofa',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+            measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
+            color: ['Oker Gul'],
+            country: 'Danmark',
+            year: '2006',
+        },
         {
             title: 'Spisestuestol',
             price: 3499,
             stock: 4,
             category: 'Spiserom',
-            categoryId: 12,
+            id: 122,
+            parentId: 22,
             subCategory: 'Spisestuestol',
             img: 'TempBilder/2Spiserom/1stoler/habdulstol.png',
             description: 'Sofa med 3 seter. Litt brukt, pent ivaretatt.',
@@ -270,7 +301,8 @@ const model = {
             price: 35890,
             stock: 5,
             category: 'Kjøkken',
-            categoryId: 21,
+            id: 131,
+            parentId: 31,
             subCategory: 'Kjøkkenbord',
             img: 'TempBilder/3Kjøkken/Tempkitchentable/8729f31b63ae4f033a520009b94acd6048-removebg-preview.png',
             description: 'Bardisk med plass til både flasker og glass, også med kjøleboks. Stamme i svart metall med fine kontraster til den gyldne fargen. Topplate av mangotre.',
@@ -285,7 +317,8 @@ const model = {
             price: 7899,
             stock: 2,
             category: 'Soverom',
-            categoryId: 32,
+            id: 142,
+            parentId: 41,
             subCategory: 'Seng',
             img: '/testBilder/80svintagebord.jpeg',
             description: '',
@@ -298,7 +331,8 @@ const model = {
             price: 9799,
             stock: 3,
             category: 'Bad',
-            categoryId: 51,
+            id: 151,
+            parentId: 51,
             subCategory: 'Badekar',
             img: '',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
@@ -312,7 +346,8 @@ const model = {
             price: 8899,
             stock: 2,
             category: 'Gang',
-            categoryId: 62,
+            id: 162,
+            parentId: 62,
             subCategory: 'Gardeobeskap',
             img: '',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
@@ -326,7 +361,8 @@ const model = {
             price: 2999,
             stock: 1,
             category: 'Klær',
-            categoryId: 71,
+            id: 171,
+            parentId: 71,
             subCategory: 'Kjoler',
             img: '',
             description: 'Godt brukt, med fortsatt mye bruk igjen. Stått lagret i bod siden 2005.',
@@ -340,7 +376,8 @@ const model = {
             price: 12500,
             stock: 1,
             category: 'Sko',
-            categoryId: 101,
+            id: 181,
+            parentId: 81,
             subCategory: 'Støvletter',
             img: '',
             description: 'brukt et par ganger',
@@ -354,7 +391,8 @@ const model = {
             price: 4999,
             stock: 2,
             category: 'Lesesal',
-            categoryId: 102,
+            id: 191,
+            parentId: 91,
             subCategory: '',
             img: '',
             description: 'Hele verden rundt siden 1880',

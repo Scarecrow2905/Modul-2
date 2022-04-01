@@ -1,4 +1,3 @@
-// Legg til i Handlekurv
 function addToCart(index) {
     categoryId = '';
     for (let i = 0; i < model.products.length; i++) {
@@ -20,7 +19,7 @@ function addToCart(index) {
 
 
 function purchase(index) {
-    if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');
+    if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv'); 
     else {
         alert('Takk for handelen!')
         updateViewCart();
@@ -35,22 +34,21 @@ function purchase(index) {
     }
 };
 
-// -------------------tiss---------bæsj----cart---ting---------------prom-p------------------
-
-
+//  (index < 1000:) Hvert meny valg har ett nr. de første 9 meny valgene har ett nr fra 0 - 8. De neste under aktegoriene vil ha nr fra 8 og oppover. make(1000) er for å sikre at det ikke vil skje en feil når man legger til mange nom varer. man kan ha opp til 1000 meny valg.
+//  (if(model.activeSubCategory[i] == true ) Når man trykker på ett kategori valg, gjør vi index nummeret i activeSubCatergory om til true, når det fra før av ligger på false. Lukker man meny valget igjenn, gjør vi den om til false igjenn.
 // Meny med dropdown
 function make(index){
 
     let html = "";
-    model.fuckLister0 = "";
-    model.activeSubCategory[index] = !model.activeSubCategory[index];
-    model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
-    
+    model.viewMenyCategories = "";
+    model.activeSubCategory[index] = !model.activeSubCategory[index]; // 
+    // model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
     for(let i = 0; i < model.categories.length; i++){      
-        if(model.activeSubCategory[i] == true && index < 1000){
+        if(model.activeSubCategory[i] == true && index < 100){ 
             html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+            // console.log(`${i}`);
          for(let j = 0; j <model.categories[i].sub.length; j++){
-            html += `<div class="sublist"  onclick="updateViewFront()">${model.categories[i].sub[j].categoriName}</div>`
+            html += `<div class="sublist"  onclick="viewStuff(${model.categories[i].sub[j].id})">${model.categories[i].sub[j].categoriName}</div>`
             }
         }
         else{
@@ -58,23 +56,92 @@ function make(index){
         }
 
     }
-    model.fuckLister0 = html;
+    model.viewMenyCategories = html;
     updateView();
        
       
     }
 function addCategory(){
     // legg til verdier for å lage kategori (Id og navn på kategori)
-
     model.activeSubCategory.push(false) 
-    model.wasActiveSubCategory.push(false) 
-    //update view
+    // model.wasActiveSubCategory.push(false) 
+}
+
+function viewStuff(index){
+
+    model.viewProductsHere = "";
+    let html = "";
+    for (let i = 0; i < model.products.length; i++){  
+        let first = i % 3 == 0 ? 'first' : '';
+    if (index === 10000){
+    html += /*html*/
+    `
+    <div class="rows ${first}">
+        <img class="front-item-image" src="${model.products[i].img}"/>
+        <div class="front-item-title">${model.products[i].title}</div>
+        <div class="front-price">${model.products[i].price}kr</div>
+        <div class="stock">stock: ${model.products[i].stock}</div>
+    </div>`
+    }}
+
+    for (let i = 0; i < model.products.length; i++){  
+        let first = i % 3 == 0 ? 'first' : '';
+        if(index == model.products[i].parentId){
+            model.activeProduct = ! model.activeProduct
+             html += /*html*/
+            `
+            <div class="rows ${first}">
+                <img class="front-item-image" src="${model.products[i].img}"/>
+                <div class="front-item-title">${model.products[i].title}</div>
+                <div class="front-price">${model.products[i].price}kr</div>
+                <div class="stock">stock: ${model.products[i].stock}</div>
+            </div>`
+        } 
+        }
+        model.viewProductsHere = html;
+        updateView();
+}
+
+
+function ViewMyProducts(){
+var result = '';
+for (let i = 0; i < model.viewProductsHere.length; i++){
+    let first = i % 3 == 0 ? 'first' : '';
+result = /*html*/ `
+<div class="rows ${first}">
+    <img class="front-item-image" src="${ model.viewProductsHere[i].img}"/>
+    <div class="front-item-title">${ model.viewProductsHere.title}</div>
+    <div class="front-price">${ model.viewProductsHere.price}kr</div>
+    <div class="stock">stock: ${ model.viewProductsHere.stock}</div>
+    <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til handlekurv</button>
+</div>
+
+`
+}
+return result;
 
 }
 
 
+function ViewMyProductsa(){
+    var result = '';
+    for (let i = 0; i < model.products.length; i++){
+        let first = i % 3 == 0 ? 'first' : '';
+    result += /*html*/`
+    
+        <div class="rows ${first}">
+            <img class="front-item-image" src="${model.products[i].img}"/>
+            <div class="front-item-title">${model.products[i].title}</div>
+            <div class="front-price">${model.products[i].price}kr</div>
+            <div class="stock">stock: ${model.products[i].stock}</div>
+            <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].categoryId})">Legg til handlekurv</button>
+        </div>
 
-
+    `
+    }
+    
+    return result;
+}
 
 
 

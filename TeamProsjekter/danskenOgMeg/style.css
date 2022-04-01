@@ -69,17 +69,16 @@ ul{
 }
 
 .front-price {
-  width:5%;
   font-size: 1rem;
   color: red;
   text-decoration: underline;
 
 }
 /*-----------*/
-.front-row {
+/* .front-row {
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* .front-item {
   width: 20%;
@@ -112,7 +111,7 @@ ul{
 }
 .front-item-image {
   /* display:flex; */
-  max-width:30%;
+  width:30%; 
   height: auto;
   border-radius: 10px;
   border: solid black 1px;

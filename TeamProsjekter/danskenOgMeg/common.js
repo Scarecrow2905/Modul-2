@@ -59,6 +59,8 @@ function lastName(){
     <div><input class="password" value="${model.account.newLastName}" placeholder="Last name*" type="text" oninput="model.account.newLastName = this.value"/></div>
     `
 }
+
+// Hener ut info om brukeren som er innlogget
 function accountInfo(){
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.currentUser == model.account.users[i].id){
