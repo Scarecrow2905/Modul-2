@@ -358,7 +358,7 @@ const model = {
             category: 'Lesesal',
             categoryId: 102,
             subCategory: '',
-            img: 'TempBilder/2Spiserom/5Interiør/vintagekaraffel.jpeg',
+            img: 'TempBilder/2Spiserom/5Pyntegjenstander/vintagekaraffel.jpeg',
             description: 'Hele verden rundt siden 1880',
             measures: 'Høyde: 50cm ',
             color: ['black', 'brown', 'tan'],
