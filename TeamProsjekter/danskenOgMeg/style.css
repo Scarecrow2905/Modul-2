@@ -1,11 +1,11 @@
 /*------------FrontPage------------*/
 @font-face {
 	font-family: stalemate;
-	src: url("stalemate.regular.ttf");
+	src: url("/TeamProsjekter/danskenOgMeg/fonts/Stalemate-Regular.ttf");
 }
 @font-face {
 	font-family: SeasidResortNF;
-	src: url("https://www.1001fonts.com/seasideresortnf-font.html");
+	src: url("/TeamProsjekter/danskenOgMeg/fonts/SeasideResortNF.ttf");
 }
 
 /*------------FrontPage - DropDown------------*/
@@ -161,7 +161,6 @@ ul {
 }
 
 /* *************PRODUCT DESCRIPTION************* */
-
 
 /* *************HANDLEKURV************* */
 
