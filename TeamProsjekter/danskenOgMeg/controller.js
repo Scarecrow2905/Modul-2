@@ -27,7 +27,7 @@ function purchase(index) {
     }
 };
 
- function removeCart(index) {
+ function removeCart(index) { // HUSK DENNE, TOMMY
      if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
      else {
         model.shoppingCart.cartProducts --;
@@ -211,4 +211,15 @@ function logOut(){
 
         } 
         updateView();
+    }
+
+
+    function searchCatalog(indexValue){
+        for (let i = 0; i < model.products.length; i++) {
+            if(model.products[i].title.includes(indexValue)){
+                model.viewProductsHere = model.products[i];
+            }
+        }
+        console.log(model.viewProductsHere);
+        conslotchange.log(indexValue);
     }

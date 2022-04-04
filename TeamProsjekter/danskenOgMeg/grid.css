@@ -9,7 +9,7 @@ body {
     padding:0;
 } 
 .page{
-    background-color: rgb(192, 169, 236);
+    background-color: rgb(162, 222, 208);
     height: 100vh;
     display:grid;
     grid-template-columns: 2fr 7fr 3fr  ;
@@ -53,7 +53,7 @@ div.footer {
 
 /*-----------LOGIN-----------*/
     .loginPage{
-        background-color: pink;
+        background-color: rgb(162, 222, 208);
         height: 100vh;
         display:grid;
         grid-template-columns:1fr 6fr 1fr  ;
@@ -65,26 +65,26 @@ div.footer {
                              'footerL footerL footerL';
     }
 .headerL {
-    background-color: rgb(189, 207, 243);
+    background-color: rgb(162, 222, 208);
     grid-area: headerL;
 }
 .smalLinje{
-    background-color: gray;
+    background-color:rgb(162, 222, 208);
     grid-area: smalLinje;
 }
 .menyL {
-    background-color:white;
+    background-color:rgb(162, 222, 208);
     grid-area: menyL;
 }
 .innholdL {
-    background-color:white;
+    background-color:rgb(162, 222, 208);
     grid-area: innholdL;
 }
 .innhold1L {
-    background-color:white;
+    background-color:rgb(162, 222, 208);
     grid-area: innhold1L;
 }
 .footerL {
-    background-color:blue;
+    background-color:rgb(162, 222, 208);
     grid-area: footerL;
 }

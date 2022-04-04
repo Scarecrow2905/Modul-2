@@ -237,7 +237,7 @@ const model = {
 
         // Stue
         {
-            title: 'Midlertidlig-Produkt 1',
+            title: 'Sofa',
             price: 9999,
             stock: 2,
             category: 'Stue',
@@ -252,13 +252,13 @@ const model = {
             year: '2006',
         },
         {
-            title: 'Rød Sofa',
+            title: 'Spisestuestol',
             price: 8999,
             stock: 2,
-            category: 'Stue',
+            category: 'Spisestue',
             id: 112,
             parentId: 11,
-            subCategory: 'Sofa',
+            subCategory: 'Spisestuestol',
             img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
@@ -267,13 +267,13 @@ const model = {
             year: '2006',
         },
         {
-            title: 'Grønn Sofa',
+            title: 'Kjøkkenbord',
             price: 8999,
             stock: 2,
-            category: 'Stue',
+            category: 'Kjøkken',
             id: 113,
             parentId: 11,
-            subCategory: 'Sofa',
+            subCategory: 'Kjøkkenbord',
             img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',

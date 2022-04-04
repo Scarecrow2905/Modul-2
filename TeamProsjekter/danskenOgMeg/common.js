@@ -2,14 +2,14 @@
 function Header() {
     return `
          <h1 class="header">Dansken og Meg<h1>
-         <h3 class="smallerHeader">Vintage Skatter</h3>
+         <h2 class="smallerHeader">Vintage Skatter</h2>
          `
 };
 
 // ---------------- Søkefelt ---------------
 function searchfield() {
     return `
-    <div class="Searchfield"> <input placeholder="Søkeord" type="text" oninput="searchCatalog()"/></div>
+    <div class="Searchfield"> <input placeholder="Søkeord" type="text" oninput="searchCatalog(this.value)"/></div>
     `
 }
 // ------------ LOGIN----------------
