@@ -25,6 +25,8 @@ ul{
   margin:0px;
   padding:0px;
   color: #333;
+  font-size:2em;
+  font-family: stalemate;
   /* font-size: largest; */
 }
 .smallerHeader{
