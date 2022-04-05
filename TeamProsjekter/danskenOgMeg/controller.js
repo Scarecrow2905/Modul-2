@@ -222,4 +222,8 @@ function logOut(){
         }
         console.log(model.viewProductsHere);
         conslotchange.log(indexValue);
-    }
+}
+    
+
+    model.products.push(newProducts);
+    

@@ -1,4 +1,4 @@
- products = [
+var newProducts = [
 
     // Stue
     {
@@ -288,6 +288,5 @@
         country: 'Denmark',
         year: '1996ca',
     }
-]
+];
 
-export {products} 
