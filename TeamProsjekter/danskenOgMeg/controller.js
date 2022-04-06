@@ -44,9 +44,11 @@ function removeCart(index) {
             model.shoppingCart.numberOfItems--;
             model.products[i].stock++;
             model.shoppingCart.totalPrice -= model.products[i].price;
-            model.shoppingCart.cartProducts[index].splice(index, 1)
+            model.shoppingCart.cartProducts.splice(index, 1);
         }}
-    updateViewCart();
+    // updateViewCart();
+    updateView();
+
 };
 
 //  (index < 1000:) Hvert meny valg har ett nr. de første 9 meny valgene har ett nr fra 0 - 8. De neste under aktegoriene vil ha nr fra 8 og oppover. make(1000) er for å sikre at det ikke vil skje en feil når man legger til mange nom varer. man kan ha opp til 1000 meny valg.
