@@ -77,7 +77,7 @@ const model = {
     viewMenyCategories: '',
     //Kategorier med forskjellige id og parentId
     activeSubCategory: [false, false, false, false, false, false, false, false],
-    // wasActiveSubCategory: [false, false, false, false, false, false, false, false]
+    test: false,
     //OBS ::: Legge til False per kategori/Sub 
 
     categories: [
@@ -203,7 +203,9 @@ const model = {
     //Alle produkter
     randomNumbers: [2, 5, 7, 9, 0, 10],
     activeProduct: false,
+    midlertidlig: '',
     viewProductsHere: '',
+    sliderValueIs: 20000,
     clickedOnProducts: false,
 
     products: [{
@@ -222,18 +224,18 @@ const model = {
         year: '2006',
     },
         {
-            title: 'Spisestuestol',
+            title: 'Rosa Sofa',
             price: 8999,
             stock: 2,
-            category: 'Spisestue',
+            category: 'Stue',
             id: 112,
             parentId: 11,
             subCategory: 'Spisestuestol',
-            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            img: 'Tempbilder/2Spiserom/1stoler/habdulstol.png',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
-            country: 'Danmark',
+            country: 'Tyskland',
             year: '2006',
         },
         {
@@ -244,7 +246,7 @@ const model = {
             id: 113,
             parentId: 11,
             subCategory: 'Kjøkkenbord',
-            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            img: 'TempBilder/3Kjøkken/Tempkitchentable/0156b822c7d011bf26f136a8aff6a31911-removebg-preview.png',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
