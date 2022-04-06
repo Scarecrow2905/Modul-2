@@ -1,10 +1,12 @@
 function addToCart(index) {
-    id = '';
     for (let i = 0; i < model.products.length; i++) {
         // console.log('index nr:', index)
         // if (model.products[i].includes(model.products[i].categoryId[index])){
             if (model.products[i].id == index) {
             if (model.products[i].stock == 0){
+            if (model.shoppingCart.cartProducts[i].id === current.id) {
+                model.shoppingCart.quantity ++;
+            }
                 alert ('Ikke igjen på lager');
             } else {
                 model.products[i].stock --;
@@ -27,12 +29,24 @@ function purchase(index) {
     }
 };
 
- function removeCart(index) { // HUSK DENNE, TOMMY
-     if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
-     else {
-        model.shoppingCart.cartProducts --;
-         updateViewCart();
-    }
+function removeCart(index) {
+
+    for (let i = 0; i < model.shoppingCart.cartProducts.length; i++){
+
+        if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
+
+
+        
+        else {
+            // for (let p = 0; p < model.shoppingCart[i].cartProducts.length; p++) {
+                
+            
+            model.shoppingCart.numberOfItems--;
+            model.products[i].stock++;
+            model.shoppingCart.totalPrice -= model.products[i].price;
+            model.shoppingCart.cartProducts[index].splice(index, 1)
+        }}
+    updateViewCart();
 };
 
 //  (index < 1000:) Hvert meny valg har ett nr. de første 9 meny valgene har ett nr fra 0 - 8. De neste under aktegoriene vil ha nr fra 8 og oppover. make(1000) er for å sikre at det ikke vil skje en feil når man legger til mange nom varer. man kan ha opp til 1000 meny valg.
@@ -76,7 +90,7 @@ function viewStuff(index){
     html += /*html*/
     `
     <div class="rows ${first}">
-        <img class="front-item-image" src="${model.products[i].img}"/>
+        <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
         <div class="stock">stock: ${model.products[i].stock}</div>
