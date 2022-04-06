@@ -225,5 +225,5 @@ function logOut(){
 }
     
 
-    model.products.push(newProducts);
+    model.products.push("newProducts");
     
