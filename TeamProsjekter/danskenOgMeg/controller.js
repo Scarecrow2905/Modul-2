@@ -42,37 +42,44 @@ function make(index){
 
     let html = "";
     model.viewMenyCategories = "";
-    model.activeSubCategory[index] = !model.activeSubCategory[index]; // 
-    // model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index];
+    model.activeSubCategory[index] = !model.activeSubCategory[index]; 
+    // model.test[index] = ! model.test[index];// 
+    // model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index]; onclick="viewStuff(${model.products[i]})"
     for(let i = 0; i < model.categories.length; i++){      
         if(model.activeSubCategory[i] == true && index < 100){ 
-            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
-            // console.log(`${i}`);
-         for(let j = 0; j <model.categories[i].sub.length; j++){
-            html += `<div class="sublist"  onclick="viewStuff(${model.categories[i].sub[j].id})">${model.categories[i].sub[j].categoriName}</div>`
+            html += `<div class="dropDownList" onclick="make(${i}); showCatergoriProducts(${i});">${model.categories[i].name}</div>`
+            for(let j = 0; j < model.categories[i].sub.length; j++){
+            html += `<div class="sublist" onclick="viewStuff(${model.categories[i].sub[j].id});">${model.categories[i].sub[j].categoriName}</div>`
             }
         }
-        else{
+        else {
             html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
         }
+        if(model.activeSubCategory[i] == true){ 
+    } 
     }
     model.viewMenyCategories = html;
     updateView();
-       
-      
     }
 function addCategory(){
     // legg til verdier for å lage kategori (Id og navn på kategori)
     model.activeSubCategory.push(false) 
     // model.wasActiveSubCategory.push(false) 
 }
-// Legger til bilder på forsiden. Gjør sånn at man får opp spesifikke bilder etter hvilken kategori man trykker på.
+
+function showCatergoriProducts(index){
+console.log('denne er: ' + index);
+updateView();
+
+}
+
+
 function viewStuff(index){
     // model.viewProductsHere = "";
     let html = "";
     for (let i = 0; i < model.products.length; i++){  
         let first = i % 3 == 0 ? 'first' : '';
-    if (index === 10000){
+    if (index === 100){
     html += /*html*/
     `
     <div class="rows ${first}">
@@ -86,7 +93,7 @@ function viewStuff(index){
 
     for (let i = 0; i < model.products.length; i++){  
         let first = i % 3 == 0 ? 'first' : '';
-        if(index == model.products[i].parentId){
+        if(index == model.products[i].parentId && model.products[i].price < model.sliderValueIs){
             model.activeProduct = ! model.activeProduct
              html += /*html*/
             `
@@ -100,6 +107,7 @@ function viewStuff(index){
         } 
         }
         model.viewProductsHere = html;
+
         updateView();
 }
 
@@ -215,11 +223,36 @@ function logOut(){
 
 
     function searchCatalog(indexValue){
+        model.midlertidlig = '';
+        // model.viewProductsHere = '';
         for (let i = 0; i < model.products.length; i++) {
-            if(model.products[i].title.includes(indexValue)){
-                model.viewProductsHere = model.products[i];
-            }
-        }
-        console.log(model.viewProductsHere);
-        conslotchange.log(indexValue);
+            // for(let i in model.products){
+            let first = i % 3 == 0 ? 'first' : '';
+            // if(model.products[i].title == indexValue){
+            if(model.products[i].title.includes(indexValue) || model.products[i].category.includes(indexValue)){
+                if(model.products[i].price < model.sliderValueIs ){
+                model.midlertidlig += `
+                <div class="rows ${first}">
+                    <img class="front-item-image" src="${model.products[i].img}"/>
+                    <div class="front-item-title">${model.products[i].title}</div>
+                    <div class="front-price">${model.products[i].price}kr</div>
+                    <div class="stock">stock: ${model.products[i].stock}</div>
+                    <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
+                </div>`
+        } 
+    }}
+        UpdateViewProductsHere();
     }
+
+    function UpdateViewProductsHere(){
+        model.viewProductsHere = model.midlertidlig
+        updateView();
+    }
+
+    function sliderValue(indexValue) {
+        model.sliderValueIs = indexValue;
+        console.log('slider value:' + model.sliderValueIs);
+        updateView();
+    }
+
+    
