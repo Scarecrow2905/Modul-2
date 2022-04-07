@@ -208,21 +208,22 @@ const model = {
     sliderValueIs: 20000,
     clickedOnProducts: false,
 
-    products: [{
-        title: 'Sofa',
-        price: 9999,
-        stock: 2,
-        category: 'Stue',
-        id: 111,
-        parentId: 11,
-        subCategory: 'Sofa',
-        img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
-        description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
-        measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
-        color: ['Oker Gul'],
-        country: 'Danmark',
-        year: '2006',
-    },
+    products: [
+        {
+            title: 'Sofa',
+            price: 9999,
+            stock: 2,
+            category: 'Stue',
+            id: 111,
+            parentId: 11,
+            subCategory: 'Sofa',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
+            description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+            measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
+            color: ['Oker Gul'],
+            country: 'Danmark',
+            year: '2006',
+        },
         {
             title: 'Spisestuestol',
             price: 8999,
@@ -230,8 +231,8 @@ const model = {
             category: 'Spiserom',
             id: 112,
             parentId: 11,
-            subCategory: 'Spisestuestoler',
-            img: 'Tempbilder/2Spiserom/1stoler/habdulstol.png',
+            subCategory: 'Spisestuestol',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofabrownleather.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
@@ -246,7 +247,7 @@ const model = {
             id: 113,
             parentId: 11,
             subCategory: 'Kjøkkenbord',
-            img: 'TempBilder/3Kjøkken/Tempkitchentable/0156b822c7d011bf26f136a8aff6a31911-removebg-preview.png',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
@@ -494,7 +495,8 @@ const model = {
             color: ['black', 'brown', 'tan'],
             country: 'Denmark',
             year: '1996ca',
-        }],
+        }
+    ],
 
 }
 
