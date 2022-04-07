@@ -15,7 +15,7 @@ function viewProduct() {
     </div>
 
     <div class="product-quantity product-column">
-        <input class="product-quantity-input" type="number"
+    <input class="product-quantity-input" type="number"
 
 
 </div>
@@ -26,11 +26,18 @@ function viewProduct() {
 
 function createProductItem() {
     var result = '';
-
-    result += `<section class="showProduct">
-            <h2 class ="product-header"> ${model.products.title} </h2>
+    for (let i = 0; i < model.products.length; i++)
+    result = `<section class="showProduct">
+            <h2 class ="product-header"> ${model.products[i].title} </h2>
             <div class="product-row">
-            <span class="
+
+                <div class="product-item product-column">
+                <span class="product-item-image" src="${model.products[i].img}"</span>
+                <span class="prduct-item-description"${model.products[i].description}"</span>
+                </div>
+    
+            </div>
+
                
 
     `
