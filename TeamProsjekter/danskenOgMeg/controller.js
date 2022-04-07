@@ -113,7 +113,7 @@ function viewStuff(index) {
             html += /*html*/
                 `
             <div class="rows ${first}">
-                <img class="front-item-image" src="${model.products[i].img}"/>
+                <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
                 <div class="front-item-title">${model.products[i].title}</div>
                 <div class="front-price">${model.products[i].price}kr</div>
                 <div class="stock">stock: ${model.products[i].stock}</div>
