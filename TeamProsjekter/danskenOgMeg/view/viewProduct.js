@@ -11,7 +11,7 @@ function viewProduct() {
     </div>
 
     <div class="currentProduct">
-    ${createProductItem()}
+    ${viewProductItem()}
     </div>
 
     <div class="product-quantity product-column">
@@ -24,15 +24,32 @@ function viewProduct() {
     return html;
 };
 
-function createProductItem() {
-    var result = '';
-
-    result += `<section class="showProduct">
-            <h2 class ="product-header"> ${model.products.title} </h2>
+function viewProductItem() {
+    let result = '';
+    for (let i = 0; i < model.products.length; i++)
+    if(model.products[i].id == model.modalPopupInformation)
+    result = `<section class="showProduct">
+            <h2 class ="product-header"> ${model.products[i].title}</h2>
             <div class="product-row">
-            <span class="
+
+                <div class="product-item product-column">
+                <img class="product-item-main-image" src="${model.products[i].img}"</span>
+                </div>
+
+                <div class="product-item">
+                <span class="product-item-description">${model.products[i].description}"</span>
+                </div>
+    
+            </div>
+
                
 
     `
     return result;
+}
+
+function modalWindowPopup(index){
+    model.modalPopupInformation = index;
+    model.app.currentPage = 'viewProduct';
+    updateView();
 }

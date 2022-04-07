@@ -26,7 +26,7 @@ function updateViewLoginWithMail(){
         </div>
         <div class="innholdL"></div>
         <div class="innhold1L"></div>
-        <div class="footerL">footer</div>
+        <div class="footerL"></div>
     </div>`
     return html;
 }
@@ -60,7 +60,7 @@ function updateViewLoginWithPhone(){
         </div>
         <div class="innholdL"></div>
         <div class="innhold1L"></div>
-        <div class="footerL">footer</div>
+        <div class="footerL"></div>
     </div>`
     return html;
 
@@ -94,7 +94,7 @@ function updateViewCreateAccount(){
     </div>
     <div class="innholdL"></div>
     <div class="innhold1L"></div>
-    <div class="footerL">footer</div>
+    <div class="footerL"></div>
 </div>`
 return html;
 }
@@ -124,7 +124,7 @@ function updateViewNewAccount(){
     </div>
     <div class="innholdL"></div>
     <div class="innhold1L"></div>
-    <div class="footerL">footer</div>
+    <div class="footerL"></div>
 </div>`
 return html;
 }
@@ -142,7 +142,7 @@ function updateViewAccountInfo(){
         <div class="menyL">${accountInfo()}</div>
         <div class="innholdL"></div>
         <div class="innhold1L"></div>
-        <div class="footerL">footer</div>
+        <div class="footerL"></div>
     </div>
     `
     return html;

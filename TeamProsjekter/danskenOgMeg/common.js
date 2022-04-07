@@ -1,8 +1,8 @@
 // ------------ oversikrift --------------
 function Header() {
     return `
-         <h1 class="header">Dansken og Meg<h1>
-         <h2 class="smallerHeader">Vintage Skatter</h2>
+         <h1 class="header" onclick="model.app.currentPage='FrontPage'; viewStuff(100);">Dansken og meg<h1>
+         <h2 class="smallerHeader" onclick="model.app.currentPage='FrontPage'; viewStuff(100);">Vintage Skatter</h2>
          `
 };
 
@@ -14,7 +14,7 @@ function searchfield() {
 }
 function slider() {
     return `
-    <div class="slider"><input type="range" value="${model.sliderValueIs}" step="100 "min="1" max="20000" onchange="sliderValue(this.value);updateView();">
+    <div><input type="range" class="slider" value="${model.sliderValueIs}" step="1000 "min="0" max="20000" onchange="sliderValue(this.value);updateView();">
 
     `
 }

@@ -57,14 +57,13 @@ function make(index) {
 
     let html = "";
     model.viewMenyCategories = "";
-    model.activeSubCategory[index] = !model.activeSubCategory[index];
-    // model.test[index] = ! model.test[index];// 
-    // model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index]; onclick="viewStuff(${model.products[i]})"
-    for (let i = 0; i < model.categories.length; i++) {
-        if (model.activeSubCategory[i] == true && index < 100) {
+    model.activeSubCategory[index] = !model.activeSubCategory[index]; 
+    for(let i = 0; i < model.categories.length; i++){      
+        if(model.activeSubCategory[i] == true && index < 100){ 
             html += `<div class="dropDownList" onclick="make(${i}); showCatergoriProducts(${i});">${model.categories[i].name}</div>`
-            for (let j = 0; j < model.categories[i].sub.length; j++) {
-                html += `<div class="sublist" onclick="viewStuff(${model.categories[i].sub[j].id});">${model.categories[i].sub[j].categoriName}</div>`
+
+            for(let j = 0; j < model.categories[i].sub.length; j++){
+            html += `<div class="sublist" onclick="viewStuff(${model.categories[i].sub[j].id});">${model.categories[i].sub[j].categoriName}</div>`
             }
         }
         else {
@@ -99,7 +98,7 @@ function viewStuff(index) {
             html += /*html*/
                 `
     <div class="rows ${first}">
-        <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
+        <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${model.products[i].id});updateView()"/>
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
         <div class="stock">stock: ${model.products[i].stock}</div>
@@ -115,7 +114,7 @@ function viewStuff(index) {
             html += /*html*/
                 `
             <div class="rows ${first}">
-                <img class="front-item-image" src="${model.products[i].img}"/>
+                <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
                 <div class="front-item-title">${model.products[i].title}</div>
                 <div class="front-price">${model.products[i].price}kr</div>
                 <div class="stock">stock: ${model.products[i].stock}</div>
@@ -123,9 +122,9 @@ function viewStuff(index) {
             </div>`
         }
         model.viewProductsHere = html;
-
+        console.log('yo')
         updateView();
-    }
+    }}
 
     // ------------- Login information ------------------ Login information  ------------------ Login information ------------------ Login information ------------------ Login information ------------------
 
@@ -272,10 +271,10 @@ function viewStuff(index) {
 
     function sliderValue(indexValue) {
         model.sliderValueIs = indexValue;
-        console.log('slider value:' + model.sliderValueIs);
+        // document.getElementById('sliderValue').innerHTML = indexValue;
         updateView();
     }
-}
+
 
 
 
@@ -313,41 +312,43 @@ function tulleview() {
     let html = `<input class="product-quantity-input" onchange="model.createIteminput.title = this.value" type="number">`
     html += "<button onclick='createProduct()'>"
 }
-let apiverdi = {
-    values: [{
-        title: 'Sofa',
-        price: 9999,
-        stock: 2,
-        category: 'Stue',
-        id: 111,
-        parentId: 11,
-        subCategory: 'Sofa',
-        img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
-        description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
-        measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
-        color: ['Oker Gul'],
-        country: 'Danmark',
-        year: '2006',
-    },],
-};
-
-async function getdata() {
-    let response = await fetch("https://pokeapi.co/api/v2")
-    let data = await response.json()
-
-    let response2 = await fetch(data.ability)
-    let data2 = await response2.json()
-    console.log(data2)
-    let response3 = await fetch(data2.results[17].url)
-    let data3 = await response3.json()
-    console.log(data3)
-}
-
-function addListOfProducts(apiVerdi) {
-
-    for (let i = 0; i < newProducts.length; i++) {
-        model.products.push(newProducts[i])
-    }
 
 
-}
+// Ikke tenk på det. ~ thorbjoern
+
+// let apiverdi = {
+//     values: [{
+//         title: 'Sofa',
+//         price: 9999,
+//         stock: 2,
+//         category: 'Stue',
+//         id: 111,
+//         parentId: 11,
+//         subCategory: 'Sofa',
+//         img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
+//         description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+//         measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
+//         color: ['Oker Gul'],
+//         country: 'Danmark',
+//         year: '2006',
+//     },],
+// };
+
+// async function getdata() {
+//     let response = await fetch("https://pokeapi.co/api/v2")
+//     let data = await response.json()
+
+//     let response2 = await fetch(data.ability)
+//     let data2 = await response2.json()
+//     console.log(data2)
+//     let response3 = await fetch(data2.results[17].url)
+//     let data3 = await response3.json()
+//     console.log(data3)
+// }
+
+// function addListOfProducts(apiVerdi) {
+
+//     for (let i = 0; i < newProducts.length; i++) {
+//         model.products.push(newProducts[i])
+//     }
+// }

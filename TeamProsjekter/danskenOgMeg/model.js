@@ -196,6 +196,7 @@ const model = {
     viewProductsHere: '',
     sliderValueIs: 20000,
     clickedOnProducts: false,
+    modalPopupInformation: '',
 
     products:[],
 
