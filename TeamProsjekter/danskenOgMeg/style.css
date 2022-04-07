@@ -183,7 +183,17 @@ ul {
 }
 
 /* *************PRODUCT DESCRIPTION************* */
+.showProduct {
+	display: flex;
+	align-items: center;
+}
 
+.product-item-main-image {
+	height: 300px;
+	width: 300px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
 
 
 /* *************HANDLEKURV************* */

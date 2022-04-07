@@ -36,7 +36,7 @@ function viewProductItem() {
                 <img class="product-item-main-image" src="${model.products[i].img}"</span>
                 </div>
 
-                <div class="product-item
+                <div class="product-item">
                 <span class="product-item-description">${model.products[i].description}"</span>
                 </div>
     
