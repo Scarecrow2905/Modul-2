@@ -11,7 +11,7 @@ function viewProduct() {
     </div>
 
     <div class="currentProduct">
-    ${createProductItem()}
+    ${viewProductItem()}
     </div>
 
     <div class="product-quantity product-column">
@@ -24,7 +24,7 @@ function viewProduct() {
     return html;
 };
 
-function createProductItem() {
+function viewProductItem() {
     var result = '';
     for (let i = 0; i < model.products.length; i++)
     result = `<section class="showProduct">
