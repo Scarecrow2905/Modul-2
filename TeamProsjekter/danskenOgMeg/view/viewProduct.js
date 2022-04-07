@@ -45,8 +45,7 @@ function viewProductItem() {
 }
 
 function modalWindowPopup(index){
-    viewProduct();
-    console.log('fuck ' + index);
+    model.modalPopupInformation = index;
+    model.app.currentPage = 'viewProduct';
     updateView();
-
 }
