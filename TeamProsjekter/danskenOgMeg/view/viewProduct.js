@@ -32,8 +32,8 @@ function viewProductItem() {
             <div class="product-row">
 
                 <div class="product-item product-column">
-                <span class="product-item-image" src="${model.products[i].img}"</span>
-                <span class="prduct-item-description"${model.products[i].description}"</span>
+                <span class="product-item-image" src="${model.products.img}"</span>
+                <span class="prduct-item-description"${model.products.description}"</span>
                 </div>
     
             </div>
