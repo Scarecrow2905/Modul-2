@@ -46,14 +46,36 @@ ul {
 	grid-area: footer;
 }
 
-.search-icon {
-	float: left;
-}
+
 .liteFeltLi {
 	list-style-type: none;
 	float: left;
-	margin-left: 15%;
 	font-size: 1rem;
+	margin: 2% 2% 2% 8%
+}
+.liteFeltLi1 {
+	list-style-type: none;
+	float: left;
+	font-size: 1rem;
+	margin: 2% 0% 2% 15%;
+	align-items: center;
+
+}
+.liteFeltLi2 {
+	list-style-type: none;
+	float: left;
+	font-size: 1rem;
+	margin: 2% 2% 2% 0%;
+	align-items: center;
+
+}
+.liteFeltLi3 {
+	list-style-type: none;
+	float: left;
+	font-size: 1rem;
+	margin: 2% 2% 2% 0%;
+	align-items: center;
+
 }
 .liteFelt {
 	align-items: center;
