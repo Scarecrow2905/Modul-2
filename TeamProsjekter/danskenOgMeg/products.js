@@ -1,7 +1,7 @@
 
 
-var newProducts = [
-
+model.products = [
+    
     // Stue
     {
         title: 'Sofa',
