@@ -15,7 +15,7 @@ function viewProduct() {
     </div>
 
     <div class="product-quantity product-column">
-    <input class="product-quantity-input" type="number"
+        <input class="product-quantity-input" type="number">
 
 
 </div>

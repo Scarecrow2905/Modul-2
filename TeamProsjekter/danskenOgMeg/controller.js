@@ -77,7 +77,8 @@ function make(index) {
 }
 function addCategory() {
     // legg til verdier for å lage kategori (Id og navn på kategori)
-    model.activeSubCategory.push(false)
+    model.activeSubCategory.push(false);
+    //model.categories.push({})
     // model.wasActiveSubCategory.push(false) 
 }
 
@@ -274,3 +275,80 @@ function viewStuff(index) {
         updateView();
     }
 
+
+
+
+function createProduct() {
+   let test = ""
+    if(model.createItems.title == "")
+    {alert("fyll ut") 
+    return;
+    }
+    let newproduct = {}
+
+    newproduct.title = model.createIteminput.title
+    model.createItems.title = '${input.value}';
+    model.createItems.price = '${input.value}';
+    model.createItems.stock = '${input.value}';
+    model.createItems.category = '${input.value}';
+    model.createItems.categoryId = '${input.value}';
+    model.createItems.img = '${input.value}';
+    model.createItems.description = '${input.value}';
+    model.createItems.measures = '${input.value}';
+    model.createItems.color = '${input.value}';
+    model.createItems.country = '${input.value}';
+    model.createItems.year = '${input.value}';
+
+    model.products.push(newproduct)
+    blanckInput()
+   // updateview()
+}
+
+function blanckInput(){
+    model.createIteminput.title = ""
+    // må nulle ut alle verdier, husk at noen er tall
+}
+function tulleview() {
+    let html = `<input class="product-quantity-input" onchange="model.createIteminput.title = this.value" type="number">`
+    html += "<button onclick='createProduct()'>"
+}
+
+
+// Ikke tenk på det. ~ thorbjoern
+
+// let apiverdi = {
+//     values: [{
+//         title: 'Sofa',
+//         price: 9999,
+//         stock: 2,
+//         category: 'Stue',
+//         id: 111,
+//         parentId: 11,
+//         subCategory: 'Sofa',
+//         img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
+//         description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+//         measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
+//         color: ['Oker Gul'],
+//         country: 'Danmark',
+//         year: '2006',
+//     },],
+// };
+
+// async function getdata() {
+//     let response = await fetch("https://pokeapi.co/api/v2")
+//     let data = await response.json()
+
+//     let response2 = await fetch(data.ability)
+//     let data2 = await response2.json()
+//     console.log(data2)
+//     let response3 = await fetch(data2.results[17].url)
+//     let data3 = await response3.json()
+//     console.log(data3)
+// }
+
+// function addListOfProducts(apiVerdi) {
+
+//     for (let i = 0; i < newProducts.length; i++) {
+//         model.products.push(newProducts[i])
+//     }
+// }
