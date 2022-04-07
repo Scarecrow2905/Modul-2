@@ -194,11 +194,30 @@ ul {
 	align-items: center;
 }
 
+.product-header {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #333;
+}
+
 .product-item-main-image {
 	height: 300px;
 	width: 300px;
 	border: 1px solid black;
 	border-radius: 5px;
+}
+
+.product-column {
+	display: flex;
+	align-items: center;
+	margin-right: 1.5em;
+
+}
+
+.product-row {
+	display:flex;
+	margin-top: 5.5em;
+	margin-left: 5.5em;
 }
 
 
