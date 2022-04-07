@@ -25,10 +25,10 @@ function viewProduct() {
 };
 
 function viewProductItem() {
-    var result = '';
+    let result = '';
     for (let i = 0; i < model.products.length; i++)
     result = `<section class="showProduct">
-            <h2 class ="product-header"> ${model.products[i].title} </h2>
+            <h2 class ="product-header"> ${model.products[i].title}</h2>
             <div class="product-row">
 
                 <div class="product-item product-column">
@@ -42,4 +42,11 @@ function viewProductItem() {
 
     `
     return result;
+}
+
+function modalWindowPopup(index){
+    viewProduct();
+    console.log('fuck ' + index);
+    updateView();
+
 }
