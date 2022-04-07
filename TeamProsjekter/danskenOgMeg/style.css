@@ -466,3 +466,16 @@ body {
 	list-style-type: none;
 	margin-right: 2%;
 }
+
+.toTopButton{
+	color:black;
+	text-decoration: none;
+	font-size: 1rem;
+	margin-left: 2%;
+}
+.toTopButton:hover{
+	color:rgb(162, 222, 208);
+	background-color:rgb(246, 153, 116);
+	border-radius:25%;
+	padding:0.2%;
+}

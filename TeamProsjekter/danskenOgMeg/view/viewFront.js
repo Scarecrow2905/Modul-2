@@ -5,7 +5,7 @@ function updateViewFront() {
     // model.app.currentPage = 'LoginMail'
     html += /*html*/`
     <div class="page">
-        <div class="header">${Header()}</div>
+        <div id="toTop" class="header">${Header()}</div>
         <div class="liteFelt">
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
@@ -24,15 +24,15 @@ function updateViewFront() {
         ${model.viewProductsHere}
         
         </div>
-        <div class="footer"></div>
+          <br>
+          <div class="footer"><a class="toTopButton" href="#toTop">Back to top</a>
+        </div>
     </div>
   `
 
     return html;
 };
 
-// ---------------- FrontPage (Produkter) ---------------&&
-// console.log(model.products[i].stock + 'STOCK')
-//Thorbjørn prøver å åpne produktet KEK FIKK TIPS OM MODAL
+
 
 

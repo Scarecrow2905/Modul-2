@@ -57,11 +57,10 @@ function make(index){
     let html = "";
     model.viewMenyCategories = "";
     model.activeSubCategory[index] = !model.activeSubCategory[index]; 
-    // model.test[index] = ! model.test[index];// 
-    // model.wasActiveSubCategory[index] = !model.wasActiveSubCategory[index]; onclick="viewStuff(${model.products[i]})"
     for(let i = 0; i < model.categories.length; i++){      
         if(model.activeSubCategory[i] == true && index < 100){ 
             html += `<div class="dropDownList" onclick="make(${i}); showCatergoriProducts(${i});">${model.categories[i].name}</div>`
+
             for(let j = 0; j < model.categories[i].sub.length; j++){
             html += `<div class="sublist" onclick="viewStuff(${model.categories[i].sub[j].id});">${model.categories[i].sub[j].categoriName}</div>`
             }
@@ -121,7 +120,7 @@ function viewStuff(index){
         } 
         }
         model.viewProductsHere = html;
-
+        console.log('yo')
         updateView();
 }
 
