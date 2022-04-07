@@ -169,11 +169,14 @@ ul {
 .front-item-image {
 	/* display:flex; */
 	width: 13em;
-
 	height: 10em;
 	border-radius: 10px;
 	border: solid black 1px;
 	margin-bottom: 2px;
+}
+
+.front-item-image:hover {
+	box-shadow: 0 5px 10px rgba(0, 0, 0.1);
 }
 
 .front-price {
@@ -194,6 +197,7 @@ ul {
 	border: 1px solid black;
 	border-radius: 5px;
 }
+
 
 
 /* *************HANDLEKURV************* */
