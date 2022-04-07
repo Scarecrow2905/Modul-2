@@ -268,7 +268,6 @@ function viewStuff(index) {
         updateView();
     }
 
-    sliderValueIs();
     function sliderValue(indexValue) {
         model.sliderValueIs = indexValue;
         // document.getElementById('sliderValue').innerHTML = indexValue;
