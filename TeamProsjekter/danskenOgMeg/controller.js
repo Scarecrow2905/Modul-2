@@ -123,7 +123,7 @@ function viewStuff(index) {
         model.viewProductsHere = html;
         console.log('yo')
         updateView();
-    }
+    }}
 
     // ------------- Login information ------------------ Login information  ------------------ Login information ------------------ Login information ------------------ Login information ------------------
 
@@ -268,9 +268,10 @@ function viewStuff(index) {
         updateView();
     }
 
+    sliderValueIs();
     function sliderValue(indexValue) {
         model.sliderValueIs = indexValue;
-        console.log('slider value:' + model.sliderValueIs);
+        // document.getElementById('sliderValue').innerHTML = indexValue;
         updateView();
     }
-}
+
