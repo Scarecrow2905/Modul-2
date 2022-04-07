@@ -11,7 +11,7 @@ function viewProduct() {
     </div>
 
     <div class="currentProduct">
-    ${createProductItem()}
+    ${viewProductItem()}
     </div>
 
     <div class="product-quantity product-column">
@@ -24,11 +24,11 @@ function viewProduct() {
     return html;
 };
 
-function createProductItem() {
-    var result = '';
+function viewProductItem() {
+    let result = '';
     for (let i = 0; i < model.products.length; i++)
     result = `<section class="showProduct">
-            <h2 class ="product-header"> ${model.products[i].title} </h2>
+            <h2 class ="product-header"> ${model.products[i].title}</h2>
             <div class="product-row">
 
                 <div class="product-item product-column">
@@ -42,4 +42,11 @@ function createProductItem() {
 
     `
     return result;
+}
+
+function modalWindowPopup(index){
+    viewProduct();
+    console.log('fuck ' + index);
+    updateView();
+
 }
