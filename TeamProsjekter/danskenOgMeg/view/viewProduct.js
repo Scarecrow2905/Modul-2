@@ -27,6 +27,7 @@ function viewProduct() {
 function viewProductItem() {
     let result = '';
     for (let i = 0; i < model.products.length; i++)
+    if(model.products[i].id == model.modalPopupInformation)
     result = `<section class="showProduct">
             <h2 class ="product-header"> ${model.products[i].title}</h2>
             <div class="product-row">
