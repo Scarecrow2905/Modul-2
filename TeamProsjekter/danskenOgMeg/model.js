@@ -211,18 +211,18 @@ const model = {
     products: [
         {
             title: 'Sofa',
-            price: 9999,
-            stock: 2,
+            price: 6999,
+            stock: 1,
             category: 'Stue',
             id: 111,
             parentId: 11,
             subCategory: 'Sofa',
-            img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
-            description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
+            img: 'TeamProsjekter/danskenOgMeg/TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            description: 'Pent brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
             country: 'Danmark',
-            year: '2006',
+            year: '1978',
         },
         {
             title: 'Spisestuestol',
