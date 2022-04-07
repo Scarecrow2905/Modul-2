@@ -9,10 +9,17 @@ function Header() {
 // ---------------- Søkefelt ---------------
 function searchfield() {
     return `
-    <div class="Searchfield"> <input placeholder="Søkeord" type="text" oninput="searchCatalog(this.value)"/></div>
+    <div class="Searchfield"> <input placeholder="Søkeord" type="text" onchange="searchCatalog(this.value)"/></div>
     `
 }
-// ------------ LOGIN----------------
+function slider() {
+    return `
+    <div class="slider"><input type="range" value="${model.sliderValueIs}" step="100 "min="1" max="20000" onchange="sliderValue(this.value);updateView();">
+
+    `
+}
+
+// ------------ LOGIN----------------onchange="sliderValue(this.value)"
 function mail() {
     return `
     <div><input class="username" value="${model.account.email}" placeholder="E-post*" type="email" oninput="model.account.email = this.value"/></div>

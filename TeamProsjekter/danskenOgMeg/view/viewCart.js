@@ -47,7 +47,7 @@ function createCartItems(){
                             <span class="cart-price cart-column">${model.shoppingCart.cartProducts[i].price} kr </span>
                         <div class="cart-quantity cart-column">
                             <input class="cart-quantity-input" type="number" value="${model.shoppingCart.quantity}">
-                            <button class="btn btn-danger cart-quantity-button" type"button">Fjern</button>
+                            <button class="btn btn-danger cart-quantity-button" type"button" onclick="removeCart(${i});">Fjern</button>
                     </div>
 
                 </div> `

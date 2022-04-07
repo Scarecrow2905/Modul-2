@@ -23,3 +23,16 @@ function viewProduct() {
 
     return html;
 };
+
+function createProductItem() {
+    var result = '';
+
+    result += `<section class="showProduct">
+            <h2 class ="product-header"> ${model.products.title} </h2>
+            <div class="product-row">
+            <span class="
+               
+
+    `
+    return result;
+}
