@@ -1,8 +1,8 @@
 // ------------ oversikrift --------------
 function Header() {
     return `
-         <h1 class="header">Dansken og Meg<h1>
-         <h2 class="smallerHeader">Vintage Skatter</h2>
+         <h1 class="header">Hore<h1>
+         <h2 class="smallerHeader" onclick="updateView()">Vintage Skatter</h2>
          `
 };
 
