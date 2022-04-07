@@ -217,7 +217,7 @@ const model = {
             id: 111,
             parentId: 11,
             subCategory: 'Sofa',
-            img: 'TeamProsjekter/danskenOgMeg/TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
+            img: 'TempBilder/1Stue/1Sofa/vintagesofaoker.jpeg',
             description: 'Pent brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
             measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
             color: ['Oker Gul'],
@@ -226,7 +226,7 @@ const model = {
         },
         {
             title: 'Spisestuestol',
-            price: 8999,
+            price: 1999,
             stock: 2,
             category: 'Spiserom',
             id: 112,
