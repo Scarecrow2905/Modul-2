@@ -7,6 +7,9 @@
 	font-family: SeasidResortNF;
 	src: url("/fonts/SeasideResortNF.ttf");
 }
+:root {
+	--ShadowForTrondErik: box-shadow: 0 10px 15px rgba(0, 0, 0.1);
+}
 
 /*------------FrontPage - DropDown------------*/
 ul {
