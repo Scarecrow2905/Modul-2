@@ -81,10 +81,10 @@ model.products = [
 
     {
         title: 'Sofabord',
-        price: 8888,
+        price: 3399,
         stock: 2,
         category: 'Stue',
-        id: 11,
+        id: 12,
         parentId: 1,
         subCategory: 'Sofabord',
         img: 'TempBilder/1Stue/2Sofabord/80svintagebord.jpeg',
