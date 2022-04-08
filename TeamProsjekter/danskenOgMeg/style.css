@@ -521,3 +521,8 @@ body {
 	background: rgb(246, 153, 116);
 	cursor: pointer;
   }
+
+  /* PRivate user site*/
+  .innholdP1{
+	  /* text-align:center; */
+  }

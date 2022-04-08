@@ -16,9 +16,9 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | 
-        currentUser: 0,
-        status: false,
+        currentPage: 'accountInfo', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | 
+        currentUser: 5, // 0
+        status: true, // false
         showStatus: 'Logg inn',
         click: 0,
     },
@@ -27,9 +27,11 @@ const model = {
     //Inputs for login og å lage nye brukeretest
     account: {
         users: [
-            { firstName: 'admin', lastName: 'nordmann', phone: 12121212, email: 'test@test.no', password: 'abc123', id: 1 },
-            { firstName: 'kåre', lastName: 'nordmann', phone: 0, email: 'fest@test.no', password: 'abcd123', id: 3 },
-            { firstName: 'håre', lastName: 'nordmann', phone: 0, email: 'hest@test.no', password: 'abce123', id: 4 },
+            { firstName: 'Admin',       lastName: 'Nordmann',    phone: 12121212, email: 'test@test.no',            password: 'abc123', id: 1, cardnumber: 1234123412341234, cardname: 'Admin Nordmann'},
+            { firstName: 'Renee',       lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no',     password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen'},
+            { firstName: 'Tommy',       lastName: 'Håvåg',       phone: 12345678, email: 'thommy@getacademy.no',    password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },
+            { firstName: 'Thorbjørn',   lastName: 'Berglund',    phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },
+            { firstName: 'Trond Erik',  lastName: 'Myrengen',    phone: 12345678, email: 'trond@getacademy.no',     password: 'abc123', id: 5, cardnumber: 1234123412341234, cardname: 'Trond Erik Myrengen' },
         ],
         // firstName:[],
         // lastName:[],
@@ -186,19 +188,21 @@ const model = {
         card: false,
         delivery: false,
         pickupPoint: false,
+        cardNumberInput: null, 
+        cardUsersName: '',
     },
     // Admin og nye brukere
-    members: [{
-        username: 'Elin',
-        password: 'monkeyBusiness',
-        userlevel: 'admin'
-    },
-    {
-        username: 'fake',
-        password: 'gay',
-        userlevel: 'user'
-    },
-    ],
+    // members: [{
+    //     username: 'Elin',
+    //     password: 'monkeyBusiness',
+    //     userlevel: 'admin'
+    // },
+    // {
+    //     username: 'fake',
+    //     password: 'gay',
+    //     userlevel: 'user'
+    // },
+    // ],
 
     //Alle produkter
     randomNumbers: [2, 5, 7, 9, 0, 10],

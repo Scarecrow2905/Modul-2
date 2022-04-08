@@ -7,12 +7,12 @@ html = `
 <button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlekurv</button>
             <div class="inputBox">
                 <span>Kortnummer</span>
-                <input type="text" maxlength="16" class="card-number-input">
+                <input type="text" value="${model.payment.cardNumberInput}" onchange="model.payment.cardNumberInput = this.value" maxlength="16" class="card-number-input">
             </div>
 
             <div class="inputBox">
             <span>Navn på kortholder</span>
-            <input type="text" class="card-holder-input">
+            <input type="text" placeholder="Example Examplesen" value="${model.payment.cardUsersName}" model.payment.cardUsersName = this.value" class="card-holder-input">
             
 
             <div class="flexbox">

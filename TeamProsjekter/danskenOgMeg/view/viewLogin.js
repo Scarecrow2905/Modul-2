@@ -130,7 +130,7 @@ return html;
 }
 function updateViewAccountInfo(){
     html = `
-    <div class="loginPage">
+    <div class="accountInfoPage">
         <div class="headerL">${Header()}</div>
         <div class="smalLinje">
             <ul>
@@ -139,10 +139,12 @@ function updateViewAccountInfo(){
                 <li class="liteFeltLi"><button onclick="model.app.click++; logOut()";>Log Out</button></li> 
             <ul>
         </div>
-        <div class="menyL">${accountInfo()}</div>
-        <div class="innholdL"></div>
-        <div class="innhold1L"></div>
-        <div class="footerL"></div>
+        <div class="innholdP0"></div>
+        <div class="innholdP1">${accountInfo()}</div>
+        <div class="innholdP2"></div>
+        <div class="innholdP3">${AddPaymentInformation()}</div>
+        <div class="innholdP4"></div>
+        
     </div>
     `
     return html;

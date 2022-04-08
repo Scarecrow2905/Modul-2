@@ -73,13 +73,39 @@ function accountInfo(){
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.currentUser == model.account.users[i].id) {
             return `
-       <div>First Name:${model.account.users[i].firstName}</div>
-       <div> Last Name:${model.account.users[i].lastName}</div>
-       <div> Phone Number:${model.account.users[i].phone}</div>
-       <div>Mail Adress:${model.account.users[i].email}</div>
-       <div>Your Password:${model.account.users[i].password}</div>
+            <div>
+                <ul>
+                    <li><b>First Name: </b>${model.account.users[i].firstName}</li>
+                    <li><b> Last Name: </b>${model.account.users[i].lastName}</li>
+                    <li><b>Mail adress: </b>${model.account.users[i].email}</li>
+                    <li><b>Your Password: </b>${model.account.users[i].password}</li>
+                </ul>
+            </div>
+            <br><hr>
+            <button>Edit payment information</button><br><hr>
+            <button>Edit first/Last name</button><br><hr>
+            <button>Edit mail adress</button><br><hr>
+            <button>Edit password</button><br><hr>
+            <button>Watch your order</button><br><hr>
+            <button>Your receipts</button><hr>
+
+
+
+
+
+
+       
     `
         }
+    }
+}
+function AddPaymentInformation(){
+    for (let i = 0; i < model.payment.length; i++) {
+            return `
+       <div>Your Card Number: ${model.payment[i].cardNumberInput}</div>;
+       <div>your Cardholder Name:${model.payment[i].cardUsersName}</div>
+    `
+        
     }
 }
 
