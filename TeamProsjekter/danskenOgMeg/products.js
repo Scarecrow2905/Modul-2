@@ -39,7 +39,7 @@ model.products = [
         id: 113,
         parentId: 11,
         subCategory: 'Kjøkkenbord',
-        img: '',
+        img: 'TempBilder/1 Kjøkkenbord/vintagekjokkenbord.jpeg',
         description: '.',
         measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
         color: ['Oker Gul'],
@@ -70,7 +70,7 @@ model.products = [
         id: 131,
         parentId: 31,
         subCategory: 'Seng',
-        img: '',
+        img: 'TempBilder/4 Soverom/1 Seng/vintageseng2.jpeg',
         description: 'Flott, unik seng.',
         color: ['gold', 'gylden'],
         country: 'Canada',
@@ -288,6 +288,6 @@ model.products = [
         color: ['black', 'brown', 'tan'],
         country: 'Denmark',
         year: '1996ca',
-    }
+    },
 ];
 
