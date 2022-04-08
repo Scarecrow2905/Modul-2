@@ -119,7 +119,7 @@ const model = {
         },
         {
             name: 'Soverom', id: 4, sub: [
-                { categoriName: 'Leketøy', id: 41, parentId: 4 },// seng
+                { categoriName: 'Seng', id: 41, parentId: 4 },// seng
                 { categoriName: 'Nattbord', id: 42, parentId: 4 },
                 { categoriName: 'Kommoder', id: 43, parentId: 4 },
                 { categoriName: 'Garderobeskap', id: 44, parentId: 4 },
