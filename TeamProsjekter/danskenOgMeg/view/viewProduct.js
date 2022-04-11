@@ -45,20 +45,21 @@ function viewProductItem() {
                 
             <div class="product-item">
                 <span class="product-item-description">
-                ${model.products[i].description} 
-                Mål:    ${model.products[i].measures}
-                Land:   ${model.products[i].country}
-                Farge:  ${model.products[i].color}
-                År:     ${model.products[i].year}
+                ${model.products[i].description}  <br> <br>
+                Mål:    ${model.products[i].measures} <br>
+                Land:   ${model.products[i].country} <br>
+                Farge:  ${model.products[i].color} <br>
+                År:     ${model.products[i].year} <br>
                 </span>
             </div>
 
         </div>
                 
-            <div class="product-input-btn">
+        <div class="product-input-btn">
+                <div class="product-price">${model.products[i].price} kr </div>
                 <input class="product-quantity-input" type="number">
                 <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView();">Legg til handlekurv</button>
-            </div>
+        </div>
     
         
 
