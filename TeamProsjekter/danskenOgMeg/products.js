@@ -72,6 +72,7 @@ model.products = [
         subCategory: 'Seng',
         img: 'TempBilder/4 Soverom/1 Seng/vintageseng2.jpeg',
         description: 'Flott, unik seng.',
+        measures: 'Høyde 100cm. Dybde 45cm. Lengde 220cm.',
         color: ['gold', 'gylden'],
         country: 'Canada',
         year: '1968',

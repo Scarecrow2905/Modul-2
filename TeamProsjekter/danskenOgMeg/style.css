@@ -163,7 +163,7 @@ ul {
 	border: none;
 	border-radius: 0.3em;
 	height: 34px;
-	width: 100%;
+	width: 70%;
 }
 .front-item-btn:hover {
 	background-color: rgb(242, 250, 140);
@@ -200,25 +200,31 @@ ul {
 
 }
 
+.product-column{
+	display: flex;
+	justify-content: center;
+}
+
 .product-header {
 	font-weight: bold;
 	font-size: 2.2em;
 	color: #333;
+	display: flex;
+	align-self: flex-end;
+	margin-top: 100px;
+	margin-bottom: -50px;
+	margin-right: -240px;
 }
 
 .product-item-main-image {
 	display: flex;
 	height: 300px;
 	width: 300px;
+	align-items: left;
 	border: 1px solid black;
 	border-radius: 5px;
-}
-
-.product-column {
-	display: flex;
-	align-items: center;
-	margin-right: 1.5em;
-
+	margin-left: 30%;
+	margin-right: 30%;
 }
 
 .product-row {
@@ -226,20 +232,29 @@ ul {
 	margin-top: 5.5em;
 	margin-left: 5.5em;
 	align-self: flex-end;
+	justify-content: center;
+	
 }
 
 .product-item-description {
 	color: #333;
 	font-size: 1.2em;
 	display: flex;
-	align-items: right;
-	margin-right: 10px;
-	margin-left:50px;
-	box-sizing: border-box;
+	margin-right: -300px;
+	margin-left: 50px;
 	border: solid 2px;
 	width: 300px;
 	height:300px;
 	
+}
+
+.product-price {
+	display: flex;
+	text-align: left;
+	align-items: left;
+	width: 160px;
+	color: #333;
+	font-size: 1.2em;
 }
 
 .product-input-btn {
@@ -248,6 +263,8 @@ ul {
 	border:#333 solid;
 	margin-top: auto;
 	align-self: flex-end;
+	margin-right: -300px;
+	margin-top: 10px;
 }
 
 .product-quantity-input {
@@ -355,7 +372,7 @@ ul {
 }
 
 .btn-buy {
-	width: 75px;
+	width: 55px;
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
