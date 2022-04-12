@@ -163,7 +163,7 @@ ul {
 	border: none;
 	border-radius: 0.3em;
 	height: 34px;
-	width: 70%;
+	width: 100%;
 }
 .front-item-btn:hover {
 	background-color: rgb(242, 250, 140);
@@ -200,32 +200,25 @@ ul {
 
 }
 
-.product-column{
-	display: flex;
-	justify-content: center;
-}
-
 .product-header {
-	font-weight:lighter;
+	font-weight: bold;
 	font-size: 2.2em;
 	color: #333;
-	display: flex;
-	align-self: flex-end;
-	margin-top: 100px;
-	margin-bottom: -50px;
-	margin-right: 20%;
-	margin-left: 80%;
 }
 
 .product-item-main-image {
 	display: flex;
 	height: 300px;
 	width: 300px;
-	align-items: left;
 	border: 1px solid black;
 	border-radius: 5px;
-	margin-left: 30%;
-	margin-right: 30%;
+}
+
+.product-column {
+	display: flex;
+	align-items: center;
+	margin-right: 1.5em;
+
 }
 
 .product-row {
@@ -233,49 +226,35 @@ ul {
 	margin-top: 5.5em;
 	margin-left: 5.5em;
 	align-self: flex-end;
-	justify-content: center;
-	
 }
 
 .product-item-description {
 	color: #333;
 	font-size: 1.2em;
 	display: flex;
-	margin-right: -300px;
-	margin-left: 50px;
-	border: solid 1px;
+	align-items: right;
+	margin-right: 10px;
+	margin-left:50px;
+	box-sizing: border-box;
+	border: solid 2px;
 	width: 300px;
 	height:300px;
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-top: 2px;
-	padding-bottom: 2px;
 	
-}
-
-.product-price {
-	display: flex;
-	text-align: left;
-	align-items: left;
-	width: 160px;
-	color: #333;
-	font-size: 1.2em;
 }
 
 .product-input-btn {
 	display:flex;
 	align-items: bottom;
+	border:#333 solid;
 	margin-top: auto;
 	align-self: flex-end;
-	margin-right: -300px;
-	margin-top: 10px;
 }
 
 .product-quantity-input {
 	height: 34px;
-	width: 53px;
+	width: 50px;
 	border-radius: 5px;
-	border: 1px solid rgb(0, 0, 0);
+	border: 1px solid rgb(162, 222, 208);
 	background-color: rgb(218, 218, 218);
 	padding: 0;
 	font-size: 1.2em;
@@ -376,7 +355,7 @@ ul {
 }
 
 .btn-buy {
-	width: 55px;
+	width: 75px;
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
