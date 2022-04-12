@@ -10,13 +10,14 @@ const model = {
         quantity: 0,
         numberOfItems: 0,
         typeOfDelivery: '',
+        
     },
 
     //App -!-
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo
+        currentPage: 'viewCreateProduct', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo | viewCreateProduct
         currentUser: 5, // 0
         status: true, // false
         showStatus: 'Logg inn',
@@ -65,7 +66,7 @@ const model = {
         title: '',
         price: 0,
         stock: 1,
-        category: '',
+        id: '',
         categoryId: '',
         subCategory: '',
         img: '',
