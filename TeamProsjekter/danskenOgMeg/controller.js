@@ -135,7 +135,7 @@ function addNewInforToModel() {
         id: model.idIndex,
     })
     model.idIndex++;
-    alert('You can now login with your new accunt. good luck!')
+    alert('You can now login with your new account. good luck!')
     model.app.currentPage = 'LoginMail';
     resettInformation();
     updateView();
@@ -273,79 +273,156 @@ function sliderValue(indexValue) {
 
 
 
+
+function viewCreateProduct() {
+    let html = /*html*/
+        `
+    <div class="cart-navigation">
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
+
+    <div class="">
+    <input class="create-Product" onchange="model.createItems.title = this.value" placeholder="Produkt navn"type="text"><br>
+    <input class="create-Product" onchange="model.createItems.price = this.value" placeholder="Pris" type="number"> <br>
+    <input class="create-Product" onchange="model.createItems.img = this.value" placeholder="bilde" type="file"> <br>
+    <input class="create-Product" onchange="model.createItems.stock = this.value" placeholder="Antall" type="number"><br>
+    <input class="create-Product" onchange="model.createItems.description = this.value" placeholder="Beskrivelse" type="text"><br>
+    <input class="create-Product" onchange="model.createItems.measures = this.value" placeholder="Mål" type="text"><br>
+    <input class="create-Product" onchange="model.createItems.country = this.value" placeholder="Land" type="text"><br>
+    <input class="create-Product" onchange="model.createItems.year = this.value" placeholder="Års-tall"type="text"><br>
+    
+    
+    <input class="" onchange="model.createItems.color = this.value" placeholder="Produkt Farge"type="color"> <br>
+
+    <div class="velgKategori">
+        <span>Velg Kategori</span>
+
+                ${createViewProduct()}
+
+        <button onclick='createProduct();'>Create Product</button>
+
+   
+    </div>
+    `
+    // html += "<button onclick='createProduct()'>"
+    return html;
+
+}
+
+function createViewProduct(){
+    var result = '';
+
+    for (let i = 0; i < model.categories.name; i++) {
+    result +=  `
+    <select name="" id="" class="kategori-input" ${model.categories.name[i]}>
+                    <option value="Kategori" selected disabled>Kategori</option>
+                    <option value="01">Stue</option>
+                    <option value="02">Spiserom</option>
+                    <option value="03">Kjøkken</option>
+                    <option value="04">Soverom</option>
+                    <option value="05">Bad</option>
+                    <option value="06">Gang</option>
+                    <option value="07">Klær</option>
+                    <option value="08">Sko</option>
+                    <option value="09">Lesesal</option>
+                </select>
+
+    `
+    }
+    return result;
+}
+
+
+/*
+<div class="velgKategori">
+                <span>Velg Kategori</span>
+                <select name="" id="" class="kategori-input">
+                    <option value="Kategori" selected disabled>Kategori</option>
+                    <option value="01">${model.categories.name[1]}</option>
+                    <option value="02">Spiserom</option>
+                    <option value="03">Kjøkken</option>
+                    <option value="04">Soverom</option>
+                    <option value="05">Bad</option>
+                    <option value="06">Gang</option>
+                    <option value="07">Klær</option>
+                    <option value="08">Sko</option>
+                    <option value="09">Lesesal</option>
+                </select>
+
+                <form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+*/
+
+
 //Lage Produkter.
 function createProduct() {
     let test = ""
     if (model.createItems.title ||
         model.createItems.price ||
         model.createItems.stock ||
-        model.createItems.category ||
-        model.createItems.img ||
+
         model.createItems.description ||
         model.createItems.measures ||
         model.createItems.color ||
         model.createItems.country ||
         model.createItems.year == "") {
         alert("Fyll ut alle feltene")
-        return;
+        
     }
-    let newproduct = {}
+    else {
+    // let newproduct = {}
+
+    // model.createItems.title = '${input.value}';
+    // model.createItems.price = '${input.value}';
+    // model.createItems.stock = '${input.value}';
+    // model.createItems.category = '${input.value}';
+    // model.createItems.categoryId = '${input.value}';
+    // model.createItems.img = '${input.value}';
+    // model.createItems.description = '${input.value}';
+    // model.createItems.measures = '${input.value}';
+    // model.createItems.color = '${input.value}';
+    // model.createItems.country = '${input.value}';
+    // model.createItems.year = '${input.value}';
+
+    model.products.push({
+        title: model.createItems.title,
+        price: model.createItems.price,
+        stock: model.createItems.stock,
+        category: model.createItems.category,
+        categoryId: model.createItems.categoryId,
+        img: model.createItems.img,
+        description: model.createItems.description,
+        measures: model.createItems.measures,
+        color: model.createItems.color,
+        country: model.createItems.country,
+        year: model.createItems.year,
 
 
-    newproduct.title = model.createIteminput.title
-    model.createItems.title = '${input.value}';
-    model.createItems.price = '${input.value}';
-    model.createItems.stock = '${input.value}';
-    model.createItems.category = '${input.value}';
-    model.createItems.categoryId = '${input.value}';
-    model.createItems.img = '${input.value}';
-    model.createItems.description = '${input.value}';
-    model.createItems.measures = '${input.value}';
-    model.createItems.color = '${input.value}';
-    model.createItems.country = '${input.value}';
-    model.createItems.year = '${input.value}';
+    })
+    blankInput();
 
     model.products.push(newproduct)
-    blanckInput()
+    // blanckInput()
     // updateview()
 }
-
-function blanckInput() {
-    model.createIteminput.title = '';
-    model.createIteminput.title = '';
-    model.createIteminput.price = 0;
-    model.createIteminput.stock = 0;
-    model.createIteminput.category = '';
-    model.createIteminput.categoryId = '';
-    model.createIteminput.img = '';
-    model.createIteminput.description = '';
-    model.createIteminput.measures = '';
-    model.createIteminput.color = [];
-    model.createIteminput.country = '';
-    model.createIteminput.year = '';
+}
+function blankInput() {
+    model.createItems.title = '';
+    model.createItems.title = '';
+    model.createItems.price = 0;
+    model.createItems.stock = 0;
+    model.createItems.category = '';
+    model.createItems.categoryId = '';
+    model.createItems.img = '';
+    model.createItems.description = '';
+    model.createItems.measures = '';
+    model.createItems.color = [];
+    model.createItems.country = '';
+    model.createItems.year = '';
     // må nulle ut alle verdier, husk at noen er tall
 }
-function tulleview() {
-    let html = /*html*/`
-    
-    <input class="" onchange="model.createItems.title = this.value" type="text">
-    <input class="" onchange="model.createItems.price = this.value" type="number">
-    <input class="" onchange="model.createItems.stock = this.value" type="number">
-    <input class="" onchange="model.createItems.category = this.value" type="text">
-    <input class="" onchange="model.createItems.categoryId = this.value" type="text">
-    <input class="" onchange="model.createItems.img = this.value" type="image">
-    <input class="" onchange="model.createItems.description = this.value" type="text">
-    <input class="" onchange="model.createItems.measures = this.value" type="text">
-    <input class="" onchange="model.createItems.color = this.value" type="color"> 
-    <input class="" onchange="model.createItems.country = this.value" type="text"> 
-    <input class="" onchange="model.createItems.year = this.value" type="text"> 
-    
-    
-    
-    `
-    html += "<button onclick='createProduct()'>"
-    updateview();
-}
+
 
 
 // Ikke tenk på det. ~ thorbjoern

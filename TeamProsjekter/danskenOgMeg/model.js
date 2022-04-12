@@ -23,7 +23,7 @@ const model = {
         click: 0,
     },
     //Inputs -!-
-    idIndex: 2,
+    iIndex: 6,
     //Inputs for login og å lage nye brukeretest
     account: {
         users: [
@@ -75,6 +75,8 @@ const model = {
         country: '',
         year: '',
     },
+    
+
     // Viser kategori og sub katergori menyen
     viewMenyCategories: '',
     //Kategorier med forskjellige id og parentId
@@ -88,12 +90,12 @@ const model = {
             sub: [
                 { categoriName: 'Sofa', id: 11, parentId: 1 },
                 { categoriName: 'Sofabord', id: 12, parentId: 1 },
-                { categoriName: 'Sjeselong', id: 14, parentId: 1 },
-                { categoriName: 'Kommoder', id: 15, parentId: 1 },
-                { categoriName: 'Hyller', id: 16, parentId: 1 },
-                { categoriName: 'Reoler', id: 17, parentId: 1 },
-                { categoriName: 'Interiør', id: 18, parentId: 1 },
-                { categoriName: 'Tekstil', id: 19, parentId: 1 },
+                { categoriName: 'Sjeselong', id: 13, parentId: 1 },
+                { categoriName: 'Kommoder', id: 14, parentId: 1 },
+                { categoriName: 'Hyller', id: 15, parentId: 1 },
+                { categoriName: 'Reoler', id: 16, parentId: 1 },
+                { categoriName: 'Interiør', id: 17, parentId: 1 },
+                { categoriName: 'Tekstil', id: 18, parentId: 1 },
             ]
         },
         {
