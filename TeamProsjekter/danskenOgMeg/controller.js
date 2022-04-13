@@ -117,7 +117,6 @@ function viewStuff(index) {
             </div>`
         }
         model.viewProductsHere = html;
-        console.log('er ' + index)
         updateView();
     }
 }
@@ -132,6 +131,8 @@ function addNewInforToModel() {
         phone: model.account.createNewPhoneNumber,
         email: model.account.createNewEmail,
         password: model.account.createNewPassword,
+        cardnumber: 0000000000000000,
+        cardname: 'No name',
         id: model.idIndex,
     })
     model.idIndex++;
@@ -345,6 +346,65 @@ function tulleview() {
     `
     html += "<button onclick='createProduct()'>"
     updateview();
+}
+
+function UpdateChange(index){
+    for (let i = 0; i < model.account.users.length; i++) {
+        if(model.app.whatInfoIsShowed == 'editPaymentInfo'){
+            if(model.payment.cardNumberInput.length < 17 && model.payment.cardNumberInput.length > 15){
+            model.account.users[index].cardnumber = model.payment.cardNumberInput;
+            model.account.users[index].cardname = model.payment.cardUsersName;
+            
+            }
+            else{
+                alert('Card number must be at 16 digits');
+                return;
+            }
+        }
+       else if(model.app.whatInfoIsShowed == 'editFirstAndLastname'){
+            model.account.users[index].firstName = model.account.newFirstName;
+            model.account.users[index].lastName = model.account.newLastName;
+            if(model.account.newFirstName == '' || model.account.newLastName == ''){
+                alert('Please enter first name and/or last name');
+                return;
+            }
+        }
+       else if(model.app.whatInfoIsShowed == 'editMail'){
+        model.account.users[index].email = model.account.createNewEmail;
+            if (model.account.createNewEmail.includes('@', '.com', '.no', 'hotmail', 'gmail') == false) { //
+            alert('Please enter a right mail adress.');
+            return;
+        }
+        }
+        else if(model.app.whatInfoIsShowed == 'editPassword'){
+            if(model.account.createNewPassword.length < 4){
+                alert('password must be at minimum 4 numers or digits');
+                return;
+            }
+            else if(model.account.createNewPassword != model.account.createNewPasswordCheck ){
+                alert('The password´s is not the same');
+                return;
+            }
+            else if(model.account.createNewPassword == model.account.createNewPasswordCheck){
+            model.account.users[index].password = model.account.createNewPassword;
+            }       
+            } 
+    }
+    resett();
+    // ShowAccountInfo();
+}
+function resett(){
+    model.account.createNewPassword = '';
+    model.account.createNewPasswordCheck = '';
+    model.account.createNewEmail = '';
+    model.account.newFirstName = '';
+    model.account.newLastName = '';
+    ShowAccountInfo();
+}
+function deleteCardInformation(index){
+    model.account.users[index].cardnumber = 0;
+    model.account.users[index].cardname = '';
+    ShowAccountInfo();
 }
 
 

@@ -142,7 +142,7 @@ function updateViewAccountInfo(){
         <div class="innholdP0"></div>
         <div class="innholdP1">${accountInfo()}</div>
         <div class="innholdP2"></div>
-        <div class="innholdP3">${AddPaymentInformation()}</div> 
+        <div class="innholdP3">${model.app.showInfoForAccount}</div> 
         <div class="innholdP4"></div>
         
     </div>

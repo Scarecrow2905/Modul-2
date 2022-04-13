@@ -17,13 +17,18 @@ const model = {
     // Navn på de forskjellige sider.
     app: {
         currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo
-        currentUser: 5, // 0
-        status: true, // false
-        showStatus: 'Logg inn',
-        click: 0,
-    },
+        currentUser: 0, // 0
+        status: false, // false
+        showStatus: 'Logg inn', // Hører til å vise om man er logget inn eller skal logge ut. 
+        click: 0,               // Hører til å logge seg ut av brukeren
+        whatInfoIsShowed: 'mainScreen',   // Hører til å forandre account infomation
+        showInfoForAccount: '<h3>This is your page and you can see or change your personal information</h3>', 
+        showAccountOrders: 'No orders', // Aktive ordre fra butikk
+        showAccountReceipts: 'No receipts', // Kvitteringer på kjøp
+
+        },
     //Inputs -!-
-    idIndex: 2,
+    idIndex: 6,
     //Inputs for login og å lage nye brukeretest
     account: {
         users: [
@@ -33,12 +38,11 @@ const model = {
             { firstName: 'Thorbjørn',   lastName: 'Berglund',    phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },
             { firstName: 'Trond Erik',  lastName: 'Myrengen',    phone: 12345678, email: 'trond@getacademy.no',     password: 'abc123', id: 5, cardnumber: 1234123412341234, cardname: 'Trond Erik Myrengen' },
         ],
-        // firstName:[],
-        // lastName:[],
+        // Midlertidlig når man skal logge seg inn med epost/telefon og passrord
         phone: '',
         email: '',
         password: '',
-        //------
+        //------ Til å lage nye brukere eller oppdatere informasjon om brukeren
         newFirstName: '',
         newLastName: '',
         createNewPhoneNumber: '',
@@ -188,7 +192,7 @@ const model = {
         card: false,
         delivery: false,
         pickupPoint: false,
-        cardNumberInput: null, 
+        cardNumberInput: '', 
         cardUsersName: '',
     },
     
