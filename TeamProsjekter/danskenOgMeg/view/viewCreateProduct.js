@@ -1,77 +1,107 @@
+let test = '';
 function viewCreateProduct() {
     let html = /*html*/
         `
 
-<div class="header">${Header()}
+<div class="header">${Header()}</div>
 
     <div class="cart-navigation">
         <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
     </div>
 
 
-    <div class="createProduct-input">
-        <input class="create-Product" onchange="model.createItems.title = this.value" placeholder="Produkt navn"   type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.price = this.value" placeholder="Pris" type="number"> <br>
-        <input class="create-Product" onchange="model.createItems.img = this.value" placeholder="bilde" type="file"> <br>
-        <input class="create-Product" onchange="model.createItems.stock = this.value" placeholder="Antall" type="number"> <br>
+    <div class="createProduct-wrapper">
+        <input class="create-Product" onchange="model.createItems.title = this.value"       placeholder="Produkt navn" type="text"> <br>
+        <input class="create-Product" onchange="model.createItems.price = this.value"       placeholder="Pris" type="number"> <br>
+        <input class="create-Product" onchange="model.createItems.img = this.value"         placeholder="bilde" type="file"> <br>
+        <input class="create-Product" onchange="model.createItems.stock = this.value"       placeholder="Antall" type="number"> <br>
         <input class="create-Product" onchange="model.createItems.description = this.value" placeholder="Beskrivelse" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.measures = this.value" placeholder="Mål" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.country = this.value" placeholder="Land" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.year = this.value" placeholder="Års-tall"type="text"> <br>
-        <input class="createProduct-input-color" onchange="model.createItems.color = this.value" placeholder="Produkt Farge"type="color"> <br>
-    </div>
-    
-
-    <div class="createProduct-function">
-    <span>Velg Kategori</span>
-    
-    ${viewCreateCategories()} <br>
-
-
+        <input class="create-Product" onchange="model.createItems.measures = this.value"    placeholder="Mål" type="text"> <br>
+        <input class="create-Product" onchange="model.createItems.country = this.value"     placeholder="Land" type="text"> <br>
+        <input class="create-Product" onchange="model.createItems.year = this.value"        placeholder="Års-tall"type="text"> <br>
+        ${viewCreateCategories()} <br>
+        ${test} <br>
+        
+        <div>Farge <input class="createProduct-input-color" onchange="model.createItems.color = this.value" placeholder="Produkt Farge"type="color"></div>
+        
 
         <button onclick='createProduct();'>Legg til produkt</button>
 
-   
-    </div>
-</div>
     `
     // html += "<button onclick='createProduct()'>"
     return html;
-
+    //
 }
-
 function viewCreateCategories() {
-    var result = '';
+    let result = '';
     html = ``
+
+    html = /*html*/
+        ` 
+                <select name="kategori" id="mainCategory" class="create-Product-kategori-input" onchange="viewCreateSubCategories(this.value)">
+                     <option value="" disabled selected hidden>Velg Kategori..</option> 
+                    
+        `
+
     for (let i = 0; i < model.categories.length; i++) {
+
+        var mainCategory = model.categories[i];
+
+
         result += /*html*/
-            `<option value="${i}">${model.categories[i].name}</option>`
+            `<option value="${mainCategory.name}">${mainCategory.name}</option>`
     }
-    html = ` <div class="inputBox">
-                <select name="kategori" id="" class="kategori-input" >
-                    <option value="">Kategori</option>    
-            `
-    return html + result;
+    closeIt = `</select>`
+    return html + result + closeIt;
+
+
+
+
 }
 
 
+function viewCreateSubCategories(mainCategory) {
+    // result = '';
+    let html = '';
+
+    for (let i = 0; i < model.categories.length; i++) {
+        if (model.categories[i].name == mainCategory) {
+
+            html +=/*html*/ `<select name="subCategory"  class="create-Product-sub-input">`
+
+            for (let j = 0; j < model.categories[i].sub.length; j++) {
+
+
+                html += /*html*/ `<option value="${model.categories[i].sub[j].categoriName}">${mainCategory.sub[j].categoriName}</option>`
+
+            }
+        }
+    }
+
+    html += `</select>`
+    test = html;
+    updateView();
+
+
+
+}
 
 //Lage Produkter.
 function createProduct() {
     let test = ""
-    if (model.createItems.title ||
-        model.createItems.price ||
-        model.createItems.stock ||
-        model.createItems.description ||
-        model.createItems.measures ||
-        model.createItems.color ||
-        model.createItems.country ||
-        model.createItems.year == "") {
+    if (model.createItems.title
+        && model.createItems.price
+        && model.createItems.stock
+        && model.createItems.description
+        && model.createItems.color
+        && model.createItems.year
+        && model.createItems.measures
+        && model.createItems.img == "") {
         alert("Fyll ut alle feltene")
 
     }
     else {
-        let newproduct = {}
+
 
         // model.createItems.title = '${model.createItems.title}';
         // model.createItems.price = '${model.createItems.price}';
@@ -100,9 +130,10 @@ function createProduct() {
 
 
         })
+        console.log(model.products)
         blankInput();
 
-        model.products.push(newproduct)
+        //  model.products.push(newproduct);
         // blanckInput()
         // updateview()
     }
