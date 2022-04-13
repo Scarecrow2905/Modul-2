@@ -26,6 +26,9 @@ const model = {
         showInfoForAccount: '<h3>This is your page and you can see or change your personal information</h3>', 
         showAccountOrders: 'No orders', // Aktive ordre fra butikk
         showAccountReceipts: 'No receipts', // Kvitteringer på kjøp
+        viewPayUserCard: '',
+        viewPayUserName: '',
+
 
         },
     //Inputs -!-
@@ -198,7 +201,6 @@ const model = {
         cardNumberInput: '', 
         cardUsersName: '',
     },
-    
 
     //Alle produkter
     randomNumbers: [2, 5, 7, 9, 0, 10],

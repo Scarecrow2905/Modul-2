@@ -408,6 +408,23 @@ function deleteCardInformation(index){
 }
 
 
+
+function viewPayUserType(){
+    for (let i = 0; i < model.account.users.length; i++) {
+        if (model.app.currentUser == model.account.users[i].id){
+            if(model.app.currentUser != 0){
+                model.app.viewPayUserCard = model.account.users[i].cardnumber;
+                model.app.viewPayUserName = model.account.users[i].cardname;
+            }
+            else {
+                model.app.viewPayUserCard = model.payment.cardNumberInput;
+                model.app.viewPayUserName = model.payment.cardUsersName;
+            }
+}}
+updateView();
+}
+
+
 // Ikke tenk på det. ~ thorbjoern
 
 // let apiverdi = {
