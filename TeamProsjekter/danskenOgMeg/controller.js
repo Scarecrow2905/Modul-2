@@ -14,7 +14,6 @@ function addToCart(index) {
                 model.shoppingCart.totalPrice += model.products[i].price;
                 model.shoppingCart.cartProducts.push(model.products[i]);
             }
-
         }
     }
     updateView();
@@ -67,10 +66,11 @@ function make(index) {
             }
         }
         else {
-            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
+            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>
+            `
         }
-        if (model.activeSubCategory[i] == true) {
-        }
+        // if (model.activeSubCategory[i] == true) {
+        // }
     }
     model.viewMenyCategories = html;
     updateView();
@@ -136,7 +136,7 @@ function addNewInforToModel() {
         id: model.idIndex,
     })
     model.idIndex++;
-    alert('You can now login with your new accunt. good luck!')
+    alert('You can now login with your new account. good luck!')
     model.app.currentPage = 'LoginMail';
     resettInformation();
     updateView();
@@ -442,7 +442,3 @@ function deleteCardInformation(index){
 
 // function addListOfProducts(apiVerdi) {
 
-//     for (let i = 0; i < newProducts.length; i++) {
-//         model.products.push(newProducts[i])
-//     }
-// }
