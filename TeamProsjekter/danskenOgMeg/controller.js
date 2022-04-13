@@ -273,127 +273,52 @@ function sliderValue(indexValue) {
 }
 
 
-
-//Lage Produkter.
-function createProduct() {
-    let test = ""
-    if (model.createItems.title ||
-        model.createItems.price ||
-        model.createItems.stock ||
-        model.createItems.category ||
-        model.createItems.img ||
-        model.createItems.description ||
-        model.createItems.measures ||
-        model.createItems.color ||
-        model.createItems.country ||
-        model.createItems.year == "") {
-        alert("Fyll ut alle feltene")
-        return;
-    }
-    let newproduct = {}
-
-
-    newproduct.title = model.createIteminput.title
-    model.createItems.title = '${input.value}';
-    model.createItems.price = '${input.value}';
-    model.createItems.stock = '${input.value}';
-    model.createItems.category = '${input.value}';
-    model.createItems.categoryId = '${input.value}';
-    model.createItems.img = '${input.value}';
-    model.createItems.description = '${input.value}';
-    model.createItems.measures = '${input.value}';
-    model.createItems.color = '${input.value}';
-    model.createItems.country = '${input.value}';
-    model.createItems.year = '${input.value}';
-
-    model.products.push(newproduct)
-    blanckInput()
-    // updateview()
-}
-
-function blanckInput() {
-    model.createIteminput.title = '';
-    model.createIteminput.title = '';
-    model.createIteminput.price = 0;
-    model.createIteminput.stock = 0;
-    model.createIteminput.category = '';
-    model.createIteminput.categoryId = '';
-    model.createIteminput.img = '';
-    model.createIteminput.description = '';
-    model.createIteminput.measures = '';
-    model.createIteminput.color = [];
-    model.createIteminput.country = '';
-    model.createIteminput.year = '';
-    // må nulle ut alle verdier, husk at noen er tall
-}
-function tulleview() {
-    let html = /*html*/`
-    
-    <input class="" onchange="model.createItems.title = this.value" type="text">
-    <input class="" onchange="model.createItems.price = this.value" type="number">
-    <input class="" onchange="model.createItems.stock = this.value" type="number">
-    <input class="" onchange="model.createItems.category = this.value" type="text">
-    <input class="" onchange="model.createItems.categoryId = this.value" type="text">
-    <input class="" onchange="model.createItems.img = this.value" type="image">
-    <input class="" onchange="model.createItems.description = this.value" type="text">
-    <input class="" onchange="model.createItems.measures = this.value" type="text">
-    <input class="" onchange="model.createItems.color = this.value" type="color"> 
-    <input class="" onchange="model.createItems.country = this.value" type="text"> 
-    <input class="" onchange="model.createItems.year = this.value" type="text"> 
-    
-    
-    
-    `
-    html += "<button onclick='createProduct()'>"
-    updateview();
-}
-
-function UpdateChange(index){
+function UpdateChange(index) {
     for (let i = 0; i < model.account.users.length; i++) {
-        if(model.app.whatInfoIsShowed == 'editPaymentInfo'){
-            if(model.payment.cardNumberInput.length < 17 && model.payment.cardNumberInput.length > 15){
-            model.account.users[index].cardnumber = model.payment.cardNumberInput;
-            model.account.users[index].cardname = model.payment.cardUsersName;
-            
+        if (model.app.whatInfoIsShowed == 'editPaymentInfo') {
+            if (model.payment.cardNumberInput.length < 17 && model.payment.cardNumberInput.length > 15) {
+                model.account.users[index].cardnumber = model.payment.cardNumberInput;
+                model.account.users[index].cardname = model.payment.cardUsersName;
+
             }
-            else{
+            else {
                 alert('Card number must be at 16 digits');
                 return;
             }
         }
-       else if(model.app.whatInfoIsShowed == 'editFirstAndLastname'){
+        else if (model.app.whatInfoIsShowed == 'editFirstAndLastname') {
             model.account.users[index].firstName = model.account.newFirstName;
             model.account.users[index].lastName = model.account.newLastName;
-            if(model.account.newFirstName == '' || model.account.newLastName == ''){
+            if (model.account.newFirstName == '' || model.account.newLastName == '') {
                 alert('Please enter first name and/or last name');
                 return;
             }
         }
-       else if(model.app.whatInfoIsShowed == 'editMail'){
-        model.account.users[index].email = model.account.createNewEmail;
+        else if (model.app.whatInfoIsShowed == 'editMail') {
+            model.account.users[index].email = model.account.createNewEmail;
             if (model.account.createNewEmail.includes('@', '.com', '.no', 'hotmail', 'gmail') == false) { //
-            alert('Please enter a right mail adress.');
-            return;
+                alert('Please enter a right mail adress.');
+                return;
+            }
         }
-        }
-        else if(model.app.whatInfoIsShowed == 'editPassword'){
-            if(model.account.createNewPassword.length < 4){
+        else if (model.app.whatInfoIsShowed == 'editPassword') {
+            if (model.account.createNewPassword.length < 4) {
                 alert('password must be at minimum 4 numers or digits');
                 return;
             }
-            else if(model.account.createNewPassword != model.account.createNewPasswordCheck ){
+            else if (model.account.createNewPassword != model.account.createNewPasswordCheck) {
                 alert('The password´s is not the same');
                 return;
             }
-            else if(model.account.createNewPassword == model.account.createNewPasswordCheck){
-            model.account.users[index].password = model.account.createNewPassword;
-            }       
-            } 
+            else if (model.account.createNewPassword == model.account.createNewPasswordCheck) {
+                model.account.users[index].password = model.account.createNewPassword;
+            }
+        }
     }
     resett();
     // ShowAccountInfo();
 }
-function resett(){
+function resett() {
     model.account.createNewPassword = '';
     model.account.createNewPasswordCheck = '';
     model.account.createNewEmail = '';
@@ -401,7 +326,7 @@ function resett(){
     model.account.newLastName = '';
     ShowAccountInfo();
 }
-function deleteCardInformation(index){
+function deleteCardInformation(index) {
     model.account.users[index].cardnumber = 0;
     model.account.users[index].cardname = '';
     ShowAccountInfo();

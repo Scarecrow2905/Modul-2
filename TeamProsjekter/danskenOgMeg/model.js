@@ -71,7 +71,7 @@ const model = {
         price: 0,
         stock: 1,
         id: '',
-        categoryId: '',
+        mainCategory: '',
         subCategory: '',
         img: '',
         description: '',
