@@ -82,12 +82,12 @@ function accountInfo(){
                 </ul>
             </div>
             <br><hr>
-            <button>Edit payment information</button><br><hr>
-            <button>Edit first/Last name</button><br><hr>
-            <button>Edit mail adress</button><br><hr>
-            <button>Edit password</button><br><hr>
-            <button>Watch your order</button><br><hr>
-            <button>Your receipts</button><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editPaymentInfo' ;ShowAccountInfo()">Edit payment information</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editFirstAndLastname' ;ShowAccountInfo()">Edit first/Last name</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editMail' ;ShowAccountInfo()">Edit mail adress</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editPassword' ;ShowAccountInfo()">Edit password</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'seeOrder' ;ShowAccountInfo()">Watch your order</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'seeReceipts' ;ShowAccountInfo()">Your receipts</button><hr>
 
 
 
@@ -99,23 +99,72 @@ function accountInfo(){
         }
     }
 }
-function AddPaymentInformation(){
-    for (let i = 0; i < model.payment.length; i++) {
-            return `
-       <div>Your Card Number: ${model.payment[i].cardNumberInput}</div>;
-       <div>your Cardholder Name:${model.payment[i].cardUsersName}</div>
-    `
-        
+function ShowAccountInfo(){
+    for (let i = 0; i < model.account.users.length; i++) {
+         if (model.app.whatInfoIsShowed == 'editPaymentInfo'){
+            model.app.showInfoForAccount = `
+            <ul>
+                <li>Your Card Number: ${model.account.users[i].cardnumber}</li>
+                <li>your Cardholder Name:${model.account.users[i].cardname}</li>
+                <li>New card number: <input type="number" value="${model.payment.cardNumberInput}" oninput="model.payment.cardNumberInput = this.value"</li>
+                <li>New card name: <input type="text" value="${model.payment.cardUsersName}" oninput="model.payment.cardUsersName = this.value"</li>
+                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="deleteCardInformation(${i})">Delete information</button></li>
+
+            </ul>`
+        }
+        else if (model.app.whatInfoIsShowed == 'editFirstAndLastname'){
+            model.app.showInfoForAccount = `
+            <ul>
+                <li>Your first name: ${model.account.users[i].firstName}</li>
+                <li>your last name:${model.account.users[i].lastName}</li>
+                <li>New first name: <input type="text" value="${model.account.newFirstName}" oninput="model.account.newFirstName = this.value"</li>
+                <li>New last name: <input type="text" value="${model.account.newLastName}" oninput="model.account.newLastName = this.value"</li>
+                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+
+
+            </ul>`
+        }
+        else if (model.app.whatInfoIsShowed == 'editMail'){
+            model.app.showInfoForAccount = `
+            <ul>
+                <li>Current mail: ${model.account.users[i].email}</li>
+                <li>New mail: <input type="text" value="${model.account.createNewEmail}" oninput="model.account.createNewEmail = this.value"</li>
+                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+
+            </ul>`
+        }
+        else if (model.app.whatInfoIsShowed == 'editPassword'){
+            model.app.showInfoForAccount = `
+            <ul>
+                <li>Your password: ${model.account.users[i].password}</li>
+                <li>New Password: <input type="text" value="${model.account.createNewPassword}" oninput="model.account.createNewPassword = this.value"</li>
+                <li>New Password (again): <input type="text" value="${model.account.createNewPasswordCheck}" oninput="model.account.createNewPasswordCheck = this.value"</li>
+
+                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+            </ul>`
+        }
+        else if (model.app.whatInfoIsShowed == 'seeOrder'){
+            model.app.showInfoForAccount = `
+            <ul>
+                <li>Your order(s):  ${model.app.showAccountOrders}</li>
+            </ul>`
+        }
+        else if (model.app.whatInfoIsShowed == 'seeReceipts'){
+            model.app.showInfoForAccount = `
+            <ul>
+                <li>Your receipt(s):  ${model.app.showAccountReceipts}</li>
+            </ul>`
+        }
     }
+    console.log('info som skal vises: ' + model.app.whatInfoIsShowed);
+    console.log('showInfoForAccount er: ' + model.app.showInfoForAccount);
+
+    updateView();
 }
 
-function login() {
-    // if model.account.users[i].email === Input.value = "true" && model.account.users[i].password === input.value = "true"
-    // active.user === model.account.users[i]
-}
-
-
-//
+{/* <li>Your Card Number: ${model.payment[i].cardNumberInput}</li>
+<li>your Cardholder Name:${model.payment[i].cardUsersName}</li> */}
 
 
 
