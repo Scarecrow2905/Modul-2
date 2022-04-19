@@ -213,6 +213,7 @@ function loggedInnOrNot() {
             }
         }
     }
+    isAdminLoggedIn();
     updateView();
 }
 function checkLoginStatus() {
@@ -232,8 +233,10 @@ function logOut() {
         model.app.status = false;
         model.app.showStatus = 'Logg inn';
         model.app.currentPage = 'FrontPage';
+        model.app.adminLoggedInn = false;
 
     }
+    checkAdmin();
     updateView();
 }
 
@@ -349,6 +352,24 @@ function viewPayUserType(){
 updateView();
 }
 
+// Sjekker om det er admin som er logget inn
+function isAdminLoggedIn(){
+    if(model.app.currentUser == 1){
+        model.app.adminLoggedInn = true;
+    }
+    checkAdmin();
+}
+// Hvis admin er logget inn vil personen få mulighet til å se knappen for å legge til nye produkter
+function checkAdmin(){
+    if(model.app.adminLoggedInn == false){
+        model.app.admin = '';
+    }
+    if(model.app.adminLoggedInn == true){
+        model.app.admin =  `<button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>`;
+    }
+    updateView();
+}
+// <button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">${model.app.admin}</button></li>
 
 // Ikke tenk på det. ~ thorbjoern
 
