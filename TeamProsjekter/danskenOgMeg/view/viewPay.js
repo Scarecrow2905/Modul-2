@@ -1,5 +1,9 @@
 function updateViewPay(){
-html = `
+    
+    // for (let i = 0; i < model.account.users.length; i++) {
+    //     if (model.app.currentUser == model.account.users[i].id){
+            
+html = /*html*/ `
 <div class="pay-page">
 <div class="container">
 <form action="">
@@ -7,12 +11,12 @@ html = `
 <button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlekurv</button>
             <div class="inputBox">
                 <span>Kortnummer</span>
-                <input type="text" value="${model.payment.cardNumberInput}" onchange="model.payment.cardNumberInput = this.value" maxlength="16" class="card-number-input">
+                <input type="text" value="${model.app.viewPayUserCard}" onchange="model.payment.cardNumberInput = this.value" maxlength="16" class="card-number-input">
             </div>
 
             <div class="inputBox">
             <span>Navn på kortholder</span>
-            <input type="text" placeholder="Example Examplesen" value="${model.payment.cardUsersName}" model.payment.cardUsersName = this.value" class="card-holder-input">
+            <input type="text" placeholder="Example Examplesen" value="${model.app.viewPayUserName}" model.payment.cardUsersName = this.value" class="card-holder-input">
             
 
             <div class="flexbox">
@@ -64,6 +68,73 @@ html = `
 
     `
     
+//     }
+//     else {
+//         html = /*html*/ `
+// <div class="pay-page">
+// <div class="container">
+// <form action="">
+// <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake til forside</button>
+// <button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlekurv</button>
+//             <div class="inputBox">
+//                 <span>Kortnummer</span>
+//                 <input type="text" value="${model.payment.cardNumberInput}" onchange="model.payment.cardNumberInput = this.value" maxlength="16" class="card-number-input">
+//             </div>
+
+//             <div class="inputBox">
+//             <span>Navn på kortholder</span>
+//             <input type="text" placeholder="Example Examplesen" value="${model.payment.cardUsersName}" model.payment.cardUsersName = this.value" class="card-holder-input">
+            
+
+//             <div class="flexbox">
+//             <div class="inputBox">
+//                 <span>Utgåelse Måned</span>
+//                 <select name="" id="" class="month-input">
+//                     <option value="month" selected disabled>Måned</option>
+//                     <option value="01">01</option>
+//                     <option value="02">02</option>
+//                     <option value="03">03</option>
+//                     <option value="04">04</option>
+//                     <option value="05">05</option>
+//                     <option value="06">06</option>
+//                     <option value="07">07</option>
+//                     <option value="08">08</option>
+//                     <option value="09">09</option>
+//                     <option value="10">10</option>
+//                     <option value="11">11</option>
+//                     <option value="12">12</option>
+//                 </select>
+            
+//             </div>
+
+//             <div class="inputBox">
+//                 <span>Utgåelse år</span>
+//                 <select name="" id="" class="year-input">
+//                     <option value="year" selected disabled>År</option>
+//                     <option value="2022">2022</option>
+//                     <option value="2023">2023</option>
+//                     <option value="2024">2024</option>
+//                     <option value="2025">2025</option>
+//                     <option value="2026">2026</option>
+//                     <option value="2027">2027</option>
+//                     <option value="2028">2028</option>
+//                     <option value="2029">2029</option>
+//                     <option value="2030">2030</option>
+//                 </select>
+            
+
+//             <div class="inputbox">
+//             <span>cvv</span>
+//             <input type="text" maxlength="4" class="cvv-input">
+//             </div>
+
+//             <input type="submit" value="submit" class="submit-btn">
+//         </form>
+//     </div>
+// </div>
+
+//     `
+    //}}
     return html;
     };
 
