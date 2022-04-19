@@ -2,7 +2,7 @@ function updateViewCart(){
     html = `
 <div class="cart-main">
 
-    <div class="cart-main-header">${Header()}</div>
+    <div class="header">${Header()}</div>
 
     <div class="cart-navigation">
     <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
