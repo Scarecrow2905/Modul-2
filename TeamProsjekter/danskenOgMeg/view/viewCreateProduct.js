@@ -24,7 +24,7 @@ function viewCreateProduct() {
         <input class="create-Product" onchange="model.createItems.country = this.value"     placeholder="Land" type="text"> <br>
         <input class="create-Product" onchange="model.createItems.year = this.value"        placeholder="Års-tall"type="text"> <br>
         ${viewCreateCategories()} <br>
-        ${test} <br>
+        ${subCat} <br>
         
         <div>Farge <input class="createProduct-input-color" onchange="model.createItems.color = this.value" placeholder="Produkt Farge"type="color"></div>
         
@@ -32,7 +32,7 @@ function viewCreateProduct() {
         <button onclick='createProduct();'>Legg til produkt</button>
 
     `
-   
+
     console.log(model.createItems.img);
     // html += "<button onclick='createProduct()'>"
     return html;
@@ -63,7 +63,7 @@ function viewCreateCategories(id) {
     html += `</select>`
     model.createItems.category == mainCategory.name;
 
-   
+
     console.log(mainCategory);
     return html;
 
@@ -98,7 +98,7 @@ function viewCreateSubCategories(mainCategory) {
         html += `</select>`
 
 
-        test = html;
+        subCat = html;
         updateView();
     }
 

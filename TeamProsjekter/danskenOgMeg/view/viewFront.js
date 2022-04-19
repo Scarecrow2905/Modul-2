@@ -13,7 +13,7 @@ function updateViewFront() {
                 <li class="liteFeltLi3">${slider()}Min/Max price: ${model.sliderValueIs}</li>
                 <li class="liteFeltLi3"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
                 <li class="liteFeltLi3"><button onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li>
-                <li class="liteFeltLi3"><button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til Produkt</button></li> 
+                <li class="liteFeltLi3">${model.app.admin} 
             <ul>
         </div>
         <div class="meny">
