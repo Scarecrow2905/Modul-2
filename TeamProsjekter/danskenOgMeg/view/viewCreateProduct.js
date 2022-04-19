@@ -1,3 +1,6 @@
+
+
+
 let test = '';
 function viewCreateProduct() {
     let html = /*html*/
@@ -14,6 +17,7 @@ function viewCreateProduct() {
         <input class="create-Product" onchange="model.createItems.title = this.value"       placeholder="Produkt navn" type="text"> <br>
         <input class="create-Product" onchange="model.createItems.price = this.value"       placeholder="Pris" type="number"> <br>
         <input class="create-Product" onchange="model.createItems.img = this.value"         placeholder="bilde" type="file"> <br>
+        
         <input class="create-Product" onchange="model.createItems.stock = this.value"       placeholder="Antall" type="number"> <br>
         <input class="create-Product" onchange="model.createItems.description = this.value" placeholder="Beskrivelse" type="text"> <br>
         <input class="create-Product" onchange="model.createItems.measures = this.value"    placeholder="Mål" type="text"> <br>
@@ -28,13 +32,18 @@ function viewCreateProduct() {
         <button onclick='createProduct();'>Legg til produkt</button>
 
     `
+   
+    console.log(model.createItems.img);
     // html += "<button onclick='createProduct()'>"
     return html;
+
     //
 }
-function viewCreateCategories() {
-    let result = '';
-    html = ``
+
+function viewCreateCategories(id) {
+
+    html = '';
+
 
     html = /*html*/
         ` 
@@ -48,17 +57,27 @@ function viewCreateCategories() {
         var mainCategory = model.categories[i];
 
 
-        result += /*html*/
+        html += /*html*/
             `<option value="${mainCategory.name}">${mainCategory.name}</option>`
     }
-    closeIt = `</select>`
-    return html + result + closeIt;
+    html += `</select>`
+    model.createItems.category == mainCategory.name;
 
+   
+    console.log(mainCategory);
+    return html;
 
 
 
 }
 
+var temp = 0;
+model.createItems.id = 1000;
+for (let i = 0; i < 1000; i++) {
+    temp = id;
+    id = temp + 1;
+
+}
 
 function viewCreateSubCategories(mainCategory) {
     // result = '';
@@ -67,77 +86,63 @@ function viewCreateSubCategories(mainCategory) {
     for (let i = 0; i < model.categories.length; i++) {
         if (model.categories[i].name == mainCategory) {
 
-            html +=/*html*/ `<select name="subCategory"  class="create-Product-sub-input">`
+            html =/*html*/ `<select name="subCategory"  class="create-Product-sub-input">`
 
             for (let j = 0; j < model.categories[i].sub.length; j++) {
-
-
-                html += /*html*/ `<option value="${model.categories[i].sub[j].categoriName}">${mainCategory.sub[j].categoriName}</option>`
-
+                html += /*html*/ `<option value="${model.categories[i].sub[j].categoriName}">${model.categories[i].sub[j].categoriName}</option>`
             }
         }
+
+
+
+        html += `</select>`
+
+
+        test = html;
+        updateView();
     }
 
-    html += `</select>`
-    test = html;
-    updateView();
-
-
-
 }
+
 
 //Lage Produkter.
 function createProduct() {
     let test = ""
-    if (model.createItems.title
-        && model.createItems.price
-        && model.createItems.stock
-        && model.createItems.description
-        && model.createItems.color
-        && model.createItems.year
-        && model.createItems.measures
-        && model.createItems.img == "") {
-        alert("Fyll ut alle feltene")
+    // if (model.createItems.title
+    //     && model.createItems.price
+    //     && model.createItems.stock
+    //     && model.createItems.description
+    //     && model.createItems.color
+    //     && model.createItems.year
+    //     && model.createItems.measures
+    //     && model.createItems.img
+    //     == "") {
+    //     alert("Fyll ut alle feltene")
 
-    }
-    else {
+    // }
+    // else {
 
+    model.products.push({
+        title: model.createItems.title,
+        price: model.createItems.price,
+        stock: model.createItems.stock,
+        category: model.createItems.category,
+        categoryId: model.createItems.id,
+        img: model.createItems.img,
+        description: model.createItems.description,
+        measures: model.createItems.measures,
+        color: model.createItems.color,
+        country: model.createItems.country,
+        year: model.createItems.year,
+    })
+    console.log(model.products)
+    //blankInput();
 
-        // model.createItems.title = '${model.createItems.title}';
-        // model.createItems.price = '${model.createItems.price}';
-        // model.createItems.stock = '${model.createItems.stock}';
-        // model.createItems.category = '${model.createItems.category}';
-        // model.createItems.categoryId = '${input.value}';
-        // model.createItems.img = '${input.value}';
-        // model.createItems.description = '${input.value}';
-        // model.createItems.measures = '${input.value}';
-        // model.createItems.color = '${input.value}';
-        // model.createItems.country = '${input.value}';
-        // model.createItems.year = '${input.value}';
-
-        model.products.push({
-            title: model.createItems.title,
-            price: model.createItems.price,
-            stock: model.createItems.stock,
-            category: model.createItems.category,
-            categoryId: model.createItems.categoryId,
-            img: model.createItems.img,
-            description: model.createItems.description,
-            measures: model.createItems.measures,
-            color: model.createItems.color,
-            country: model.createItems.country,
-            year: model.createItems.year,
-
-
-        })
-        console.log(model.products)
-        blankInput();
-
-        //  model.products.push(newproduct);
-        // blanckInput()
-        // updateview()
-    }
+    //  model.products.push(newproduct);
+    // blanckInput()
+    // updateview()
 }
+
 function blankInput() {
     model.createItems.title = '';
     model.createItems.title = '';
