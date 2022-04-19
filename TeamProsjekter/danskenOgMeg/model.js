@@ -28,7 +28,7 @@ const model = {
         showAccountReceipts: 'No receipts', // Kvitteringer på kjøp
         viewPayUserCard: '',
         viewPayUserName: '',
-        adminLoggedInn: false,
+        adminLoggedInn: false, // true
         admin: '', // Legg til Produkt
 
 
