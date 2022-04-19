@@ -55,13 +55,12 @@ div.footer {
     .loginPage{
         background-color: rgb(162, 222, 208);
         height: 100vh;
-        display:grid;
+        display: grid;
         grid-template-columns:1fr 6fr 1fr  ;
-        grid-template-rows: 1fr 0.6fr 8fr 1fr;
+        grid-template-rows: 1fr 0.6fr 8fr 2fr ;
         grid-template-areas: 'headerL headerL headerL'
                              'smalLinje smalLinje smalLinje'
                              'innholdL menyL innhold1L' 
-                             'innholdL menyL innhold1L'
                              'footerL footerL footerL';
     }
 .headerL {
@@ -100,7 +99,7 @@ div.footer {
                          'smalLinje smalLinje smalLinje smalLinje smalLinje'
                          'innholdP0 innholdP1 innholdP2 innholdP3 innholdP4' 
                          'innholdP0 innholdP1 innholdP2 innholdP3 innholdP4'
-                         'footerL footerL footerL footerL footerL';
+                         'footerA footerA footerA footerA footerA';
 }
 .headerL {
 background-color: rgb(162, 222, 208);
@@ -135,7 +134,7 @@ grid-area: innholdP3;
 background-color:rgb(162, 222, 208);
 grid-area: innholdP4;
 }
-.footerL {
-background-color:yellow;
-grid-area: footerL;
+.footerA {
+background-color:rgb(162, 222, 208);
+grid-area: footerA;
 }

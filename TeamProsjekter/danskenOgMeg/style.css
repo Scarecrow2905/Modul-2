@@ -528,6 +528,14 @@ body {
 .h2Login {
 	text-align: center;
 }
+.headerL{
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	color: #333;
+	font-size: 2em;
+	font-family: stalemate;
+}
 .paragraphMail {
 	text-align: center;
 	text-decoration: underline;
@@ -638,6 +646,4 @@ body {
   }
 
   /* PRivate user site*/
-  .innholdP1{
-	  /* text-align:center; */
-  }
+  
