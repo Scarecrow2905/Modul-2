@@ -3,7 +3,7 @@ function addToCart(index) {
     for (let i = 0; i < model.products.length; i++) {
         if (model.products[i].id == index) {
             if (model.products[i].stock == 0) {
-                if (model.shoppingCart.cartProducts[i].id === current.id) {
+                if (model.shoppingCart.cartProducts[i].id == current.id) {
                     model.shoppingCart.quantity++;
                 }
                 alert('Ikke igjen på lager');

@@ -24,7 +24,7 @@ function updateViewCart(){
 
 </div>
 ` 
-return html; // KANSKJE GJØRE DENNE TIL MODAL?
+return html; 
 };
 
 function createCartItems(){
