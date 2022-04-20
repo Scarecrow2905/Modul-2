@@ -67,7 +67,7 @@ function viewProductItem() {
                
 
     `
-    updateView();
+    
     return result;
 }
 
