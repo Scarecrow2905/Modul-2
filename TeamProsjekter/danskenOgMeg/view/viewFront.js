@@ -1,8 +1,6 @@
 // ----------------------- Fram Side ----------------------------------
 function updateViewFront() {
-
   let html = '';
-  // model.app.currentPage = 'LoginMail'
   html += /*html*/`
     <div class="page">
         <div id="toTop" class="header">${Header()}</div>
@@ -24,8 +22,7 @@ function updateViewFront() {
         ${model.viewProductsHere}
         
         </div>
-          <br>
-          <div class="footer"><a class="toTopButton" href="#toTop">Til toppen</a>
+          <br><div class="footer"><a class="toTopButton" href="#toTop">Til toppen</a>
         </div>
     </div>
   `

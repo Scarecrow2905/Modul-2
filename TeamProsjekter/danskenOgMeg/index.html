@@ -19,16 +19,10 @@
     <script src="common.js"></script>
     <script src="controller.js"></script>
    
-    
     <!---------------Styles----------------------->
     <link rel="stylesheet" href="grid.css"/>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="style-createProduct.css"/>
-    
-    
-        
-
-
 <body>
     <div id='app'></div>
 
@@ -41,7 +35,7 @@
     function updateView(){
         let html = '';
         const page = model.app.currentPage; 
-        if (page === 'FrontPage') html = updateViewFront(); 
+        if (page ===      'FrontPage') html = updateViewFront(); 
         else if (page === 'Product') html = updateViewProduct();
         else if (page === 'Cart') html = updateViewCart();
         else if (page === 'LoginMail') html = updateViewLoginWithMail();
@@ -52,7 +46,6 @@
         else if (page === 'PayPage') html = updateViewPay();
         else if (page === 'viewProduct') html = viewProduct();
         else if (page === 'viewCreateProduct') html = viewCreateProduct();
-        
         appDiv.innerHTML = html;
     } 
     </script>
