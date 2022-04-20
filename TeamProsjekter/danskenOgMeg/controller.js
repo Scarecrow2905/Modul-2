@@ -98,8 +98,6 @@ function viewStuff(index) {
 }
 
 //Alt som har med Login, Ny bruker, Resette ny bruker informasjon, og som sjekker hvem som er logget inn.
-
-
 function DoThisMailPersonExist() {
     let foundUser = false;
     for (let i = 0; i < model.account.users.length; i++) {
