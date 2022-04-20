@@ -27,12 +27,12 @@ function mail() {
 }
 function phone() {
     return `
-    <div><input class="username" value="${model.account.phone}" placeholder="Phone*" type="email" oninput="model.account.phone = this.value"/></div>
+    <div><input class="username" value="${model.account.phone}" placeholder="Telefon*" type="email" oninput="model.account.phone = this.value"/></div>
 `
 }
 function password() {
     return `
-    <div><input class="username" value="${model.account.password}" placeholder="Password*" type="email" oninput="model.account.password = this.value"/></div>
+    <div><input class="username" value="${model.account.password}" placeholder="Passord*" type="email" oninput="model.account.password = this.value"/></div>
 `
 }
 
@@ -44,27 +44,27 @@ function newMail() {
 }
 function newPhone() {
     return `
-    <div><input class="username" value="${model.account.createNewPhoneNumber}" placeholder="Phone Number*" type="tel" oninput="model.account.createNewPhoneNumber = this.value"/></div>
+    <div><input class="username" value="${model.account.createNewPhoneNumber}" placeholder="Telefonnummer*" type="tel" oninput="model.account.createNewPhoneNumber = this.value"/></div>
 `
 }
 function newPassword() {
     return `
-    <div><input class="password" value="${model.account.createNewPassword}"  placeholder="Password*" type="password" oninput="model.account.createNewPassword = this.value"/></div>
+    <div><input class="password" value="${model.account.createNewPassword}"  placeholder="Passord*" type="password" oninput="model.account.createNewPassword = this.value"/></div>
     `
 }
 function passwordCheck() {
     return `
-    <div><input class="password" value="${model.account.createNewPasswordCheck}" placeholder="Password*" type="password" oninput="model.account.createNewPasswordCheck = this.value"/></div>
+    <div><input class="password" value="${model.account.createNewPasswordCheck}" placeholder="Passord*" type="password" oninput="model.account.createNewPasswordCheck = this.value"/></div>
     `
 }
 function firstName() {
     return `
-    <div><input class="password"  value="${model.account.newFirstName}" placeholder="First name*" type="text" oninput="model.account.newFirstName = this.value"/></div>
+    <div><input class="password"  value="${model.account.newFirstName}" placeholder="Fornavn*" type="text" oninput="model.account.newFirstName = this.value"/></div>
     `
 }
 function lastName() {
     return `
-    <div><input class="password" value="${model.account.newLastName}" placeholder="Last name*" type="text" oninput="model.account.newLastName = this.value"/></div>
+    <div><input class="password" value="${model.account.newLastName}" placeholder="Etternavn*" type="text" oninput="model.account.newLastName = this.value"/></div>
     `
 }
 
@@ -82,12 +82,12 @@ function accountInfo(){
                 </ul>
             </div>
             <br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editPaymentInfo' ;ShowAccountInfo()">Edit payment information</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editFirstAndLastname' ;ShowAccountInfo()">Edit first/Last name</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editMail' ;ShowAccountInfo()">Edit mail adress</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editPassword' ;ShowAccountInfo()">Edit password</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'seeOrder' ;ShowAccountInfo()">Watch your order</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'seeReceipts' ;ShowAccountInfo()">Your receipts</button><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editPaymentInfo' ;ShowAccountInfo()">Endre betalingsinformasjon</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editFirstAndLastname' ;ShowAccountInfo()">Endre fornavn/Etternavn</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editMail' ;ShowAccountInfo()">Endre e-post adresse</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'editPassword' ;ShowAccountInfo()">Endre passord</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'seeOrder' ;ShowAccountInfo()">Ordrehistorikk</button><br><hr>
+            <button onclick="model.app.whatInfoIsShowed = 'seeReceipts' ;ShowAccountInfo()">Dine kvitteringer</button><hr>
 
 
 

@@ -45,11 +45,13 @@ function viewProductItem() {
                 
             <div class="product-item">
                 <span class="product-item-description">
-                ${model.products[i].description} <br>
+                ${model.products[i].description}<br><br>
+                
                 Mål:    ${model.products[i].measures} <br>
-                Land:   ${model.products[i].country} <br>
-                Farge:  ${model.products[i].color} <br>
-                År:     ${model.products[i].year} <br>
+                Land:   ${model.products[i].country}  <br>
+                Farge:  ${model.products[i].color}    <br>
+                År:     ${model.products[i].year}     <br>
+                
                 </span>
             </div>
 

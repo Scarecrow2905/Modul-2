@@ -14,79 +14,97 @@ function viewCreateProduct() {
 
 
     <div class="createProduct-wrapper">
-        <input class="create-Product" onchange="model.createItems.title = this.value"       placeholder="Produkt navn" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.price = this.value"       placeholder="Pris" type="number"> <br>
-        <input class="create-Product" onchange="model.createItems.img = this.value"         placeholder="bilde" type="file"> <br>
-        
-        <input class="create-Product" onchange="model.createItems.stock = this.value"       placeholder="Antall" type="number"> <br>
-        <input class="create-Product" onchange="model.createItems.description = this.value" placeholder="Beskrivelse" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.measures = this.value"    placeholder="Mål" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.country = this.value"     placeholder="Land" type="text"> <br>
-        <input class="create-Product" onchange="model.createItems.year = this.value"        placeholder="Års-tall"type="text"> <br>
+        <input class="create-Product" id="c.title" onchange="model.createItems.title = this.value" value="${model.createItems.title}"      placeholder="Produkt navn" type="text"> <br>
+
+        <input class="create-Product" id="c.price" onchange="model.createItems.price = this.value" value="${model.createItems.price}"      placeholder="Pris" type="number"> <br>
+
+        <input class="create-Product" id="c.img"onchange="model.createItems.img = this.value"    value="${model.createItems.img}"     placeholder="bilde" type="file"> <br>
+
+        <input class="create-Product" id="c.stock" onchange="model.createItems.stock = this.value"    value="${model.createItems.stock}"   placeholder="Antall" type="number"> <br>
+
+        <input class="create-Product"  id="c.description"onchange="model.createItems.description = this.value" value="${model.createItems.description}"placeholder="Beskrivelse" type="text"> <br>
+
+        <input class="create-Product" id="c.measures" onchange="model.createItems.measures = this.value" value="${model.createItems.measures}"   placeholder="Mål" type="text"> <br>
+
+        <input class="create-Product" id="c.country" onchange="model.createItems.country = this.value"   value="${model.createItems.country}"  placeholder="Land" type="text"> <br>
+
+        <input class="create-Product" id="c.year" onchange="model.createItems.year = this.value"    value="${model.createItems.year}"    placeholder="Års-tall"type="text"> <br>
         ${viewCreateCategories()} <br>
         ${test} <br>
         
-        <div>Farge <input class="createProduct-input-color" onchange="model.createItems.color = this.value" placeholder="Produkt Farge"type="color"></div>
+        <div>Farge <input class="createProduct-input-color" onchange="model.createItems.color = this.value" value="${model.createItems.color}" placeholder="Produkt Farge"type="color"></div>
         
 
         <button onclick='createProduct();'>Legg til produkt</button>
 
     `
-   
-    console.log(model.createItems.img);
+
     // html += "<button onclick='createProduct()'>"
     return html;
 
     //
 }
 
-function viewCreateCategories(id) {
+function viewCreateCategories() {
 
     html = '';
 
 
     html = /*html*/
         ` 
-                <select name="kategori" id="mainCategory" class="create-Product-kategori-input" onchange="viewCreateSubCategories(this.value)">
-                     <option value="" disabled selected hidden>Velg Kategori..</option> 
+                <select name="kategori" id="m.cat" class="create-Product-kategori-input" onchange="model.createItems.category = this.value; viewCreateSubCategories(this.value)">
+                     <option selected disabled hidden>Velg Kategori..</option> 
                     
         `
 
     for (let i = 0; i < model.categories.length; i++) {
 
-        var mainCategory = model.categories[i];
+        // var mainCategory = model.categories[i];
 
-
-        html += /*html*/
-            `<option value="${mainCategory.name}">${mainCategory.name}</option>`
+        if (model.createItems.category == model.categories[i].name) {
+            html += /*html*/
+                `<option selected value="${model.categories[i].name}">${model.categories[i].name}</option>`
+            // Denne skal poppe opp som verdi
+        }
+        else {
+            html += /*html*/
+                `<option value="${model.categories[i].name}">${model.categories[i].name}</option>`
+            // Denne skal poppe opp som verdi
+        }
     }
-    html += `</select>`
-    model.createItems.category == mainCategory.name;
 
-   
-    console.log(mainCategory);
+    html += `</select>`
+    // model.createItems.category = mainCategory.name;
+
+
+    // console.log(mainCategory);
     return html;
 
 
 
 }
+//Når du velger en Hovedkategori så skal kategorien være den kategorieen.
 
-var temp = 0;
-model.createItems.id = 1000;
-for (let i = 0; i < 1000; i++) {
-    temp = id;
-    id = temp + 1;
+// var temp = 0;
+// model.createItems.id = 1000;
+// for (let i = 0; i < 1000; i++) {
+//     temp = id;
+//     id = temp + 1;
 
-}
+// }
 
 function viewCreateSubCategories(mainCategory) {
     // result = '';
     let html = '';
 
+    html =/*html*/ `<select  name="subCategory"  class="create-Product-kategori-input" onchange="model.createItems.subCategory = this.value; console.log(this.value)">
+    <option selected disabled hidden>Velg underkategori.</option> 
+    `
+
     for (let i = 0; i < model.categories.length; i++) {
         if (model.categories[i].name == mainCategory) {
 
-            html =/*html*/ `<select name="subCategory"  class="create-Product-sub-input">`
+
 
             for (let j = 0; j < model.categories[i].sub.length; j++) {
                 html += /*html*/ `<option value="${model.categories[i].sub[j].categoriName}">${model.categories[i].sub[j].categoriName}</option>`
@@ -98,9 +116,9 @@ function viewCreateSubCategories(mainCategory) {
         html += `</select>`
 
 
-        test = html;
-        updateView();
     }
+    test = html;
+    updateView();
 
 }
 
@@ -121,33 +139,41 @@ function createProduct() {
 
     // }
     // else {
+    setProductId();
+    let newproduct = {}
 
-    model.products.push({
-        title: model.createItems.title,
-        price: model.createItems.price,
-        stock: model.createItems.stock,
-        category: model.createItems.category,
-        categoryId: model.createItems.id,
-        img: model.createItems.img,
-        description: model.createItems.description,
-        measures: model.createItems.measures,
-        color: model.createItems.color,
-        country: model.createItems.country,
-        year: model.createItems.year,
-    })
-    console.log(model.products)
+
+    newproduct.title = model.createItems.title;
+    newproduct.price = model.createItems.price;
+    newproduct.stock = model.createItems.stock;
+    newproduct.category = model.createItems.category;
+    newproduct.parentId = model.createItems.id;
+    newproduct.img = model.createItems.img;
+    newproduct.description = model.createItems.description;
+    newproduct.measures = model.createItems.measures;
+    newproduct.color = model.createItems.color;
+    newproduct.country = model.createItems.country;
+    newproduct.year = model.createItems.year;
+    model.products.push(newproduct);
+    console.log(newproduct);
+
     //blankInput();
 
     //  model.products.push(newproduct);
-    // blanckInput()
-    // updateview()
+
+    blankInput();
+
+    updateView();
+}
+function setProductId() {
+    if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
 }
 
 function blankInput() {
     model.createItems.title = '';
     model.createItems.title = '';
-    model.createItems.price = 0;
-    model.createItems.stock = 0;
+    model.createItems.price = null;
+    model.createItems.stock = null;
     model.createItems.category = '';
     model.createItems.categoryId = '';
     model.createItems.img = '';
@@ -156,7 +182,7 @@ function blankInput() {
     model.createItems.color = [];
     model.createItems.country = '';
     model.createItems.year = '';
-    // må nulle ut alle verdier, husk at noen er tall
+    // må nulle ut alle verdier; husk at noen er tall
 }
 
 
@@ -165,20 +191,20 @@ function blankInput() {
 
 // let apiverdi = {
 //     values: [{
-//         title: 'Sofa',
-//         price: 9999,
-//         stock: 2,
-//         category: 'Stue',
-//         id: 111,
-//         parentId: 11,
-//         subCategory: 'Sofa',
-//         img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
-//         description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
-//         measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
-//         color: ['Oker Gul'],
-//         country: 'Danmark',
-//         year: '2006',
-//     },],
+//         title: 'Sofa';
+//         price: 9999;
+//         stock: 2;
+//         category: 'Stue';
+//         id: 111;
+//         parentId: 11;
+//         subCategory: 'Sofa';
+//         img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg';
+//         description: 'Godt brukt; men fortsatt en flott sofa. Stått lagret i bod siden 2005.';
+//         measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm';
+//         color: ['Oker Gul'];
+//         country: 'Danmark';
+//         year: '2006';
+//     };];
 // };
 
 // async function getdata() {

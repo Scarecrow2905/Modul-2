@@ -25,7 +25,7 @@ function updateViewFront() {
         
         </div>
           <br>
-          <div class="footer"><a class="toTopButton" href="#toTop">Back to top</a>
+          <div class="footer"><a class="toTopButton" href="#toTop">Til toppen</a>
         </div>
     </div>
   `

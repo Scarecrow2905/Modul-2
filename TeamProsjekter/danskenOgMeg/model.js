@@ -9,7 +9,7 @@ const model = {
         quantity: 0,
         numberOfItems: 0,
         typeOfDelivery: '',
-        
+
     },
 
     //App -!-
@@ -22,7 +22,7 @@ const model = {
         showStatus: 'Logg inn', // Hører til å vise om man er logget inn eller skal logge ut. 
         click: 0,               // Hører til å logge seg ut av brukeren
         whatInfoIsShowed: 'mainScreen',   // Hører til å forandre account infomation
-        showInfoForAccount: '<h3>This is your page and you can see or change your personal information</h3>', 
+        showInfoForAccount: '<h3>This is your page and you can see or change your personal information</h3>',
         showAccountOrders: 'No orders', // Aktive ordre fra butikk
         showAccountReceipts: 'No receipts', // Kvitteringer på kjøp
         viewPayUserCard: '',
@@ -31,17 +31,17 @@ const model = {
         admin: '', // Legg til Produkt
 
 
-        },
+    },
     //Inputs -!-
     idIndex: 6,
     //Inputs for login og å lage nye brukeretest
     account: {
         users: [
-            { firstName: 'Admin',       lastName: 'Nordmann',    phone: 12121212, email: 'test@test.no',            password: 'abc123', id: 1, cardnumber: 1234123412341234, cardname: 'Admin Nordmann'},
-            { firstName: 'Renee',       lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no',     password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen'},
-            { firstName: 'Tommy',       lastName: 'Håvåg',       phone: 12345678, email: 'thommy@getacademy.no',    password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },
-            { firstName: 'Thorbjørn',   lastName: 'Berglund',    phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },
-            { firstName: 'Trond Erik',  lastName: 'Myrengen',    phone: 12345678, email: 'trond@getacademy.no',     password: 'abc123', id: 5, cardnumber: 1234123412341234, cardname: 'Trond Erik Myrengen' },
+            { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: 'test@test.no', password: 'abc123', id: 1, cardnumber: 1234123412341234, cardname: 'Admin Nordmann' },
+            { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen' },
+            { firstName: 'Tommy', lastName: 'Håvåg', phone: 12345678, email: 'tommyh@getacademy.no', password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },
+            { firstName: 'Thorbjørn', lastName: 'Berglund', phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },
+            { firstName: 'Trond Erik', lastName: 'Myrengen', phone: 12345678, email: 'trond@getacademy.no', password: 'abc123', id: 5, cardnumber: 1234123412341234, cardname: 'Trond Erik Myrengen' },
         ],
         // Midlertidlig når man skal logge seg inn med epost/telefon og passrord
         phone: '',
@@ -72,10 +72,10 @@ const model = {
     //Legge til nye produkter
     createItems: {
         title: '',
-        price: 0,
-        stock: 1,
+        price: null,
+        stock: null,
         id: '',
-        mainCategory: '',
+        category: '',
         subCategory: '',
         img: '',
         description: '',
@@ -84,15 +84,18 @@ const model = {
         country: '',
         year: '',
     },
-    
+
 
     // Viser kategori og sub katergori menyen
     viewMenyCategories: '',
     //Kategorier med forskjellige id og parentId
     activeSubCategory: [false, false, false, false, false, false, false, false],
     test: false,
-    //OBS ::: Legge til False per kategori/Sub 
+    //OBS ::: Legge til False per kategori/Sub
 
+    
+
+    // id = kategori id 
     categories: [
         {
             name: 'Stue', id: 1,
@@ -199,7 +202,7 @@ const model = {
         card: false,
         delivery: false,
         pickupPoint: false,
-        cardNumberInput: '', 
+        cardNumberInput: '',
         cardUsersName: '',
     },
 
@@ -212,7 +215,7 @@ const model = {
     clickedOnProducts: false,
     modalPopupInformation: '',
 
-    products:[],
+    products: [],
 
 }
 
