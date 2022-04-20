@@ -19,13 +19,37 @@ body {
                          'meny innhold innhold '
                          'footer footer footer ';
 }
+div.header {
+    background-color: rgb(162, 222, 208);
+    grid-area: header;
+}
+div.meny {
+    background-color:rgb(162, 222, 208);
+    grid-area: meny;
+    margin-top:14%;
+}
+div.innhold {
+    background-color: rgb(162, 222, 208);
+    grid-area: innhold;
+}
+div.liteFelt {
+    background-color:rgb(162, 222, 208);
+    grid-area: liteFelt;
+    border:1px solid black;
+}
+div.footer {
+    background-color:rgb(162, 222, 208);
+    grid-area: footer;
+}
 @media only screen and (max-width: 600px){
     .page{
-        grid-template-columns:1fr 4fr ;
-        grid-template-rows: 2fr 6fr 1fr ;
-        grid-template-areas: 'meny meny'
-                             'header innhold' 
-                             'footer footer';
+        grid-template-columns:1fr  ;
+        grid-template-rows: 2fr 1fr 2fr 6fr 1fr ;
+        grid-template-areas: 'header'
+                             'liteFelt'
+                             'meny'
+                             'innhold' 
+                             'footer ';
     }
 }
 
@@ -87,6 +111,8 @@ div.footer {
     background-color:rgb(162, 222, 208);
     grid-area: footerL;
 }
+
+
 
 /*-----------LOGIN-----------*/
 .accountInfoPage{

@@ -1,6 +1,5 @@
 
 const model = {
-
     text1: "",
     shoppingCart: {
 
@@ -17,9 +16,9 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'viewCreateProduct', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo | viewCreateProduct
-        currentUser: 1, // 0
-        status: true, // false
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo / viewCreateProduct
+        currentUser: 0, // 0
+        status: false, // false
         showStatus: 'Logg inn', // Hører til å vise om man er logget inn eller skal logge ut. 
         click: 0,               // Hører til å logge seg ut av brukeren
         whatInfoIsShowed: 'mainScreen',   // Hører til å forandre account infomation
