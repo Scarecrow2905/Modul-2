@@ -33,8 +33,8 @@ function viewProduct() {
 function viewProductItem() {
     let result = '';
     for (let i = 0; i < model.products.length; i++)
-    if(model.products[i].id == model.modalPopupInformation)
-    result = `<section class="showProduct">
+        if (model.products[i].id == model.modalPopupInformation)
+            result = `<section class="showProduct">
             <div class="product-header"> ${model.products[i].title}</div>
         <div class="product-row">
 
@@ -67,11 +67,10 @@ function viewProductItem() {
                
 
     `
-    
     return result;
 }
 
-function modalWindowPopup(index){
+function modalWindowPopup(index) {
     model.modalPopupInformation = index;
     model.app.currentPage = 'viewProduct';
     updateView();

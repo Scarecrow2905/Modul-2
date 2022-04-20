@@ -1,7 +1,6 @@
+// Shopping Cart, Purchase and Remove items for cart
 function addToCart(index) {
     for (let i = 0; i < model.products.length; i++) {
-        // console.log('index nr:', index)
-        // if (model.products[i].includes(model.products[i].categoryId[index])){
         if (model.products[i].id == index) {
             if (model.products[i].stock == 0) {
                 if (model.shoppingCart.cartProducts[i].id == current.id) {
@@ -19,7 +18,6 @@ function addToCart(index) {
     updateView();
 };
 
-
 function purchase(index) {
     if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');
     else {
@@ -29,17 +27,10 @@ function purchase(index) {
 };
 
 function removeCart(index) {
-
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-
-        if (model.shoppingCart.cartProducts === 0) alert('Ingenting å fjerne');
-
-
-
-        else {
-            // for (let p = 0; p < model.shoppingCart[i].cartProducts.length; p++) {
-
-
+        if (model.shoppingCart.cartProducts === 0){
+             alert('Ingenting å fjerne');
+        }else {
             model.shoppingCart.numberOfItems--;
             model.products[i].stock++;
             model.shoppingCart.totalPrice -= model.products[i].price;
@@ -49,9 +40,7 @@ function removeCart(index) {
     updateView();
 };
 
-//  (index < 1000:) Hvert meny valg har ett nr. de første 9 meny valgene har ett nr fra 0 - 8. De neste under aktegoriene vil ha nr fra 8 og oppover. make(1000) er for å sikre at det ikke vil skje en feil når man legger til mange nom varer. man kan ha opp til 1000 meny valg.
-//  (if(model.activeSubCategory[i] == true ) Når man trykker på ett kategori valg, gjør vi index nummeret i activeSubCatergory om til true, når det fra før av ligger på false. Lukker man meny valget igjenn, gjør vi den om til false igjenn.
-// Meny med dropdown
+// Meny og dropdown for categorier og subcategorier
 function make(index) {
     let html = "";
     model.viewMenyCategories = "";
@@ -68,30 +57,18 @@ function make(index) {
             html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>
             `
         }
-        // if (model.activeSubCategory[i] == true) {
-        // }
     }
     model.viewMenyCategories = html;
     updateView();
 }
-function addCategory() {
-    // legg til verdier for å lage kategori (Id og navn på kategori)
-    model.activeSubCategory.push(false);
-    //model.categories.push({})
-    // model.wasActiveSubCategory.push(false) 
-}
-
-
 
 function viewStuff(index) {
-    // model.viewProductsHere = "";
     let html = "";
     let first = '';
     for (let i = 0; i < model.products.length; i++) {
             first = i % 4 == 0 ? 'first' : '';
         if (index === 100) {
-            html += /*html*/
-                `
+            html += /*html*/`
     <div class="rows ${first}">
         <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${model.products[i].id});updateView()"/>
         <div class="front-item-title">${model.products[i].title}</div>
@@ -106,8 +83,7 @@ function viewStuff(index) {
         let first = i % 4 == 0 ? 'first' : '';
         if (index == model.products[i].parentId && model.products[i].price < model.sliderValueIs) {
             model.activeProduct = !model.activeProduct
-            html += /*html*/
-                `
+            html += /*html*/`
             <div class="rows ${first}">
                 <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
                 <div class="front-item-title">${model.products[i].title}</div>
@@ -121,27 +97,7 @@ function viewStuff(index) {
     }
 }
 
-// ------------- Login information ------------------ Login information  ------------------ Login information ------------------ Login information ------------------ Login information ------------------
-
-// Pusher ny bruker inn i modellen.
-function addNewInforToModel() {
-    model.account.users.push({
-        firstName: model.account.newFirstName,
-        lastName: model.account.newLastName,
-        phone: model.account.createNewPhoneNumber,
-        email: model.account.createNewEmail,
-        password: model.account.createNewPassword,
-        cardnumber: 0000000000000000,
-        cardname: 'No name',
-        id: model.idIndex,
-    })
-    model.idIndex++;
-    alert('You can now login with your new account. good luck!')
-    model.app.currentPage = 'LoginMail';
-    resettInformation();
-    updateView();
-}
-//Sjekker at personens mail  og passord finnes i modellen.
+//Alt som har med Login, Ny bruker, Resette ny bruker informasjon, og som sjekker hvem som er logget inn.
 function DoThisMailPersonExist() {
     let foundUser = false;
     for (let i = 0; i < model.account.users.length; i++) {
@@ -158,7 +114,7 @@ function DoThisMailPersonExist() {
     }
     loggedInnOrNot()
 }
-//Sjekker at personens telefon nummer og passord finnes i modellen.
+
 function DoThisPhonePersonExist() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.account.phone == model.account.users[i].phone && model.account.password == model.account.users[i].password) {
@@ -174,8 +130,26 @@ function DoThisPhonePersonExist() {
     }
     loggedInnOrNot()
 }
-// Sjekker at alt er riktig når man lager en ny bruker.
-function checkEverything() {
+//addNewInforToModel
+function addNewInfoToModel() {
+    model.account.users.push({
+        firstName: model.account.newFirstName,
+        lastName: model.account.newLastName,
+        phone: model.account.createNewPhoneNumber,
+        email: model.account.createNewEmail,
+        password: model.account.createNewPassword,
+        cardnumber: 0000000000000000,
+        cardname: 'No name',
+        id: model.idIndex,
+    })
+    model.idIndex++;
+    alert('You can now login with your new account. good luck!')
+    model.app.currentPage = 'LoginMail';
+    resettInformation();
+    updateView();
+}
+//checkEverything
+function checkNewAccountInformation() {
     if (model.account.newFirstName == '') {
         return alert('You have forgotten you´re first name')
     } else if (model.account.newLastName == '') {
@@ -192,7 +166,7 @@ function checkEverything() {
         updateView();
     }
 }
-// Nullstill informasjonen om ny bruker.
+
 function resettInformation() {
     model.account.newFirstName = '';
     model.account.newLastName = '';
@@ -202,7 +176,7 @@ function resettInformation() {
     model.account.createNewPasswordCheck = '';
     updateView();
 }
-// Sjekker om du er logget inn, og hvilken  som er currentUser, for hvilket navn som skal komme opp.
+
 function loggedInnOrNot() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.status == false) {
@@ -216,15 +190,33 @@ function loggedInnOrNot() {
     isAdminLoggedIn();
     updateView();
 }
+
+function isAdminLoggedIn(){
+    if(model.app.currentUser == 1){
+        model.app.adminLoggedInn = true;
+    }
+    checkAdmin();
+}
+
+function checkAdmin(){
+    if(model.app.adminLoggedInn == false){
+        model.app.admin = '';
+    }
+    if(model.app.adminLoggedInn == true){
+        model.app.admin =  `<button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>`;
+    }
+    updateView();
+}
+
 function checkLoginStatus() {
     if (model.app.status == false) {
         model.app.currentPage = 'LoginMail';
     } else if (model.app.status == true) {
         model.app.currentPage = 'accountInfo';
     }
-    // model.app.currentPage = 'FrontPage'
     updateView();
 }
+
 function logOut() {
     if (model.app.click == 1) {
         alert('Are you sure you want to log out? klick again..')
@@ -240,14 +232,11 @@ function logOut() {
     updateView();
 }
 
-
+// Søkerfunksjonen og pris justering
 function searchCatalog(indexValue) {
     model.midlertidlig = '';
-    // model.viewProductsHere = '';
     for (let i = 0; i < model.products.length; i++) {
-        // for(let i in model.products){
         let first = i % 3 == 0 ? 'first' : '';
-        // if(model.products[i].title == indexValue){
         if (model.products[i].title.includes(indexValue) || model.products[i].category.includes(indexValue)) {
             if (model.products[i].price < model.sliderValueIs) {
                 model.midlertidlig += `
@@ -271,11 +260,10 @@ function UpdateViewProductsHere() {
 
 function sliderValue(indexValue) {
     model.sliderValueIs = indexValue;
-    // document.getElementById('sliderValue').innerHTML = indexValue;
     updateView();
 }
 
-
+// Endring av bruker informasjon og/eller legge til
 function UpdateChange(index) {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.whatInfoIsShowed == 'editPaymentInfo') {
@@ -319,23 +307,21 @@ function UpdateChange(index) {
         }
     }
     resett();
-    // ShowAccountInfo();
 }
+
 function resett() {
     model.account.createNewPassword = '';
     model.account.createNewPasswordCheck = '';
     model.account.createNewEmail = '';
     model.account.newFirstName = '';
     model.account.newLastName = '';
-    ShowAccountInfo();
+    showDetailedAccountInformation();
 }
 function deleteCardInformation(index) {
     model.account.users[index].cardnumber = 0;
     model.account.users[index].cardname = '';
-    ShowAccountInfo();
+    showDetailedAccountInformation();
 }
-
-
 
 function viewPayUserType(){
     for (let i = 0; i < model.account.users.length; i++) {
@@ -352,56 +338,8 @@ function viewPayUserType(){
 updateView();
 }
 
-// Sjekker om det er admin som er logget inn
-function isAdminLoggedIn(){
-    if(model.app.currentUser == 1){
-        model.app.adminLoggedInn = true;
-    }
-    checkAdmin();
+// Funksjoner for å legge til kategorier eller subkategorier
+function addCategory() {
+    model.activeSubCategory.push(false); 
 }
-// Hvis admin er logget inn vil personen få mulighet til å se knappen for å legge til nye produkter
-function checkAdmin(){
-    if(model.app.adminLoggedInn == false){
-        model.app.admin = '';
-    }
-    if(model.app.adminLoggedInn == true){
-        model.app.admin =  `<button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>`;
-    }
-    updateView();
-}
-// <button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">${model.app.admin}</button></li>
-
-// Ikke tenk på det. ~ thorbjoern
-
-// let apiverdi = {
-//     values: [{
-//         title: 'Sofa',
-//         price: 9999,
-//         stock: 2,
-//         category: 'Stue',
-//         id: 111,
-//         parentId: 11,
-//         subCategory: 'Sofa',
-//         img: 'TempBilder/1Stue/1Sofa/vintagesofapattern.jpeg',
-//         description: 'Godt brukt, men fortsatt en flott sofa. Stått lagret i bod siden 2005.',
-//         measures: 'Høyde: 80cm. Dybde: 50cm. Lengde: 170cm',
-//         color: ['Oker Gul'],
-//         country: 'Danmark',
-//         year: '2006',
-//     },],
-// };
-
-// async function getdata() {
-//     let response = await fetch("https://pokeapi.co/api/v2")
-//     let data = await response.json()
-
-//     let response2 = await fetch(data.ability)
-//     let data2 = await response2.json()
-//     console.log(data2)
-//     let response3 = await fetch(data2.results[17].url)
-//     let data3 = await response3.json()
-//     console.log(data3)
-// }
-
-// function addListOfProducts(apiVerdi) {
 

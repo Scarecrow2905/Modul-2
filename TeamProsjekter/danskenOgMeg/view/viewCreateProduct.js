@@ -168,14 +168,14 @@ function createProduct() {
 function setProductId() {
     /*-------------------------------stue-------------------------------------*/
     if (model.createItems.category = 1){  
-    if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
-    if (model.createItems.subCategory == 'Sofabord') model.createItems.id = 12;
-    if (model.createItems.subCategory == 'Sjeselong') model.createItems.id = 13;
-    if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 14;
-    if (model.createItems.subCategory == 'Hyller') model.createItems.id = 15;
-    if (model.createItems.subCategory == 'Reoler') model.createItems.id = 16;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 17;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 18;
+        if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
+        if (model.createItems.subCategory == 'Sofabord') model.createItems.id = 12;
+        if (model.createItems.subCategory == 'Sjeselong') model.createItems.id = 13;
+        if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 14;
+        if (model.createItems.subCategory == 'Hyller') model.createItems.id = 15;
+        if (model.createItems.subCategory == 'Reoler') model.createItems.id = 16;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 17;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 18;
     }
     /*-----------------------------Spiserom-----------------------------------*/
     if (model.createItems.category = 2) {
@@ -196,45 +196,57 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 36;
     }
     /*-----------------------------Soverom------------------------------------*/
-    if (model.createItems.subCategory == 'Seng') model.createItems.id = 41;
-    if (model.createItems.subCategory == 'Nattbord') model.createItems.id = 42;
-    if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 43;
-    if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 44;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 45;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 46;
+    if (model.createItems.category = 4) {
+        if (model.createItems.subCategory == 'Seng') model.createItems.id = 41;
+        if (model.createItems.subCategory == 'Nattbord') model.createItems.id = 42;
+        if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 43;
+        if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 44;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 45;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 46;
+    }
     /*-----------------------------Bad------------------------------------*/
-    if (model.createItems.subCategory == 'Badekar') model.createItems.id = 51;
-    if (model.createItems.subCategory == 'Vaskebrett') model.createItems.id = 52;
-    if (model.createItems.subCategory == 'Innredning') model.createItems.id = 53;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 54;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 55;
+    if (model.createItems.category = 5) {
+        if (model.createItems.subCategory == 'Badekar') model.createItems.id = 51;
+        if (model.createItems.subCategory == 'Vaskebrett') model.createItems.id = 52;
+        if (model.createItems.subCategory == 'Innredning') model.createItems.id = 53;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 54;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 55;
+    }
     /*-----------------------------gang------------------------------------*/
-    if (model.createItems.subCategory == 'Sko oppbevaring') model.createItems.id = 61;
-    if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 62;
-    if (model.createItems.subCategory == 'Hattehyller') model.createItems.id = 63;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 64;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 65;
+    if (model.createItems.category = 6) {
+        if (model.createItems.subCategory == 'Sko oppbevaring') model.createItems.id = 61;
+        if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 62;
+        if (model.createItems.subCategory == 'Hattehyller') model.createItems.id = 63;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 64;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 65;
+    }
     /*-----------------------------klær------------------------------------*/
-    if (model.createItems.subCategory == 'Kjole') model.createItems.id = 71;
-    if (model.createItems.subCategory == 'Bukser') model.createItems.id = 72;
-    if (model.createItems.subCategory == 'Gensere') model.createItems.id = 73;
-    if (model.createItems.subCategory == 'Jakker') model.createItems.id = 74;
-    if (model.createItems.subCategory == 'Cardigans') model.createItems.id = 75;
-    if (model.createItems.subCategory == 'Hatter') model.createItems.id = 76;
-    if (model.createItems.subCategory == 'Skjerf') model.createItems.id = 77;
-    if (model.createItems.subCategory == 'Øredobber') model.createItems.id = 78;
+    if (model.createItems.category = 7) {
+        if (model.createItems.subCategory == 'Kjole') model.createItems.id = 71;
+        if (model.createItems.subCategory == 'Bukser') model.createItems.id = 72;
+        if (model.createItems.subCategory == 'Gensere') model.createItems.id = 73;
+        if (model.createItems.subCategory == 'Jakker') model.createItems.id = 74;
+        if (model.createItems.subCategory == 'Cardigans') model.createItems.id = 75;
+        if (model.createItems.subCategory == 'Hatter') model.createItems.id = 76;
+        if (model.createItems.subCategory == 'Skjerf') model.createItems.id = 77;
+        if (model.createItems.subCategory == 'Øredobber') model.createItems.id = 78;
+    }
     /*-----------------------------Sko------------------------------------*/
-    if (model.createItems.subCategory == 'Støvletter') model.createItems.id = 81;
-    if (model.createItems.subCategory == 'Støvler') model.createItems.id = 82;
-    if (model.createItems.subCategory == 'Joggesko') model.createItems.id = 83;
-    if (model.createItems.subCategory == 'Platåsko') model.createItems.id = 84;
-    if (model.createItems.subCategory == 'Høyhælte sko') model.createItems.id = 85;
+    if (model.createItems.category = 8) {
+        if (model.createItems.subCategory == 'Støvletter') model.createItems.id = 81;
+        if (model.createItems.subCategory == 'Støvler') model.createItems.id = 82;
+        if (model.createItems.subCategory == 'Joggesko') model.createItems.id = 83;
+        if (model.createItems.subCategory == 'Platåsko') model.createItems.id = 84;
+        if (model.createItems.subCategory == 'Høyhælte sko') model.createItems.id = 85;
+    }
     /*-----------------------------Lesesal------------------------------------*/
-    if (model.createItems.subCategory == 'Godstol') model.createItems.id = 91;
-    if (model.createItems.subCategory == 'Bokhyller') model.createItems.id = 92;
-    if (model.createItems.subCategory == 'Avlastningsbord') model.createItems.id = 93;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 94;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 95;
+    if (model.createItems.category = 9) {
+        if (model.createItems.subCategory == 'Godstol') model.createItems.id = 91;
+        if (model.createItems.subCategory == 'Bokhyller') model.createItems.id = 92;
+        if (model.createItems.subCategory == 'Avlastningsbord') model.createItems.id = 93;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 94;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 95;
+    }
 }
 
 function blankInput() {
