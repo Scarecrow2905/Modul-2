@@ -81,7 +81,7 @@ function viewCreateCategories() {
     return html;
 
 
-
+    33
 }
 //Når du velger en Hovedkategori så skal kategorien være den kategorieen.
 
@@ -166,7 +166,69 @@ function createProduct() {
     updateView();
 }
 function setProductId() {
+    /*-------------------------------stue-------------------------------------*/
     if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
+    if (model.createItems.subCategory == 'Sofabord') model.createItems.id = 12;
+    if (model.createItems.subCategory == 'Sjeselong') model.createItems.id = 13;
+    if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 14;
+    if (model.createItems.subCategory == 'Hyller') model.createItems.id = 15;
+    if (model.createItems.subCategory == 'Reoler') model.createItems.id = 16;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 17;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 18;
+    /*-----------------------------Spiserom-----------------------------------*/
+    if (model.createItems.subCategory == 'Spisebord') model.createItems.id = 21;
+    if (model.createItems.subCategory == 'Spisestuestoler') model.createItems.id = 22;
+    if (model.createItems.subCategory == 'Reoler') model.createItems.id = 23;
+    if (model.createItems.subCategory == 'Kommode') model.createItems.id = 24;
+    if (model.createItems.subCategory == 'Skjenk') model.createItems.id = 25;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 27;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 28;
+    /*-----------------------------Kjøkken------------------------------------*/
+    if (model.createItems.subCategory == 'Kjøkkenbord') model.createItems.id = 31;
+    if (model.createItems.subCategory == 'Kjøkkenstoler') model.createItems.id = 32;
+    if (model.createItems.subCategory == 'Hyller') model.createItems.id = 33;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 35;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 36;
+    /*-----------------------------Soverom------------------------------------*/
+    if (model.createItems.subCategory == 'Seng') model.createItems.id = 41;
+    if (model.createItems.subCategory == 'Nattbord') model.createItems.id = 42;
+    if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 43;
+    if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 44;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 45;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 46;
+    /*-----------------------------Bad------------------------------------*/
+    if (model.createItems.subCategory == 'Badekar') model.createItems.id = 51;
+    if (model.createItems.subCategory == 'Vaskebrett') model.createItems.id = 52;
+    if (model.createItems.subCategory == 'Innredning') model.createItems.id = 53;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 54;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 55;
+    /*-----------------------------gang------------------------------------*/
+    if (model.createItems.subCategory == 'Sko oppbevaring') model.createItems.id = 61;
+    if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 62;
+    if (model.createItems.subCategory == 'Hattehyller') model.createItems.id = 63;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 64;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 65;
+    /*-----------------------------klær------------------------------------*/
+    if (model.createItems.subCategory == 'Kjole') model.createItems.id = 71;
+    if (model.createItems.subCategory == 'Bukser') model.createItems.id = 72;
+    if (model.createItems.subCategory == 'Gensere') model.createItems.id = 73;
+    if (model.createItems.subCategory == 'Jakker') model.createItems.id = 74;
+    if (model.createItems.subCategory == 'Cardigans') model.createItems.id = 75;
+    if (model.createItems.subCategory == 'Hatter') model.createItems.id = 76;
+    if (model.createItems.subCategory == 'Skjerf') model.createItems.id = 77;
+    if (model.createItems.subCategory == 'Øredobber') model.createItems.id = 78;
+    /*-----------------------------Sko------------------------------------*/
+    if (model.createItems.subCategory == 'Støvletter') model.createItems.id = 81;
+    if (model.createItems.subCategory == 'Støvler') model.createItems.id = 82;
+    if (model.createItems.subCategory == 'Joggesko') model.createItems.id = 83;
+    if (model.createItems.subCategory == 'Platåsko') model.createItems.id = 84;
+    if (model.createItems.subCategory == 'Høyhælte sko') model.createItems.id = 85;
+    /*-----------------------------Sko------------------------------------*/
+
+    if (model.createItems.subCategory == '') model.createItems.id = 0;
+    if (model.createItems.subCategory == '') model.createItems.id = 0;
+
+
 }
 
 function blankInput() {

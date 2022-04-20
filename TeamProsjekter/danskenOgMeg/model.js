@@ -119,7 +119,6 @@ const model = {
                 { categoriName: 'Reoler', id: 23, parentId: 2 },
                 { categoriName: 'Kommode', id: 24, parentId: 2 },
                 { categoriName: 'Skjenk', id: 25, parentId: 2 },
-                { categoriName: 'Kommode', id: 26, parentId: 2 },
                 { categoriName: 'Interiør', id: 27, parentId: 2 },
                 { categoriName: 'Tekstil', id: 28, parentId: 2 },
 
@@ -196,7 +195,7 @@ const model = {
 
 
     // Data -!-
-
+    products: [],
     //Betalingsløsninger
     payment: {
         vipps: false,
@@ -216,7 +215,7 @@ const model = {
     clickedOnProducts: false,
     modalPopupInformation: '',
 
-    products: [],
+    
 
 }
 
