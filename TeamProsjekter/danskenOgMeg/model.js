@@ -17,7 +17,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'viewCreateProduct', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo | viewCreateProduct
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo | viewCreateProduct
         currentUser: 1, // 0
         status: true, // false
         showStatus: 'Logg inn', // Hører til å vise om man er logget inn eller skal logge ut. 
