@@ -53,7 +53,6 @@ function removeCart(index) {
 //  (if(model.activeSubCategory[i] == true ) Når man trykker på ett kategori valg, gjør vi index nummeret i activeSubCatergory om til true, når det fra før av ligger på false. Lukker man meny valget igjenn, gjør vi den om til false igjenn.
 // Meny med dropdown
 function make(index) {
-
     let html = "";
     model.viewMenyCategories = "";
     model.activeSubCategory[index] = !model.activeSubCategory[index];
@@ -87,8 +86,9 @@ function addCategory() {
 function viewStuff(index) {
     // model.viewProductsHere = "";
     let html = "";
+    let first = '';
     for (let i = 0; i < model.products.length; i++) {
-        let first = i % 3 == 0 ? 'first' : '';
+            first = i % 4 == 0 ? 'first' : '';
         if (index === 100) {
             html += /*html*/
                 `
@@ -103,7 +103,7 @@ function viewStuff(index) {
     }
 
     for (let i = 0; i < model.products.length; i++) {
-        let first = i % 3 == 0 ? 'first' : '';
+        let first = i % 4 == 0 ? 'first' : '';
         if (index == model.products[i].parentId && model.products[i].price < model.sliderValueIs) {
             model.activeProduct = !model.activeProduct
             html += /*html*/

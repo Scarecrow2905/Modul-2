@@ -1,6 +1,5 @@
 
 const model = {
-
     text1: "",
     shoppingCart: {
 
@@ -17,9 +16,9 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo | viewCreateProduct
-        currentUser: 1, // 0
-        status: true, // false
+        currentPage: 'FrontPage', //FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PaymentPage | accountInfo / viewCreateProduct
+        currentUser: 0, // 0
+        status: false, // false
         showStatus: 'Logg inn', // Hører til å vise om man er logget inn eller skal logge ut. 
         click: 0,               // Hører til å logge seg ut av brukeren
         whatInfoIsShowed: 'mainScreen',   // Hører til å forandre account infomation
@@ -119,7 +118,6 @@ const model = {
                 { categoriName: 'Reoler', id: 23, parentId: 2 },
                 { categoriName: 'Kommode', id: 24, parentId: 2 },
                 { categoriName: 'Skjenk', id: 25, parentId: 2 },
-                { categoriName: 'Kommode', id: 26, parentId: 2 },
                 { categoriName: 'Interiør', id: 27, parentId: 2 },
                 { categoriName: 'Tekstil', id: 28, parentId: 2 },
 
@@ -196,7 +194,7 @@ const model = {
 
 
     // Data -!-
-
+    products: [],
     //Betalingsløsninger
     payment: {
         vipps: false,
@@ -215,8 +213,6 @@ const model = {
     sliderValueIs: 20000,
     clickedOnProducts: false,
     modalPopupInformation: '',
-
-    products: [],
 
 }
 

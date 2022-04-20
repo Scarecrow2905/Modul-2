@@ -15,6 +15,20 @@
 ul {
 	margin: 5px;
 }
+
+
+.header {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	color: #333;
+	font-size: 2em;
+	font-family: stalemate;
+	/* font-size: largest; */
+}
+.meny{
+	margin-left:20%;
+}
 .dropDownList {
 	user-select: none;
 	color: black;
@@ -31,15 +45,6 @@ ul {
 	background-color: rgb(242, 166, 136);
 	color: #333;
 }
-.header {
-	text-align: center;
-	margin: 0px;
-	padding: 0px;
-	color: #333;
-	font-size: 2em;
-	font-family: stalemate;
-	/* font-size: largest; */
-}
 .smallerHeader {
 	margin: 0px;
 	padding: 0px;
@@ -50,21 +55,19 @@ ul {
 }
 
 
-.liteFeltLi {
+ .liteFeltLi {
 	list-style-type: none;
 	float: left;
 	font-size: 1rem;
-	margin: 2% 2% 2% 8%
-}
+} 
 .liteFeltLi1 {
 	list-style-type: none;
-	float: left;
+	float:left;
 	font-size: 1rem;
-	margin: 2% 0% 2% 15%;
-	align-items: center;
+	margin: 0% 0% 1% 10%;
 
 }
-.liteFeltLi2 {
+/* .liteFeltLi2 {
 	list-style-type: none;
 	float: left;
 	font-size: 1rem;
@@ -79,10 +82,10 @@ ul {
 	margin: 2% 2% 2% 0%;
 	align-items: center;
 
-}
-.liteFelt {
+}  */
+/* .liteFelt {
 	align-items: center;
-}
+} */
 .sublist {
 	user-select: none;
 	background-color: rgb(242, 250, 140);
@@ -114,6 +117,7 @@ ul {
 .first {
 	clear: left;
 }
+
 .stock {
 	font-size: 0.9rem;
 }
@@ -292,10 +296,7 @@ ul {
 	
 }
 
-.createProduct-function {
-	
 
-}
 	
 
 
