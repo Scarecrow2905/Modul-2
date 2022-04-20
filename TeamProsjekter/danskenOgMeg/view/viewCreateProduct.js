@@ -167,6 +167,7 @@ function createProduct() {
 }
 function setProductId() {
     /*-------------------------------stue-------------------------------------*/
+    if (model.createItems.category = 1){  
     if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
     if (model.createItems.subCategory == 'Sofabord') model.createItems.id = 12;
     if (model.createItems.subCategory == 'Sjeselong') model.createItems.id = 13;
@@ -175,20 +176,25 @@ function setProductId() {
     if (model.createItems.subCategory == 'Reoler') model.createItems.id = 16;
     if (model.createItems.subCategory == 'Interiør') model.createItems.id = 17;
     if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 18;
+    }
     /*-----------------------------Spiserom-----------------------------------*/
-    if (model.createItems.subCategory == 'Spisebord') model.createItems.id = 21;
-    if (model.createItems.subCategory == 'Spisestuestoler') model.createItems.id = 22;
-    if (model.createItems.subCategory == 'Reoler') model.createItems.id = 23;
-    if (model.createItems.subCategory == 'Kommode') model.createItems.id = 24;
-    if (model.createItems.subCategory == 'Skjenk') model.createItems.id = 25;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 27;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 28;
+    if (model.createItems.category = 2) {
+        if (model.createItems.subCategory == 'Spisebord') model.createItems.id = 21;
+        if (model.createItems.subCategory == 'Spisestuestoler') model.createItems.id = 22;
+        if (model.createItems.subCategory == 'Reoler') model.createItems.id = 23;
+        if (model.createItems.subCategory == 'Kommode') model.createItems.id = 24;
+        if (model.createItems.subCategory == 'Skjenk') model.createItems.id = 25;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 27;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 28;
+    }
     /*-----------------------------Kjøkken------------------------------------*/
-    if (model.createItems.subCategory == 'Kjøkkenbord') model.createItems.id = 31;
-    if (model.createItems.subCategory == 'Kjøkkenstoler') model.createItems.id = 32;
-    if (model.createItems.subCategory == 'Hyller') model.createItems.id = 33;
-    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 35;
-    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 36;
+    if (model.createItems.category = 3) {
+        if (model.createItems.subCategory == 'Kjøkkenbord') model.createItems.id = 31;
+        if (model.createItems.subCategory == 'Kjøkkenstoler') model.createItems.id = 32;
+        if (model.createItems.subCategory == 'Hyller') model.createItems.id = 33;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 35;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 36;
+    }
     /*-----------------------------Soverom------------------------------------*/
     if (model.createItems.subCategory == 'Seng') model.createItems.id = 41;
     if (model.createItems.subCategory == 'Nattbord') model.createItems.id = 42;
@@ -223,12 +229,12 @@ function setProductId() {
     if (model.createItems.subCategory == 'Joggesko') model.createItems.id = 83;
     if (model.createItems.subCategory == 'Platåsko') model.createItems.id = 84;
     if (model.createItems.subCategory == 'Høyhælte sko') model.createItems.id = 85;
-    /*-----------------------------Sko------------------------------------*/
-
-    if (model.createItems.subCategory == '') model.createItems.id = 0;
-    if (model.createItems.subCategory == '') model.createItems.id = 0;
-
-
+    /*-----------------------------Lesesal------------------------------------*/
+    if (model.createItems.subCategory == 'Godstol') model.createItems.id = 91;
+    if (model.createItems.subCategory == 'Bokhyller') model.createItems.id = 92;
+    if (model.createItems.subCategory == 'Avlastningsbord') model.createItems.id = 93;
+    if (model.createItems.subCategory == 'Interiør') model.createItems.id = 94;
+    if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 95;
 }
 
 function blankInput() {

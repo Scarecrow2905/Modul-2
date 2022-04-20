@@ -214,7 +214,5 @@ const model = {
     clickedOnProducts: false,
     modalPopupInformation: '',
 
-    
-
 }
 
