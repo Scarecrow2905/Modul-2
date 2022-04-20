@@ -18,7 +18,6 @@ function updateViewLoginWithMail(){
                 <div  class="usernamePosition">${mail()}</div>
                 <div  class="passwordPosition">${password()}</div>
                 <div> <button class="loginButton" onclick="DoThisMailPersonExist(); model.account.password = ''">Log inn</button></div>
-                <div class="paragraphLogin"> are you a robot?</div>
                 <div> <button onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Forgot your password?</button></div>
                 <div> <p class="paragraphLogin"> Or, are you a new user?</p></div>
                 <div> <button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Create new account</button></div>
@@ -51,8 +50,7 @@ function updateViewLoginWithPhone(){
                 <p class="paragraphMail"><b>TELEFON</b></p></div>
                 <div class="usernamePosition">${phone()}</div>
                 <div class="passwordPosition">${password()}</div>
-                <div><button class="loginButton" onclick="DoThisPhonePersonExist(); model.account.password = ''">Logg inn</button></div>
-                <div class="paragraphLogin">Er du en robot?</div>
+                <div><button  class="loginButton" onclick="DoThisPhonePersonExist(); model.account.password = ''">Logg inn</button></div>
                 <div><button  onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Glemt passord?</button></div>
                 <div><p class="paragraphLogin"> Or, are you a new user?</<p></div>
                 <div><button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Lag ny bruker</button></div>
@@ -86,7 +84,7 @@ function updateViewCreateAccount(){
             <div class="passwordPosition">${newPassword()}      </div>
             <p class="paragraphLogin">Write your password again :</p>
             <div class="passwordPosition">${passwordCheck()} </div>
-            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';checkEverything()">Continue</button> </div>
+            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';checkNewAccountInformation()">Continue</button> </div>
             <br>
             <div class="paragraphLogin">Already have an account?</div>
             <div><button class="loginButton" onclick="model.app.currentPage = 'LoginMail';updateView()">Login</div>
@@ -98,8 +96,8 @@ function updateViewCreateAccount(){
 </div>`
 return html;
 }
-// ------------------------- Account Information ----------------------------
 
+// ------------------------- Account Information ----------------------------
 function updateViewNewAccount(){
     html =/*hmtl*/ `
     <div class="loginPage">
@@ -119,7 +117,7 @@ function updateViewNewAccount(){
             <div class="usernamePosition"> E-post:<br><b>${model.account.createNewEmail}</b>          </div>
             <div class="usernamePosition"> Telefonnummer:<br><b>${model.account.createNewPhoneNumber}</b>        </div>
             <div class="passwordPosition"> Passord:<br><b>${model.account.createNewPassword}</b>      </div>
-            <div><button class="loginButton" onclick="model.app.currentPage='FrontPage'; addNewInforToModel();">Lag ny bruker og gå til innlogging</button> </div>
+            <div><button class="loginButton" onclick="model.app.currentPage='FrontPage'; addNewInfoToModel();">Lag ny bruker og gå til innlogging</button> </div>
         </div>
     </div>
     <div class="innholdL"></div>
@@ -128,6 +126,7 @@ function updateViewNewAccount(){
 </div>`
 return html;
 }
+
 function updateViewAccountInfo(){
     html = `
     <div class="accountInfoPage">
@@ -148,10 +147,4 @@ function updateViewAccountInfo(){
     </div>
     `
     return html;
-}// Fortsett med denne over!
-
-
-
-
-// Line 9 and 9 Requires oninputs
-// Login require onclick => Login w/Username/PW => Welcome User === User: {user} [is Logged in.] => Login ~~ log out.
+}
