@@ -81,7 +81,7 @@ function viewCreateCategories() {
     return html;
 
 
-    33
+
 }
 //Når du velger en Hovedkategori så skal kategorien være den kategorieen.
 
@@ -94,10 +94,10 @@ function viewCreateCategories() {
 // }
 
 function viewCreateSubCategories(mainCategory) {
-    // result = '';
+
     let html = '';
 
-    html =/*html*/ `<select  name="subCategory"  class="create-Product-kategori-input" onchange="model.createItems.subCategory = this.value; console.log(this.value)">
+    html =/*html*/ `<select  name="subCategory"  class="create-Product-kategori-input" onchange="model.createItems.subCategory = this.value; console.log(this.value + 'Hei')">
     <option selected disabled hidden>Velg underkategori.</option> 
     `
 
@@ -113,10 +113,11 @@ function viewCreateSubCategories(mainCategory) {
 
 
 
-        html += `</select>`
+
 
 
     }
+    html += `</select>`
     test = html;
     updateView();
 
@@ -139,7 +140,6 @@ function createProduct() {
 
     // }
     // else {
-    setProductId();
     let newproduct = {}
 
 
@@ -147,6 +147,7 @@ function createProduct() {
     newproduct.price = model.createItems.price;
     newproduct.stock = model.createItems.stock;
     newproduct.category = model.createItems.category;
+    setProductId();
     newproduct.parentId = model.createItems.id;
     newproduct.img = model.createItems.img;
     newproduct.description = model.createItems.description;
@@ -157,7 +158,6 @@ function createProduct() {
     model.products.push(newproduct);
     console.log(newproduct);
 
-    //blankInput();
 
     //  model.products.push(newproduct);
 
@@ -167,7 +167,7 @@ function createProduct() {
 }
 function setProductId() {
     /*-------------------------------stue-------------------------------------*/
-    if (model.createItems.category = 1){  
+    if (model.createItems.category == 'Stue') {
         if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
         if (model.createItems.subCategory == 'Sofabord') model.createItems.id = 12;
         if (model.createItems.subCategory == 'Sjeselong') model.createItems.id = 13;
@@ -178,7 +178,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 18;
     }
     /*-----------------------------Spiserom-----------------------------------*/
-    if (model.createItems.category = 2) {
+    if (model.createItems.category == 'Spiserom') {
         if (model.createItems.subCategory == 'Spisebord') model.createItems.id = 21;
         if (model.createItems.subCategory == 'Spisestuestoler') model.createItems.id = 22;
         if (model.createItems.subCategory == 'Reoler') model.createItems.id = 23;
@@ -188,7 +188,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 28;
     }
     /*-----------------------------Kjøkken------------------------------------*/
-    if (model.createItems.category = 3) {
+    if (model.createItems.category == 'Kjøkken') {
         if (model.createItems.subCategory == 'Kjøkkenbord') model.createItems.id = 31;
         if (model.createItems.subCategory == 'Kjøkkenstoler') model.createItems.id = 32;
         if (model.createItems.subCategory == 'Hyller') model.createItems.id = 33;
@@ -196,7 +196,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 36;
     }
     /*-----------------------------Soverom------------------------------------*/
-    if (model.createItems.category = 4) {
+    if (model.createItems.category == 'Soverom') {
         if (model.createItems.subCategory == 'Seng') model.createItems.id = 41;
         if (model.createItems.subCategory == 'Nattbord') model.createItems.id = 42;
         if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 43;
@@ -205,7 +205,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 46;
     }
     /*-----------------------------Bad------------------------------------*/
-    if (model.createItems.category = 5) {
+    if (model.createItems.category == 'Bad') {
         if (model.createItems.subCategory == 'Badekar') model.createItems.id = 51;
         if (model.createItems.subCategory == 'Vaskebrett') model.createItems.id = 52;
         if (model.createItems.subCategory == 'Innredning') model.createItems.id = 53;
@@ -213,7 +213,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 55;
     }
     /*-----------------------------gang------------------------------------*/
-    if (model.createItems.category = 6) {
+    if (model.createItems.category == 'Gang') {
         if (model.createItems.subCategory == 'Sko oppbevaring') model.createItems.id = 61;
         if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 62;
         if (model.createItems.subCategory == 'Hattehyller') model.createItems.id = 63;
@@ -221,7 +221,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 65;
     }
     /*-----------------------------klær------------------------------------*/
-    if (model.createItems.category = 7) {
+    if (model.createItems.category == 'Klær') {
         if (model.createItems.subCategory == 'Kjole') model.createItems.id = 71;
         if (model.createItems.subCategory == 'Bukser') model.createItems.id = 72;
         if (model.createItems.subCategory == 'Gensere') model.createItems.id = 73;
@@ -232,7 +232,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Øredobber') model.createItems.id = 78;
     }
     /*-----------------------------Sko------------------------------------*/
-    if (model.createItems.category = 8) {
+    if (model.createItems.category == 'Sko') {
         if (model.createItems.subCategory == 'Støvletter') model.createItems.id = 81;
         if (model.createItems.subCategory == 'Støvler') model.createItems.id = 82;
         if (model.createItems.subCategory == 'Joggesko') model.createItems.id = 83;
@@ -240,7 +240,7 @@ function setProductId() {
         if (model.createItems.subCategory == 'Høyhælte sko') model.createItems.id = 85;
     }
     /*-----------------------------Lesesal------------------------------------*/
-    if (model.createItems.category = 9) {
+    if (model.createItems.category == 'Lesesal') {
         if (model.createItems.subCategory == 'Godstol') model.createItems.id = 91;
         if (model.createItems.subCategory == 'Bokhyller') model.createItems.id = 92;
         if (model.createItems.subCategory == 'Avlastningsbord') model.createItems.id = 93;
