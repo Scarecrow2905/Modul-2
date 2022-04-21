@@ -1,3 +1,4 @@
+
 // Shopping Cart, Purchase and Remove items for cart
 function addToCart(index) {
     for (let i = 0; i < model.products.length; i++) {
@@ -70,7 +71,7 @@ function viewStuff(index) {
     let html = "";
     let first = '';
     for (let i = 0; i < model.products.length; i++) {
-            first = i % 4 == 0 ? 'first' : '';
+        first = i % 4 == 0 ? 'first' : '';
         if (index === 100) {
             html += /*html*/`
     <div class="rows ${first}">
@@ -195,19 +196,19 @@ function loggedInnOrNot() {
     updateView();
 }
 
-function isAdminLoggedIn(){
-    if(model.app.currentUser == 1){
+function isAdminLoggedIn() {
+    if (model.app.currentUser == 1) {
         model.app.adminLoggedInn = true;
     }
     checkAdmin();
 }
 
-function checkAdmin(){
-    if(model.app.adminLoggedInn == false){
+function checkAdmin() {
+    if (model.app.adminLoggedInn == false) {
         model.app.admin = '';
     }
-    if(model.app.adminLoggedInn == true){
-        model.app.admin =  `<button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>`;
+    if (model.app.adminLoggedInn == true) {
+        model.app.admin = `<button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>`;
     }
     updateView();
 }
@@ -327,10 +328,10 @@ function deleteCardInformation(index) {
     showDetailedAccountInformation();
 }
 
-function viewPayUserType(){
+function viewPayUserType() {
     for (let i = 0; i < model.account.users.length; i++) {
-        if (model.app.currentUser == model.account.users[i].id){
-            if(model.app.currentUser != 0){
+        if (model.app.currentUser == model.account.users[i].id) {
+            if (model.app.currentUser != 0) {
                 model.app.viewPayUserCard = model.account.users[i].cardnumber;
                 model.app.viewPayUserName = model.account.users[i].cardname;
             }
@@ -338,12 +339,167 @@ function viewPayUserType(){
                 model.app.viewPayUserCard = model.payment.cardNumberInput;
                 model.app.viewPayUserName = model.payment.cardUsersName;
             }
-}}
-updateView();
+        }
+    }
+    updateView();
 }
 
 // Funksjoner for å legge til kategorier eller subkategorier
 function addCategory() {
-    model.activeSubCategory.push(false); 
+    model.activeSubCategory.push(false);
 }
 
+
+
+//**------------------------CreateProducts controller functions----------------- **/
+//Lage Produkter.
+function createProduct() {
+    let test = ""
+    // if (model.createItems.title
+    //     && model.createItems.price
+    //     && model.createItems.stock
+    //     && model.createItems.description
+    //     && model.createItems.color
+    //     && model.createItems.year
+    //     && model.createItems.measures
+    //     && model.createItems.img
+    //     == "") {
+    //     alert("Fyll ut alle feltene")
+
+    // }
+    // else {
+
+    //Midlertidlig variabel som all informasjon blir lagret i.
+    let newproduct = {}
+
+    // 
+    newproduct.title = model.createItems.title;
+    newproduct.price = model.createItems.price;
+    newproduct.stock = model.createItems.stock;
+    newproduct.category = model.createItems.category;
+    setProductId();
+    newproduct.parentId = model.createItems.id;
+    newproduct.img = model.createItems.img; // ⛔  Må lage enløsning på denne.
+    newproduct.description = model.createItems.description;
+    newproduct.measures = model.createItems.measures;
+    newproduct.color = model.createItems.color;
+    newproduct.country = model.createItems.country;
+    newproduct.year = model.createItems.year;
+    //Pusher Newproduct inn i Products som et eget produkt. OBS bilde ikke fikset.
+    model.products.push(newproduct);
+    console.log(newproduct);
+
+
+    //  model.products.push(newproduct);
+
+    blankInput();
+
+    updateView();
+}
+
+//Setter riktig id-er for hovedkategori og underkategori.
+function setProductId() {
+    /*-------------------------------stue-------------------------------------*/
+    //Sjekker hvilken Hoved-Kategori den er i og setter riktig underkategori.
+    if (model.createItems.category == 'Stue') {
+        if (model.createItems.subCategory == 'Sofa') model.createItems.id = 11;
+        if (model.createItems.subCategory == 'Sofabord') model.createItems.id = 12;
+        if (model.createItems.subCategory == 'Sjeselong') model.createItems.id = 13;
+        if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 14;
+        if (model.createItems.subCategory == 'Hyller') model.createItems.id = 15;
+        if (model.createItems.subCategory == 'Reoler') model.createItems.id = 16;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 17;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 18;
+    }
+    /*-----------------------------Spiserom-----------------------------------*/
+    if (model.createItems.category == 'Spiserom') {
+        if (model.createItems.subCategory == 'Spisebord') model.createItems.id = 21;
+        if (model.createItems.subCategory == 'Spisestuestoler') model.createItems.id = 22;
+        if (model.createItems.subCategory == 'Reoler') model.createItems.id = 23;
+        if (model.createItems.subCategory == 'Kommode') model.createItems.id = 24;
+        if (model.createItems.subCategory == 'Skjenk') model.createItems.id = 25;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 27;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 28;
+    }
+    /*-----------------------------Kjøkken------------------------------------*/
+    if (model.createItems.category == 'Kjøkken') {
+        if (model.createItems.subCategory == 'Kjøkkenbord') model.createItems.id = 31;
+        if (model.createItems.subCategory == 'Kjøkkenstoler') model.createItems.id = 32;
+        if (model.createItems.subCategory == 'Hyller') model.createItems.id = 33;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 35;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 36;
+    }
+    /*-----------------------------Soverom------------------------------------*/
+    if (model.createItems.category == 'Soverom') {
+        if (model.createItems.subCategory == 'Seng') model.createItems.id = 41;
+        if (model.createItems.subCategory == 'Nattbord') model.createItems.id = 42;
+        if (model.createItems.subCategory == 'Kommoder') model.createItems.id = 43;
+        if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 44;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 45;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 46;
+    }
+    /*-----------------------------Bad------------------------------------*/
+    if (model.createItems.category == 'Bad') {
+        if (model.createItems.subCategory == 'Badekar') model.createItems.id = 51;
+        if (model.createItems.subCategory == 'Vaskebrett') model.createItems.id = 52;
+        if (model.createItems.subCategory == 'Innredning') model.createItems.id = 53;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 54;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 55;
+    }
+    /*-----------------------------gang------------------------------------*/
+    if (model.createItems.category == 'Gang') {
+        if (model.createItems.subCategory == 'Sko oppbevaring') model.createItems.id = 61;
+        if (model.createItems.subCategory == 'Garderobeskap') model.createItems.id = 62;
+        if (model.createItems.subCategory == 'Hattehyller') model.createItems.id = 63;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 64;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 65;
+    }
+    /*-----------------------------klær------------------------------------*/
+    if (model.createItems.category == 'Klær') {
+        if (model.createItems.subCategory == 'Kjole') model.createItems.id = 71;
+        if (model.createItems.subCategory == 'Bukser') model.createItems.id = 72;
+        if (model.createItems.subCategory == 'Gensere') model.createItems.id = 73;
+        if (model.createItems.subCategory == 'Jakker') model.createItems.id = 74;
+        if (model.createItems.subCategory == 'Cardigans') model.createItems.id = 75;
+        if (model.createItems.subCategory == 'Hatter') model.createItems.id = 76;
+        if (model.createItems.subCategory == 'Skjerf') model.createItems.id = 77;
+        if (model.createItems.subCategory == 'Øredobber') model.createItems.id = 78;
+    }
+    /*-----------------------------Sko------------------------------------*/
+    if (model.createItems.category == 'Sko') {
+        if (model.createItems.subCategory == 'Støvletter') model.createItems.id = 81;
+        if (model.createItems.subCategory == 'Støvler') model.createItems.id = 82;
+        if (model.createItems.subCategory == 'Joggesko') model.createItems.id = 83;
+        if (model.createItems.subCategory == 'Platåsko') model.createItems.id = 84;
+        if (model.createItems.subCategory == 'Høyhælte sko') model.createItems.id = 85;
+    }
+    /*-----------------------------Lesesal------------------------------------*/
+    if (model.createItems.category == 'Lesesal') {
+        if (model.createItems.subCategory == 'Godstol') model.createItems.id = 91;
+        if (model.createItems.subCategory == 'Bokhyller') model.createItems.id = 92;
+        if (model.createItems.subCategory == 'Avlastningsbord') model.createItems.id = 93;
+        if (model.createItems.subCategory == 'Interiør') model.createItems.id = 94;
+        if (model.createItems.subCategory == 'Tekstil') model.createItems.id = 95;
+    }
+}
+
+function blankInput() {
+    model.createItems.title = '';
+    model.createItems.title = '';
+    model.createItems.price = null;
+    model.createItems.stock = null;
+    model.createItems.category = '';
+    model.createItems.categoryId = '';
+    model.createItems.img = '';
+    model.createItems.description = '';
+    model.createItems.measures = '';
+    model.createItems.color = [];
+    model.createItems.country = '';
+    model.createItems.year = '';
+    // må nulle ut alle verdier; husk at noen er tall
+}
+//Skal prøve å få denne til å endre pathen til img med hjelp av en hjelpe variabel.
+// var img = document.getElementById('front-item-image').value;
+// var newPath = imgpath.replace('//C:/fakepath/', '')
+
+/*---------------------------Slutt på CreateProduct-------------------------------------- */

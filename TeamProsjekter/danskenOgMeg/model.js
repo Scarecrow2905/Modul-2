@@ -86,8 +86,8 @@ const model = {
     //Legge til nye produkter
     createItems: {
         title: '',
-        price: null,
-        stock: null,
+        price: '',
+        stock: '',
         id: '',
         category: '',
         subCategory: '',
