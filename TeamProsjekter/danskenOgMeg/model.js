@@ -5,7 +5,7 @@ const model = {
         totalPrice: 0,
         cartProducts: [
         ],
-        quantity: 0,
+        TotalQuantity: 0,
         numberOfItems: 0,
         typeOfDelivery: '',
 

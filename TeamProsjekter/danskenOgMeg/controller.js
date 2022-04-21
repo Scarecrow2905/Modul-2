@@ -1,22 +1,100 @@
 // Shopping Cart, Purchase and Remove items for cart
+// function addToCart(index) {
+//     for (let i = 0; i < model.products.length; i++) {
+//         model.shoppingCart.cartProducts = model.products[i].id[index];
+//     }
+//     console.log(index);
+//      updateView();
+// }                for (let j = 0; j < model.shoppingCart.cartProducts.length; j++) {
+
+
+
 function addToCart(index) {
     for (let i = 0; i < model.products.length; i++) {
-        if (model.products[i].id == index) {
-            if (model.products[i].stock == 0) {
-                if (model.shoppingCart.cartProducts[i].id == current.id) {
-                    model.shoppingCart.quantity++;
+            if (model.products[i].id == index) {
+                if (model.products[i].stock == 0) {
+                    return alert('Ikke igjen på lager');
                 }
-                alert('Ikke igjen på lager');
-            } else {
-                model.products[i].stock--;
-                model.shoppingCart.numberOfItems++;
-                model.shoppingCart.totalPrice += model.products[i].price;
-                model.shoppingCart.cartProducts.push(model.products[i]);
+                else if(model.products[i].productQuantity > 0){
+                    model.products[i].productQuantity++;
+                    model.shoppingCart.TotalQuantity++
+                    model.shoppingCart.totalPrice += model.products[i].price;
+                    model.shoppingCart.numberOfItems++
+                    model.products[i].stock--;
+
+                }
+                else{
+                    model.shoppingCart.cartProducts.push(model.products[i]);
+                    model.products[i].productQuantity++;
+                    model.shoppingCart.TotalQuantity++;
+                    model.shoppingCart.totalPrice += model.products[i].price;
+                    model.shoppingCart.numberOfItems++
+                    model.products[i].stock--;
+
+
+                }
+                // for (let j = 0; j < model.shoppingCart.cartProducts.length; j++) {
+                // else if(model.products[i].productQuantity >= 1){ 
+                //     model.products[i].productQuantity++;
+                //     model.shoppingCart.TotalQuantity++;
+                //     model.shoppingCart.totalPrice += model.products[i].price;
+                //     model.shoppingCart.numberOfItems++
+                //     model.products[i].stock--;
+                //     updateView();
+                // }
+                // else {
+                //     model.shoppingCart.cartProducts.push(model.products[i]);
+                //     model.products[i].productQuantity++
+                //     model.shoppingCart.TotalQuantity++;
+                //     model.products[i].stock--;
+                //     model.shoppingCart.numberOfItems++;
+                //     model.shoppingCart.totalPrice += model.products[i].price;
+                //     updateView();
+                // }
+                
+
+            // }   if (model.products[i].stock == 0) {
+            //         alert('Ikke igjen på lager');
+
+            //     } else if (model.shoppingCart.cartProducts[j].id == index) {
+            //         model.shoppingCart.quantity++;
+
+                // } else {
+                //     model.shoppingCart.quantity++;
+                //     model.products[i].stock--;
+                //     model.shoppingCart.numberOfItems++;
+                //     model.shoppingCart.totalPrice += model.products[i].price;
+                //     model.shoppingCart.cartProducts.push(model.products[i]);
+                // }
             }
-        }
     }
+    console.log(index)
     updateView();
 };
+function ChangeQuantity(index){
+    for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
+    model.shoppingCart.cartProducts[i].productQuantity = index;
+
+    // model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
+    // model.shoppingCart.totalPrice 
+
+    }
+    updateView();
+}
+
+// function ChangeQuantity(index){
+//     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
+//     model.shoppingCart.cartProducts[i].productQuantity = index;
+//     for (let j = 0; j < model.products.length; j++) {
+//         model.products[j].productQuantity = model.shoppingCart.cartProducts[i].productQuantity;
+//         }
+//         model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
+//         model.shoppingCart.totalPrice = model.shoppingCart.cartProducts[i].price * index;
+
+
+//     }
+//     updateView();
+// }
 
 function purchase(index) {
     if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');
@@ -33,8 +111,9 @@ function removeCart(index) {
         }else {
             model.shoppingCart.numberOfItems--;
             model.products[i].stock++;
-            model.shoppingCart.totalPrice -= model.products[i].price;
-            model.shoppingCart.cartProducts.splice(index, 1)
+            model.shoppingCart.totalPrice = model.shoppingCart.totalPrice - model.shoppingCart.cartProducts[index].price;
+            model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
+            model.shoppingCart.cartProducts.splice(index, 1);
         }
     }
     updateView();
@@ -74,7 +153,7 @@ function viewStuff(index) {
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
         <div class="stock">stock: ${model.products[i].stock}</div>
-        <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView();">Legg til handlekurv</button>
+        <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
     </div>`
         }
     }
