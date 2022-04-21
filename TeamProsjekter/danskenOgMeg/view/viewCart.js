@@ -17,7 +17,9 @@ function updateViewCart() {
 
     <div class="cart-total">
     <strong class="cart-total-title">Totalt</strong>
-    <span class="cart-total-price">${model.shoppingCart.totalPrice} kr </span>
+    <span class="cart-total-price">${model.shoppingCart.totalPrice} kr </span><br>
+    <span class="cart-total-price">${model.shoppingCart.TotalQuantity} Varer</span>
+
 
     <button class="btn-buy" onclick="model.app.currentPage = 'PayPage';viewPayUserType()"> Kjøp</button>
     </div>
@@ -31,7 +33,9 @@ function createCartItems() {
     var result = '';
 
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-        result += `<section class="newProduct">
+        // for (let j = 0; j < model.products.length; j++) {
+
+    result += `<section class="newProduct">
                     <h2 class="cart-header"> Handlekurv </h2>
                     <div class="cart-row">
                         <span class="cart-item cart-header cart-column">ITEM </span>
@@ -44,9 +48,9 @@ function createCartItems() {
                             <img class="cart-item-image" src="${model.shoppingCart.cartProducts[i].img}">
                             <span class="cart-item-title"> ${model.shoppingCart.cartProducts[i].title} </span>
                         </div>
-                            <span class="cart-price cart-column">${model.shoppingCart.cartProducts[i].price} kr </span>
+                            <span class="cart-price cart-column">${model.shoppingCart.cartProducts[i].price} kr/stk </span>
                         <div class="cart-quantity cart-column">
-                            <input class="cart-quantity-input" type="number" value="${model.shoppingCart.quantity}">
+                            <input class="cart-quantity-input" type="number" value="${model.shoppingCart.cartProducts[i].productQuantity}" onclick="ChangeQuantity(this.value);">
                             <button class="btn btn-danger cart-quantity-button" type"button" onclick="removeCart(${i});">Fjern</button>
                     </div>
 
@@ -54,4 +58,6 @@ function createCartItems() {
     }
     return result;
 }
-
+//                             <input class="cart-quantity-input" type="number" value="${model.shoppingCart.TotalQuantity}">
+// model.shoppingCart.TotalQuantity++;
+//                             <input class="cart-quantity-input" type="number" value="${model.products[j].productQuantity}">

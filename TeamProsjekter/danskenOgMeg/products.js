@@ -15,6 +15,7 @@ model.products = [
         color: ['Oker Gul'],
         country: 'Danmark',
         year: "1978",
+        productQuantity: 0,
     },
     {
         title: 'Spisestuestol',
@@ -30,6 +31,8 @@ model.products = [
         color: ['Brunt tre'],
         country: 'Tyskland',
         year: "1967",
+        productQuantity: 0,
+
     },
     {
         title: 'Kjøkkenbord',
@@ -45,6 +48,7 @@ model.products = [
         color: ['Trehvit'],
         country: 'Norge',
         year: "1998",
+        productQuantity: 0,
     },
     {
         title: 'Unikt barbord',
