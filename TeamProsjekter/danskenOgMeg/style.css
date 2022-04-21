@@ -1,7 +1,7 @@
 /*------------FrontPage------------*/
 @font-face {
 	font-family: stalemate;
-	src: url("/fonts/Stalemate-Regular.ttf");
+	src: url("fonts/Stalemate-Regular.ttf");
 }
 @font-face {
 	font-family: SeasidResortNF;
@@ -14,20 +14,6 @@
 /*------------FrontPage - DropDown------------*/
 ul {
 	margin: 5px;
-}
-
-
-.header {
-	text-align: center;
-	margin: 0px;
-	padding: 0px;
-	color: #333;
-	font-size: 2em;
-	font-family: stalemate;
-	/* font-size: largest; */
-}
-.meny{
-	margin-left:20%;
 }
 .dropDownList {
 	user-select: none;
@@ -45,6 +31,15 @@ ul {
 	background-color: rgb(242, 166, 136);
 	color: #333;
 }
+.header {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	color: #333;
+	font-size: 2em;
+	font-family: stalemate;
+	/* font-size: largest; */
+}
 .smallerHeader {
 	margin: 0px;
 	padding: 0px;
@@ -55,19 +50,26 @@ ul {
 }
 
 
- .liteFeltLi {
+.liteFeltLi {
 	list-style-type: none;
 	float: left;
 	font-size: 1rem;
-} 
+	height: 50px;
+	margin: 2% 2% 2% 8%
+}
 .liteFeltLi1 {
 	list-style-type: none;
-	float:left;
+	float: left;
 	font-size: 1rem;
-	margin: 0% 0% 1% 10%;
+	margin: 2% 0% 2% 15%;
+	align-items: center;
 
 }
-/* .liteFeltLi2 {
+.liteFeltLi1.input {
+	height: 50px;
+	font-size: 50px;
+}
+.liteFeltLi2 {
 	list-style-type: none;
 	float: left;
 	font-size: 1rem;
@@ -82,10 +84,11 @@ ul {
 	margin: 2% 2% 2% 0%;
 	align-items: center;
 
-}  */
-/* .liteFelt {
+}
+.liteFelt {
 	align-items: center;
-} */
+	width: 100vw;
+}
 .sublist {
 	user-select: none;
 	background-color: rgb(242, 250, 140);
@@ -117,7 +120,6 @@ ul {
 .first {
 	clear: left;
 }
-
 .stock {
 	font-size: 0.9rem;
 }
@@ -166,9 +168,8 @@ ul {
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
-	height: 40px;
+	height: 34px;
 	width: 70%;
-	min-width: 150px;
 }
 .front-item-btn:hover {
 	background-color: rgb(242, 250, 140);
@@ -296,11 +297,6 @@ ul {
 	margin: 20px;
 	
 }
-
-
-	
-
-
 
 /* *************HANDLEKURV************* */
 

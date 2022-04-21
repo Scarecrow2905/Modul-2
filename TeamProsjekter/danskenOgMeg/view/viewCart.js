@@ -1,4 +1,4 @@
-function updateViewCart(){
+function updateViewCart() {
     html = `
 <div class="cart-main">
 
@@ -25,11 +25,11 @@ function updateViewCart(){
     </div>
 
 </div>
-` 
-return html; 
+`
+    return html;
 };
 
-function createCartItems(){
+function createCartItems() {
     var result = '';
 
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {

@@ -55,19 +55,12 @@ function viewProductItem() {
                 </span>
             </div>
 
-        </div>
-                
+        </div> 
             <div class="product-input-btn">
-                <input class="product-quantity-input" type="number">
+                <input class="product-quantity-input"  type="number">
                 <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView();">Legg til handlekurv</button>
             </div>
-    
-        
-
-               
-
     `
-
     return result;
 }
 

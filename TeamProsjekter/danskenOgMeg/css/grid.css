@@ -44,14 +44,14 @@ div.footer {
 @media only screen and (max-width: 600px){
     .page{
         grid-template-columns:1fr  ;
-        grid-template-rows: 2fr 1fr 2fr 6fr 1fr ;
+        grid-template-rows: 2fr 2fr 2fr 6fr 1fr ;
         grid-template-areas: 'header'
                              'liteFelt'
                              'meny'
                              'innhold' 
                              'footer ';
     }
-}
+
 
 div.header {
     background-color: rgb(162, 222, 208);
@@ -64,15 +64,25 @@ div.meny {
 div.innhold {
     background-color: rgb(162, 222, 208);
     grid-area: innhold;
+    display: flex;
+    flex-direction: column;
+
+}
+div.innhold.div {
+    transform: scale(5);
 }
 div.liteFelt {
     background-color:rgb(162, 222, 208);
     grid-area: liteFelt;
+    height: 100px; 
 }
 div.footer {
     background-color:rgb(162, 222, 208);
     grid-area: footer;
 }
+}
+
+
 
 
 /*-----------LOGIN-----------*/
