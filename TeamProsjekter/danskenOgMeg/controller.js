@@ -1,13 +1,4 @@
 
-// Shopping Cart, Purchase and Remove items for cart
-// function addToCart(index) {
-//     for (let i = 0; i < model.products.length; i++) {
-//         model.shoppingCart.cartProducts = model.products[i].id[index];
-//     }
-//     console.log(index);
-//      updateView();
-// }                for (let j = 0; j < model.shoppingCart.cartProducts.length; j++) {
-
 
 
 function addToCart(index) {
@@ -31,67 +22,33 @@ function addToCart(index) {
                     model.shoppingCart.totalPrice += model.products[i].price;
                     model.shoppingCart.numberOfItems++
                     model.products[i].stock--;
-
-
                 }
-                // for (let j = 0; j < model.shoppingCart.cartProducts.length; j++) {
-                // else if(model.products[i].productQuantity >= 1){ 
-                //     model.products[i].productQuantity++;
-                //     model.shoppingCart.TotalQuantity++;
-                //     model.shoppingCart.totalPrice += model.products[i].price;
-                //     model.shoppingCart.numberOfItems++
-                //     model.products[i].stock--;
-                //     updateView();
-                // }
-                // else {
-                //     model.shoppingCart.cartProducts.push(model.products[i]);
-                //     model.products[i].productQuantity++
-                //     model.shoppingCart.TotalQuantity++;
-                //     model.products[i].stock--;
-                //     model.shoppingCart.numberOfItems++;
-                //     model.shoppingCart.totalPrice += model.products[i].price;
-                //     updateView();
-                // }
-                
-
-            // }   if (model.products[i].stock == 0) {
-            //         alert('Ikke igjen på lager');
-
-            //     } else if (model.shoppingCart.cartProducts[j].id == index) {
-            //         model.shoppingCart.quantity++;
-
-                // } else {
-                //     model.shoppingCart.quantity++;
-                //     model.products[i].stock--;
-                //     model.shoppingCart.numberOfItems++;
-                //     model.shoppingCart.totalPrice += model.products[i].price;
-                //     model.shoppingCart.cartProducts.push(model.products[i]);
-                // }
             }
-    }
-    updateView();
-    model.shoppingCart.cartProducts[i].productQuantity = index;
-
-    // model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
-    // model.shoppingCart.totalPrice 
-
     }
     updateView();
 }
 
-// function ChangeQuantity(index){
-//     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-//     model.shoppingCart.cartProducts[i].productQuantity = index;
-//     for (let j = 0; j < model.products.length; j++) {
-//         model.products[j].productQuantity = model.shoppingCart.cartProducts[i].productQuantity;
-//         }
-//         model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
-//         model.shoppingCart.totalPrice = model.shoppingCart.cartProducts[i].price * index;
 
+function ChangeQuantity(index, value){
+        model.shoppingCart.cartProducts[index].productQuantity = parseInt(value);
+        for (let j = 0; j < model.products.length; j++) {
+            for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
+            if(model.products[j].id == model.shoppingCart.cartProducts[i]){
+                model.products[j].productQuantity = model.shoppingCart.cartProducts[i].productQuantity;
+            } 
+            }
+        }
+        dritt();
+}
+function dritt(){
+    for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
+        model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
+        // model.shoppingCart.totalPrice = model.shoppingCart.cartProducts[i].price * value;
+        console.log(model.shoppingCart.cartProducts[i].productQuantity)
 
-//     }
-//     updateView();
-// }
+}
+    updateView();
+}
 
 function purchase(index) {
     if (model.shoppingCart[index] === 0) alert('Ingenting i handlekurv');

@@ -50,7 +50,7 @@ function createCartItems() {
                         </div>
                             <span class="cart-price cart-column">${model.shoppingCart.cartProducts[i].price} kr/stk </span>
                         <div class="cart-quantity cart-column">
-                            <input class="cart-quantity-input" type="number" value="${model.shoppingCart.cartProducts[i].productQuantity}" onclick="ChangeQuantity(this.value);">
+                            <input class="cart-quantity-input" type="number" value="${model.shoppingCart.cartProducts[i].productQuantity}" onchange="ChangeQuantity(${i}, this.value);">
                             <button class="btn btn-danger cart-quantity-button" type"button" onclick="removeCart(${i});">Fjern</button>
                     </div>
 
