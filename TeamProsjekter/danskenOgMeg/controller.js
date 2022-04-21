@@ -33,7 +33,7 @@ function purchase(index) {
 
 function removeCart(index) {
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-        if (model.shoppingCart.cartProducts === 0){
+        if (model.shoppingCart.cartProducts == 0){
              alert('Ingenting å fjerne');
         } else {
             model.shoppingCart.numberOfItems--;

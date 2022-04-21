@@ -488,7 +488,14 @@ body {
 
 .container form .inputBox {
 	margin-top: 20px;
+	margin-right: 20px;
 }
+
+.cvv-input {
+	width: 20px;
+}
+
+
 
 .container form .inputBox span {
 	display: block;
@@ -648,5 +655,5 @@ body {
 	cursor: pointer;
   }
 
-  /* PRivate user site*/
+  /* Private user site*/
   
