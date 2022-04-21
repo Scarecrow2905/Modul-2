@@ -5,7 +5,7 @@ function addToCart(index) {
     for (let i = 0; i < model.products.length; i++) {
             if (model.products[i].id == index) {
                 if (model.products[i].stock == 0) {
-                    return alert('Ikke igjen på lager');
+                    return alert('Tomt på lager');
                 }
                 else if(model.products[i].productQuantity > 0){
                     model.products[i].productQuantity++;
@@ -115,7 +115,7 @@ function viewStuff(index) {
         <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${model.products[i].id});updateView()"/>
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
-        <div class="stock">stock: ${model.products[i].stock}</div>
+        <div class="stock">På lager: ${model.products[i].stock}</div>
         <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
     </div>`
         }
@@ -130,7 +130,7 @@ function viewStuff(index) {
                 <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
                 <div class="front-item-title">${model.products[i].title}</div>
                 <div class="front-price">${model.products[i].price}kr</div>
-                <div class="stock">stock: ${model.products[i].stock}</div>
+                <div class="stock">På lager: ${model.products[i].stock}</div>
                 <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
             </div>`
         }

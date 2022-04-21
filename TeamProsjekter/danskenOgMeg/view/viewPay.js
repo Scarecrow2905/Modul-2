@@ -16,12 +16,12 @@ html = /*html*/ `
 
             <div class="inputBox">
             <span>Navn på kortholder</span>
-            <input type="text" placeholder="Example Examplesen" value="${model.app.viewPayUserName}" model.payment.cardUsersName = this.value" class="card-holder-input">
+            <input type="text" placeholder="Ola Nordmann" value="${model.app.viewPayUserName}" model.payment.cardUsersName = this.value" class="card-holder-input">
             
 
             <div class="flexbox">
             <div class="inputBox">
-                <span>Utgåelse Måned</span>
+                <span>Utløpsmåned</span>
                 <select name="" id="" class="month-input">
                     <option value="month" selected disabled>Måned</option>
                     <option value="01">01</option>
@@ -41,7 +41,7 @@ html = /*html*/ `
             </div>
 
             <div class="inputBox">
-                <span>Utgåelse år</span>
+                <span>Utløpsår</span>
                 <select name="" id="" class="year-input">
                     <option value="year" selected disabled>År</option>
                     <option value="2022">2022</option>
