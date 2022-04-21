@@ -265,7 +265,7 @@ model.products = [
         year: '1990',
     },
     {
-        title: 'Kommode (9 Skuffer)',
+        title: 'Kommode <br> (9 Skuffer)',
         price: 5899,
         stock: 2,
         category: 'Spiserom',
@@ -280,7 +280,7 @@ model.products = [
         year: '1998',
     },
     {
-        title: 'Retro Kommode (8 Skuffer)',
+        title: 'Retro Kommode <br> (8 Skuffer)',
         price: 3499,
         stock: 2,
         category: 'Spiserom',

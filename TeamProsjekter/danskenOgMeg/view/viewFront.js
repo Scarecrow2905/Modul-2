@@ -8,7 +8,7 @@ function updateViewFront() {
             <ul>
                 <li class="liteFeltLi">${searchfield()}</li>
                 <li class="liteFeltLi"><button class="search-icon" onclick="searchfield();"><i class="fas fa-search"></i></button></li>
-                <li class="liteFeltLi1">${slider()}Min/Max price: ${model.sliderValueIs}</li>
+                <li class="liteFeltLi1">${slider()}Min/Max pris: ${model.sliderValueIs}</li>
                 <li class="liteFeltLi1"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.TotalQuantity} Pris: ${model.shoppingCart.totalPrice}</button></li>
                 <li class="liteFeltLi1"><button onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li>
                 <li class="liteFeltLi1">${model.app.admin} 
