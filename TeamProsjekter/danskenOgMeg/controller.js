@@ -41,10 +41,19 @@ function ChangeQuantity(index, value){
         dritt();
 }
 function dritt(){
+    model.shoppingCart.TotalQuantity = 0;
+    model.shoppingCart.totalPrice = 0;
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-        model.shoppingCart.TotalQuantity = model.shoppingCart.cartProducts[i].productQuantity;
-        // model.shoppingCart.totalPrice = model.shoppingCart.cartProducts[i].price * value;
-        console.log(model.shoppingCart.cartProducts[i].productQuantity)
+        model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity ;
+        // for (let j = 0; j < model.products.length; j++) {
+        // if(model.shoppingCart.cartProducts[i].productQuantity == model.products[j].stock){ // Fiks dette. maks stock
+        //     alert('Maks');
+        //     return
+        // }
+        // }
+        model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity
+        
+       
 
 }
     updateView();
