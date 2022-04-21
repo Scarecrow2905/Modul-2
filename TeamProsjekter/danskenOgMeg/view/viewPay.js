@@ -61,7 +61,7 @@ html = /*html*/ `
             <input type="text" maxlength="4" class="cvv-input">
             </div>
 
-            <input type="submit" value="submit" class="submit-btn">
+            <input type="submit" value="Kjøp" class="submit-btn">
         </form>
     </div>
 </div>
