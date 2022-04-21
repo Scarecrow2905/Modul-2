@@ -76,8 +76,8 @@ function addToCart(index) {
     // model.shoppingCart.totalPrice 
 
     }
-    updateView();
-}
+    
+
 
 // function ChangeQuantity(index){
 //     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
