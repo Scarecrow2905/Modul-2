@@ -57,7 +57,7 @@ function viewProductItem() {
 
         </div> 
             <div class="product-input-btn">
-                <input class="product-quantity-input"  type="number">
+                <div class="product-price"> ${model.products[i].price},- </div>
                 <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView();">Legg til handlekurv</button>
             </div>
     `

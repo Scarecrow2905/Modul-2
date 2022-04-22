@@ -12,7 +12,7 @@ body {
     background-color: rgb(162, 222, 208);
     height: 100vh;
     display:grid;
-    grid-template-columns: 2fr 7fr 3fr  ;
+    grid-template-columns: 2fr 7fr 3fr;
     grid-template-rows: 1fr 0.5fr 7fr 0.5fr ;
     grid-template-areas: 'header header header'
                          'liteFelt liteFelt liteFelt'
@@ -28,10 +28,13 @@ div.meny {
     grid-area: meny;
     margin-top:14%;
 }
+
 div.innhold {
     background-color: rgb(162, 222, 208);
     grid-area: innhold;
+
 }
+
 div.liteFelt {
     background-color:rgb(162, 222, 208);
     grid-area: liteFelt;
@@ -47,7 +50,7 @@ div.footer {
         display: grid;
         height: 50vh;
         grid-template-columns: 2fr 3fr 3fr;
-        grid-template-rows: 1fr 0.5fr 7fr 0.5fr;
+        grid-template-rows: 1fr 1fr 7fr 0.5fr;
         grid-template-areas: 'header header header'
                              'liteFelt liteFelt liteFelt'
                              'meny innhold innhold'
@@ -70,9 +73,52 @@ div.innhold {
     background-color: rgb(162, 222, 208);
     grid-area: innhold;
     display: grid;
+    grid-template-columns: 2fr 3fr;
+
+}
+div.liteFelt {
+    background-color:rgb(162, 222, 208);
+    grid-area: liteFelt;
+    height: 100px; 
 }
 
+div.footer {
+    background-color:rgb(162, 222, 208);
+    grid-area: footer;
+}
+}
 
+@media only screen and (max-width: 750px){
+    .page {
+        display: grid;
+        height: 50vh;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 1fr 1fr 7fr 0.5fr;
+        grid-template-areas: 'header header header'
+                             'liteFelt liteFelt liteFelt'
+                             'meny innhold innhold'
+                             'footer footer footer';
+    }
+
+
+div.header {
+    background-color: rgb(162, 222, 208);
+    grid-area: header;
+}
+
+div.meny {
+    background-color:rgb(162, 222, 208);
+    grid-area: meny;
+    max-width: 500px;
+}
+
+div.innhold {
+    background-color: rgb(162, 222, 208);
+    grid-area: innhold;
+    display: grid;
+    grid-template-columns: 3fr;
+
+}
 div.liteFelt {
     background-color:rgb(162, 222, 208);
     grid-area: liteFelt;
