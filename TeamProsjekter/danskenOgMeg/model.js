@@ -78,7 +78,6 @@ const model = {
     //Legge til nye kategorier
     createCategory: [
         { name: '', id: '', sub: [] },
-        { name: '', id: '', parentId: '' },
     ],
     createSubCategory: [
         { categoriName: '', id: '', parentId: '' },

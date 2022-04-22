@@ -580,9 +580,32 @@ function blankInput() {
     model.createItems.country = '';
     model.createItems.year = '';
     // må nulle ut alle verdier; husk at noen er tall
+    //img: "C:\\fakepath\\158905.jpg"
 }
 //Skal prøve å få denne til å endre pathen til img med hjelp av en hjelpe variabel.
 // var img = document.getElementById('front-item-image').value;
 // var newPath = imgpath.replace('//C:/fakepath/', '')
 
 /*---------------------------Slutt på CreateProduct-------------------------------------- */
+/*--------------------------------Ny Kategori  ------------------------------------------ */
+
+function createCategory() {
+    NewCategory = {}
+    NewCategory.name = model.createCategory.name;
+    NewCategory.id = model.createCategory.id;
+    NewCategory.sub = model.createCategory.sub;
+    addImg(PictureInPictureWindow);
+    model.category.push(NewCategory);
+    console.log(NewCategory)
+
+}
+function createSub() {
+
+}
+
+function addImg(picture) {
+// img path skal den være model.products.img.src?
+    var newPath = img.path.replace("//C:/fakepath/', '")
+    newPath = picture;
+    return picture;
+}

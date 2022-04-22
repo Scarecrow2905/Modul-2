@@ -131,7 +131,49 @@ div.footer {
 }
 }
 
+@media only screen and (max-width: 640px){
+    .page {
+        display: grid;
+        height: 50vh;
+        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-rows: 1fr 0.5fr 7fr 0.5fr;
+        grid-template-areas: 'header header header'
+                             'liteFelt liteFelt liteFelt'
+                             'meny innhold innhold'
+                             'footer footer footer';
+    }
 
+
+div.header {
+    background-color: rgb(162, 222, 208);
+    grid-area: header;
+}
+
+div.meny {
+    background-color:rgb(162, 222, 208);
+    grid-area: meny;
+    max-width: 500px;
+}
+
+div.innhold {
+    background-color: rgb(162, 222, 208);
+    grid-area: innhold;
+    display: grid;
+    grid-template-columns: 2fr;
+}
+
+
+div.liteFelt {
+    background-color:rgb(162, 222, 208);
+    grid-area: liteFelt;
+    height: 100px; 
+}
+
+div.footer {
+    background-color:rgb(162, 222, 208);
+    grid-area: footer;
+}
+}
 
 
 /*-----------LOGIN-----------*/
