@@ -1,5 +1,6 @@
 
 const model = {
+    selectedCategory: '',
     shoppingCart: {
 
         totalPrice: 0,

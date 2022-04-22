@@ -4,7 +4,7 @@ model.products = [
     {
         title: 'Sofa',
         price: 6999,
-        stock: 1,
+        stock: 4,
         category: 'Stue',
         id: 111,
         parentId: 11,
@@ -20,7 +20,7 @@ model.products = [
     {
         title: 'Spisestuestol',
         price: 1999,
-        stock: 2,
+        stock: 4,
         category: 'Spiserom',
         id: 122,
         parentId: 22,
@@ -37,7 +37,7 @@ model.products = [
     {
         title: 'Kjøkkenbord',
         price: 2499,
-        stock: 2,
+        stock: 5,
         category: 'Kjøkken',
         id: 131,
         parentId: 31,
