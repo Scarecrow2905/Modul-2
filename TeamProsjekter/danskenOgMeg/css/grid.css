@@ -47,7 +47,7 @@ div.footer {
         display: grid;
         height: 50vh;
         grid-template-columns: 2fr 3fr 3fr;
-        grid-template-rows: 1fr 0.5fr 7fr 0.5fr;
+        grid-template-rows: 1fr 1fr 7fr 0.5fr;
         grid-template-areas: 'header header header'
                              'liteFelt liteFelt liteFelt'
                              'meny innhold innhold'
@@ -70,6 +70,7 @@ div.innhold {
     background-color: rgb(162, 222, 208);
     grid-area: innhold;
     display: grid;
+    align-content: flex-end;
 }
 
 
