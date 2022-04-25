@@ -11,7 +11,7 @@ const model = {
         typeOfDelivery: '',
 
     },
-
+    modal: '',
     //App -!-
     //Betalingsløsninger
     payment: {

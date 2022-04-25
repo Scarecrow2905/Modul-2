@@ -18,7 +18,7 @@ function updateViewFront() {
           ${model.viewMenyCategories}
         </div>
         <div class="innhold">
-
+        ${model.modal}
         ${model.viewProductsHere}
         
         </div>

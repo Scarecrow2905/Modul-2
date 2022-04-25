@@ -69,7 +69,7 @@ function lastName() {
 }
 
 // Hener ut info om brukeren som er innlogget. Endrer informasjon som brukerer gjør selv.
-function accountInfo(){
+function accountInfo() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.currentUser == model.account.users[i].id) {
             return `
@@ -92,9 +92,9 @@ function accountInfo(){
         }
     }
 }
-function showDetailedAccountInformation(){//ShowAccountInfo
+function showDetailedAccountInformation() {//ShowAccountInfo
     for (let i = 0; i < model.account.users.length; i++) {
-         if (model.app.whatInfoIsShowed == 'editPaymentInfo'){
+        if (model.app.whatInfoIsShowed == 'editPaymentInfo') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your Card Number:     ${model.account.users[i].cardnumber}</li>
@@ -106,7 +106,7 @@ function showDetailedAccountInformation(){//ShowAccountInfo
 
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'editFirstAndLastname'){
+        else if (model.app.whatInfoIsShowed == 'editFirstAndLastname') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your first name: ${model.account.users[i].firstName}</li>
@@ -118,7 +118,7 @@ function showDetailedAccountInformation(){//ShowAccountInfo
 
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'editMail'){
+        else if (model.app.whatInfoIsShowed == 'editMail') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Current mail: ${model.account.users[i].email}</li>
@@ -127,7 +127,7 @@ function showDetailedAccountInformation(){//ShowAccountInfo
 
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'editPassword'){
+        else if (model.app.whatInfoIsShowed == 'editPassword') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your password: ${model.account.users[i].password}</li>
@@ -137,13 +137,13 @@ function showDetailedAccountInformation(){//ShowAccountInfo
                 <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'seeOrder'){
+        else if (model.app.whatInfoIsShowed == 'seeOrder') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your order(s):  ${model.app.showAccountOrders}</li>
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'seeReceipts'){
+        else if (model.app.whatInfoIsShowed == 'seeReceipts') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your receipt(s):  ${model.app.showAccountReceipts}</li>
@@ -157,7 +157,8 @@ function showDetailedAccountInformation(){//ShowAccountInfo
 
 
 
-    
+
+
 
 
 
