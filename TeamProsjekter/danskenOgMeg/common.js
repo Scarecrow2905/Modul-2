@@ -9,7 +9,7 @@ function Header() {
 // ---------------- Søkefelt ---------------
 function searchfield() {
     return `
-    <div class="Searchfield"> <input placeholder="Søkeord" type="text" onchange="searchCatalog(this.value)"/></div>
+    <div class="Searchfield"> <input class="search-field" placeholder="Søkeord" type="text" onchange="searchCatalog(this.value)"/></div>
     `
 }
 function slider() {

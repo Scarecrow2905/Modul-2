@@ -112,7 +112,7 @@ function purchase(index) {
 
 function removeCart(index) {
     model.shoppingCart.TotalQuantity = 0; // Resetter totalt antall varer i handlevognen
-    model.shoppingCart.totalPrice = 0; // Resetter totalt antall varer i handlevognen
+    model.shoppingCart.totalPrice == 0; // Resetter totalt antall varer i handlevognen
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
         if (model.shoppingCart.cartProducts == 0){ // hvis handlekruven er tom
              alert('Ingenting å fjerne');
