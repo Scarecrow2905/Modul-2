@@ -101,8 +101,8 @@ function showDetailedAccountInformation(){//ShowAccountInfo
                 <li>your Cardholder Name: ${model.account.users[i].cardname}</li>
                 <li>New card number:      <input type="number" value="${model.payment.cardNumberInput}" oninput="model.payment.cardNumberInput = this.value"</li>
                 <li>New card name:        <input type="text"   value="${model.payment.cardUsersName}"   oninput="model.payment.cardUsersName = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
-                <li><button onclick="deleteCardInformation(${i})">Delete information</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
+                <li><button onclick="deleteCardInformation(${i})">Slett informasjon</button></li>
 
             </ul>`
         }
@@ -113,7 +113,7 @@ function showDetailedAccountInformation(){//ShowAccountInfo
                 <li>your last name:  ${model.account.users[i].lastName}</li>
                 <li>New first name:  <input type="text" value="${model.account.newFirstName}" oninput="model.account.newFirstName = this.value"</li>
                 <li>New last name:   <input type="text" value="${model.account.newLastName}"  oninput="model.account.newLastName = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
 
 
             </ul>`
@@ -123,7 +123,7 @@ function showDetailedAccountInformation(){//ShowAccountInfo
             <ul>
                 <li>Current mail: ${model.account.users[i].email}</li>
                 <li>New mail: <input type="text" value="${model.account.createNewEmail}" oninput="model.account.createNewEmail = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
 
             </ul>`
         }
@@ -134,7 +134,7 @@ function showDetailedAccountInformation(){//ShowAccountInfo
                 <li>New Password:         <input type="text" value="${model.account.createNewPassword}"      oninput="model.account.createNewPassword = this.value"</li>
                 <li>New Password (again): <input type="text" value="${model.account.createNewPasswordCheck}" oninput="model.account.createNewPasswordCheck = this.value"</li>
 
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
             </ul>`
         }
         else if (model.app.whatInfoIsShowed == 'seeOrder'){
