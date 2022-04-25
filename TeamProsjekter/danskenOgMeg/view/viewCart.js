@@ -21,7 +21,7 @@ function updateViewCart() {
     <span class="cart-total-price">${model.shoppingCart.TotalQuantity} Varer</span>
 
 
-    <button class="btn-buy" onclick="model.app.currentPage = 'PayPage';viewPayUserType()"> Kjøp</button>
+    <button class="btn-buy" onclick="model.app.currentPage = 'PayPage';viewPayUserType()">Kjøp</button>
     </div>
 
 </div>
@@ -38,9 +38,9 @@ function createCartItems() {
     result += `<section class="newProduct">
                     <h2 class="cart-header"> Handlekurv </h2>
                     <div class="cart-row">
-                        <span class="cart-item cart-header cart-column">ITEM </span>
-                        <span class="cart-price cart-header cart-column">PRICE </span>
-                        <span class="cart-quantity cart-header cart-column"> QUANTITY </span>
+                        <span class="cart-item cart-header cart-column">VARER</span>
+                        <span class="cart-price cart-header cart-column">PRIS </span>
+                        <span class="cart-quantity cart-header cart-column">ANTALL</span>
                     </div>
 
                     <div class="cart-row"> 
