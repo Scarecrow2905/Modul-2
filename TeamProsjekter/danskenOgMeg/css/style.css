@@ -713,4 +713,48 @@ body {
   }
 
   /* Private user site*/
-  
+  .accountInfoButton{
+	background: rgb(246, 153, 116);
+	color: #333;
+	border: none;
+	border-radius: 0.3em;
+	font-weight: bold;
+	justify-content: center;
+	height: 30px;
+	float:left;
+	margin-left:18.9%;
+	margin-bottom:5px;
+
+  }
+
+  .accountInfoButtonList{
+	  list-style-type: none;
+  }
+.overflowAccountInfo{
+	overflow: auto;
+}
+li{
+	list-style-type: none;
+
+}
+
+
+  /* .to-cart-btn {
+	color: #333;
+	background-color: rgb(246, 153, 116);
+	border: none;
+	border-radius: 0.3em;
+	font-weight: bold;
+	height: 30px;
+	float: right;
+	justify-content: right;
+}
+
+.to-login-btn {
+	color: #333;
+	background-color: rgb(246, 153, 116);
+	border: none;
+	border-radius: 0.3em;
+	font-weight: bold;
+	height: 30px;
+} */

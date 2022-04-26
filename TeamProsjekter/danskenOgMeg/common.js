@@ -73,7 +73,7 @@ function accountInfo() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.currentUser == model.account.users[i].id) {
             return `
-            <div>
+            <div class="overflowAccountInfo">
                 <ul>
                     <li><b>First Name:    </b>${model.account.users[i].firstName}</li>
                     <li><b> Last Name:    </b>${model.account.users[i].lastName} </li>
