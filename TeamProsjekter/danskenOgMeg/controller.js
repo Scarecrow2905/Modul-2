@@ -8,8 +8,8 @@ function addToCart(i) {
                     model.products[i].productQuantity++;
                     model.shoppingCart.TotalQuantity++
                     model.shoppingCart.totalPrice += model.products[i].price;
-                    model.shoppingCart.numberOfItems++
-                    model.products[i].stock--;
+                    // model.shoppingCart.numberOfItems++
+                    model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
 
                 }
                 else{
@@ -17,88 +17,40 @@ function addToCart(i) {
                     model.products[i].productQuantity++;
                     model.shoppingCart.TotalQuantity++;
                     model.shoppingCart.totalPrice += model.products[i].price;
-                    model.shoppingCart.numberOfItems++
-                    model.products[i].stock--;
+                    // model.shoppingCart.numberOfItems++
+                    model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
                 }
-            
-    
                 viewStuff(model.selectedCategory);
 }
-// function addToCart(index) {
-//     for (let i = 0; i < model.products.length; i++) {
-//             if (model.products[i].id == index) {
-//                 if (model.products[i].stock == 0) {
-//                     return alert('Tomt på lager');
-//                 }
-//                 else if(model.products[i].productQuantity > 0){
-//                     model.products[i].productQuantity++;
-//                     model.shoppingCart.TotalQuantity++
-//                     model.shoppingCart.totalPrice += model.products[i].price;
-//                     model.shoppingCart.numberOfItems++
-//                     model.products[i].stock--;
-
-//                 }
-//                 else{
-//                     model.shoppingCart.cartProducts.push(model.products[i]);
-//                     model.products[i].productQuantity++;
-//                     model.shoppingCart.TotalQuantity++;
-//                     model.shoppingCart.totalPrice += model.products[i].price;
-//                     model.shoppingCart.numberOfItems++
-//                     model.products[i].stock--;
-//                 }
-//             }
-//     }
-//     updateView();
-// }
-// Problemer //
-// Få stock til å gå i minus ved å legge til varer
-// Få stock til å endre seg når man juster inputen
-// Når en vare fjernes, fjernes noen ganger flere og totalpris og antall varer blir ikke riktig
-// Hvordan gjøre om stock i forhold til input valget man velger
-// Når maks stock grense er nådd på en vare via input, og man velger noe som er høyere en stock, skal antall i input gå ned tilbake til antalls stock av varen. og ikke under 0.
-// Når return brukes på linje 59, fungerer ikke antall varer og prisendring, 
 
 
 function ChangeQuantity(index, value){
-    // if(parseInt(value) > model.shoppingCart.cartProducts[index].stock || parseInt(value) < 0) ;
+    console.log('index' + index)
+    if(parseInt(value) >= model.shoppingCart.cartProducts[index].totalProducts || parseInt(value) < 0) alert('Maks Grense') ;
         model.shoppingCart.cartProducts[index].productQuantity = parseInt(value); // Gjør varens productQuantity i handlekurven om til det samme som i input
-                model.products[index].productQuantity = model.shoppingCart.cartProducts[index].productQuantity;
-                model.products[index].stock -= parseInt(value); // Gjør produktets productQuantity om til det samme som i handlevognens productQuantity
-                // Få til stock
-        
-        
+        for(let i = 0; i< model.products.length;i++ ){
+            if(model.shoppingCart.cartProducts[index].id == model.products[i].id){
+                model.products[i].productQuantity = model.shoppingCart.cartProducts[index].productQuantity;
+
+                model.products[i].stock = model.products[i].totalProducts;
+                model.shoppingCart.cartProducts[index].stock = model.shoppingCart.cartProducts[index].totalProducts;
+
+                model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity ;
+                model.shoppingCart.cartProducts[index].stock = model.shoppingCart.cartProducts[index].totalProducts - model.shoppingCart.cartProducts[index].productQuantity  ;
+            }
+        }
         ChangeShoppingCartInfo();
 }
-// function ChangeQuantity(index, value){
-//         model.shoppingCart.cartProducts[index].productQuantity = parseInt(value); // Gjør varens productQuantity i handlekurven om til det samme som i inputen
-//         for (let j = 0; j < model.products.length; j++) {
-//             for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-//             if(model.products[j].id == model.shoppingCart.cartProducts[i]){ // Sjekker at det er samme vare
-//                 model.products[j].productQuantity = model.shoppingCart.cartProducts[i].productQuantity;
-//                 model.products[j].stock += parseInt(value); // Gjør produktets productQuantity om til det samme som i handlevognens productQuantity
-//                 // Få til stock
-//             } 
-//             }
-//         }
-//         ChangeShoppingCartInfo();
-// }
+
 function ChangeShoppingCartInfo(){
     model.shoppingCart.TotalQuantity = 0; // Resetter totalt antall varer i handlevognen
     model.shoppingCart.totalPrice = 0; // resetter totalprisen i handlevognen
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
         model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity ; // Gjør total antall produkter i handlevognen  om til varen(es) antall productQuantity
         model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity; //  Gjør totalprisen i handlevognen om til prisen til antall varer og antall pr. vare
-        for (let j = 0; j < model.products.length; j++) {
-            //if(model.shoppingCart.cartProducts[i].id == model.products[j].id){ // Sjekker om produktet i handlekurv og produktet i modellen er like.
-               // if(model.shoppingCart.cartProducts[i].productQuantity > model.products[j].stock){ // Fiks dette. maks stock
-                    // model.shoppingCart.cartProducts[i].productQuantity = model.products[j].stock
-                        //alert('Maks');
-                        //return;
-                        
-        
-        }
+        for (let j = 0; j < model.products.length; j++) { 
+    }
 }
-console.log(model.products[0].stock )
     updateView();
 }
 
@@ -113,17 +65,18 @@ function purchase(index) {
 function removeCart(index) {
     model.shoppingCart.TotalQuantity = 0; // Resetter totalt antall varer i handlevognen
     model.shoppingCart.totalPrice = 0; // Resetter totalt antall varer i handlevognen
-    for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-        if (model.shoppingCart.cartProducts == 0){ // hvis handlekruven er tom
-             alert('Ingenting å fjerne');
-        } else {
-            model.shoppingCart.numberOfItems--;
-            model.products[i].stock++;
-            model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity;
+
+        for (let i = 0; i < model.products.length; i++) {
+            if(model.products[i].id == model.shoppingCart.cartProducts[index].id){
+            model.products[i].productQuantity = 0;
+            model.products[i].stock = model.products[i].totalProducts;
+        }}
+        model.shoppingCart.cartProducts.splice(index, 1);
+        for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
             model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity ;
-            model.shoppingCart.cartProducts.splice(index, 1);
-        }
-    }
+            model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity;
+
+            }     
     updateView();
 };
 

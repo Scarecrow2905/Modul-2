@@ -4,10 +4,10 @@ const model = {
     shoppingCart: {
 
         totalPrice: 0,
+        TotalQuantity: 0,
         cartProducts: [
         ],
-        TotalQuantity: 0,
-        numberOfItems: 0,
+        // numberOfItems: 0,
         typeOfDelivery: '',
 
     },
@@ -48,7 +48,7 @@ const model = {
         viewPayUserCard: '',
         viewPayUserName: '',
         adminLoggedInn: false,         // true
-        admin: '',            // Legg til Produkt
+        admin: '',            // Legg til Produkt skal være blank ''
     },
     //Inputs -!-
     account: {
