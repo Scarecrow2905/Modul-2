@@ -10,8 +10,8 @@ function viewProduct() {
 
     <div class="liteFelt">
             <ul>
-                <li class="liteFeltLi3"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltLi3"><button onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li> 
+                <li class="liteFeltProducts"><button class="liteFelt" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+                <li class="liteFeltProducts"><button class="liteFelt" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li> 
             <ul>
     </div>
 

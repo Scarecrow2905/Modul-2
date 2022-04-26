@@ -133,9 +133,9 @@ function updateViewAccountInfo(){
         <div class="headerL">${Header()}</div>
         <div class="smalLinje">
             <ul>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'FrontPage'; updateView()";>Tilbake</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltLi"><button onclick="model.app.click++; logOut()";>Logg ut</button></li> 
+                <li class="to-login-btn"><button onclick="model.app.currentPage = 'FrontPage'; updateView()";>Tilbake</button></li>
+                <li class="to-login-btn"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+                <li class="to-login-btn"><button onclick="model.app.click++; logOut()";>Logg ut</button></li> 
             <ul>
         </div>
         <div class="innholdP0"></div>

@@ -94,6 +94,7 @@ function accountInfo() {
 }
 function showDetailedAccountInformation() {//ShowAccountInfo
     for (let i = 0; i < model.account.users.length; i++) {
+        if(model.app.currentUser == model.account.users[i].id)
         if (model.app.whatInfoIsShowed == 'editPaymentInfo') {
             model.app.showInfoForAccount = `
             <ul>

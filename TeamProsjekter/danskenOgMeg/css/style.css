@@ -102,7 +102,16 @@ ul {
 	height: 30px;
 }
 
-
+.liteFelt {
+	color: #333;
+	background-color: rgb(246, 153, 116);
+	border: none;
+	border-radius: 0.3em;
+}
+.liteFeltProducts{
+	list-style-type: none;
+	margin-left:0px;
+}
  .liteFeltLi {
 	list-style-type: none;
 	float: left;
@@ -374,7 +383,6 @@ ul {
 	display: flex;
 	align-items: center;
 }
-
 .btn-cart-navigation {
 	color: #333;
 	background-color: rgb(246, 153, 116);

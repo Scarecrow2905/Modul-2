@@ -54,7 +54,7 @@ const model = {
     account: {
         users: [
             { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: 'test@test.no', password: 'abc123', id: 1, cardnumber: 1234123412341234, cardname: 'Admin Nordmann' },
-            { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen' },
+            { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341244, cardname: 'Renee Thorstensen' },
             { firstName: 'Tommy', lastName: 'Håvåg', phone: 12345678, email: 'tommyh@getacademy.no', password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },
             { firstName: 'Thorbjørn', lastName: 'Berglund', phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },
             { firstName: 'Trond Erik', lastName: 'Myrengen', phone: 12345678, email: 'trond@getacademy.no', password: 'abc123', id: 5, cardnumber: 1234123412341234, cardname: 'Trond Erik Myrengen' },
