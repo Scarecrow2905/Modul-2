@@ -11,7 +11,7 @@ const model = {
         typeOfDelivery: '',
 
     },
-
+    modal: '',
     //App -!-
     //Betalingsløsninger
     payment: {
@@ -42,9 +42,9 @@ const model = {
         showStatus: 'Logg inn',    // Hører til å vise om man er logget inn eller skal logge ut. 
         click: 0,            // Hører til å logge seg ut av brukeren
         whatInfoIsShowed: 'mainScreen',  // Hører til å forandre account infomation
-        showInfoForAccount: '<h3>This is your page and you can see or change your personal information</h3>',
-        showAccountOrders: 'No orders',   // Aktive ordre fra butikk
-        showAccountReceipts: 'No receipts', // Kvitteringer på kjøp
+        showInfoForAccount: '<h3>På din side kan du endre din personlige informasjon.</h3>',
+        showAccountOrders: 'Ingen bestillinger.',   // Aktive ordre fra butikk
+        showAccountReceipts: 'Ingen kvitteringer.', // Kvitteringer på kjøp
         viewPayUserCard: '',
         viewPayUserName: '',
         adminLoggedInn: false,         // true
@@ -78,7 +78,6 @@ const model = {
     //Legge til nye kategorier
     createCategory: [
         { name: '', id: '', sub: [] },
-        { name: '', id: '', parentId: '' },
     ],
     createSubCategory: [
         { categoriName: '', id: '', parentId: '' },

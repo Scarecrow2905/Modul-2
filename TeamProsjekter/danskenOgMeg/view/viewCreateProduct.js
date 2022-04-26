@@ -92,7 +92,7 @@ function viewCreateCategories() {
 //     id = temp + 1;
 
 // }
-
+// Denne viser underkategori basert på  hovedkategorien viewCreateCategories
 function viewCreateSubCategories(mainCategory) {
 
     let html = '';

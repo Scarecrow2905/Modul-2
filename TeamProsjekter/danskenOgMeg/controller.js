@@ -46,7 +46,7 @@ function ChangeShoppingCartInfo(){
     model.shoppingCart.TotalQuantity = 0; // Resetter totalt antall varer i handlevognen
     model.shoppingCart.totalPrice = 0; // resetter totalprisen i handlevognen
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-        model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity ; // Gjør total antall produkter i handlevognen  om til varen(es) antall productQuantity
+        model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity; // Gjør total antall produkter i handlevognen  om til varen(es) antall productQuantity
         model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity; //  Gjør totalprisen i handlevognen om til prisen til antall varer og antall pr. vare
         for (let j = 0; j < model.products.length; j++) { 
     }
@@ -144,14 +144,14 @@ function DoThisMailPersonExist() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.account.email == model.account.users[i].email && model.account.password == model.account.users[i].password) {
             model.app.currentUser = model.account.users[i].id;
-            alert('logged inn');
+            alert('Du er nå logget inn!');
             foundUser = true;
             model.app.status = true;
             model.app.currentPage = 'FrontPage';
         }
     }
     if (foundUser === false) {
-        alert('User account do not exist.')
+        alert('Bruker eksisterer ikke.')
     }
     loggedInnOrNot()
 }
@@ -160,14 +160,14 @@ function DoThisPhonePersonExist() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.account.phone == model.account.users[i].phone && model.account.password == model.account.users[i].password) {
             model.app.currentUser = model.account.users[i].id;
-            alert('logged inn');
+            alert('Du er nå logget inn!');
             foundUser = true;
             model.app.status = true;
             model.app.currentPage = 'FrontPage';
         }
     }
     if (foundUser === false) {
-        alert('User account do not exist.')
+        alert('Bruker eksisterer ikke.')
     }
     loggedInnOrNot()
 }
@@ -184,7 +184,7 @@ function addNewInfoToModel() {
         id: model.idIndex,
     })
     model.idIndex++;
-    alert('You can now login with your new account. good luck!')
+    alert('Du kan nå logge på med din nye konto!')
     model.app.currentPage = 'LoginMail';
     resettInformation();
     updateView();
@@ -192,17 +192,17 @@ function addNewInfoToModel() {
 //checkEverything
 function checkNewAccountInformation() {
     if (model.account.newFirstName == '') {
-        return alert('You have forgotten you´re first name')
+        return alert('Du har glemt fornavnet.')
     } else if (model.account.newLastName == '') {
-        return alert('You have forgotten you´re last name')
+        return alert('Du har glemt etternavnet.')
     } else if (model.account.createNewEmail.includes('@', '.com', '.no', 'hotmail', 'gmail') == false) { //
-        return alert('Please enter a right mail adress.')
+        return alert('Bruk en gyldig e-post adresse.')
     } else if (model.account.createNewPhoneNumber.length < 8) {
-        return alert('Too few digital numbers')
+        return alert('Fyll ut minst 8 nummer.')
     } else if (model.account.createNewPassword.length < 4) {
-        return alert('password need to be at least 4 digits long')
+        return alert('Passordet må inneholde minst 4 bokstaver eller tall.')
     } else if (model.account.createNewPassword != model.account.createNewPasswordCheck) {
-        return alert('Password is not the same. Please fix it you stupid');
+        return alert('Passordene samsvarer ikke.');
     } else if (model.account.createNewPassword == model.account.createNewPasswordCheck) {
         updateView();
     }
@@ -244,7 +244,10 @@ function checkAdmin() {
         model.app.admin = '';
     }
     if (model.app.adminLoggedInn == true) {
-        model.app.admin = `<button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>`;
+        model.app.admin = `
+        <li class="liteFeltLi1"><button onclick="createViewModal();">New Category</button></li>
+        <button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>
+        `;
     }
     updateView();
 }
@@ -260,7 +263,7 @@ function checkLoginStatus() {
 
 function logOut() {
     if (model.app.click == 1) {
-        alert('Are you sure you want to log out? klick again..')
+        alert('Er du sikker på at du vil logge ut? Godkjenn ved å trykke en gang til.')
     } if (model.app.click > 1) {
         model.app.click = 0;
         model.app.status = false;
@@ -314,7 +317,7 @@ function UpdateChange(index) {
 
             }
             else {
-                alert('Card number must be at 16 digits');
+                alert('Kortnummeret må inneholde 16 siffer.');
                 return;
             }
         }
@@ -322,24 +325,24 @@ function UpdateChange(index) {
             model.account.users[index].firstName = model.account.newFirstName;
             model.account.users[index].lastName = model.account.newLastName;
             if (model.account.newFirstName == '' || model.account.newLastName == '') {
-                alert('Please enter first name and/or last name');
+                alert('Fyll inn fornavn og/eller etternavn.');
                 return;
             }
         }
         else if (model.app.whatInfoIsShowed == 'editMail') {
             model.account.users[index].email = model.account.createNewEmail;
             if (model.account.createNewEmail.includes('@', '.com', '.no', 'hotmail', 'gmail') == false) { //
-                alert('Please enter a right mail adress.');
+                alert('Du må angi en gyldig e-post adresse.');
                 return;
             }
         }
         else if (model.app.whatInfoIsShowed == 'editPassword') {
             if (model.account.createNewPassword.length < 4) {
-                alert('password must be at minimum 4 numers or digits');
+                alert('Passordet må inneholde minst 4 bokstaver eller tall.');
                 return;
             }
             else if (model.account.createNewPassword != model.account.createNewPasswordCheck) {
-                alert('The password´s is not the same');
+                alert('Passordene samsvarer ikke.');
                 return;
             }
             else if (model.account.createNewPassword == model.account.createNewPasswordCheck) {
@@ -533,9 +536,42 @@ function blankInput() {
     model.createItems.country = '';
     model.createItems.year = '';
     // må nulle ut alle verdier; husk at noen er tall
+    //img: "C:\\fakepath\\158905.jpg"
 }
 //Skal prøve å få denne til å endre pathen til img med hjelp av en hjelpe variabel.
 // var img = document.getElementById('front-item-image').value;
 // var newPath = imgpath.replace('//C:/fakepath/', '')
 
 /*---------------------------Slutt på CreateProduct-------------------------------------- */
+/*--------------------------------Ny Kategori  ------------------------------------------ */
+
+function createCategory() {
+    NewCategory = {}
+    NewCategory.name = model.createCategory.name;
+    NewCategory.id = model.createCategory.id;
+    NewCategory.sub = model.createCategory.sub;
+    addImg(PictureInPictureWindow);
+    model.category.push(NewCategory);
+    console.log(NewCategory)
+
+}
+function createSub() {
+
+}
+
+function addImg(picture) {
+    // img path skal den være model.products.img.src?
+    var newPath = img.path.replace("//C:/fakepath/', '")
+    newPath = picture;
+    return picture;
+}
+
+function topPanel() {
+    return `<div class="header">${Header()}</div>
+
+    <div class="cart-navigation">
+        <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
+    </div>`
+};
+
+

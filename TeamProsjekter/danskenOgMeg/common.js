@@ -9,7 +9,7 @@ function Header() {
 // ---------------- Søkefelt ---------------
 function searchfield() {
     return `
-    <div class="Searchfield"> <input placeholder="Søkeord" type="text" onchange="searchCatalog(this.value)"/></div>
+    <div class="Searchfield"> <input class="search-field" placeholder="Søkeord" type="text" onchange="searchCatalog(this.value)"/></div>
     `
 }
 function slider() {
@@ -69,7 +69,7 @@ function lastName() {
 }
 
 // Hener ut info om brukeren som er innlogget. Endrer informasjon som brukerer gjør selv.
-function accountInfo(){
+function accountInfo() {
     for (let i = 0; i < model.account.users.length; i++) {
         if (model.app.currentUser == model.account.users[i].id) {
             return `
@@ -92,58 +92,58 @@ function accountInfo(){
         }
     }
 }
-function showDetailedAccountInformation(){//ShowAccountInfo
+function showDetailedAccountInformation() {//ShowAccountInfo
     for (let i = 0; i < model.account.users.length; i++) {
-         if (model.app.whatInfoIsShowed == 'editPaymentInfo'){
+        if (model.app.whatInfoIsShowed == 'editPaymentInfo') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your Card Number:     ${model.account.users[i].cardnumber}</li>
                 <li>your Cardholder Name: ${model.account.users[i].cardname}</li>
                 <li>New card number:      <input type="number" value="${model.payment.cardNumberInput}" oninput="model.payment.cardNumberInput = this.value"</li>
                 <li>New card name:        <input type="text"   value="${model.payment.cardUsersName}"   oninput="model.payment.cardUsersName = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
-                <li><button onclick="deleteCardInformation(${i})">Delete information</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
+                <li><button onclick="deleteCardInformation(${i})">Slett informasjon</button></li>
 
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'editFirstAndLastname'){
+        else if (model.app.whatInfoIsShowed == 'editFirstAndLastname') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your first name: ${model.account.users[i].firstName}</li>
                 <li>your last name:  ${model.account.users[i].lastName}</li>
                 <li>New first name:  <input type="text" value="${model.account.newFirstName}" oninput="model.account.newFirstName = this.value"</li>
                 <li>New last name:   <input type="text" value="${model.account.newLastName}"  oninput="model.account.newLastName = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
 
 
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'editMail'){
+        else if (model.app.whatInfoIsShowed == 'editMail') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Current mail: ${model.account.users[i].email}</li>
                 <li>New mail: <input type="text" value="${model.account.createNewEmail}" oninput="model.account.createNewEmail = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
 
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'editPassword'){
+        else if (model.app.whatInfoIsShowed == 'editPassword') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your password: ${model.account.users[i].password}</li>
                 <li>New Password:         <input type="text" value="${model.account.createNewPassword}"      oninput="model.account.createNewPassword = this.value"</li>
                 <li>New Password (again): <input type="text" value="${model.account.createNewPasswordCheck}" oninput="model.account.createNewPasswordCheck = this.value"</li>
 
-                <li><button onclick="UpdateChange(${i})">Save changes</button></li>
+                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'seeOrder'){
+        else if (model.app.whatInfoIsShowed == 'seeOrder') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your order(s):  ${model.app.showAccountOrders}</li>
             </ul>`
         }
-        else if (model.app.whatInfoIsShowed == 'seeReceipts'){
+        else if (model.app.whatInfoIsShowed == 'seeReceipts') {
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your receipt(s):  ${model.app.showAccountReceipts}</li>
@@ -157,7 +157,8 @@ function showDetailedAccountInformation(){//ShowAccountInfo
 
 
 
-    
+
+
 
 
 
