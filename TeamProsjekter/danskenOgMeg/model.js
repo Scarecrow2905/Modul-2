@@ -36,7 +36,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage',   // FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PayPage | accountInfo / viewCreateProduct
+        currentPage: 'FrontPage',   // FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PayPage | accountInfo / viewCreateProduct | viewCreateCategory
         currentUser: 0,            // 0
         status: false,        // false
         showStatus: 'Logg inn',    // Hører til å vise om man er logget inn eller skal logge ut. 
@@ -97,6 +97,8 @@ const model = {
         color: [],
         country: '',
         year: '',
+        productQuantity: 0,
+        totalProducts: 0,
     },
 
     // Data -!-
