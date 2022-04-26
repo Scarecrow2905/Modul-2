@@ -36,7 +36,7 @@ const model = {
 
     // Navn på de forskjellige sider.
     app: {
-        currentPage: 'FrontPage',   // FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PayPage | accountInfo / viewCreateProduct
+        currentPage: 'FrontPage',   // FrontPage |  Product | LoginMail |LoginPhone | Cart | viewProduct |PayPage | accountInfo / viewCreateProduct | viewCreateCategory
         currentUser: 0,            // 0
         status: false,        // false
         showStatus: 'Logg inn',    // Hører til å vise om man er logget inn eller skal logge ut. 
@@ -53,7 +53,7 @@ const model = {
     //Inputs -!-
     account: {
         users: [
-            { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: 'test@test.no', password: 'abc123', id: 1, cardnumber: 1234123412341234, cardname: 'Admin Nordmann' },
+            { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: '1@1.no', password: '1', id: 1, cardnumber: 1234123412341234, cardname: 'Elin Admin' },
             { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen' },
             { firstName: 'Tommy', lastName: 'Håvåg', phone: 12345678, email: 'tommyh@getacademy.no', password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },
             { firstName: 'Thorbjørn', lastName: 'Berglund', phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },
@@ -97,6 +97,8 @@ const model = {
         color: [],
         country: '',
         year: '',
+        productQuantity: 0,
+        totalProducts: 0,
     },
 
     // Data -!-

@@ -424,6 +424,8 @@ function createProduct() {
     newproduct.color = model.createItems.color;
     newproduct.country = model.createItems.country;
     newproduct.year = model.createItems.year;
+    newproduct.productQuantity = model.createItems.productQuantity;
+    newproduct.totalProducts = model.createItems.stock;
     //Pusher Newproduct inn i Products som et eget produkt. OBS bilde ikke fikset.
     model.products.push(newproduct);
     console.log(newproduct);
@@ -535,6 +537,9 @@ function blankInput() {
     model.createItems.color = [];
     model.createItems.country = '';
     model.createItems.year = '';
+    model.createItems.productQuantity = '';
+    model.createItems.totalProducts = '';
+    
     // må nulle ut alle verdier; husk at noen er tall
     //img: "C:\\fakepath\\158905.jpg"
 }
@@ -553,7 +558,7 @@ function createCategory() {
     addImg(PictureInPictureWindow);
     model.category.push(NewCategory);
     console.log(NewCategory)
-
+    updateView();
 }
 function createSub() {
 
