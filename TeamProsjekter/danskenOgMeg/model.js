@@ -53,7 +53,11 @@ const model = {
     //Inputs -!-
     account: {
         users: [
+<<<<<<< Updated upstream
             { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: '1@1.no', password: '1', id: 1, cardnumber: 1234123412341234, cardname: 'Elin Admin' },
+=======
+            { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: 'elin@admin.no', password: 'abc123', id: 1, cardnumber: 1234123412341234, cardname: 'Elin Admin' },
+>>>>>>> Stashed changes
             { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen' },
             { firstName: 'Tommy', lastName: 'Håvåg', phone: 12345678, email: 'tommyh@getacademy.no', password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },
             { firstName: 'Thorbjørn', lastName: 'Berglund', phone: 12345678, email: 'thorbjorn@getacademy.no', password: 'abc123', id: 4, cardnumber: 1234123412341234, cardname: 'Thorbjørn Berglund' },

@@ -4,16 +4,15 @@ function viewProduct() {
 
     <div class="header">${Header()}</div>
 
-    <div class="-navigation">
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
-    <button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button>
+<div class="liteFelt">
 
-    <div class="liteFelt">
-            <ul>
-                <li class="liteFeltLi3"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltLi3"><button onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li> 
-            <ul>
-    </div>
+    <ul>
+       <li class="liteFeltLi">  <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button> </li>
+       <li class="liteFeltLi1"> <button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+       <li class="liteFeltLi1"> <button class="to-login-btn" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li> 
+    <ul>
+
+</div>
 
 
 
