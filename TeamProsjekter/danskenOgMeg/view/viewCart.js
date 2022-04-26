@@ -4,9 +4,12 @@ function updateViewCart() {
 
     <div class="header">${Header()}</div>
 
-    <div class="cart-navigation">
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
-    <button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button>
+    <div class="liteFelt">
+
+    <ul>
+        <li class="liteFeltLi"><button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button> </li>
+        <li class="liteFeltLi1"><button class="to-login-btn" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button> </li>
+    <ul>
 
     </div>
 

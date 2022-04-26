@@ -71,14 +71,14 @@ ul {
 }
 
 .search-field {
-	background-color: rgb(246, 153, 116);
+	background-color: rgb(255, 255, 255);
 	color: #333;
 	border: none;
 	height: 28px;
 	margin-right: 3px;
 	margin-bottom: 3px;
 	border-radius: 5px;
-	border:solid 1px black;
+	border:solid 2px rgb(246, 153, 116);
 	
 }
 
@@ -87,7 +87,6 @@ ul {
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
-	font-weight: bold;
 	height: 30px;
 	float: right;
 	justify-content: right;
@@ -98,7 +97,6 @@ ul {
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
-	font-weight: bold;
 	height: 30px;
 }
 
@@ -177,12 +175,12 @@ ul {
 
 .stock {
 	font-size: 0.9rem;
+	color: #333;
 }
 
 .front-price {
-	font-size: 1rem;
+	font-size: 2rem;
 	color: #333;
-	text-decoration: underline;
 }
 /*-----------*/
 /* .front-row {
@@ -388,7 +386,6 @@ ul {
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
-	font-weight: bold;
 	height: 34px;
 	margin-right: 25px;
 }
@@ -693,10 +690,12 @@ body {
 }
 .slider{
 	-webkit-appearance: none;
-	border-radius: 25%;
+	border-radius: 20px;
 	background: rgb(242, 250, 140);
 	outline: none;
 	height: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
 
 }
 .slider:hover {

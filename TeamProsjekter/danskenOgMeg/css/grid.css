@@ -38,7 +38,6 @@ div.innhold {
 div.liteFelt {
     background-color:rgb(162, 222, 208);
     grid-area: liteFelt;
-    border: 1px solid black;
 }
 div.footer {
     background-color:rgb(162, 222, 208);
@@ -109,7 +108,7 @@ div.header {
 div.meny {
     background-color:rgb(162, 222, 208);
     grid-area: meny;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 div.innhold {
@@ -135,7 +134,7 @@ div.footer {
     .page {
         display: grid;
         height: 50vh;
-        grid-template-columns: 2fr 3fr 3fr;
+        grid-template-columns: 2fr 3fr;
         grid-template-rows: 1fr 0.5fr 7fr 0.5fr;
         grid-template-areas: 'header header header'
                              'liteFelt liteFelt liteFelt'

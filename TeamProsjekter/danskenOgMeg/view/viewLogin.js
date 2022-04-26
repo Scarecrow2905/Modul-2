@@ -1,14 +1,17 @@
 // ------------------------- Login Mail ---------------------------
 function updateViewLoginWithMail(){
     html = /*html*/`
-    <div class="loginPage">
-        <div class="headerL">${Header()}</div>
-        <div  class="smalLinje">
+<div class="loginPage">
+
+    <div class="headerL">${Header()}</div>
+
+        <div class="liteFelt">
             <ul>
-                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
-                <li class="cartLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
+                <li class="liteFeltLi1"><button class="to-back-btn" onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
+                <li class="liteFeltLi1"><button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
             </ul> 
         </div>
+
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
             <div>
@@ -26,7 +29,10 @@ function updateViewLoginWithMail(){
         <div class="innholdL"></div>
         <div class="innhold1L"></div>
         <div class="footerL"></div>
-    </div>`
+
+</div>
+`
+
     return html;
 }
 
@@ -105,7 +111,7 @@ function updateViewNewAccount(){
     <div  class="smalLinje">
         <ul>
             <li class="backLogin"><button onclick="model.app.currentPage = 'FrontPage';updateView()">Til forsiden</button></li>
-            <liclass="backLogin"><button onclick="model.app.currentPage = 'createNewAccount';updateView()">Tilbake</button></li>
+            <li class="backLogin"><button onclick="model.app.currentPage = 'createNewAccount';updateView()">Tilbake</button></li>
             <li class="cartLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
         </ul> 
     </div>
