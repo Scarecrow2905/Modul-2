@@ -68,6 +68,7 @@ model.products = [
         color: ['Eik', ' Sort'],
         country: 'Sverige',
         year: '1961',
+        productQuantity: 0,
         
     },
     // Soverom
