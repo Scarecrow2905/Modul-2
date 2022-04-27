@@ -243,6 +243,8 @@ grid-area: innholdP0;
 background-color:white;
 border:1px solid black;
 padding: 10px;
+overflow:scroll;
+
 /* box-shadow:  0px 0px 5px 3px rgba(0, 0, 0.1); */
 grid-area: innholdP1;
 }
@@ -253,6 +255,7 @@ grid-area: innholdP2;
 .innholdP3 {
 background-color:white;
 border:1px solid black;
+overflow:hidden;
 /* box-shadow:  0px 0px 5px 3px rgba(0, 0, 0.1); */
 grid-area: innholdP3;
 }
@@ -263,4 +266,64 @@ grid-area: innholdP4;
 .footerA {
 background-color:rgb(162, 222, 208);
 grid-area: footerA;
+}
+
+@media only screen and (max-width: 640px){
+    .accountInfoPage {
+        background-color: rgb(162, 222, 208);
+        height: 100%;
+        display:grid;
+        grid-template-columns:1fr ;
+        grid-template-rows: 2fr 1fr 0.5fr 4fr 0.5fr 2fr 1fr 1fr ;
+        grid-template-areas: 'headerL '
+                             'smalLinje '
+                             'innholdP0'
+                             'innholdP1 ' 
+                             'innholdP2'
+                             'innholdP3 '
+                             'innholdP4'
+                             'footerA' ;
+                             
+    }
+    .headerL {
+        background-color: rgb(162, 222, 208);
+        grid-area: headerL;
+        }
+        .smalLinje{
+        background-color:rgb(162, 222, 208);
+        grid-area: smalLinje;
+        float:left;
+        }
+        .innholdP0 {
+        background-color:rgb(162, 222, 208);
+        grid-area: innholdP0;
+        }
+        .innholdP1 {
+        background-color:white;
+        border:1px solid black;
+        padding: 10px;
+        overflow:scroll;
+        
+        /* box-shadow:  0px 0px 5px 3px rgba(0, 0, 0.1); */
+        grid-area: innholdP1;
+        }
+        .innholdP2 {
+        background-color:rgb(162, 222, 208);
+        grid-area: innholdP2;
+        }
+        .innholdP3 {
+        background-color:white;
+        border:1px solid black;
+        overflow:scroll;
+        /* box-shadow:  0px 0px 5px 3px rgba(0, 0, 0.1); */
+        grid-area: innholdP3;
+        }
+        .innholdP4 {
+        background-color:rgb(162, 222, 208);
+        grid-area: innholdP4;
+        }
+        .footerA {
+        background-color:rgb(162, 222, 208);
+        grid-area: footerA;
+        }
 }

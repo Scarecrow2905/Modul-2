@@ -1,56 +1,56 @@
 
 
 function addToCart(i) {
-                if (model.products[i].stock == 0) {
-                    return alert('Tomt på lager');
-                }
-                else if(model.products[i].productQuantity > 0){
-                    model.products[i].productQuantity++;
-                    model.shoppingCart.TotalQuantity++
-                    model.shoppingCart.totalPrice += model.products[i].price;
-                    // model.shoppingCart.numberOfItems++
-                    model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
+    if (model.products[i].stock == 0) {
+        return alert('Tomt på lager');
+    }
+    else if (model.products[i].productQuantity > 0) {
+        model.products[i].productQuantity++;
+        model.shoppingCart.TotalQuantity++
+        model.shoppingCart.totalPrice += model.products[i].price;
+        // model.shoppingCart.numberOfItems++
+        model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
 
-                }
-                else{
-                    model.shoppingCart.cartProducts.push(model.products[i]);
-                    model.products[i].productQuantity++;
-                    model.shoppingCart.TotalQuantity++;
-                    model.shoppingCart.totalPrice += model.products[i].price;
-                    // model.shoppingCart.numberOfItems++
-                    model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
-                }
-                viewStuff(model.selectedCategory);
+    }
+    else {
+        model.shoppingCart.cartProducts.push(model.products[i]);
+        model.products[i].productQuantity++;
+        model.shoppingCart.TotalQuantity++;
+        model.shoppingCart.totalPrice += model.products[i].price;
+        // model.shoppingCart.numberOfItems++
+        model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
+    }
+    viewStuff(model.selectedCategory);
 }
 
 
-function ChangeQuantity(index, value){
+function ChangeQuantity(index, value) {
     console.log('index' + index)
-    if(parseInt(value) >= model.shoppingCart.cartProducts[index].totalProducts || parseInt(value) < 0) alert('Maks Grense') ;
-        model.shoppingCart.cartProducts[index].productQuantity = parseInt(value); // Gjør varens productQuantity i handlekurven om til det samme som i input
-        for(let i = 0; i< model.products.length;i++ ){
-            if(model.shoppingCart.cartProducts[index].id == model.products[i].id){
-                model.products[i].productQuantity = model.shoppingCart.cartProducts[index].productQuantity;
+    if (parseInt(value) >= model.shoppingCart.cartProducts[index].totalProducts || parseInt(value) < 0) alert('Maks Grense');
+    model.shoppingCart.cartProducts[index].productQuantity = parseInt(value); // Gjør varens productQuantity i handlekurven om til det samme som i input
+    for (let i = 0; i < model.products.length; i++) {
+        if (model.shoppingCart.cartProducts[index].id == model.products[i].id) {
+            model.products[i].productQuantity = model.shoppingCart.cartProducts[index].productQuantity;
 
-                model.products[i].stock = model.products[i].totalProducts;
-                model.shoppingCart.cartProducts[index].stock = model.shoppingCart.cartProducts[index].totalProducts;
+            model.products[i].stock = model.products[i].totalProducts;
+            model.shoppingCart.cartProducts[index].stock = model.shoppingCart.cartProducts[index].totalProducts;
 
-                model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity ;
-                model.shoppingCart.cartProducts[index].stock = model.shoppingCart.cartProducts[index].totalProducts - model.shoppingCart.cartProducts[index].productQuantity  ;
-            }
+            model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity;
+            model.shoppingCart.cartProducts[index].stock = model.shoppingCart.cartProducts[index].totalProducts - model.shoppingCart.cartProducts[index].productQuantity;
         }
-        ChangeShoppingCartInfo();
+    }
+    ChangeShoppingCartInfo();
 }
 
-function ChangeShoppingCartInfo(){
+function ChangeShoppingCartInfo() {
     model.shoppingCart.TotalQuantity = 0; // Resetter totalt antall varer i handlevognen
     model.shoppingCart.totalPrice = 0; // resetter totalprisen i handlevognen
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
         model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity; // Gjør total antall produkter i handlevognen  om til varen(es) antall productQuantity
         model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity; //  Gjør totalprisen i handlevognen om til prisen til antall varer og antall pr. vare
-        for (let j = 0; j < model.products.length; j++) { 
+        for (let j = 0; j < model.products.length; j++) {
+        }
     }
-}
     updateView();
 }
 
@@ -66,17 +66,18 @@ function removeCart(index) {
     model.shoppingCart.TotalQuantity = 0; // Resetter totalt antall varer i handlevognen
     model.shoppingCart.totalPrice = 0; // Resetter totalt antall varer i handlevognen
 
-        for (let i = 0; i < model.products.length; i++) {
-            if(model.products[i].id == model.shoppingCart.cartProducts[index].id){
+    for (let i = 0; i < model.products.length; i++) {
+        if (model.products[i].id == model.shoppingCart.cartProducts[index].id) {
             model.products[i].productQuantity = 0;
             model.products[i].stock = model.products[i].totalProducts;
-        }}
-        model.shoppingCart.cartProducts.splice(index, 1);
-        for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-            model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity ;
-            model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity;
+        }
+    }
+    model.shoppingCart.cartProducts.splice(index, 1);
+    for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
+        model.shoppingCart.TotalQuantity += model.shoppingCart.cartProducts[i].productQuantity;
+        model.shoppingCart.totalPrice += model.shoppingCart.cartProducts[i].price * model.shoppingCart.cartProducts[i].productQuantity;
 
-            }     
+    }
     updateView();
 };
 
@@ -540,6 +541,7 @@ function blankInput() {
     model.createItems.productQuantity = '';
     model.createItems.totalProducts = '';
     
+
     // må nulle ut alle verdier; husk at noen er tall
     //img: "C:\\fakepath\\158905.jpg"
 }
