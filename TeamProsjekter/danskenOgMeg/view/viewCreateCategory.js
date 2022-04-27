@@ -6,7 +6,7 @@ function viewCreateCategory() {
         html = /*html*/
             `
         <input class="" id="" onchange="category.name = this.value" value="${category.name}" placeholder="Kategori Navn" type= "text">
-        <button onclick="idCountCategory();">mekk ny Categori</button>
+        <button onclick="createCategory();">mekk ny Categori</button>
         `
 
     }
@@ -16,8 +16,10 @@ function viewCreateCategory() {
 function idCountCategory() {
     for (let i = 0; i < model.categories.length; i++) {
         let newCategory = model.categories[i];
-        newCategory +1;
+        newCategory ++;
         model.categories[i].id = newCategory;
+        let newId = 0;
+        newId = model.categories.length++;
         
         
     }
@@ -33,7 +35,7 @@ function idCountCategory() {
 function createCategory() {
     NewCategory = {}
     NewCategory.name = model.createCategory.name;
-    NewCategory.id = model.createCategory.id;
+    NewCategory.id = model.categories.length+1;
     NewCategory.sub = model.createCategory.sub;
     addImg(PictureInPictureWindow);
     model.category.push(NewCategory);
