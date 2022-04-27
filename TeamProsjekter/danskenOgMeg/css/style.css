@@ -82,6 +82,14 @@ ul {
 	
 }
 
+.admin-btn {
+		color: #333;
+		background-color: rgb(233, 104, 53);
+		border: none;
+		border-radius: 0.3em;
+		height: 30px;
+}
+
 .to-cart-btn {
 	color: #333;
 	background-color: rgb(246, 153, 116);
@@ -100,11 +108,20 @@ ul {
 	height: 30px;
 }
 
+.to-back-btn {
+	color: #333;
+	background-color: rgb(246, 153, 116);
+	border: none;
+	border-radius: 0.3em;
+	height: 30px;
+}
+
 .liteFelt {
 	color: #333;
 	background-color: rgb(246, 153, 116);
 	border: none;
 	border-radius: 0.3em;
+	height: 50px;
 }
 .liteFeltProducts{
 	list-style-type: none;
@@ -119,7 +136,7 @@ ul {
 	list-style-type: none;
 	float:right;
 	font-size: 1rem;
-	margin: 0% 0% 1% 10%;
+	margin: 0% 0% 1% 9%;
 
 }
 /* .liteFeltLi2 {
@@ -612,15 +629,17 @@ body {
 }
 .username {
 	font-size: 15px;
-	width: 30%;
-	padding: 1% 0% 1% 0%;
+	height: 20px;
+	width: 200px;
+	padding: 5px;
 	border-radius: 5px;
 	border: solid 2px rgb(246, 153, 116);
 }
 .password {
 	font-size: 15px;
-	width: 30%;
-	padding: 1% 0% 1% 0%;
+	height: 20px;
+	width: 200px;
+	padding: 5px;
 	border-radius: 5px;
 	border: solid 2px rgb(246, 153, 116);
 }
@@ -632,16 +651,22 @@ body {
 	text-align: center;
 	margin-top: 1%;
 }
+.loginPosition {
+	text-align: center;
+
+}
+.loginButtonPosition {
+	text-align: center;
+}
+
 .loginButton {
-	margin-left: 34.8%;
-	margin-top: 1%;
 	background-color: rgb(246, 153, 116);
 	color: #333;
-	width: 30.4%;
-	height: 27px;
-	padding: 0.5% 0% 0.5% 0%;
+	width: 200px;
+	height: 30px;
 	border: none;
 	border-radius: 5px;
+	margin-top: 20px;
 }
 
 .loginButton:active {
@@ -649,12 +674,49 @@ body {
 	box-shadow: 1px 1px 1px 1px black;
 }
 
+.account-btn {
+	width: 300px;
+	background-color: rgb(246, 153, 116);
+	border: none;
+	border-radius: 0.3em;
+	height: 30px;
+	color: #333;
+}
+
+.account-btn:active {
+	background-color: rgb(242, 250, 140);
+}
+
+.account-btn-right {
+	width: 150px;
+	margin: 3px;
+	background-color: rgb(246, 153, 116);
+	border: none;
+	border-radius: 0.3em;
+	height: 30px;
+	color: #333;
+}
+
+.account-btn-right:active {
+	background-color: rgb(242, 250, 140);
+}
+
+.account-input {
+	font-size: 15px;
+	height: 25px;
+	width: 200px;
+	margin:5px;
+	border-radius: 5px;
+	border: solid 2px rgb(246, 153, 116);
+}
+
 .forgotPasswordButton {
 	text-decoration: underline;
-	background-color: rgb(242, 250, 140);
+	background-color: rgb(162, 222, 208);
 	width: 30.4%;
 	height: 27px;
-	margin-top: 1%;
+	margin-top: 80px;
+	margin-bottom: -1%;
 	margin-left: 34.8%;
 	padding: 0.5% 0% 0.5% 0%;
 	color: #333;
@@ -662,24 +724,18 @@ body {
 	border-radius: 0.3em;
 }
 
-.forgotPasswordButton:active {
-	background-color: rgb(247, 240, 240);
-	box-shadow: 1px 1px 1px 1px black;
-}
+
 .createUserButton {
 	text-decoration: underline;
-	background-color: white;
+	background-color: rgb(162, 222, 208);
 	width: 30.4%;
 	margin-top: 1%;
 	margin-left: 34.8%;
 	padding: 0.5% 0% 0.5% 0%;
+	border:none;
 	
 }
 
-.createUserButton:hover {
-	background-color: rgb(247, 240, 240);
-	box-shadow: 2px 2px 1px 1px black;
-}
 .backLogin {
 	list-style-type: none;
 	float: left;

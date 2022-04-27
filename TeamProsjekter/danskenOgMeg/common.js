@@ -82,12 +82,12 @@ function accountInfo() {
                 </ul>
             </div>
             <br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editPaymentInfo'      ;showDetailedAccountInformation()">Endre betalingsinformasjon</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editFirstAndLastname' ;showDetailedAccountInformation()">Endre fornavn/Etternavn</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editMail'             ;showDetailedAccountInformation()">Endre e-post adresse</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'editPassword'         ;showDetailedAccountInformation()">Endre passord</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'seeOrder'             ;showDetailedAccountInformation()">Ordrehistorikk</button><br><hr>
-            <button onclick="model.app.whatInfoIsShowed = 'seeReceipts'          ;showDetailedAccountInformation()">Dine kvitteringer</button><hr>
+            <button class="account-btn" onclick="model.app.whatInfoIsShowed = 'editPaymentInfo'      ;showDetailedAccountInformation()">Endre betalingsinformasjon</button><br><hr>
+            <button class="account-btn" onclick="model.app.whatInfoIsShowed = 'editFirstAndLastname' ;showDetailedAccountInformation()">Endre fornavn/Etternavn</button><br><hr>
+            <button class="account-btn" onclick="model.app.whatInfoIsShowed = 'editMail'             ;showDetailedAccountInformation()">Endre e-post adresse</button><br><hr>
+            <button class="account-btn" onclick="model.app.whatInfoIsShowed = 'editPassword'         ;showDetailedAccountInformation()">Endre passord</button><br><hr>
+            <button class="account-btn" onclick="model.app.whatInfoIsShowed = 'seeOrder'             ;showDetailedAccountInformation()">Ordrehistorikk</button><br><hr>
+            <button class="account-btn" onclick="model.app.whatInfoIsShowed = 'seeReceipts'          ;showDetailedAccountInformation()">Dine kvitteringer</button><hr>
         `
         }
     }
@@ -100,10 +100,10 @@ function showDetailedAccountInformation() {//ShowAccountInfo
             <ul>
                 <li>Your Card Number:     ${model.account.users[i].cardnumber}</li>
                 <li>your Cardholder Name: ${model.account.users[i].cardname}</li>
-                <li>New card number:      <input type="number" value="${model.payment.cardNumberInput}" oninput="model.payment.cardNumberInput = this.value"</li>
-                <li>New card name:        <input type="text"   value="${model.payment.cardUsersName}"   oninput="model.payment.cardUsersName = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
-                <li><button onclick="deleteCardInformation(${i})">Slett informasjon</button></li>
+                <li>New card number:      <input class="account-input" type="number" value="${model.payment.cardNumberInput}" oninput="model.payment.cardNumberInput = this.value"</li>
+                <li>New card name:        <input class="account-input" type="text"   value="${model.payment.cardUsersName}"   oninput="model.payment.cardUsersName = this.value"</li>
+                <li><button class="account-btn-right" onclick="UpdateChange(${i})">Lagre endringer</button></li>
+                <li><button class="account-btn-right" onclick="deleteCardInformation(${i})">Slett informasjon</button></li>
 
             </ul>`
         }
@@ -112,9 +112,9 @@ function showDetailedAccountInformation() {//ShowAccountInfo
             <ul>
                 <li>Your first name: ${model.account.users[i].firstName}</li>
                 <li>your last name:  ${model.account.users[i].lastName}</li>
-                <li>New first name:  <input type="text" value="${model.account.newFirstName}" oninput="model.account.newFirstName = this.value"</li>
-                <li>New last name:   <input type="text" value="${model.account.newLastName}"  oninput="model.account.newLastName = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
+                <li>New first name:  <input class="account-input" type="text" value="${model.account.newFirstName}" oninput="model.account.newFirstName = this.value"</li>
+                <li>New last name:   <input class="account-input" type="text" value="${model.account.newLastName}"  oninput="model.account.newLastName = this.value"</li>
+                <li><button class="account-btn-right" onclick="UpdateChange(${i})">Lagre endringer</button></li>
 
 
             </ul>`
@@ -123,8 +123,8 @@ function showDetailedAccountInformation() {//ShowAccountInfo
             model.app.showInfoForAccount = `
             <ul>
                 <li>Current mail: ${model.account.users[i].email}</li>
-                <li>New mail: <input type="text" value="${model.account.createNewEmail}" oninput="model.account.createNewEmail = this.value"</li>
-                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
+                <li>New mail: <input class="account-input" type="text" value="${model.account.createNewEmail}" oninput="model.account.createNewEmail = this.value"</li>
+                <li><button class="account-btn-right" onclick="UpdateChange(${i})">Lagre endringer</button></li>
 
             </ul>`
         }
@@ -132,10 +132,10 @@ function showDetailedAccountInformation() {//ShowAccountInfo
             model.app.showInfoForAccount = `
             <ul>
                 <li>Your password: ${model.account.users[i].password}</li>
-                <li>New Password:         <input type="text" value="${model.account.createNewPassword}"      oninput="model.account.createNewPassword = this.value"</li>
-                <li>New Password (again): <input type="text" value="${model.account.createNewPasswordCheck}" oninput="model.account.createNewPasswordCheck = this.value"</li>
+                <li>New Password:         <input class="account-input" type="text" value="${model.account.createNewPassword}"      oninput="model.account.createNewPassword = this.value"</li>
+                <li>New Password (again): <input class="account-input" type="text" value="${model.account.createNewPasswordCheck}" oninput="model.account.createNewPasswordCheck = this.value"</li>
 
-                <li><button onclick="UpdateChange(${i})">Lagre endringer</button></li>
+                <li><button class="account-btn-right" onclick="UpdateChange(${i})">Lagre endringer</button></li>
             </ul>`
         }
         else if (model.app.whatInfoIsShowed == 'seeOrder') {

@@ -1,35 +1,39 @@
 // ------------------------- Login Mail ---------------------------
 function updateViewLoginWithMail(){
     html = /*html*/`
-<div class="loginPage">
-
     <div class="headerL">${Header()}</div>
-
+    
         <div class="liteFelt">
             <ul>
-                <li class="liteFeltLi1"><button class="to-back-btn" onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
+                <li class="liteFeltLi"><button class="to-back-btn" onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
                 <li class="liteFeltLi1"><button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-            </ul> 
+            <ul>
         </div>
+
+<div class="loginPage">
+
 
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn..</h2></div>
-            <div>
+            <div class="menyL">
                 <div> <p class="paragraphMail"><b>MAIL</b></p>
                       <p class="paragraphLogin">ELLER</p>
-                      <p onclick="model.app.currentPage = 'LoginPhone'; updateView()" class="Phone">TELEFON</p></div>
+                      <p onclick="model.app.currentPage = 'LoginPhone'; updateView()" class="Phone">TELEFON</p>
+                </div>
+
                 <div  class="usernamePosition">${mail()}</div>
                 <div  class="passwordPosition">${password()}</div>
-                <div> <button class="loginButton" onclick="DoThisMailPersonExist(); model.account.password = ''">Logg inn</button></div>
+                <div  class="loginPosition"> <button class="loginButton" onclick="DoThisMailPersonExist(); model.account.password = ''">Logg inn</button></div>
                 <div> <button onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Glemt passord?</button></div>
                 <div> <p class="paragraphLogin"></p></div>
                 <div> <button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Lag ny bruker</button></div>
             </div>
         </div>
+        </div>
+        
         <div class="innholdL"></div>
         <div class="innhold1L"></div>
         <div class="footerL"></div>
-
 </div>
 `
 
@@ -40,14 +44,18 @@ function updateViewLoginWithMail(){
 
 function updateViewLoginWithPhone(){
     html = /*html*/`
-    <div class="loginPage">
-        <div class="headerL">${Header()}</div>
-        <div  class="smalLinje">
+    <div class="headerL">${Header()}</div>
+    
+        <div class="liteFelt">
             <ul>
-                <li class="backLogin"><button onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
-                <li class="cartLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
-            </ul> 
+                <li class="liteFeltLi"><button class="to-back-btn" onclick="model.app.currentPage='FrontPage';updateView()">Tilbake</button></li>
+                <li class="liteFeltLi1"><button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+            <ul>
         </div>
+    </div>   
+
+    <div class="loginPage">
+
         <div class="menyL">
             <div><h2 class="h2Login">Logg inn</h2></div>
             <div>
@@ -56,7 +64,7 @@ function updateViewLoginWithPhone(){
                 <p class="paragraphMail"><b>TELEFON</b></p></div>
                 <div class="usernamePosition">${phone()}</div>
                 <div class="passwordPosition">${password()}</div>
-                <div><button  class="loginButton" onclick="DoThisPhonePersonExist(); model.account.password = ''">Logg inn</button></div>
+                <div class="loginButtonPosition"><button  class="loginButton" onclick="DoThisPhonePersonExist(); model.account.password = ''">Logg inn</button></div>
                 <div><button  onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Glemt passord?</button></div>
                 <div><p class="paragraphLogin"></<p></div>
                 <div><button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Lag ny bruker</button></div>
@@ -72,14 +80,17 @@ function updateViewLoginWithPhone(){
 // ------------------------- Create Account ----------------------------
 function updateViewCreateAccount(){
     html =/*hmtl*/ `
-    <div class="loginPage">
     <div class="headerL">${Header()}</div>
-    <div  class="smalLinje">
+
+    <div class="liteFelt">
         <ul>
-            <li class="backLogin"><button onclick="model.app.currentPage = 'LoginMail';updateView()">Tilbake</button></li>
-            <li class="cartLogin"><button onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li></li>
+            <li class="liteFeltLi"><button class="to-back-btn" onclick="model.app.currentPage = 'LoginMail';updateView()">Tilbake</button></li>
+            <li class="liteFeltLi1"><button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
         </ul> 
     </div>
+    
+<div class="loginPage">
+
     <div class="menyL">
         <div><h2 class="h2Login">Opprett ny bruker</h2></div>
         <div>
@@ -90,10 +101,10 @@ function updateViewCreateAccount(){
             <div class="passwordPosition">${newPassword()}      </div>
             <p class="paragraphLogin">Bekreft passord:</p>
             <div class="passwordPosition">${passwordCheck()} </div>
-            <div><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';checkNewAccountInformation()">Fortsett</button> </div>
+            <div class="loginButtonPosition"><button class="loginButton" onclick="model.app.currentPage = 'viewNewAccount';checkNewAccountInformation()">Fortsett</button> </div>
             <br>
             <div class="paragraphLogin">Har du brukerkonto?</div>
-            <div><button class="loginButton" onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</div>
+            <div class="loginButtonPosition"><button class="loginButton" onclick="model.app.currentPage = 'LoginMail';updateView()">Logg inn</div>
         </div>
     </div>
     <div class="innholdL"></div>
@@ -135,22 +146,26 @@ return html;
 
 function updateViewAccountInfo(){
     html = `
-    <div class="accountInfoPage">
-        <div class="headerL">${Header()}</div>
-        <div class="smalLinje">
-            <ul>
-                <li class="accountInfoButtonList"><button class="accountInfoButton" onclick="model.app.currentPage = 'FrontPage'; updateView()";>Tilbake</button></li>
-                <li class="accountInfoButtonList"><button class="accountInfoButton" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="accountInfoButtonList"><button class="accountInfoButton" onclick="model.app.click++; logOut()";>Logg ut</button></li> 
-            <ul>
-        </div>
+    <div class="headerL">${Header()}</div>
+    
+    
+<div class="liteFelt">
+    <ul>
+        <li class ="liteFeltLi"><button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button> </li>
+        <li class ="liteFeltLi1"><button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button> </li>
+        <li class ="liteFeltLi1"><button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
+    <ul>
+</div>
+
+<div class="accountInfoPage">
+
         <div class="innholdP0"></div>
         <div class="innholdP1">${accountInfo()}</div>
         <div class="innholdP2"></div>
         <div class="innholdP3">${model.app.showInfoForAccount}</div> 
         <div class="innholdP4"></div>
         
-    </div>
+</div>
     `
     return html;
 }

@@ -180,8 +180,8 @@ div.footer {
         background-color: rgb(162, 222, 208);
         height: 100vh;
         display: grid;
-        grid-template-columns:1fr 6fr 1fr  ;
-        grid-template-rows: 1fr 0.6fr 8fr 2fr ;
+        grid-template-columns:1fr 5fr 1fr;
+        grid-template-rows: 1fr 1fr 8fr 2fr ;
         grid-template-areas: 'headerL headerL headerL'
                              'smalLinje smalLinje smalLinje'
                              'innholdL menyL innhold1L' 
