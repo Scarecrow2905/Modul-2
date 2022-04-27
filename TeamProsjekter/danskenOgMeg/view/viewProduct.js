@@ -5,9 +5,9 @@ function viewProduct() {
     <div class="header">${Header()}</div>
 
     <div class="-navigation">
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage'; model.modalPopupInformation = ''; updateView()">Tilbake</button>
     <button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button>
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button>
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.TotalQuantity} Pris: ${model.shoppingCart.totalPrice}</button>
 
     <div class="currentProduct">
     ${viewProductItem()}
@@ -40,6 +40,7 @@ function viewProductItem() {
                 Land:   ${model.products[i].country}  <br>
                 Farge:  ${model.products[i].color}    <br>
                 År:     ${model.products[i].year}     <br>
+                På lager: ${model.products[i].stock}
                 </span>
             </div>
 

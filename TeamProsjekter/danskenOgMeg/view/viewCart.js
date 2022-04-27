@@ -7,7 +7,7 @@ function updateViewCart() {
     <div class="liteFelt">
 
     <ul>
-        <li class="liteFeltLi"><button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button> </li>
+        <li class="liteFeltLi"><button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';viewStuff(100)">Tilbake</button> </li>
         <li class="liteFeltLi1"><button class="to-login-btn" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button> </li>
     <ul>
 
@@ -53,7 +53,7 @@ function createCartItems() {
                             <span class="cart-price cart-column">${model.shoppingCart.cartProducts[i].price} kr/stk </span>
                         <div class="cart-quantity cart-column">
                             <input class="cart-quantity-input" type="number" max="${model.shoppingCart.cartProducts[i].totalProducts}" min="0" value="${model.shoppingCart.cartProducts[i].productQuantity}" onclick="ChangeQuantity(${i}, this.value);">
-                            <button class="btn btn-danger cart-quantity-button" type="button" onclick="removeCart(${i});">Fjern</button>
+                            <button class="btn btn-danger cart-quantity-button" type="button" onclick="removeCart(${i});updateView()">Fjern</button>
                     </div>
 
                 </div> `
