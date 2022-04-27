@@ -20,7 +20,11 @@ function addToCart(i) {
         // model.shoppingCart.numberOfItems++
         model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
     }
+    if(model.viewProductsHere != ''){
+        searchCatalog(model.searchText)
+    }else{
     viewStuff(model.selectedCategory);
+    }
 }
 
 
@@ -95,11 +99,12 @@ function make(index) {
             }
         }
         else {
-            html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>
+            html += `<div class="dropDownList" onclick="make(${i});model.menuText = ''">${model.categories[i].name}</div>
             `
         }
     }
     model.viewMenyCategories = html;
+    model.searchText = '';
     updateView();
 }
 
@@ -109,10 +114,10 @@ function viewStuff(index) {
     let first = '';
     for (let i = 0; i < model.products.length; i++) {
         first = i % 4 == 0 ? 'first' : '';
-        if (index === 100) {
+        if (index === 100 && model.products[i].price < model.sliderValueIs) {
             html += /*html*/`
     <div class="rows ${first}">
-        <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${model.products[i].id});updateView()"/>
+        <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${i});updateView()"/>
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
         <div class="stock">På lager: ${model.products[i].stock}</div>
@@ -127,7 +132,7 @@ function viewStuff(index) {
             model.activeProduct = !model.activeProduct
             html += /*html*/`
             <div class="rows ${first}">
-                <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
+                <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${i});updateView()"/>
                 <div class="front-item-title">${model.products[i].title}</div>
                 <div class="front-price">${model.products[i].price}kr</div>
                 <div class="stock">På lager: ${model.products[i].stock}</div>
@@ -281,7 +286,7 @@ function logOut() {
 function searchCatalog(indexValue) {
     model.midlertidlig = '';
     for (let i = 0; i < model.products.length; i++) {
-        let first = i % 3 == 0 ? 'first' : '';
+        let first = i % 4 == 0 ? 'first' : '';
         if (model.products[i].title.includes(indexValue) || model.products[i].category.includes(indexValue)) {
             if (model.products[i].price < model.sliderValueIs) {
                 model.midlertidlig += `
@@ -289,8 +294,8 @@ function searchCatalog(indexValue) {
                     <img class="front-item-image" src="${model.products[i].img}"/>
                     <div class="front-item-title">${model.products[i].title}</div>
                     <div class="front-price">${model.products[i].price}kr</div>
-                    <div class="stock">stock: ${model.products[i].stock}</div>
-                    <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
+                    <div class="stock">På lager: ${model.products[i].stock}</div>
+                    <button type="button" class="front-item-btn" onclick="addToCart(${i})">Legg til handlekurv</button>
                 </div>`
             }
         }
