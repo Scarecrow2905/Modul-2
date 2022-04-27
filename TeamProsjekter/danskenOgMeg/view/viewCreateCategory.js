@@ -1,44 +1,63 @@
 function viewCreateCategory() {
+    let html = '';
+    // for (let i = 0; i < model.createCategory.length; i++) {
+    const category = model.createCategory;
 
-    for (let i = 0; i < model.createCategory.length; i++) {
-        const category = model.createCategory[i];
+    html = /*html*/
+        `
+        <input id="CreateCat" onchange="model.createCategory.name = this.value" value="${model.createCategory.name}" placeholder="Hovedkategori" type= "text"><br>
+        
+        
 
-        html = /*html*/
-            `
-        <input class="" id="" onchange="category.name = this.value" value="${category.name}" placeholder="Kategori Navn" type= "text">
-        <button onclick="createCategory();">mekk ny Categori</button>
+        ${model.ekstraInput}
         `
 
-    }
+
+    html += `<button onclick="FlerUKategorier()">+</button><br>
+            <button onclick="nyKategori()">Lagre</button>`
+    // }
     return html;
 }
+function FlerUKategorier() {
+    let html = '';
+    for (let i = 0; i < model.createCategory.sub.length; i++) {
+        html += /*html*/
 
-function idCountCategory() {
-    for (let i = 0; i < model.categories.length; i++) {
-        let newCategory = model.categories[i];
-        newCategory ++;
-        model.categories[i].id = newCategory;
-        let newId = 0;
-        newId = model.categories.length++;
-        
-        
+            `
+    <input class="" id="" onchange="model.createCategory.sub[${i}].categoriName = this.value" 
+    value="${model.createCategory.sub[i].categoriName}" placeholder="Underkategori" type= "text"><br>
+
+    `
+
     }
-    
-    console.log(idCountCategory + newCategory)
+
+
+    model.ekstraInput += html;
+    updateView();
+}
+function nyKategori() {
+    let object = {};
+    object.name = model.createCategory.name;
+    object.id = model.categoryID;
+    object.sub = [];
+    for (let i = 0; i < model.createCategory.sub.length; i++) {
+        EnNyUnderKategori(object, i + 1);
+
+
+    }
+
+    model.categories.push(object);
+    model.categoryID++
+    //Mulig den må endre side (changePage)
+    updateView();
+}
+
+function EnNyUnderKategori(object, i) {
+    let SubCat = {};
+    SubCat.categoriName = '';
+    SubCat.id = (model.categoryID * 10) + i;
+    SubCat.parentId = model.categoryID;
+    object.sub.push(SubCat);
 }
 
 
-    // <input class="" id="" onchange="category.sub = this.value" value="${category.sub}" placeholder="Underkategori" type="text">
-    //<input class="" id="" onchange="category.id = this.value" value="${category.id}" placeholder="Kategori ID" type="number">
-
-
-function createCategory() {
-    NewCategory = {}
-    NewCategory.name = model.createCategory.name;
-    NewCategory.id = model.categories.length+1;
-    NewCategory.sub = model.createCategory.sub;
-    addImg(PictureInPictureWindow);
-    model.category.push(NewCategory);
-    console.log(NewCategory)
-
-}
