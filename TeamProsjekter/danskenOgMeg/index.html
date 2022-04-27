@@ -38,7 +38,7 @@
     function updateView(){
         let html = '';
         const page = model.app.currentPage; 
-        if (page ===      'FrontPage') html = updateViewFront(); 
+             if (page === 'FrontPage') html = updateViewFront(); 
         else if (page === 'Product') html = updateViewProduct();
         else if (page === 'Cart') html = updateViewCart();
         else if (page === 'LoginMail') html = updateViewLoginWithMail();

@@ -79,13 +79,13 @@ const model = {
         search: '',
     },
     //Legge til nye kategorier
-    createCategory: [
-        { name: '', id: '', sub: [] },
-    ],
+    createCategory: 
+        { name: '', id: '', sub: [{ categoriName: '', id: '', parentId: '' },] },
+    
     createSubCategory: [
         { categoriName: '', id: '', parentId: '' },
     ],
-
+    ekstraInput: '',
     //Legge til nye produkter
     createItems: {
         title: '',
@@ -103,6 +103,7 @@ const model = {
         productQuantity: 0,
         totalProducts: 0,
     },
+    categoryID: 10,
 
     // Data -!-
     categories: [
