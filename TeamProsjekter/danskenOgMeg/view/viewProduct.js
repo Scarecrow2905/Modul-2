@@ -5,24 +5,13 @@ function viewProduct() {
     <div class="header">${Header()}</div>
 
     <div class="-navigation">
-    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button>
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage'; model.modalPopupInformation = ''; updateView()">Tilbake</button>
     <button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button>
-
-    <div class="liteFelt">
-            <ul>
-                <li class="liteFeltProducts"><button class="liteFelt" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
-                <li class="liteFeltProducts"><button class="liteFelt" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button></li> 
-            <ul>
-    </div>
-
-
+    <button class="btn-cart-navigation" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.TotalQuantity} Pris: ${model.shoppingCart.totalPrice}</button>
 
     <div class="currentProduct">
     ${viewProductItem()}
     </div>
-
-        
-
 
     </div>
     `
@@ -51,21 +40,21 @@ function viewProductItem() {
                 Land:   ${model.products[i].country}  <br>
                 Farge:  ${model.products[i].color}    <br>
                 År:     ${model.products[i].year}     <br>
-                
+                På lager: ${model.products[i].stock}
                 </span>
             </div>
 
         </div> 
             <div class="product-input-btn">
                 <div class="product-price"> ${model.products[i].price},- </div>
-                <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView();">Legg til handlekurv</button>
+                <button type="button" class="front-item-btn" onclick="addToCart(${i});updateView();">Legg til handlekurv</button>
             </div>
     `
     return result;
 }
 
 function modalWindowPopup(index) {
-    model.modalPopupInformation = index;
+    model.modalPopupInformation = model.products[index].id;
     model.app.currentPage = 'viewProduct';
     updateView();
 }

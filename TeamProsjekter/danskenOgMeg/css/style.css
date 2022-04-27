@@ -24,7 +24,6 @@ ul {
 	color: #333;
 	font-size: 2em;
 	font-family: stalemate;
-	/* font-size: largest; */
 }
 .meny{
 	margin-left:20%;
@@ -122,25 +121,7 @@ ul {
 	margin: 0% 0% 1% 10%;
 
 }
-/* .liteFeltLi2 {
-	list-style-type: none;
-	float: left;
-	font-size: 1rem;
-	margin: 2% 2% 2% 0%;
-	align-items: center;
 
-}
-.liteFeltLi3 {
-	list-style-type: none;
-	float: left;
-	font-size: 1rem;
-	margin: 2% 2% 2% 0%;
-	align-items: center;
-
-}  */
-/* .liteFelt {
-	align-items: center;
-} */
 .sublist {
 	user-select: none;
 	background-color: rgb(242, 250, 140);
@@ -182,38 +163,18 @@ ul {
 	font-size: 2rem;
 	color: #333;
 }
-/*-----------*/
-/* .front-row {
-  display: flex;
-  
-  flex-direction: column;
-} */
-
-/* .front-item {
-  width: 20%;
-  height: auto;
-  margin-top: 5px;
-  margin-left: 5px;
-} */
 
 .front-item-title {
 	color: #333;
-	/* margin-left: .5em; */
 	font-size: 1.2em;
 }
 
 .front-column {
-	/* position: relative; */
-	/* float: left; */
 	align-items: center;
-	/* margin-right: 1.5em; */
 	padding-bottom: 10px;
 	margin-top: 10px;
 }
-/* .front-column:nth-child(3n + 1) {
-  clear: left;
-  
-}  */
+
 .front-item-btn {
 	margin: 0px;
 	padding: 5px;
@@ -230,7 +191,6 @@ ul {
 	color: #333;
 }
 .front-item-image {
-	/* display:flex; */
 	width: 13em;
 	height: 10em;
 	border-radius: 10px;
@@ -352,11 +312,6 @@ ul {
 	margin: 20px;
 	
 }
-
-
-	
-
-
 
 /* *************HANDLEKURV************* */
 
@@ -549,8 +504,6 @@ body {
 	width: 20px;
 }
 
-
-
 .container form .inputBox span {
 	display: block;
 	color: #999;
@@ -614,11 +567,15 @@ body {
 	font-size: 15px;
 	width: 30%;
 	padding: 1% 0% 1% 0%;
+	border-radius: 5px;
+	border: solid 2px rgb(246, 153, 116);
 }
 .password {
 	font-size: 15px;
 	width: 30%;
 	padding: 1% 0% 1% 0%;
+	border-radius: 5px;
+	border: solid 2px rgb(246, 153, 116);
 }
 .usernamePosition {
 	text-align: center;
@@ -634,24 +591,33 @@ body {
 	background-color: rgb(246, 153, 116);
 	color: #333;
 	width: 30.4%;
+	height: 27px;
 	padding: 0.5% 0% 0.5% 0%;
+	border: none;
+	border-radius: 5px;
 }
-.loginButton:hover {
-	background-color: rgb(246, 153, 116);
-	box-shadow: 2px 2px 1px 1px #333;
+
+.loginButton:active {
+	background-color: rgb(242, 250, 140);
+	box-shadow: 1px 1px 1px 1px black;
 }
 
 .forgotPasswordButton {
 	text-decoration: underline;
-	background-color: white;
+	background-color: rgb(242, 250, 140);
 	width: 30.4%;
+	height: 27px;
 	margin-top: 1%;
 	margin-left: 34.8%;
 	padding: 0.5% 0% 0.5% 0%;
+	color: #333;
+	border:none;
+	border-radius: 0.3em;
 }
-.forgotPasswordButton:hover {
+
+.forgotPasswordButton:active {
 	background-color: rgb(247, 240, 240);
-	box-shadow: 2px 2px 1px 1px black;
+	box-shadow: 1px 1px 1px 1px black;
 }
 .createUserButton {
 	text-decoration: underline;
@@ -660,7 +626,9 @@ body {
 	margin-top: 1%;
 	margin-left: 34.8%;
 	padding: 0.5% 0% 0.5% 0%;
+	
 }
+
 .createUserButton:hover {
 	background-color: rgb(247, 240, 240);
 	box-shadow: 2px 2px 1px 1px black;
@@ -668,7 +636,7 @@ body {
 .backLogin {
 	list-style-type: none;
 	float: left;
-	margin-left: 2%;
+	margin-left:2%;
 }
 .cartLogin {
 	float: right;
@@ -712,7 +680,7 @@ body {
   }
 
   /* Private user site*/
-  .accountInfoButton{
+  .accountInfoButton1{
 	background: rgb(246, 153, 116);
 	color: #333;
 	border: none;
@@ -721,39 +689,61 @@ body {
 	justify-content: center;
 	height: 30px;
 	float:left;
-	margin-left:18.9%;
+	margin-left:10%;
 	margin-bottom:5px;
-
   }
 
-  .accountInfoButtonList{
+  .accountInfoButton2{
+	background: rgb(246, 153, 116);
+	color: #333;
+	border: none;
+	border-radius: 0.3em;
+	font-weight: bold;
+	justify-content: center;
+	height: 30px;
+	float:left;
+	margin-left:1%;
+	margin-bottom:5px;
+  }
+
+  .accountInfoButtonList1{
 	  list-style-type: none;
   }
+
+  .accountInfoButtonList1{
+	list-style-type: none;
+}
+
+.updateViewCreateAccountButton{
+	background: rgb(246, 153, 116);
+	border: none;
+	color: #333;
+	border-radius: 0.3em;
+	font-weight: bold;
+	justify-content: center;
+	height: 30px;
+}
+.ViewNewAccountButton{
+	background: rgb(246, 153, 116);
+	border: none;
+	color: #333;
+	border-radius: 0.3em;
+	font-weight: bold;
+	justify-content: center;
+	height: 30px;
+}
+.ViewNewAccountButton{
+	background: rgb(246, 153, 116);
+	border: none;
+	color: #333;
+	border-radius: 0.3em;
+	font-weight: bold;
+	justify-content: center;
+	height: 30px;
+}
 .overflowAccountInfo{
 	overflow: auto;
 }
 li{
 	list-style-type: none;
-
 }
-
-
-  /* .to-cart-btn {
-	color: #333;
-	background-color: rgb(246, 153, 116);
-	border: none;
-	border-radius: 0.3em;
-	font-weight: bold;
-	height: 30px;
-	float: right;
-	justify-content: right;
-}
-
-.to-login-btn {
-	color: #333;
-	background-color: rgb(246, 153, 116);
-	border: none;
-	border-radius: 0.3em;
-	font-weight: bold;
-	height: 30px;
-} */

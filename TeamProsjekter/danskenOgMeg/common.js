@@ -1,15 +1,15 @@
 // ------------ oversikrift --------------
 function Header() {
     return `
-         <h1 class="header" onclick="model.app.currentPage='FrontPage'; viewStuff(100);">Dansken og meg<h1>
-         <h2 class="smallerHeader" onclick="model.app.currentPage='FrontPage'; viewStuff(100);">Vintage Skatter</h2>
+         <h1 class="header" onclick="model.app.currentPage='FrontPage'; viewStuff(100); model.searchText = ''">Dansken og meg<h1>
+         <h2 class="smallerHeader" onclick="model.app.currentPage='FrontPage'; viewStuff(100); model.searchText = ''">Vintage Skatter</h2>
          `
 };
 
 // ---------------- Søkefelt ---------------
 function searchfield() {
     return `
-    <div class="Searchfield"> <input class="search-field" placeholder="Søkeord" type="text" onchange="searchCatalog(this.value)"/></div>
+    <div class="Searchfield"> <input class="search-field" placeholder="Søkeord" type="text" onchange="searchCatalog(this.value);model.searchText = this.value"/></div>
     `
 }
 function slider() {
