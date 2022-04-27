@@ -55,7 +55,7 @@ const model = {
     //Inputs -!-
     account: {
         users: [
-            { firstName: 'Admin', lastName: 'Nordmann', phone: 12121212, email: '1@1.no', password: '1', id: 1, cardnumber: 1234123412341234, cardname: 'Elin Admin' },
+            { firstName: 'Elin', lastName: 'Admin', phone: 12121212, email: '1@1.no', password: '1', id: 1, cardnumber: 1234123412341234, cardname: 'Elin Admin' },
             { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341244, cardname: 'Renee Thorstensen' },
             { firstName: 'Renee', lastName: 'Thorstensen', phone: 12345678, email: 'renee@getacademy.no', password: 'abc123', id: 2, cardnumber: 1234123412341234, cardname: 'Renee Thorstensen' },
             { firstName: 'Tommy', lastName: 'Håvåg', phone: 12345678, email: 'tommyh@getacademy.no', password: 'abc123', id: 3, cardnumber: 1234123412341234, cardname: 'Tommy Håvåg' },

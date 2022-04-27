@@ -95,13 +95,12 @@ function make(index) {
             html += `<div class="dropDownList" onclick="make(${i});">${model.categories[i].name}</div>`
 
             for (let j = 0; j < model.categories[i].sub.length; j++) {
-                html += `<div class="sublist" onclick="viewStuff(${model.categories[i].sub[j].id}); model.menuText = 'showingSubCategories';">${model.categories[i].sub[j].categoriName}</div>`
+                html += `<div class="sublist" onclick="viewStuff(${model.categories[i].sub[j].id});">${model.categories[i].sub[j].categoriName}</div>`
             }
         }
         else {
             html += `<div class="dropDownList" onclick="make(${i});model.menuText = ''">${model.categories[i].name}</div>
             `
-            model.menuText = ''
         }
     }
     model.viewMenyCategories = html;
@@ -130,7 +129,6 @@ function viewStuff(index) {
     for (let i = 0; i < model.products.length; i++) {
         let first = i % 4 == 0 ? 'first' : '';
         if (index == model.products[i].parentId && model.products[i].price < model.sliderValueIs) {
-            if(model.menuText != ''){
             model.activeProduct = !model.activeProduct
             html += /*html*/`
             <div class="rows ${first}">
@@ -140,7 +138,7 @@ function viewStuff(index) {
                 <div class="stock">På lager: ${model.products[i].stock}</div>
                 <button type="button" class="front-item-btn" onclick="addToCart(${i});updateView()">Legg til handlekurv</button>
             </div>`
-        }}
+        }
         model.viewProductsHere = html;
         updateView();
     }
