@@ -22,7 +22,7 @@ function updateViewLoginWithMail(){
                 <div  class="passwordPosition">${password()}</div>
                 <div> <button class="loginButton" onclick="DoThisMailPersonExist(); model.account.password = ''">Logg inn</button></div>
                 <div> <button onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Glemt passord?</button></div>
-                <div> <p class="paragraphLogin">Eller, er du ny bruker??</p></div>
+                <div> <p class="paragraphLogin"></p></div>
                 <div> <button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Lag ny bruker</button></div>
             </div>
         </div>
@@ -49,7 +49,7 @@ function updateViewLoginWithPhone(){
             </ul> 
         </div>
         <div class="menyL">
-            <div><h2 class="h2Login">Logg inn..</h2></div>
+            <div><h2 class="h2Login">Logg inn</h2></div>
             <div>
                 <div><p onclick="model.app.currentPage = 'LoginMail'; updateView()"  class="Phone">MAIL</p>
                 <p class="paragraphLogin">ELLER</p>
@@ -58,7 +58,7 @@ function updateViewLoginWithPhone(){
                 <div class="passwordPosition">${password()}</div>
                 <div><button  class="loginButton" onclick="DoThisPhonePersonExist(); model.account.password = ''">Logg inn</button></div>
                 <div><button  onclick="alert('1202 - Denne funksjonen fungerer ikke')" class="forgotPasswordButton">Glemt passord?</button></div>
-                <div><p class="paragraphLogin"> Or, are you a new user?</<p></div>
+                <div><p class="paragraphLogin"></<p></div>
                 <div><button class="createUserButton" onclick="model.app.currentPage = 'createNewAccount'; updateView()">Lag ny bruker</button></div>
             </div>
         </div>
