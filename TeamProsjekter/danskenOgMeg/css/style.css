@@ -567,11 +567,15 @@ body {
 	font-size: 15px;
 	width: 30%;
 	padding: 1% 0% 1% 0%;
+	border-radius: 5px;
+	border: solid 2px rgb(246, 153, 116);
 }
 .password {
 	font-size: 15px;
 	width: 30%;
 	padding: 1% 0% 1% 0%;
+	border-radius: 5px;
+	border: solid 2px rgb(246, 153, 116);
 }
 .usernamePosition {
 	text-align: center;
@@ -587,24 +591,33 @@ body {
 	background-color: rgb(246, 153, 116);
 	color: #333;
 	width: 30.4%;
+	height: 27px;
 	padding: 0.5% 0% 0.5% 0%;
+	border: none;
+	border-radius: 5px;
 }
-.loginButton:hover {
-	background-color: rgb(246, 153, 116);
-	box-shadow: 2px 2px 1px 1px #333;
+
+.loginButton:active {
+	background-color: rgb(242, 250, 140);
+	box-shadow: 1px 1px 1px 1px black;
 }
 
 .forgotPasswordButton {
 	text-decoration: underline;
-	background-color: white;
+	background-color: rgb(242, 250, 140);
 	width: 30.4%;
+	height: 27px;
 	margin-top: 1%;
 	margin-left: 34.8%;
 	padding: 0.5% 0% 0.5% 0%;
+	color: #333;
+	border:none;
+	border-radius: 0.3em;
 }
-.forgotPasswordButton:hover {
+
+.forgotPasswordButton:active {
 	background-color: rgb(247, 240, 240);
-	box-shadow: 2px 2px 1px 1px black;
+	box-shadow: 1px 1px 1px 1px black;
 }
 .createUserButton {
 	text-decoration: underline;
@@ -613,7 +626,9 @@ body {
 	margin-top: 1%;
 	margin-left: 34.8%;
 	padding: 0.5% 0% 0.5% 0%;
+	
 }
+
 .createUserButton:hover {
 	background-color: rgb(247, 240, 240);
 	box-shadow: 2px 2px 1px 1px black;
