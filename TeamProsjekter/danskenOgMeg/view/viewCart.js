@@ -36,7 +36,6 @@ function createCartItems() {
     var result = '';
 
     for (let i = 0; i < model.shoppingCart.cartProducts.length; i++) {
-        // for (let j = 0; j < model.products.length; j++) {
 
     result += `<section class="newProduct">
                     <h2 class="cart-header"> Handlekurv </h2>
@@ -61,6 +60,4 @@ function createCartItems() {
     }
     return result;
 }
-//                             <input class="cart-quantity-input" type="number" value="${model.shoppingCart.TotalQuantity}">
-// model.shoppingCart.TotalQuantity++;
-//                             <input class="cart-quantity-input" type="number" value="${model.products[j].productQuantity}">
+

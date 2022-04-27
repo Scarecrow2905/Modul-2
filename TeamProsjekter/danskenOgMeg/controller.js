@@ -108,10 +108,10 @@ function viewStuff(index) {
     let first = '';
     for (let i = 0; i < model.products.length; i++) {
         first = i % 4 == 0 ? 'first' : '';
-        if (index === 100) {
+        if (index === 100 && model.products[i].price < model.sliderValueIs) {
             html += /*html*/`
     <div class="rows ${first}">
-        <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${model.products[i].id});updateView()"/>
+        <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${i});updateView()"/>
         <div class="front-item-title">${model.products[i].title}</div>
         <div class="front-price">${model.products[i].price}kr</div>
         <div class="stock">På lager: ${model.products[i].stock}</div>
@@ -126,13 +126,14 @@ function viewStuff(index) {
             model.activeProduct = !model.activeProduct
             html += /*html*/`
             <div class="rows ${first}">
-                <img class="front-item-image" src="${model.products[i].img}" onclick="model.app.currentPage = 'viewProduct';updateView()"/>
+                <img class="front-item-image" src="${model.products[i].img}" onclick="modalWindowPopup(${i});updateView()"/>
                 <div class="front-item-title">${model.products[i].title}</div>
                 <div class="front-price">${model.products[i].price}kr</div>
                 <div class="stock">På lager: ${model.products[i].stock}</div>
                 <button type="button" class="front-item-btn" onclick="addToCart(${i});updateView()">Legg til handlekurv</button>
             </div>`
         }
+        console.log(`onclick="modalWindowPopup(${i})`)
         model.viewProductsHere = html;
         updateView();
     }
@@ -289,7 +290,7 @@ function searchCatalog(indexValue) {
                     <div class="front-item-title">${model.products[i].title}</div>
                     <div class="front-price">${model.products[i].price}kr</div>
                     <div class="stock">stock: ${model.products[i].stock}</div>
-                    <button type="button" class="front-item-btn" onclick="addToCart(${model.products[i].id});updateView()">Legg til handlekurv</button>
+                    <button type="button" class="front-item-btn" onclick="addToCart(${i});updateView()">Legg til handlekurv</button>
                 </div>`
             }
         }
