@@ -251,7 +251,7 @@ function checkAdmin() {
     }
     if (model.app.adminLoggedInn == true) {
         model.app.admin = `
-        <li class="liteFeltLi1"><button class="to-back-btn" onclick="createViewModal();">New Category</button></li>
+        <li class="liteFeltLi1"><button class="to-back-btn" onclick="createViewModal();">Legg til Kategori</button></li>
         <button class="to-back-btn" onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>
         `;
     }
