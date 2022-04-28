@@ -20,10 +20,10 @@ function addToCart(i) {
         // model.shoppingCart.numberOfItems++
         model.products[i].stock = model.products[i].totalProducts - model.products[i].productQuantity
     }
-    if(model.viewProductsHere != ''){
+    if (model.viewProductsHere != '') {
         searchCatalog(model.searchText)
-    }else{
-    viewStuff(model.selectedCategory);
+    } else {
+        viewStuff(model.selectedCategory);
     }
 }
 
@@ -251,8 +251,8 @@ function checkAdmin() {
     }
     if (model.app.adminLoggedInn == true) {
         model.app.admin = `
-        <li class="liteFeltLi1"><button onclick="createViewModal();">New Category</button></li>
-        <button onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>
+        <li class="liteFeltLi1"><button class="to-back-btn" onclick="createViewModal();">New Category</button></li>
+        <button class="to-back-btn" onclick="model.app.currentPage = 'viewCreateProduct'; updateView()">Legg til produkt</button></li>
         `;
     }
     updateView();
@@ -545,7 +545,7 @@ function blankInput() {
     model.createItems.year = '';
     model.createItems.productQuantity = '';
     model.createItems.totalProducts = '';
-    
+
 
     // må nulle ut alle verdier; husk at noen er tall
     //img: "C:\\fakepath\\158905.jpg"
