@@ -151,7 +151,7 @@ function updateViewAccountInfo(){
 <div class="liteFelt">
     <ul>
         <li class ="liteFeltLi"><button class="btn-cart-navigation" onclick="model.app.currentPage = 'FrontPage';updateView()">Tilbake</button> </li>
-        <li class ="liteFeltLi1"><button class="btn-cart-navigation" onclick="checkLoginStatus();updateView();">${model.app.showStatus}</button> </li>
+        <li class ="liteFeltLi1"><button class="btn-cart-navigation" onclick="model.app.currentPage = 'loginMail';"logOut()">Logg ut</button> </li> <<<<TOMMY SJEKK HER>>>>>
         <li class ="liteFeltLi1"><button class="to-cart-btn" onclick="model.app.currentPage = 'Cart';updateView()">Handlevogn ${model.shoppingCart.cartProducts.length} Pris: ${model.shoppingCart.totalPrice}</button></li>
     <ul>
 </div>

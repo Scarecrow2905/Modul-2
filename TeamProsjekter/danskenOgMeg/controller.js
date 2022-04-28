@@ -276,6 +276,7 @@ function logOut() {
         model.app.showStatus = 'Logg inn';
         model.app.currentPage = 'FrontPage';
         model.app.adminLoggedInn = false;
+        console.log('Logg ut')
 
     }
     checkAdmin();
